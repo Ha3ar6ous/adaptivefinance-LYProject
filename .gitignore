@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+
+# Misc
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# ML / Data specific
+data/*.csv
+data/*.parquet
+data/*.pkl
+data/*.h5
+models/*.h5
+models/*.pt
+models/*.onnx
+!data/.gitkeep
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
