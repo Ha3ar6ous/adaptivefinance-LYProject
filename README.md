@@ -17,7 +17,7 @@ The application implements a microservices-based architecture to decouple reliab
 
 ```mermaid
 graph TD
-    Client[Next.js Client] -->|HTTPS/JSON| API[Node.js API Gateway]
+    Client[React.js Client] -->|HTTPS/JSON| API[Node.js API Gateway]
     API -->|Read/Write| DB[(MongoDB Atlas)]
     
     subgraph "Inference Engine"
@@ -26,18 +26,14 @@ graph TD
         ML -->|Health Check| Scoring[Random Forest Classifier]
         ML -->|Context Generation| LLM[Generative AI Provider]
     end
-    
-    style Client fill:#f9f,stroke:#333,stroke-width:2px
-    style API fill:#bbf,stroke:#333,stroke-width:2px
-    style ml fill:#ddf,stroke:#333,stroke-width:2px
 ```
 
 ## Technology Stack
 
 ### Frontend
--   **Framework**: Next.js (React) for server-side rendering and static optimization.
+-   **Framework**: React.js for building dynamic user interfaces.
 -   **Component Library**: shadcn/ui for accessible, consistent design patterns.
--   **State Management**: React Context API for application-levle state.
+-   **State Management**: React Context API for application-level state.
 
 ### Backend
 -   **Runtime**: Node.js with Express.js for scalable API endpoint management.
@@ -122,9 +118,3 @@ pip install -r requirements.txt
 # Start Flask inference service
 python app.py
 ```
-
-## Contributing
-Please refer to `CONTRIBUTING.md` for coding standards and pull request guidelines.
-
-## License
-MIT License
