@@ -3,13 +3,16 @@ import { useState } from 'react'
 const DownloadData = () => {
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const handleDownload = async () => {
     setMessage('')
     setError('')
+    setLoading(true)
     const token = localStorage.getItem('token')
     if (!token) {
       setError('Please login first.')
+      setLoading(false)
       return
     }
 
@@ -20,6 +23,7 @@ const DownloadData = () => {
       if (!res.ok) {
         const text = await res.text()
         setError(text || 'Unable to download CSV')
+        setLoading(false)
         return
       }
       const blob = await res.blob()
@@ -31,18 +35,22 @@ const DownloadData = () => {
       link.click()
       link.remove()
       window.URL.revokeObjectURL(url)
-      setMessage('CSV download started.')
+      setMessage('CSV downloaded successfully!')
     } catch (err) {
       setError('Error downloading CSV')
+    } finally {
+      setLoading(false)
     }
   }
 
   return (
     <div>
       <h3>Download Your Data</h3>
-      <button onClick={handleDownload}>Download CSV</button>
-      {message && <p className="success">{message}</p>}
-      {error && <p className="error">{error}</p>}
+      <button onClick={handleDownload} disabled={loading}>
+        {loading ? 'Downloading...' : 'Download CSV'}
+      </button>
+      {message && <p className='success'>{message}</p>}
+      {error && <p className='error'>{error}</p>}
     </div>
   )
 }

@@ -6,14 +6,14 @@ const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <div className="landing-body">
-        <section className="landing-content">
+      <div className='landing-body'>
+        <section className='landing-content'>
           <h1>Welcome to Adaptive Finance</h1>
           <p>
             Track your gig work activity, view earnings, and export your dataset
             for time-series modeling.
           </p>
-          <div className="button-row">
+          <div className='button-row'>
             <button onClick={() => navigate('/login')}>Login</button>
             <button onClick={() => navigate('/signup')}>Signup</button>
           </div>
