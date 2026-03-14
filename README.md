@@ -1,120 +1,239 @@
-# AI-Driven Risk Aware Micro-Investing Framework for Gig Economy
+# Adaptive Finance - Gig Worker Income Tracker
 
-## Introduction
+A full-stack web application for gig workers to track daily income, manage work data, and export earnings records for financial analysis.
 
-This documentation details the **AI-Driven Risk Aware Micro-Investing Framework**, a comprehensive solution designed to address financial instability in the gig economy. The system transforms irregular income streams into actionable financial stability through predictive modeling and an automated decision engine. By leveraging Time-Series Forecasting (SARIMA) and Explainable AI (LLMs), the framework acts as an autonomous financial advisor for gig workers.
+## Overview
 
-## Project Scope
+Adaptive Finance helps gig workers (delivery drivers, couriers, etc.) track their daily work activity across different platforms and generate data exports for personal financial planning. Built with React, Node.js, and MongoDB, the app features a mobile-first responsive design with JWT authentication.
 
-The gig economy is characterized by high income volatility (30-50% monthly variance) and a lack of traditional financial safety nets. This project aims to:
-1.  **Forecast Income**: utilizing historical data to predict near-term earnings.
-2.  **Assess Risk**: Generating real-time financial health scores based on debt, savings, and expenditure.
-3.  **Allocate Funds**: Dynamically routing surplus income into emergency funds, debt repayment, or micro-investments based on a strict priority hierarchy.
+## Features
 
-## System Architecture
+ **User Authentication**
 
-The application implements a microservices-based architecture to decouple reliable financial transaction processing from resource-intensive machine learning tasks.
+- Secure signup and login with JWT tokens
+- Password hashing with bcrypt
+- Protected routes and API endpoints
 
-```mermaid
-graph TD
-    Client[React.js Client] -->|HTTPS/JSON| API[Node.js API Gateway]
-    API -->|Read/Write| DB[(MongoDB Atlas)]
-    
-    subgraph "Inference Engine"
-        API -->|REST API| ML[Python ML Service]
-        ML -->|Data Processing| Forecast[SARIMA & XGBoost]
-        ML -->|Health Check| Scoring[Random Forest Classifier]
-        ML -->|Context Generation| LLM[Generative AI Provider]
-    end
-```
+ **Daily Income Entry**
+
+- Log daily work activity: date, platform, hours worked, orders completed, income
+- 2-month rolling history (editable past dates)
+- Automatic detection of duplicate entries with update confirmation dialog
+- Real-time form validation and error handling
+
+ **Data Management**
+
+- View all logged entries organized by date
+- Edit existing entries with duplicate detection
+- CSV export functionality for financial analysis
+
+ **Mobile-First Design**
+
+- Fully responsive layout (mobile, tablet, desktop)
+- Collapsible hamburger menu for mobile navigation
+- Touch-friendly interface with proper tap targets
+- Keyboard accessible (focus states, ARIA labels)
+
+ **Professional UI**
+
+- Custom CSS design system with variables
+- Smooth animations and transitions
+- Loading states during API calls
+- Error and success message displays
+- Modal dialogs for confirmations
 
 ## Technology Stack
 
 ### Frontend
--   **Framework**: React.js for building dynamic user interfaces.
--   **Component Library**: shadcn/ui for accessible, consistent design patterns.
--   **State Management**: React Context API for application-level state.
+
+- **React 19.2.4** - UI framework
+- **Vite 8.0.0** - Build tool and dev server
+- **React Router 6** - Client-side routing with protected routes
+- **CSS3** - Custom styling with CSS variables (no external libraries)
 
 ### Backend
--   **Runtime**: Node.js with Express.js for scalable API endpoint management.
--   **Database**: MongoDB (Mongoose ODM) for flexible document storage of heterogeneous financial data.
 
-### Machine Learning
--   **Language**: Python 3.9+
--   **Forecasting**: statsmodels (SARIMA), xGBoost.
--   **Classification**: scikit-learn (Random Forest).
--   **Explainability**: Integration with LLM APIs (Gemini/OpenAI) for natural language reasoning.
+- **Node.js + Express** - Server and API
+- **MongoDB + Mongoose** - Database and ODM
+- **bcrypt** - Password hashing
+- **jsonwebtoken (JWT)** - Authentication tokens
+- **dotenv** - Environment configuration
 
-## Logic Flow
+## Project Structure
 
-The core decision-making process follows a deterministic hierarchy to ensure financial safety.
+```
+LYProject/
+├── client/                    # React frontend
+│   ├── src/
+│   │   ├── modules/
+│   │   │   ├── landing/       # Landing page
+│   │   │   ├── auth/          # Login, Signup pages
+│   │   │   ├── data/          # Data entry, Download pages
+│   │   │   └── dashboard/     # Dashboard with routing
+│   │   ├── components/        # Reusable components
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server/                    # Node.js backend
+│   ├── models/
+│   │   ├── User.js            # User schema with bcrypt
+│   │   └── DailyIncomeEntry.js # Income entry schema
+│   ├── controllers/
+│   │   ├── authController.js  # Auth logic
+│   │   └── dataController.js  # Data entry & export logic
+│   ├── middleware/
+│   │   └── authMiddleware.js  # JWT verification
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   └── dataRoutes.js
+│   ├── services/
+│   │   └── csvService.js      # CSV generation utilities
+│   ├── config/
+│   │   └── db.js              # MongoDB connection
+│   ├── seed.js                # Database seeding script
+│   ├── server.js              # Express app entry
+│   └── package.json
+│
+├── data/                      # Data directory
+├── models/                    # ML models (future)
+├── scripts/                   # Utility scripts
+└── README.md
 
-```mermaid
-flowchart TB
-    Input[Incoming Transaction] --> Forecast[Forecast & Volatility Check]
-    Forecast --> Health[Calculate Health Score]
-    Health --> Phase{Determine Phase}
-    
-    Phase -- Score < 30 --> Crisis[Crisis Mode]
-    Phase -- Score 30-60 --> Survival[Survival Mode]
-    Phase -- Score 60-80 --> Stable[Stability Mode]
-    Phase -- Score > 80 --> Growth[Growth Mode]
-    
-    Crisis -->|Action| Alert[Immediate Liquidity Preservation]
-    Survival -->|Action| Essentials[Cover Recurring Expenses]
-    Stable -->|Action| EF[Build Emergency Fund]
-    Growth -->|Action| Invest[Micro-Investment Allocation]
 ```
 
-## Installation and Setup
+## API Endpoints
+
+### Authentication
+
+- `POST /api/auth/signup` - Create new user account
+- `POST /api/auth/login` - Login with email/password
+- `GET /api/auth/profile` - Get logged-in user profile (protected)
+
+### Data Management
+
+- `POST /api/data/entry` - Create or update daily income entry (protected)
+- `GET /api/data/user` - Get all entries for logged-in user (protected)
+- `GET /api/data/export` - Download entries as CSV (protected)
+
+## Getting Started
 
 ### Prerequisites
--   **Node.js**: Version 18.0.0 or higher.
--   **Python**: Version 3.9 or higher.
--   **MongoDB**: Local instance or Atlas connection string.
 
-### 1. Clone the Repository
+- Node.js 16+ and npm
+- MongoDB 4.0+ (local or cloud)
+
+### Installation
+
+1. **Clone the repository**
+
 ```bash
-git clone https://github.com/organization/gig-economy-investing-framework.git
-cd gig-economy-investing-framework
+git clone https://github.com/Ha3ar6ous/adaptivefinance-LYProject.git
+cd LYProject
 ```
 
-### 2. Frontend Configuration
-```bash
-cd frontend
-# Install dependencies
-npm install
+2. **Backend setup**
 
-# Start development server
+```bash
+cd server
+npm install
+cp .env.example .env
+# Edit .env with your MongoDB URI
+node server.js
+```
+
+Backend runs on `http://localhost:5000`
+
+3. **Frontend setup**
+
+```bash
+cd ../client
+npm install
 npm run dev
 ```
-The frontend will be available at `http://localhost:3000`.
 
-### 3. Backend Configuration
+Frontend runs on `http://localhost:5173`
+
+### Database Seeding
+
+Load sample data (40 days of realistic Zomato delivery entries):
+
 ```bash
-cd ../backend
-# Install dependencies
-npm install
-
-# Configure environment variables
-cp .env.example .env
-# Edit .env to include your MONGODB_URI
-
-# Start backend server
-npm run start
+cd server
+node seed.js
 ```
-The API server will run on `http://localhost:5000`.
 
-### 4. Machine Learning Service
+**Test Credentials:**
+
+- Email: `rahul@example.com`
+- Password: `password123`
+
+## Usage
+
+1. **Sign up** with email and password
+2. **Log in** to access dashboard
+3. **Enter data** for each working day:
+   - Select date (up to 2 months history)
+   - Enter platform (e.g., Zomato, Uber)
+   - Log hours worked, orders completed, income earned
+4. **Update entries** - System detects duplicates and asks for confirmation
+5. **Download CSV** - Export all entries for analysis or other tools
+
+## Sample Data
+
+The seed script populates 40 days of realistic Zomato delivery data:
+
+- **Sundays**: 0 income (rest days)
+- **Working days**: 6-14 hours, 8-25 orders, ₹40-80 per order
+- **Sample earnings**: ₹31,953 over 32 working days
+
+## Error Handling
+
+- Form validation with user-friendly error messages
+- Duplicate entry detection with explicit confirmation dialog
+- Loading states during API calls
+- Network error handling with clear feedback
+- Protected routes redirect unauthorized users to login
+
+## Future Enhancements
+
+- [ ] Income forecasting with SARIMA
+- [ ] Financial health scoring
+- [ ] Automated savings recommendations
+- [ ] Data visualization (charts, graphs)
+- [ ] Dark mode support
+- [ ] Multi-platform support (mobile app)
+- [ ] Expense tracking
+- [ ] Budget management
+
+## Testing
+
+Manual testing credentials in seeded database:
+
+```
+Email: rahul@example.com
+Password: password123
+```
+
+Browser DevTools recommended for testing responsive design and mobile features.
+
+## Development
+
 ```bash
-cd ../ml
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+# Start both servers in parallel
+# Terminal 1: Backend
+cd server && npm start
 
-# Install requirements
-pip install -r requirements.txt
-
-# Start Flask inference service
-python app.py
+# Terminal 2: Frontend
+cd client && npm run dev
 ```
+
+## License
+
+MIT License - See LICENSE file for details
+
+## Author
+
+Ritesh (Ha3ar6ous)
