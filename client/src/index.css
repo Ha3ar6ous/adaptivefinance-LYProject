@@ -1,0 +1,73 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #f5f7ff;
+  color: #1f2937;
+}
+#root {
+  min-height: 100vh;
+}
+
+.page-container {
+  width: min(720px, 92vw);
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.8rem;
+}
+
+button {
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover { opacity: 0.9; }
+
+.form { display: flex; flex-direction: column; gap: 0.6rem; }
+.form label { display: flex; flex-direction: column; gap: 0.25rem; font-weight: 500; }
+.form input { padding: 0.45rem; border: 1px solid #cbd5e1; border-radius: 4px; }
+
+.dashboard-layout { width: min(1100px, 96vw); margin: 1rem auto; display: grid; grid-template-columns: 220px 1fr; gap: 1rem; }
+.sidebar { background: #fff; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 8px; }
+.sidebar nav { display: grid; gap: 0.3rem; margin-bottom: 1rem; }
+.sidebar a { color: #111827; text-decoration: none; font-weight: 500; }
+.sidebar a.active { color: #2563eb; }
+.dashboard-content { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; }
+
+.error { color: #b91c1c; }
+.success { color: #047857; }
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+.logo { font-weight: 700; cursor: pointer; }
+.nav-actions { display: flex; gap: 0.5rem; }
+.nav-actions button { border: 1px solid #fff; color: #fff; background: #1f2937; }
+
+.landing-body { width: min(900px, 92vw); margin: 2rem auto; }
+.landing-content { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.2rem; }
+
+.landing-content p { color: #334155; margin-bottom: 1rem; }
+
+.dashboard-layout-full { display: grid; grid-template-columns: 260px 1fr; min-height: calc(100vh - 0px); }
+.sidebar-full { background: #fff; border-right: 1px solid #e2e8f0; padding: 1rem; display: flex; flex-direction: column; }
+.sidebar-header { margin-bottom: 0.8rem; }
+.sidebar-nav { display: grid; gap: 0.4rem; margin-bottom: 1rem; }
+.sidebar-nav a { color: #111827; text-decoration: none; padding: 0.4rem 0.25rem; border-radius: 5px; }
+.sidebar-nav a.active { background: #eef2ff; color: #1d4ed8; }
+
+.dashboard-content-full { padding: 1rem; background: #fff; }
