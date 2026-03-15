@@ -25,7 +25,11 @@ const LoginPage = () => {
         return
       }
       localStorage.setItem('token', data.token)
-      navigate('/dashboard')
+      if (data.user.hasCompletedOnboarding) {
+        navigate('/dashboard')
+      } else {
+        navigate('/onboarding')
+      }
     } catch (err) {
       setError('An error occurred. Please try again.')
       setLoading(false)

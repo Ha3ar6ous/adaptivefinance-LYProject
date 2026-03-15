@@ -9,6 +9,7 @@ import DownloadData from './modules/data/DownloadData'
 import Route1 from './modules/dashboard/Route1'
 import Route2 from './modules/dashboard/Route2'
 import Route3 from './modules/dashboard/Route3'
+import OnboardingPage from './modules/onboarding/OnboardingPage'
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem('token')
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' element={<LandingPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<SignupPage />} />
+        <Route path='/onboarding' element={<PrivateRoute><OnboardingPage /></PrivateRoute>} />
         <Route
           path='/dashboard'
           element={

@@ -1,9 +1,31 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false)
+  const [user, setUser] = useState(null)
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const token = localStorage.getItem('token')
+        const res = await fetch('http://localhost:5000/api/auth/profile', {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        if (res.ok) {
+          const data = await res.json()
+          setUser(data.user)
+        }
+      } catch (err) {
+        console.error('Failed to fetch profile', err)
+      }
+    }
+    fetchProfile()
+  }, [])
+
   const handleLogout = () => {
     localStorage.removeItem('token')
     navigate('/')
@@ -33,6 +55,14 @@ const Dashboard = () => {
             ✕
           </button>
         </div>
+        
+        {user && (
+          <div style={{ padding: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', marginBottom: '1rem' }}>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: '#ccc' }}>Welcome back,</p>
+            <p style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold' }}>{user.name}</p>
+          </div>
+        )}
+
         <nav className='sidebar-nav'>
           <NavLink to='enter-data' onClick={() => setOpen(false)}>
             Enter Your Data
@@ -55,7 +85,7 @@ const Dashboard = () => {
         </button>
       </aside>
       <main className='dashboard-content-full'>
-        <Outlet />
+        <Outlet context={{ user }} />
       </main>
     </div>
   )

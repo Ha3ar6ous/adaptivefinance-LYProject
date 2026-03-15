@@ -32,7 +32,7 @@ exports.signup = async (req, res) => {
       .status(201)
       .json({
         token,
-        user: { id: user._id, name: user.name, email: user.email },
+        user: { id: user._id, name: user.name, email: user.email, hasCompletedOnboarding: user.hasCompletedOnboarding },
       })
   } catch (error) {
     console.error('Signup error', error)
@@ -62,7 +62,7 @@ exports.login = async (req, res) => {
     const token = generateToken(user)
     res.json({
       token,
-      user: { id: user._id, name: user.name, email: user.email },
+      user: { id: user._id, name: user.name, email: user.email, hasCompletedOnboarding: user.hasCompletedOnboarding },
     })
   } catch (error) {
     console.error('Login error', error)
@@ -76,4 +76,30 @@ exports.getProfile = async (req, res) => {
   }
   const user = await User.findById(req.user.id).select('-password')
   res.json({ user })
+}
+
+exports.completeOnboarding = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ message: 'Unauthorized' })
+  }
+  try {
+    const { bankBalance, monthlyExpenses, debts, investments } = req.body
+
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      {
+        bankBalance: Number(bankBalance) || 0,
+        monthlyExpenses: Number(monthlyExpenses) || 0,
+        debts: Number(debts) || 0,
+        investments: Number(investments) || 0,
+        hasCompletedOnboarding: true,
+      },
+      { new: true }
+    ).select('-password')
+
+    res.json({ user })
+  } catch (error) {
+    console.error('Onboarding error', error)
+    res.status(500).json({ message: 'Server error' })
+  }
 }

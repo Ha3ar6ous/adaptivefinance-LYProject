@@ -18,6 +18,26 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    hasCompletedOnboarding: {
+      type: Boolean,
+      default: false,
+    },
+    bankBalance: {
+      type: Number,
+      default: 0,
+    },
+    monthlyExpenses: {
+      type: Number,
+      default: 0,
+    },
+    debts: {
+      type: Number,
+      default: 0,
+    },
+    investments: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true },
 )

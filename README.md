@@ -131,7 +131,7 @@ LYProject/
 
 ```bash
 git clone https://github.com/Ha3ar6ous/adaptivefinance-LYProject.git
-cd LYProject
+cd adaptivefinance-LYProject
 ```
 
 2. **Backend setup**
@@ -141,7 +141,12 @@ cd server
 npm install
 cp .env.example .env
 # Edit .env with your MongoDB URI
-node server.js
+
+# Run production server
+npm start
+
+# OR run development server with nodemon (auto-restarts on changes)
+npm run dev
 ```
 
 Backend runs on `http://localhost:5000`
@@ -224,7 +229,7 @@ Browser DevTools recommended for testing responsive design and mobile features.
 ```bash
 # Start both servers in parallel
 # Terminal 1: Backend
-cd server && npm start
+cd server && npm run dev
 
 # Terminal 2: Frontend
 cd client && npm run dev
