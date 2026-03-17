@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { FiActivity, FiShield, FiTrendingUp } from 'react-icons/fi'
 import Navbar from '../../components/Navbar'
 
 const LandingPage = () => {
@@ -7,15 +8,34 @@ const LandingPage = () => {
     <>
       <Navbar />
       <div className='landing-body'>
-        <section className='landing-content'>
-          <h1>Welcome to Adaptive Finance</h1>
-          <p>
-            Track your gig work activity, view earnings, and export your dataset
-            for time-series modeling.
-          </p>
-          <div className='button-row'>
-            <button onClick={() => navigate('/login')}>Login</button>
-            <button onClick={() => navigate('/signup')}>Signup</button>
+        <section className='landing-hero-layout'>
+          <div className='hero-left'>
+            <p className='eyebrow'>Adaptive Finance</p>
+            <h1>
+              AI-Driven Risk Aware Micro-Investing Framework for Gig Economy
+            </h1>
+            <p className='hero-subtitle'>
+              Build resilience with AI-backed income forecasting, risk-aware
+              health scoring, and practical micro-investing guidance for gig
+              workers.
+            </p>
+            <ul className='hero-list'>
+              <li>
+                <FiActivity /> Track daily income and short-term forecasts
+              </li>
+              <li>
+                <FiShield /> Understand your risk and financial health
+              </li>
+              <li>
+                <FiTrendingUp /> Get recommended micro-investment actions
+              </li>
+            </ul>
+          </div>
+          <div className='hero-right'>
+            <img
+              src='/src/assets/hero.avif'
+              alt='Gig economy financial management'
+            />
           </div>
         </section>
       </div>

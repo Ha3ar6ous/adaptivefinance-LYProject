@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FiEdit3 } from 'react-icons/fi'
 
 const EnterData = () => {
   const [date, setDate] = useState(new Date().toISOString().split('T')[0])
@@ -40,7 +41,8 @@ const EnterData = () => {
       const userRes = await fetch('http://localhost:5000/api/data/user', {
         headers: { Authorization: `Bearer ${token}` },
       })
-      const entries = await userRes.json()
+      const data = await userRes.json()
+      const entries = data.entries || []
 
       const existing = entries.find((e) => e.date === date)
 
@@ -121,7 +123,17 @@ const EnterData = () => {
 
   return (
     <div>
-      <h3>Enter Your Data</h3>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.4rem',
+          marginBottom: '0.5rem',
+        }}
+      >
+        <FiEdit3 />
+        <h3 style={{ margin: 0 }}>Enter Your Data</h3>
+      </div>
       {showConfirm && existingEntry && (
         <div className='confirmation-dialog'>
           <div className='dialog-content'>

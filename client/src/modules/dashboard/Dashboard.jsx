@@ -12,8 +12,8 @@ const Dashboard = () => {
         const token = localStorage.getItem('token')
         const res = await fetch('http://localhost:5000/api/auth/profile', {
           headers: {
-            Authorization: `Bearer ${token}`
-          }
+            Authorization: `Bearer ${token}`,
+          },
         })
         if (res.ok) {
           const data = await res.json()
@@ -55,11 +55,21 @@ const Dashboard = () => {
             ✕
           </button>
         </div>
-        
+
         {user && (
-          <div style={{ padding: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', marginBottom: '1rem' }}>
-            <p style={{ margin: 0, fontSize: '0.9rem', color: '#ccc' }}>Welcome back,</p>
-            <p style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold' }}>{user.name}</p>
+          <div
+            style={{
+              padding: '1rem',
+              borderBottom: '1px solid rgba(255,255,255,0.1)',
+              marginBottom: '1rem',
+            }}
+          >
+            <p style={{ margin: 0, fontSize: '0.9rem', color: '#ccc' }}>
+              Welcome back,
+            </p>
+            <p style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold' }}>
+              {user.name}
+            </p>
           </div>
         )}
 
@@ -85,6 +95,23 @@ const Dashboard = () => {
         </button>
       </aside>
       <main className='dashboard-content-full'>
+        <header className='dashboard-topbar'>
+          <div>
+            <h2>Dashboard Overview</h2>
+            <p>Insights and recommended actions for your gig finances.</p>
+          </div>
+          {user && (
+            <div className='user-chip'>
+              <span className='user-icon'>👤</span>
+              <div>
+                <p style={{ margin: 0, fontSize: '0.75rem', color: '#555' }}>
+                  Hello,
+                </p>
+                <p style={{ margin: 0, fontWeight: '700' }}>{user.name}</p>
+              </div>
+            </div>
+          )}
+        </header>
         <Outlet context={{ user }} />
       </main>
     </div>

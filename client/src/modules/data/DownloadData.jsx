@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FiDownload } from 'react-icons/fi'
 
 const DownloadData = () => {
   const [message, setMessage] = useState('')
@@ -26,17 +27,34 @@ const DownloadData = () => {
         setLoading(false)
         return
       }
-      const blob = await res.blob()
+      
+      const csvText = await res.text()
+      
+      // Basic check: if only header is present, rows will be 1
+      const rows = csvText.trim().split('\n')
+      if (rows.length <= 1) {
+        setError('No data found to export. Please add some entries first.')
+        setLoading(false)
+        return
+      }
+
+      const blob = new Blob([csvText], { type: 'text/csv;charset=utf-8;' })
       const url = window.URL.createObjectURL(blob)
       const link = document.createElement('a')
       link.href = url
-      link.download = 'daily_income.csv'
+      link.setAttribute('download', 'daily_income.csv')
       document.body.appendChild(link)
       link.click()
-      link.remove()
-      window.URL.revokeObjectURL(url)
+      
+      // Cleanup
+      setTimeout(() => {
+        document.body.removeChild(link)
+        window.URL.revokeObjectURL(url)
+      }, 100)
+
       setMessage('CSV downloaded successfully!')
     } catch (err) {
+      console.error(err)
       setError('Error downloading CSV')
     } finally {
       setLoading(false)
@@ -45,7 +63,17 @@ const DownloadData = () => {
 
   return (
     <div>
-      <h3>Download Your Data</h3>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.4rem',
+          marginBottom: '0.5rem',
+        }}
+      >
+        <FiDownload />
+        <h3 style={{ margin: 0 }}>Download Your Data</h3>
+      </div>
       <button onClick={handleDownload} disabled={loading}>
         {loading ? 'Downloading...' : 'Download CSV'}
       </button>
