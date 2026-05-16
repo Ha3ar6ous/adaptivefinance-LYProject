@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { FiZap } from 'react-icons/fi'
 
 const LoginPage = () => {
   const [email, setEmail] = useState('')
@@ -37,9 +38,13 @@ const LoginPage = () => {
   }
 
   return (
-    <div className='page-container'>
-      <h1>Login</h1>
-      <form className='form' onSubmit={handleSubmit}>
+    <div className='landing-body' style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div className='bento-item' style={{ width: '100%', maxWidth: '420px', margin: '0 auto', padding: '2rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+          <span className='badge badge-dark'><FiZap /> Freelancer Portal</span>
+        </div>
+        <h1 style={{ marginBottom: '1.5rem', textAlign: 'center', fontSize: '1.8rem' }}>Welcome Back</h1>
+        <form className='form' onSubmit={handleSubmit}>
         <label>
           Email
           <input
@@ -60,11 +65,15 @@ const LoginPage = () => {
             required
           />
         </label>
-        <button type='submit' disabled={loading}>
+        <button type='submit' className='accent-cta' disabled={loading} style={{ marginTop: '0.5rem', padding: '0.75rem', width: '100%' }}>
           {loading ? 'Logging in...' : 'Login'}
         </button>
       </form>
       {error && <p className='error'>{error}</p>}
+      <p style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.9rem', color: '#555' }}>
+        Don't have an account? <span style={{ color: '#111', fontWeight: 'bold', cursor: 'pointer' }} onClick={() => navigate('/signup')}>Sign up</span>
+      </p>
+      </div>
     </div>
   )
 }
