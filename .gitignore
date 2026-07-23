@@ -28,15 +28,10 @@ dist/
 *.seed
 *.pid.lock
 
-# ML / Data specific
-data/*.csv
-data/*.parquet
-data/*.pkl
-data/*.h5
+# ML Models (generated)
 models/*.h5
 models/*.pt
 models/*.onnx
-!data/.gitkeep
 
 # Environment variables
 .env.local
