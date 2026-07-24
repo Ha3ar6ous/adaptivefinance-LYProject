@@ -1,5 +1,6 @@
 const DailyIncomeEntry = require('../models/DailyIncomeEntry')
 const { createCsvFromEntries } = require('../services/csvService')
+const { runAnalyticsForUser } = require('./analyticsController')
 
 const normalizeToDateOnlyUTC = (value) => {
   if (!value) {
@@ -68,6 +69,10 @@ exports.createOrUpdateEntry = async (req, res) => {
       payload,
       { new: true, upsert: true, setDefaultsOnInsert: true },
     )
+
+    runAnalyticsForUser(userId).catch((err) => {
+      console.error('analytics refresh failed', err.message)
+    })
 
     return res.status(200).json({ entry })
   } catch (err) {
