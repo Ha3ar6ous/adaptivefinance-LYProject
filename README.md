@@ -222,6 +222,13 @@ Email: rahul@example.com
 Password: password123
 ```
 
+or latest one 
+
+```
+Email: chamundaki@gmail.com
+Password: password
+```
+
 Browser DevTools recommended for testing responsive design and mobile features.
 
 ## Development
