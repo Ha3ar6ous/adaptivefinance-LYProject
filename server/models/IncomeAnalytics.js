@@ -30,6 +30,17 @@ const incomeAnalyticsSchema = new mongoose.Schema(
       note: { type: String, default: '' },
       generatedAt: { type: Date },
     },
+    health: {
+      score: { type: Number, default: 0 },
+      phase: { type: String, default: 'crisis' },
+      factors: { type: mongoose.Schema.Types.Mixed, default: {} },
+      generatedAt: { type: Date },
+    },
+    router: {
+      summary: { type: String, default: '' },
+      actions: { type: [mongoose.Schema.Types.Mixed], default: [] },
+      generatedAt: { type: Date },
+    },
     entryCount: { type: Number, default: 0 },
     status: {
       type: String,
@@ -42,4 +53,3 @@ const incomeAnalyticsSchema = new mongoose.Schema(
 )
 
 module.exports = mongoose.model('IncomeAnalytics', incomeAnalyticsSchema)
-

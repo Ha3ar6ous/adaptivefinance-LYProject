@@ -81,13 +81,13 @@ const Dashboard = () => {
             Download Your Data
           </NavLink>
           <NavLink to='route1' onClick={() => setOpen(false)}>
-            Route 1
+            Income History
           </NavLink>
           <NavLink to='route2' onClick={() => setOpen(false)}>
-            Route 2
+            Forecasts
           </NavLink>
           <NavLink to='route3' onClick={() => setOpen(false)}>
-            Route 3
+            Health & Decisions
           </NavLink>
         </nav>
         <button className='logout' onClick={handleLogout}>
