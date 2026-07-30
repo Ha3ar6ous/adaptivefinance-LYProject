@@ -3,6 +3,7 @@ const IncomeAnalytics = require('../models/IncomeAnalytics')
 const User = require('../models/User')
 const { buildDecisionRouter } = require('../services/decisionRouterService')
 const { calculateHealthScore } = require('../services/healthScoreService')
+const { refreshInvestmentSuggestionForUser } = require('../services/investmentEngineService')
 const { analyzeIncome } = require('../services/mlService')
 
 const buildStatus = (entries, result) => {
@@ -46,7 +47,7 @@ const runAnalyticsForUser = async (userId) => {
       analytics: baseAnalytics,
     })
 
-    return IncomeAnalytics.findOneAndUpdate(
+    const analytics = await IncomeAnalytics.findOneAndUpdate(
       { userId },
       {
         userId,
@@ -78,6 +79,8 @@ const runAnalyticsForUser = async (userId) => {
       },
       { new: true, upsert: true, setDefaultsOnInsert: true },
     )
+    await refreshInvestmentSuggestionForUser(userId)
+    return analytics
   }
 
   try {
@@ -93,7 +96,7 @@ const runAnalyticsForUser = async (userId) => {
       analytics: result,
     })
 
-    return IncomeAnalytics.findOneAndUpdate(
+    const analytics = await IncomeAnalytics.findOneAndUpdate(
       { userId },
       {
         userId,
@@ -119,6 +122,8 @@ const runAnalyticsForUser = async (userId) => {
       },
       { new: true, upsert: true, setDefaultsOnInsert: true },
     )
+    await refreshInvestmentSuggestionForUser(userId)
+    return analytics
   } catch (err) {
     const baseAnalytics = {
       forecast: {
@@ -145,7 +150,7 @@ const runAnalyticsForUser = async (userId) => {
       analytics: baseAnalytics,
     })
 
-    return IncomeAnalytics.findOneAndUpdate(
+    const analytics = await IncomeAnalytics.findOneAndUpdate(
       { userId },
       {
         userId,
@@ -171,6 +176,8 @@ const runAnalyticsForUser = async (userId) => {
       },
       { new: true, upsert: true, setDefaultsOnInsert: true },
     )
+    await refreshInvestmentSuggestionForUser(userId)
+    return analytics
   }
 }
 

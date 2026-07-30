@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { FiActivity, FiHome, FiRefreshCw, FiShield, FiTrendingUp } from 'react-icons/fi'
+import InvestmentSuggestions from '../../components/InvestmentSuggestions'
 import ScoreGauge from '../../components/charts/ScoreGauge'
-import { getAnalytics, runAnalytics } from '../../services/analyticsApi'
+import { getAnalytics, getInvestmentSuggestion, runAnalytics } from '../../services/analyticsApi'
 
 const cardStyle = { padding: '1.5rem', background: 'rgba(255, 255, 255, 0.6)' }
 
 const DashboardHome = () => {
   const { user } = useOutletContext() || {}
   const [analytics, setAnalytics] = useState(null)
+  const [investment, setInvestment] = useState(null)
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState('')
@@ -16,7 +18,12 @@ const DashboardHome = () => {
   const loadAnalytics = async () => {
     try {
       setError('')
-      setAnalytics(await getAnalytics())
+      const [analyticsData, investmentData] = await Promise.all([
+        getAnalytics(),
+        getInvestmentSuggestion(),
+      ])
+      setAnalytics(analyticsData)
+      setInvestment(investmentData)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -28,7 +35,10 @@ const DashboardHome = () => {
     try {
       setRefreshing(true)
       setError('')
-      setAnalytics(await runAnalytics())
+      const analyticsData = await runAnalytics()
+      const investmentData = await getInvestmentSuggestion()
+      setAnalytics(analyticsData)
+      setInvestment(investmentData)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -117,6 +127,11 @@ const DashboardHome = () => {
           <p style={{ margin: '0.5rem 0 0', color: '#666', fontWeight: 500 }}>
             {analytics?.router?.summary || `${analytics?.entryCount || 0} entries analyzed`}
           </p>
+        </div>
+
+        <div className='bento-item' style={cardStyle}>
+          <h3 style={{ marginTop: 0 }}>Investment Suggestion</h3>
+          <InvestmentSuggestions investment={investment} compact />
         </div>
       </div>
     </div>

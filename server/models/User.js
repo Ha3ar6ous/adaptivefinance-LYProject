@@ -38,6 +38,11 @@ const userSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    riskPreference: {
+      type: String,
+      enum: ['low', 'medium', 'high'],
+      default: 'low',
+    },
   },
   { timestamps: true },
 )

@@ -5,6 +5,7 @@ const connectDB = require('./config/db')
 const authRoutes = require('./routes/authRoutes')
 const dataRoutes = require('./routes/dataRoutes')
 const analyticsRoutes = require('./routes/analyticsRoutes')
+const investmentRoutes = require('./routes/investmentRoutes')
 
 const app = express()
 
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes)
 app.use('/api/data', dataRoutes)
 app.use('/api/analytics', analyticsRoutes)
+app.use('/api/investments', investmentRoutes)
 
 app.get('/api/test', (req, res) => {
   res.json({ message: 'API working correctly' })

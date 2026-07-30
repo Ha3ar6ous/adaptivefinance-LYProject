@@ -7,10 +7,10 @@ import SignupPage from './modules/auth/SignupPage'
 import Dashboard from './modules/dashboard/Dashboard'
 import DashboardHome from './modules/dashboard/DashboardHome'
 import EnterData from './modules/data/EnterData'
-import DownloadData from './modules/data/DownloadData'
 import Route1 from './modules/dashboard/Route1'
 import Route2 from './modules/dashboard/Route2'
 import Route3 from './modules/dashboard/Route3'
+import InvestmentEngine from './modules/dashboard/InvestmentEngine'
 import OnboardingPage from './modules/onboarding/OnboardingPage'
 
 const PrivateRoute = ({ children }) => {
@@ -100,10 +100,10 @@ function App() {
             >
               <Route index element={<DashboardHome />} />
               <Route path='enter-data' element={<EnterData />} />
-              <Route path='download-data' element={<DownloadData />} />
               <Route path='route1' element={<Route1 />} />
               <Route path='route2' element={<Route2 />} />
               <Route path='route3' element={<Route3 />} />
+              <Route path='investments' element={<InvestmentEngine />} />
             </Route>
           </Routes>
         </div>

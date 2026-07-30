@@ -77,9 +77,6 @@ const Dashboard = () => {
           <NavLink to='enter-data' onClick={() => setOpen(false)}>
             Enter Your Data
           </NavLink>
-          <NavLink to='download-data' onClick={() => setOpen(false)}>
-            Download Your Data
-          </NavLink>
           <NavLink to='route1' onClick={() => setOpen(false)}>
             Income History
           </NavLink>
@@ -88,6 +85,9 @@ const Dashboard = () => {
           </NavLink>
           <NavLink to='route3' onClick={() => setOpen(false)}>
             Health & Decisions
+          </NavLink>
+          <NavLink to='investments' onClick={() => setOpen(false)}>
+            Investment Suggestions
           </NavLink>
         </nav>
         <button className='logout' onClick={handleLogout}>

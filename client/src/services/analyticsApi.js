@@ -32,3 +32,21 @@ export const getChartData = async () => {
   return data
 }
 
+export const getInvestmentSuggestion = async () => {
+  const res = await fetch(`${API_BASE}/investments/me`, {
+    headers: authHeaders(),
+  })
+  const data = await res.json()
+  if (!res.ok) throw new Error(data.message || 'Unable to load investments')
+  return data.investment
+}
+
+export const runInvestmentSuggestion = async () => {
+  const res = await fetch(`${API_BASE}/investments/run`, {
+    method: 'POST',
+    headers: authHeaders(),
+  })
+  const data = await res.json()
+  if (!res.ok) throw new Error(data.message || 'Unable to refresh investments')
+  return data.investment
+}
