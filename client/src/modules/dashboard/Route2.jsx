@@ -31,28 +31,30 @@ const Route2 = () => {
   const forecastTotal = (data?.forecast || []).reduce((sum, point) => sum + Number(point.income || 0), 0)
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-      <h3 style={{ margin: 0 }}>Forecast And Model Output</h3>
+    <div className='dashboard-stack'>
+      <h3 className='page-title'>Forecast And Model Output</h3>
       {error && <p className='error'>{error}</p>}
 
-      <div className='bento-item' style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.65)' }}>
+      <div className='dashboard-panel'>
         <h4>Forecast income</h4>
         <AiInlineNote label='Forecast read'>{explanation?.forecastInsight}</AiInlineNote>
-        <SimpleLineChart data={data?.forecast || []} color='#111' />
-        <p style={{ color: '#666' }}>Forecast total: Rs {Math.round(forecastTotal).toLocaleString('en-IN')}</p>
+        <SimpleLineChart data={data?.forecast || []} />
+        <p className='muted-copy'>Forecast total: Rs {Math.round(forecastTotal).toLocaleString('en-IN')}</p>
       </div>
 
-      <div className='bento-item' style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.65)' }}>
+      <div className='dashboard-panel'>
         <h4>Recent actual + forecast</h4>
-        <SimpleBarChart data={comparison} color='#333' />
+        <SimpleBarChart data={comparison} />
       </div>
 
-      <div className='bento-item' style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.65)' }}>
+      <div className='dashboard-panel'>
         <h4>Volatility output</h4>
         <AiInlineNote label='Risk read'>{explanation?.decisionInsight}</AiInlineNote>
-        <p style={{ textTransform: 'capitalize' }}>Label: {data?.volatility?.label || 'unknown'}</p>
-        <p>Score: {data?.volatility?.score ?? 0}</p>
-        <p>CV: {data?.volatility?.features?.coefficientOfVariation ?? 'N/A'}</p>
+        <div className='stats-grid'>
+          <div><span>Label</span><strong className='capitalize'>{data?.volatility?.label || 'unknown'}</strong></div>
+          <div><span>Score</span><strong>{data?.volatility?.score ?? 0}</strong></div>
+          <div><span>CV</span><strong>{data?.volatility?.features?.coefficientOfVariation ?? 'N/A'}</strong></div>
+        </div>
       </div>
     </div>
   )

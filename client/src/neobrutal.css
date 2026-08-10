@@ -1,0 +1,191 @@
+/* --- RICH NEOBRUTAL OVERRIDES --- */
+:root {
+  --bg: #F5F7F6;
+  --panel: #FFFFFF;
+  --panel-soft: #FFFFFF;
+  --border: #0B2519;
+  --border-soft: #0B2519;
+  --text: #0B2519;
+  --muted: #425B51;
+  --primary: #12452F;
+  --primary-deep: #092B1C;
+  --cta: #12452F;
+  --danger: #9B2C2C;
+  --success: #1E4F39;
+  --warning: #B7791F;
+  --chart-line: #12452F;
+  --chart-bar: #388A6B;
+  --radius: 8px;
+  
+  /* Smoothened Neobrutal Shadows */
+  --shadow-sm: 2px 2px 0px rgba(11, 37, 25, 0.95);
+  --shadow-md: 4px 4px 0px rgba(11, 37, 25, 0.95);
+  --shadow-lg: 6px 6px 0px rgba(11, 37, 25, 0.95);
+  
+  --shadow-hover: 1px 1px 0px rgba(11, 37, 25, 0.95);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Panel Styles */
+.dashboard-panel, .card, .bento-item, .feature-card, .soft-row, .decision-item, .investment-item, .sidebar-full, .dashboard-content-full {
+  background: var(--panel) !important;
+  border: 2px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-panel:hover, .card:hover, .bento-item:hover, .feature-card:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-color: var(--border) !important;
+}
+
+/* Buttons */
+button, .nav-actions .accent-cta, .nav-actions .secondary-cta, .action-grid button {
+  border: 2px solid var(--border) !important;
+  border-radius: 6px !important;
+  box-shadow: var(--shadow-sm) !important;
+  font-weight: 700 !important;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: all 0.15s ease-out !important;
+  color: #FFFFFF !important;
+  background: var(--primary) !important;
+}
+
+button:hover, .nav-actions .accent-cta:hover, .nav-actions .secondary-cta:hover {
+  transform: translate(-1px, -1px) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+button:active, .nav-actions .accent-cta:active, .nav-actions .secondary-cta:active {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 0px 0px 0px transparent !important;
+}
+
+.logout, .nav-actions .secondary-cta {
+  background: #FFF !important;
+  color: var(--text) !important;
+}
+
+/* Inputs */
+.form input {
+  border: 2px solid var(--border) !important;
+  border-radius: 6px !important;
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+  background: #FFF;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: var(--primary) !important;
+  box-shadow: 2px 2px 0px var(--border) !important;
+}
+
+/* User Chips & Elements */
+.user-chip, .status-pill, .tag-row span, .sidebar-user, .badge {
+  border: 2px solid var(--border) !important;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px 0px var(--border) !important;
+  background: #FFF !important;
+  color: var(--text) !important;
+  font-weight: 600;
+}
+
+/* Sidebar Links */
+.sidebar-nav a {
+  border: 2px solid transparent !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+  font-weight: 600 !important;
+}
+
+.sidebar-nav a:hover {
+  border-color: var(--border) !important;
+  box-shadow: 2px 2px 0px var(--border) !important;
+  background: #FFF !important;
+  transform: translate(-2px, -2px) !important;
+}
+
+.sidebar-nav a.active {
+  background: var(--primary) !important;
+  color: #FFF !important;
+  border-color: var(--border) !important;
+  box-shadow: 3px 3px 0px var(--border) !important;
+  transform: translate(-1px, -1px) !important;
+}
+
+.sidebar-nav a.active svg {
+  color: #FFF !important;
+}
+
+/* Charts Enhancement */
+.chart-svg {
+  filter: drop-shadow(0px 2px 4px rgba(11,37,25,0.15));
+}
+
+.chart-svg rect, .chart-svg circle {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  stroke: var(--border);
+  stroke-width: 1.5;
+}
+
+.chart-svg rect:hover, .chart-svg circle:hover {
+  fill: #EAB308 !important; /* Rich gold highlight */
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.chart-svg polyline {
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: drawLine 1.5s ease-out forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.dashboard-topbar {
+  border-bottom: 2px solid var(--border) !important;
+  padding-bottom: 1rem !important;
+}
+
+.ai-insight-strip, .dialog-info {
+  border: 2px solid var(--border) !important;
+  background: #FDF9EB !important; /* Subtle money/gold tint for insights */
+  box-shadow: var(--shadow-sm) !important;
+  border-radius: 6px !important;
+}
+
+.navbar {
+  border-bottom: 2px solid var(--border) !important;
+  box-shadow: 0 4px 0px var(--border) !important;
+  background: #FFF !important;
+}
+
+h1, h2, h3, h4, .dashboard-topbar h2, .welcome-copy h2, .metric-card h4 {
+  color: var(--text) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.metric-card p, .muted-copy, .factor-row p {
+  color: var(--muted) !important;
+  font-weight: 500 !important;
+}

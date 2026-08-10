@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { FiRefreshCw } from 'react-icons/fi'
 import AiInlineNote from '../../components/AiInlineNote'
 import InvestmentSuggestions from '../../components/InvestmentSuggestions'
 import { getAiExplanation } from '../../services/aiApi'
@@ -47,16 +48,18 @@ const InvestmentEngine = () => {
   }, [])
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', alignItems: 'center' }}>
-        <h3 style={{ margin: 0 }}>Investment Suggestions</h3>
-        <button type='button' onClick={refresh} disabled={refreshing} style={{ width: 'auto', padding: '0.55rem 0.8rem' }}>
-          {refreshing ? 'Refreshing...' : 'Refresh'}
+    <div className='dashboard-stack'>
+      <div className='page-head'>
+        <h3 className='page-title'>Investment Suggestions</h3>
+        <button type='button' className='icon-button' onClick={refresh} disabled={refreshing}>
+          <FiRefreshCw /> {refreshing ? 'Refreshing...' : 'Refresh'}
         </button>
       </div>
       {error && <p className='error'>{error}</p>}
       <AiInlineNote label='Investment read'>{explanation?.investmentInsight}</AiInlineNote>
-      {loading ? <p>Loading...</p> : <InvestmentSuggestions investment={investment} />}
+      <div className='dashboard-panel'>
+        {loading ? <p className='muted-copy'>Loading...</p> : <InvestmentSuggestions investment={investment} />}
+      </div>
     </div>
   )
 }

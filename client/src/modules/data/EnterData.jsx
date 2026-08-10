@@ -122,17 +122,12 @@ const EnterData = () => {
   }
 
   return (
-    <div>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.4rem',
-          marginBottom: '0.5rem',
-        }}
-      >
-        <FiEdit3 />
-        <h3 style={{ margin: 0 }}>Enter Your Data</h3>
+    <div className='dashboard-stack'>
+      <div className='page-head'>
+        <div className='title-with-icon'>
+          <FiEdit3 />
+          <h3 className='page-title'>Enter Your Data</h3>
+        </div>
       </div>
       {showConfirm && existingEntry && (
         <div className='confirmation-dialog'>
@@ -168,7 +163,7 @@ const EnterData = () => {
           </div>
         </div>
       )}
-      <form className='form' onSubmit={checkAndSubmit}>
+      <form className='form dashboard-panel form-panel' onSubmit={checkAndSubmit}>
         <label>
           Date
           <input

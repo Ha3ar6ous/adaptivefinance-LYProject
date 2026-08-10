@@ -15,30 +15,30 @@ const Route1 = () => {
   const recent = history.slice(-10).reverse()
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-      <h3 style={{ margin: 0 }}>Income History</h3>
+    <div className='dashboard-stack'>
+      <h3 className='page-title'>Income History</h3>
       {error && <p className='error'>{error}</p>}
 
-      <div className='bento-item' style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.65)' }}>
+      <div className='dashboard-panel'>
         <h4>Daily income line</h4>
-        <SimpleLineChart data={history} color='#111' />
+        <SimpleLineChart data={history} />
       </div>
 
-      <div className='bento-item' style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.65)' }}>
+      <div className='dashboard-panel'>
         <h4>Daily income bars</h4>
-        <SimpleBarChart data={history.slice(-30)} color='#444' />
+        <SimpleBarChart data={history.slice(-30)} />
       </div>
 
-      <div className='bento-item' style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.65)' }}>
+      <div className='dashboard-panel'>
         <h4>Recent entries</h4>
-        <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <div className='table-shell'>
+          <table className='data-table'>
             <tbody>
               {recent.map((entry) => (
                 <tr key={entry.date}>
-                  <td style={{ padding: '0.6rem', borderBottom: '1px solid #ddd' }}>{entry.date}</td>
-                  <td style={{ padding: '0.6rem', borderBottom: '1px solid #ddd' }}>{entry.platform}</td>
-                  <td style={{ padding: '0.6rem', borderBottom: '1px solid #ddd' }}>Rs {entry.income}</td>
+                  <td>{entry.date}</td>
+                  <td>{entry.platform}</td>
+                  <td>Rs {entry.income}</td>
                 </tr>
               ))}
             </tbody>
@@ -50,4 +50,3 @@ const Route1 = () => {
 }
 
 export default Route1
-

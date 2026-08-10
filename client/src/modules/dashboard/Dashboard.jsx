@@ -1,5 +1,25 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
+import {
+  FiBarChart2,
+  FiBriefcase,
+  FiEdit3,
+  FiLogOut,
+  FiMenu,
+  FiPieChart,
+  FiShield,
+  FiTrendingUp,
+  FiUser,
+  FiX,
+} from 'react-icons/fi'
+
+const menuItems = [
+  { to: 'enter-data', label: 'Enter Your Data', icon: FiEdit3 },
+  { to: 'route1', label: 'Income History', icon: FiBarChart2 },
+  { to: 'route2', label: 'Forecasts', icon: FiTrendingUp },
+  { to: 'route3', label: 'Health & Decisions', icon: FiShield },
+  { to: 'investments', label: 'Investment Suggestions', icon: FiPieChart },
+]
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false)
@@ -39,9 +59,7 @@ const Dashboard = () => {
           onClick={() => setOpen((prev) => !prev)}
           aria-label='Toggle menu'
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <FiMenu />
         </button>
       </div>
       <aside className={`sidebar-full ${open ? 'open' : ''}`}>
@@ -52,46 +70,32 @@ const Dashboard = () => {
             onClick={() => setOpen(false)}
             aria-label='Close menu'
           >
-            ✕
+            <FiX />
           </button>
         </div>
 
         {user && (
-          <div
-            style={{
-              padding: '1rem',
-              borderBottom: '1px solid rgba(255,255,255,0.1)',
-              marginBottom: '1rem',
-            }}
-          >
-            <p style={{ margin: 0, fontSize: '0.9rem', color: '#ccc' }}>
-              Welcome back,
-            </p>
-            <p style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold' }}>
-              {user.name}
-            </p>
+          <div className='sidebar-user'>
+            <span className='sidebar-user-icon'>
+              <FiBriefcase />
+            </span>
+            <div>
+              <p>Welcome back</p>
+              <strong>{user.name}</strong>
+            </div>
           </div>
         )}
 
         <nav className='sidebar-nav'>
-          <NavLink to='enter-data' onClick={() => setOpen(false)}>
-            Enter Your Data
-          </NavLink>
-          <NavLink to='route1' onClick={() => setOpen(false)}>
-            Income History
-          </NavLink>
-          <NavLink to='route2' onClick={() => setOpen(false)}>
-            Forecasts
-          </NavLink>
-          <NavLink to='route3' onClick={() => setOpen(false)}>
-            Health & Decisions
-          </NavLink>
-          <NavLink to='investments' onClick={() => setOpen(false)}>
-            Investment Suggestions
-          </NavLink>
+          {menuItems.map(({ to, label, icon: Icon }) => (
+            <NavLink key={to} to={to} onClick={() => setOpen(false)}>
+              <Icon />
+              <span>{label}</span>
+            </NavLink>
+          ))}
         </nav>
         <button className='logout' onClick={handleLogout}>
-          Logout
+          <FiLogOut /> Logout
         </button>
       </aside>
       <main className='dashboard-content-full'>
@@ -102,12 +106,12 @@ const Dashboard = () => {
           </div>
           {user && (
             <div className='user-chip'>
-              <span className='user-icon'>👤</span>
+              <span className='user-icon'>
+                <FiUser />
+              </span>
               <div>
-                <p style={{ margin: 0, fontSize: '0.75rem', color: '#555' }}>
-                  Hello,
-                </p>
-                <p style={{ margin: 0, fontWeight: '700' }}>{user.name}</p>
+                <p>Hello</p>
+                <strong>{user.name}</strong>
               </div>
             </div>
           )}
