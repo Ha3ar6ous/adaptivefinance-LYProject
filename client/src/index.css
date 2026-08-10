@@ -62,8 +62,8 @@ h3 {
   justify-content: space-between;
   align-items: center;
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  
+  -webkit-
   color: #111;
   padding: 0.8rem 1.5rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -836,8 +836,8 @@ button:disabled:hover {
 
 .sidebar-full {
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  
+  -webkit-
   border: 1.5px solid #e6e6e6;
   border-radius: 16px;
   padding: 1.5rem;
@@ -948,8 +948,8 @@ button:disabled:hover {
 .dashboard-content-full {
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  
+  -webkit-
   border: 1.5px solid #e6e6e6;
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
@@ -1832,7 +1832,7 @@ body {
   border: 2px solid var(--border) !important;
   border-radius: var(--radius) !important;
   box-shadow: var(--shadow-sm) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.1s ease-out; will-change: transform;
 }
 
 .dashboard-panel:hover, .card:hover, .bento-item:hover, .feature-card:hover {
@@ -1944,7 +1944,7 @@ button:active, .nav-actions .accent-cta:active, .nav-actions .secondary-cta:acti
 
 .ai-insight-strip, .dialog-info {
   border: 2px solid var(--border) !important;
-  background: #FDF9EB !important; /* Subtle money/gold tint for insights */
+  background: #FFFFFF !important; /* Subtle money/gold tint for insights */
   box-shadow: var(--shadow-sm) !important;
   border-radius: 6px !important;
 }
@@ -1967,3 +1967,17 @@ h1, h2, h3, h4, .dashboard-topbar h2, .welcome-copy h2, .metric-card h4 {
 }
 .chart-svg polyline { stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 10000; stroke-dashoffset: 10000; animation: drawLine 2s ease-out forwards; } @keyframes drawLine { to { stroke-dashoffset: 0; } }
 .dashboard-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(140px, auto); gap: 1.2rem; } .score-panel { grid-column: span 2; grid-row: span 2; display: flex; align-items: center; justify-content: center; } .forecast-panel, .volatility-panel { grid-column: span 1; grid-row: span 1; } .action-panel { grid-column: span 2; grid-row: span 1; } .investment-panel { grid-column: span 4; grid-row: span 1; } .panel-icon-small { display: inline-flex; align-items: center; justify-content: center; width: 2.2rem; height: 2.2rem; border-radius: 6px; background: #E7F8F2; color: var(--primary); border: 1px solid #C9EEE3; } @media (max-width: 900px) { .dashboard-grid { grid-template-columns: repeat(2, 1fr); } .investment-panel { grid-column: span 2; } } @media (max-width: 600px) { .dashboard-grid { grid-template-columns: 1fr; } .score-panel, .forecast-panel, .volatility-panel, .action-panel, .investment-panel { grid-column: span 1; grid-row: span 1; } }
+:root { --accent-grad: linear-gradient(135deg, #12452F, #388A6B) !important; } .progress-track > div { background: var(--accent-grad) !important; }
+@keyframes slideUpFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } } 
+.dashboard-panel { animation: slideUpFade 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; } 
+.bento-grid > :nth-child(1) { animation-delay: 0.05s; } 
+.bento-grid > :nth-child(2) { animation-delay: 0.1s; } 
+.bento-grid > :nth-child(3) { animation-delay: 0.15s; } 
+.bento-grid > :nth-child(4) { animation-delay: 0.2s; } 
+.bento-grid > :nth-child(5) { animation-delay: 0.25s; }
+.dashboard-panel:hover { transform: translateY(-3px); }
+.welcome-panel { background: #FAFCFB !important; border: 2px solid var(--border) !important; }
+.ai-insight-strip { background: #FCFDF5 !important; }
+.panel-header svg, .panel-icon svg { padding: 4px; background: #E8F5EE; border-radius: 4px; color: #12452F; box-shadow: 2px 2px 0px rgba(0,0,0,0.1); }
+.panel-header { align-items: center; }
+.metric-card h4 { color: #12452F !important; }

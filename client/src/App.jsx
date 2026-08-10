@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Navigate, Route, Routes, BrowserRouter, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import { FiTrendingUp, FiActivity, FiZap } from 'react-icons/fi'
@@ -12,6 +13,14 @@ import Route2 from './modules/dashboard/Route2'
 import Route3 from './modules/dashboard/Route3'
 import InvestmentEngine from './modules/dashboard/InvestmentEngine'
 import OnboardingPage from './modules/onboarding/OnboardingPage'
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem('token')
@@ -54,18 +63,14 @@ const GlobalHeader = () => {
 }
 
 const GlobalBackground = () => {
-  const location = useLocation()
-  const shouldAnimate = location.pathname !== '/'
-  
   return (
     <div
-      className={shouldAnimate ? 'animate-bg' : ''}
       style={{
-        position: 'absolute',
+        position: 'fixed',
         inset: 0,
         backgroundImage: `
-          linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
-          linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+          linear-gradient(45deg, transparent 49%, #f0f0f0 49%, #f0f0f0 51%, transparent 51%),
+          linear-gradient(-45deg, transparent 49%, #f0f0f0 49%, #f0f0f0 51%, transparent 51%)
         `,
         backgroundSize: '40px 40px',
         WebkitMaskImage: 'radial-gradient(ellipse 80% 60% at 50% 0%, #000 50%, transparent 100%)',
@@ -81,6 +86,7 @@ const GlobalBackground = () => {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div style={{ position: 'relative', width: '100%', minHeight: '100vh', backgroundColor: '#ffffff' }}>
         <GlobalBackground />
         <div style={{ position: 'relative', zIndex: 1 }}>

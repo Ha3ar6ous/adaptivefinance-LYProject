@@ -92,8 +92,8 @@ const DashboardHome = () => {
 
       <AiInsightStrip explanation={explanation} />
 
-      <div className='dashboard-grid'>
-        <div className='dashboard-panel'>
+      <div className='bento-grid'>
+        <div className='dashboard-panel bento-wide bento-tall' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <ScoreGauge score={analytics?.health?.score || 0} label={analytics?.health?.phase || 'crisis'} />
         </div>
 
@@ -115,7 +115,7 @@ const DashboardHome = () => {
           <p>CV {analytics?.volatility?.features?.coefficientOfVariation ?? 'N/A'}</p>
         </div>
 
-        <div className='dashboard-panel metric-card'>
+        <div className='dashboard-panel metric-card bento-wide'>
           <div className='panel-header'>
             <h3>Next Action</h3>
             <FiActivity />
@@ -124,7 +124,7 @@ const DashboardHome = () => {
           <p>{analytics?.router?.summary || `${analytics?.entryCount || 0} entries analyzed`}</p>
         </div>
 
-        <div className='dashboard-panel'>
+        <div className='dashboard-panel bento-full'>
           <h3>Investment Suggestion</h3>
           <InvestmentSuggestions investment={investment} compact />
         </div>
