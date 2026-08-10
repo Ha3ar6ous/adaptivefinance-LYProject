@@ -1,13 +1,21 @@
 import { useEffect, useState } from 'react'
+import AiInlineNote from '../../components/AiInlineNote'
 import ScoreGauge from '../../components/charts/ScoreGauge'
+import { getAiExplanation } from '../../services/aiApi'
 import { getChartData } from '../../services/analyticsApi'
 
 const Route3 = () => {
   const [data, setData] = useState(null)
+  const [explanation, setExplanation] = useState(null)
   const [error, setError] = useState('')
 
   useEffect(() => {
-    getChartData().then(setData).catch((err) => setError(err.message))
+    Promise.all([getChartData(), getAiExplanation().catch(() => null)])
+      .then(([chartData, aiData]) => {
+        setData(chartData)
+        setExplanation(aiData)
+      })
+      .catch((err) => setError(err.message))
   }, [])
 
   const factors = data?.health?.factors || {}
@@ -20,11 +28,13 @@ const Route3 = () => {
 
       <div className='bento-item' style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.65)' }}>
         <ScoreGauge score={data?.health?.score || 0} label={data?.health?.phase || 'crisis'} />
+        <AiInlineNote label='Health read'>{explanation?.healthInsight}</AiInlineNote>
         <p style={{ color: '#666' }}>{data?.router?.summary || 'Run analytics to generate decisions.'}</p>
       </div>
 
       <div className='bento-item' style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.65)' }}>
         <h4>Decision router</h4>
+        <AiInlineNote label='Decision read'>{explanation?.decisionInsight}</AiInlineNote>
         <div style={{ display: 'grid', gap: '0.75rem' }}>
           {actions.map((action) => (
             <div key={action.key} style={{ padding: '1rem', border: '1px solid #ddd', borderRadius: 8 }}>

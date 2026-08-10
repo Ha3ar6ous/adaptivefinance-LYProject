@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { FiActivity, FiHome, FiRefreshCw, FiShield, FiTrendingUp } from 'react-icons/fi'
+import AiInsightStrip from '../../components/AiInsightStrip'
 import InvestmentSuggestions from '../../components/InvestmentSuggestions'
 import ScoreGauge from '../../components/charts/ScoreGauge'
+import { getAiExplanation } from '../../services/aiApi'
 import { getAnalytics, getInvestmentSuggestion, runAnalytics } from '../../services/analyticsApi'
 
 const cardStyle = { padding: '1.5rem', background: 'rgba(255, 255, 255, 0.6)' }
@@ -11,6 +13,7 @@ const DashboardHome = () => {
   const { user } = useOutletContext() || {}
   const [analytics, setAnalytics] = useState(null)
   const [investment, setInvestment] = useState(null)
+  const [explanation, setExplanation] = useState(null)
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState('')
@@ -22,8 +25,10 @@ const DashboardHome = () => {
         getAnalytics(),
         getInvestmentSuggestion(),
       ])
+      const explanationData = await getAiExplanation().catch(() => null)
       setAnalytics(analyticsData)
       setInvestment(investmentData)
+      setExplanation(explanationData)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -36,9 +41,13 @@ const DashboardHome = () => {
       setRefreshing(true)
       setError('')
       const analyticsData = await runAnalytics()
-      const investmentData = await getInvestmentSuggestion()
+      const [investmentData, explanationData] = await Promise.all([
+        getInvestmentSuggestion(),
+        getAiExplanation().catch(() => null),
+      ])
       setAnalytics(analyticsData)
       setInvestment(investmentData)
+      setExplanation(explanationData)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -84,6 +93,8 @@ const DashboardHome = () => {
       </div>
 
       {error && <p className='error'>{error}</p>}
+
+      <AiInsightStrip explanation={explanation} />
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
         <div className='bento-item' style={cardStyle}>

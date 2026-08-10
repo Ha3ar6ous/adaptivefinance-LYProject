@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
+import AiInlineNote from '../../components/AiInlineNote'
 import InvestmentSuggestions from '../../components/InvestmentSuggestions'
+import { getAiExplanation } from '../../services/aiApi'
 import { getInvestmentSuggestion, runInvestmentSuggestion } from '../../services/analyticsApi'
 
 const InvestmentEngine = () => {
   const [investment, setInvestment] = useState(null)
+  const [explanation, setExplanation] = useState(null)
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState('')
@@ -11,7 +14,12 @@ const InvestmentEngine = () => {
   const load = async () => {
     try {
       setError('')
-      setInvestment(await getInvestmentSuggestion())
+      const [investmentData, aiData] = await Promise.all([
+        getInvestmentSuggestion(),
+        getAiExplanation().catch(() => null),
+      ])
+      setInvestment(investmentData)
+      setExplanation(aiData)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -23,7 +31,10 @@ const InvestmentEngine = () => {
     try {
       setRefreshing(true)
       setError('')
-      setInvestment(await runInvestmentSuggestion())
+      const investmentData = await runInvestmentSuggestion()
+      const aiData = await getAiExplanation().catch(() => null)
+      setInvestment(investmentData)
+      setExplanation(aiData)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -44,10 +55,10 @@ const InvestmentEngine = () => {
         </button>
       </div>
       {error && <p className='error'>{error}</p>}
+      <AiInlineNote label='Investment read'>{explanation?.investmentInsight}</AiInlineNote>
       {loading ? <p>Loading...</p> : <InvestmentSuggestions investment={investment} />}
     </div>
   )
 }
 
 export default InvestmentEngine
-

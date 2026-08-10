@@ -1,6 +1,7 @@
 const DailyIncomeEntry = require('../models/DailyIncomeEntry')
 const IncomeAnalytics = require('../models/IncomeAnalytics')
 const User = require('../models/User')
+const { generateAiExplanationForUser } = require('../services/aiExplanationService')
 const { buildDecisionRouter } = require('../services/decisionRouterService')
 const { calculateHealthScore } = require('../services/healthScoreService')
 const { refreshInvestmentSuggestionForUser } = require('../services/investmentEngineService')
@@ -14,6 +15,14 @@ const buildStatus = (entries, result) => {
     return 'insufficient_data'
   }
   return 'ready'
+}
+
+const refreshAiSafely = async (userId) => {
+  try {
+    await generateAiExplanationForUser(userId)
+  } catch (err) {
+    console.error('AI explanation refresh failed', err.message)
+  }
 }
 
 const runAnalyticsForUser = async (userId) => {
@@ -80,6 +89,7 @@ const runAnalyticsForUser = async (userId) => {
       { new: true, upsert: true, setDefaultsOnInsert: true },
     )
     await refreshInvestmentSuggestionForUser(userId)
+    await refreshAiSafely(userId)
     return analytics
   }
 
@@ -123,6 +133,7 @@ const runAnalyticsForUser = async (userId) => {
       { new: true, upsert: true, setDefaultsOnInsert: true },
     )
     await refreshInvestmentSuggestionForUser(userId)
+    await refreshAiSafely(userId)
     return analytics
   } catch (err) {
     const baseAnalytics = {
@@ -177,6 +188,7 @@ const runAnalyticsForUser = async (userId) => {
       { new: true, upsert: true, setDefaultsOnInsert: true },
     )
     await refreshInvestmentSuggestionForUser(userId)
+    await refreshAiSafely(userId)
     return analytics
   }
 }
