@@ -90,11 +90,18 @@ const DashboardHome = () => {
 
       {error && <p className='error'>{error}</p>}
 
-      <AiInsightStrip explanation={explanation} />
+      {analytics?.status === 'insufficient_data' && (
+        <div className='dashboard-panel' style={{ backgroundColor: '#fef2f2', borderColor: '#f87171', marginBottom: '1.2rem' }}>
+          <h3 style={{ color: '#b91c1c', marginBottom: '0.5rem' }}>Insufficient Data</h3>
+          <p style={{ color: '#991b1b', margin: 0 }}>Please enter at least 3 days of income history to generate your financial health score and insights. Your current score is artificially skewed because there isn't enough data.</p>
+        </div>
+      )}
+
+      {analytics?.status !== 'insufficient_data' && <AiInsightStrip explanation={explanation} />}
 
       <div className='bento-grid'>
         <div className='dashboard-panel bento-wide bento-tall' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <ScoreGauge score={analytics?.health?.score || 0} label={analytics?.health?.phase || 'crisis'} />
+          <ScoreGauge score={analytics?.health?.score || 0} label={analytics?.health?.phase === 'insufficient_data' ? 'Missing Data' : analytics?.health?.phase || 'crisis'} />
         </div>
 
         <div className='dashboard-panel metric-card'>

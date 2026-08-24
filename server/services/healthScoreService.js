@@ -76,10 +76,12 @@ const calculateHealthScore = ({ user, entries, analytics }) => {
     factors.forecastTrend.value * 0.15 +
     factors.dataConsistency.value * 0.1
 
-  const score = Math.round(clamp(weighted))
+  const isInsufficient = !entries || entries.length < 3
+  const score = isInsufficient ? 0 : Math.round(clamp(weighted))
+  
   return {
     score,
-    phase: getPhase(score),
+    phase: isInsufficient ? 'insufficient_data' : getPhase(score),
     factors,
   }
 }

@@ -60,18 +60,17 @@ const OnboardingPage = () => {
   }
 
   return (
-    <div className='page-container' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', backgroundColor: '#f4f5f7' }}>
-      <div style={{ maxWidth: '400px', width: '100%', padding: '2rem', backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
-        <h1 style={{ textAlign: 'center', marginBottom: '1rem' }}>Welcome! Let's get started.</h1>
-        <p style={{ textAlign: 'center', color: '#666', marginBottom: '2rem' }}>Step {step} of 4</p>
+    <div className='landing-body' style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div className='bento-item' style={{ width: '100%', maxWidth: '420px', margin: '0 auto', padding: '2rem' }}>
+        <h1 style={{ marginBottom: '0.5rem', textAlign: 'center', fontSize: '1.8rem' }}>Welcome! Let's get started.</h1>
+        <p style={{ textAlign: 'center', color: '#555', marginBottom: '1.5rem', fontWeight: '600', fontSize: '0.95rem' }}>Step {step} of 4</p>
         
-        {error && <p className='error' style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
+        {error && <p className='error' style={{ color: 'red', textAlign: 'center', marginBottom: '1rem' }}>{error}</p>}
         
-        <form className='form' onSubmit={step === 4 ? handleSubmit : handleNext} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          
+        <form className='form' onSubmit={step === 4 ? handleSubmit : handleNext}>
           {step === 1 && (
-            <div>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Current Bank Balance (₹)</label>
+            <label>
+              Current Bank Balance (₹)
               <input
                 type='number'
                 name='bankBalance'
@@ -79,14 +78,13 @@ const OnboardingPage = () => {
                 onChange={handleChange}
                 placeholder='e.g. 50000'
                 required
-                style={{ width: '100%', padding: '0.75rem', border: '1px solid #ccc', borderRadius: '4px' }}
               />
-            </div>
+            </label>
           )}
 
           {step === 2 && (
-            <div>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Estimated Monthly Expenses (₹)</label>
+            <label>
+              Estimated Monthly Expenses (₹)
               <input
                 type='number'
                 name='monthlyExpenses'
@@ -94,14 +92,13 @@ const OnboardingPage = () => {
                 onChange={handleChange}
                 placeholder='e.g. 20000'
                 required
-                style={{ width: '100%', padding: '0.75rem', border: '1px solid #ccc', borderRadius: '4px' }}
               />
-            </div>
+            </label>
           )}
 
           {step === 3 && (
-            <div>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Total Debts (₹)</label>
+            <label>
+              Total Debts (₹)
               <input
                 type='number'
                 name='debts'
@@ -109,14 +106,13 @@ const OnboardingPage = () => {
                 onChange={handleChange}
                 placeholder='e.g. 10000'
                 required
-                style={{ width: '100%', padding: '0.75rem', border: '1px solid #ccc', borderRadius: '4px' }}
               />
-            </div>
+            </label>
           )}
 
           {step === 4 && (
-            <div>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Total Investments (₹)</label>
+            <label>
+              Total Investments (₹)
               <input
                 type='number'
                 name='investments'
@@ -124,21 +120,20 @@ const OnboardingPage = () => {
                 onChange={handleChange}
                 placeholder='e.g. 150000'
                 required
-                style={{ width: '100%', padding: '0.75rem', border: '1px solid #ccc', borderRadius: '4px' }}
               />
-            </div>
+            </label>
           )}
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1.5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1.5rem', gap: '1rem' }}>
             {step > 1 ? (
-              <button type='button' onClick={handlePrev} style={{ padding: '0.75rem 1.5rem', border: 'none', backgroundColor: '#e2e8f0', color: '#333', borderRadius: '4px', cursor: 'pointer' }}>
+              <button type='button' className='secondary-cta' onClick={handlePrev} style={{ flex: 1, padding: '0.75rem', cursor: 'pointer' }}>
                 Back
               </button>
             ) : (
-              <div></div>
+              <div style={{ flex: 1 }}></div>
             )}
             
-            <button type='submit' disabled={loading} style={{ padding: '0.75rem 1.5rem', border: 'none', backgroundColor: '#007bff', color: '#fff', borderRadius: '4px', cursor: 'pointer' }}>
+            <button type='submit' className='accent-cta' disabled={loading} style={{ flex: 1, padding: '0.75rem', cursor: 'pointer' }}>
               {step === 4 ? (loading ? 'Saving...' : 'Finish') : 'Next'}
             </button>
           </div>
