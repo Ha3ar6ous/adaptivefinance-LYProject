@@ -48,3 +48,29 @@ These two profiles have been seeded into the database to demonstrate how Adaptiv
    - **Income Stability:** Extremely low due to frequent 0-income days.
    - **Decision Router:** Will "Block" investing entirely. Will strongly "Allow" and prioritize debt payoff and liquidity building.
 5. **Investment Suggestions:** Will likely show no viable high-risk investments, suggesting liquid funds or nothing at all until debt is paid.
+
+---
+
+## Profile 3: Vijay Kumar (High Income, High Volatility, High Debt)
+**Email:** "vijay.k@gmail.com"
+**Password:** "password"
+
+### Financial Data:
+- **Bank Balance:** Rs 2,500
+- **Monthly Expenses:** Rs 25,000
+- **Debts:** Rs 800,000
+- **Investments:** Rs 0
+- **Risk Preference:** Low (defaulted)
+- **Income History:** High income but extremely volatile. Misses work frequently (30% of the time, 0 income), earns moderately sometimes (Rs 800 - Rs 1,499), but also has very high income days (Rs 4,000 - Rs 7,999).
+
+### Expected App Behavior:
+1. **Health Score:** Will be relatively low (Crisis or Survival phase) due to the extreme debt and low cash buffer, despite the high income.
+2. **Dashboard Overview:** Will recommend prioritizing cash flow protection and aggressively paying down debt.
+3. **Forecasts:** Will show a high overall projected income but a very high coefficient of variation (High Volatility).
+4. **Health & Decisions:**
+   - **Liquidity (Cash Buffer):** Very poor (Rs 2,500 vs Rs 25,000 expenses).
+   - **Debt Safety:** Critical (Rs 800,000 debt drastically brings down the health score).
+   - **Income Stability:** High volatility.
+   - **Decision Router:** Will "Block" investing because the emergency fund is below 1 month, debt is too high, and income is volatile.
+5. **Investment Suggestions:** Will block investing and advise focusing on safety actions like building an emergency fund first.
+
