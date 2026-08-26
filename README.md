@@ -2,7 +2,7 @@
 
 An intelligent, risk-aware financial platform built for gig workers with irregular incomes. The system tracks daily earnings, forecasts future income, classifies income volatility, computes a weighted financial health score, and runs a rule-based decision engine that determines whether a user is financially ready to invest -- or should focus on safety actions first.
 
-Built as a three-tier microservices architecture: a React 19 frontend, a Node.js/Express API server, and a Python/FastAPI ML inference service.
+Built as a three-tier architecture — a React 19 frontend, a Node.js/Express API server, and a Python/FastAPI ML inference service — this platform helps gig workers make safer financial decisions
 
 ---
 
