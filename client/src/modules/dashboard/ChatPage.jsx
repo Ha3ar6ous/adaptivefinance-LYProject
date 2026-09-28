@@ -61,7 +61,7 @@ const ChatPage = () => {
   }
 
   return (
-    <div className='dashboard-stack' style={{ height: 'calc(100vh - 120px)', display: 'flex', flexDirection: 'column' }}>
+    <div className='dashboard-stack'>
       <div className='page-head' style={{ marginBottom: '1rem' }}>
         <div className='title-with-icon'>
           <FiMessageSquare />
@@ -69,7 +69,7 @@ const ChatPage = () => {
         </div>
       </div>
 
-      <div className='dashboard-panel' style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0 }}>
+      <div className='dashboard-panel' style={{ height: '65vh', minHeight: '500px', display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0 }}>
         
         {/* Messages Area */}
         <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>

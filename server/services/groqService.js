@@ -61,7 +61,7 @@ const callGroqText = async ({ systemPrompt, messages }) => {
   const controller = new AbortController()
   const timeout = setTimeout(
     () => controller.abort(),
-    Number(process.env.GROQ_TIMEOUT_MS || 12000),
+    Number(process.env.GROQ_TIMEOUT_MS || 30000),
   )
 
   try {
