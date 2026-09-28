@@ -71,7 +71,7 @@ const ChatPage = () => {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 180px)', minHeight: '600px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 180px)', minHeight: '600px', minWidth: 0, width: '100%' }}>
       <div className='title-with-icon' style={{ marginBottom: '1rem', flexShrink: 0 }}>
         <FiMessageSquare size={24} />
         <h3 className='page-title' style={{ margin: 0 }}>Talk to Your Data</h3>
@@ -85,17 +85,20 @@ const ChatPage = () => {
         margin: 0, 
         overflow: 'hidden',
         border: '2px solid var(--border)',
-        boxShadow: '4px 4px 0px var(--border)'
+        boxShadow: '4px 4px 0px var(--border)',
+        minWidth: 0,
+        width: '100%'
       }}>
         
         {/* Messages Area */}
-        <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', background: 'var(--bg-body)' }}>
+        <div style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', background: 'var(--bg-body)' }}>
           {messages.map((msg, idx) => (
             <div key={idx} style={{ 
               display: 'flex', 
               gap: '1rem', 
               alignItems: 'flex-start',
-              flexDirection: msg.role === 'user' ? 'row-reverse' : 'row'
+              flexDirection: msg.role === 'user' ? 'row-reverse' : 'row',
+              maxWidth: '100%'
             }}>
               <div style={{
                 background: msg.role === 'user' ? 'var(--primary)' : 'var(--panel)',
@@ -119,6 +122,7 @@ const ChatPage = () => {
                 maxWidth: '85%',
                 boxShadow: msg.role !== 'user' ? '4px 4px 0px var(--border)' : 'none',
                 border: msg.role !== 'user' ? '2px solid var(--border)' : 'none',
+                wordBreak: 'break-word'
               }}>
                 <p style={{ margin: 0, whiteSpace: 'pre-wrap', lineHeight: '1.5' }}>
                   {renderMessageContent(msg.content)}
@@ -140,10 +144,10 @@ const ChatPage = () => {
         </div>
 
         {/* Input Area */}
-        <div style={{ padding: '1rem', borderTop: '2px solid var(--border)', background: 'var(--panel)' }}>
+        <div style={{ padding: '1rem', borderTop: '2px solid var(--border)', background: 'var(--panel)', minWidth: 0, width: '100%', boxSizing: 'border-box' }}>
           
           {/* Quick Prompts */}
-          <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '0.8rem', flexShrink: 0 }}>
+          <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '0.8rem', flexShrink: 0, minWidth: 0, width: '100%' }}>
             {quickPrompts.map((prompt, idx) => (
               <button 
                 key={idx} 
