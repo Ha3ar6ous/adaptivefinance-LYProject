@@ -114,45 +114,46 @@ const fallbackFromSnapshot = (snapshot, error = '') => {
   const direction = forecastDirection(snapshot)
   const tone = score >= 80 ? 'growth' : score >= 60 ? 'safe' : 'caution'
   const nextAction = invest.eligible
-    ? `Start with ${money(invest.topSuggestion?.allocationAmount)} in ${invest.topSuggestion?.name}.`
-    : blockedAction?.reason || allowedAction?.reason || 'Add more income data and keep building your safety buffer.'
+    ? `Since things are looking stable, a great first step is putting ${money(invest.topSuggestion?.allocationAmount)} into ${invest.topSuggestion?.name}.`
+    : blockedAction?.reason || allowedAction?.reason || 'Let\'s keep tracking your income and focus on building up that safety buffer first!'
+  
   const watchOut =
     snapshot.volatility.label === 'high'
-      ? 'Your income is volatile, so keep money liquid and avoid locking away too much at once.'
+      ? 'Your income has been bouncing up and down lately. It\'s best to keep your money easily accessible (liquid) and avoid locking too much away at once.'
       : direction === 'softening'
-        ? 'The forecast looks softer than recent earnings, so avoid increasing fixed commitments right now.'
-        : 'Keep tracking income daily so the guidance stays accurate.'
+        ? 'It looks like your earnings might dip a bit soon. Let\'s hold off on any new fixed expenses for now to stay safe.'
+        : 'Keep logging your daily income! The more you track, the better guidance I can give you.'
 
   return {
     overview: {
-      headline: score >= 70 ? 'Your money plan is in a workable zone.' : 'Your next move should protect cash flow.',
-      summary: `Score ${score} puts you in the ${snapshot.health.phase} phase. The main pressure point is ${factorLabel(weak?.key || 'dataConsistency')}, while income volatility is ${snapshot.volatility.label}.`,
+      headline: score >= 70 ? 'You are doing great! Your money plan is looking solid.' : 'Let\'s focus on protecting your cash flow right now.',
+      summary: `With a score of ${score}, you're currently in the ${snapshot.health.phase} phase. Your main focus area should be ${factorLabel(weak?.key || 'dataConsistency')}, especially since your income volatility is ${snapshot.volatility.label}. Don't worry, we'll take it one step at a time!`,
       nextAction,
     },
     healthInsight: secondWeak
-      ? `Your weakest areas are ${factorLabel(weak?.key)} and ${factorLabel(secondWeak.key)}. Improving these will help more than chasing higher returns.`
-      : `Your score is ${score}. The biggest lever right now is ${factorLabel(weak?.key || 'dataConsistency')}.`,
+      ? `If we can improve your ${factorLabel(weak?.key)} and ${factorLabel(secondWeak.key)}, it will give you a lot more breathing room. Focusing here will help much more than chasing high returns right now.`
+      : `Your overall health score is ${score}. The biggest thing holding you back is ${factorLabel(weak?.key || 'dataConsistency')}, so let's work on that first.`,
     forecastInsight: snapshot.forecast.total
-      ? `Your ${snapshot.forecast.horizon}-day forecast is ${money(snapshot.forecast.total)} and looks ${direction}. Use it to size commitments conservatively.`
-      : 'Add more income entries so the forecast becomes useful.',
+      ? `Based on recent trends, your ${snapshot.forecast.horizon}-day forecast looks to be around ${money(snapshot.forecast.total)}, which is ${direction}. It's a good idea to use this projection to plan your upcoming expenses safely.`
+      : 'Once you add a few more days of income, I\'ll be able to forecast your upcoming earnings!',
     decisionInsight: blockedAction
-      ? `The router is limiting ${blockedAction.label.toLowerCase()} because: ${blockedAction.reason}`
-      : snapshot.router.summary || 'The safety router will unlock actions as your profile improves.',
+      ? `Right now, it's safer to pause on ${blockedAction.label.toLowerCase()} because ${blockedAction.reason.toLowerCase()}.`
+      : snapshot.router.summary || 'As your profile improves, more financial actions will safely unlock for you.',
     investmentInsight: invest.eligible
-      ? `${invest.topSuggestion?.name} is the top match: ${money(invest.topSuggestion?.allocationAmount)} monthly, ${invest.topSuggestion?.liquidity || 'matched'} liquidity, and ${(invest.topSuggestion?.reasonTags || []).slice(0, 2).join(', ') || 'safety-fit tags'}.`
-      : invest.blockedReason || 'Investment suggestions will appear once investing is allowed.',
+      ? `Good news! ${invest.topSuggestion?.name} is a great match for you right now: ${money(invest.topSuggestion?.allocationAmount)} monthly, with ${invest.topSuggestion?.liquidity || 'matched'} liquidity.`
+      : invest.blockedReason || 'I\'ll suggest some safe investments once we get your emergency buffer built up.',
     reasons: [
-      `${factorLabel(weak?.key || 'dataConsistency')} is the lowest health factor`,
-      `Forecast is ${direction}`,
-      invest.eligible ? 'A safe investment path is available' : 'Investing is still gated by safety rules',
+      `${factorLabel(weak?.key || 'dataConsistency')} needs some attention`,
+      `Your earnings trend is currently ${direction}`,
+      invest.eligible ? 'You are in a safe position to start investing' : 'We need to focus on safety before investing',
     ],
     actionPlan: [
       {
-        title: invest.eligible ? 'Invest small' : 'Fix the blocker',
+        title: invest.eligible ? 'Start small with investing' : 'Focus on the basics',
         detail: nextAction,
       },
       {
-        title: 'Protect cash flow',
+        title: 'Protect your cash flow',
         detail: watchOut,
       },
     ],
@@ -181,34 +182,36 @@ const validateExplanation = (value) => {
   }
   return {
     overview: {
-      headline: String(value.overview.headline).slice(0, 120),
-      summary: String(value.overview.summary).slice(0, 260),
-      nextAction: String(value.overview.nextAction).slice(0, 180),
+      headline: String(value.overview.headline).slice(0, 150),
+      summary: String(value.overview.summary).slice(0, 300),
+      nextAction: String(value.overview.nextAction).slice(0, 200),
     },
-    healthInsight: String(value.healthInsight).slice(0, 180),
-    forecastInsight: String(value.forecastInsight).slice(0, 180),
-    decisionInsight: String(value.decisionInsight).slice(0, 180),
-    investmentInsight: String(value.investmentInsight).slice(0, 180),
-    reasons: value.reasons.slice(0, 3).map((reason) => String(reason).slice(0, 140)),
+    healthInsight: String(value.healthInsight).slice(0, 250),
+    forecastInsight: String(value.forecastInsight).slice(0, 250),
+    decisionInsight: String(value.decisionInsight).slice(0, 250),
+    investmentInsight: String(value.investmentInsight).slice(0, 250),
+    reasons: value.reasons.slice(0, 3).map((reason) => String(reason).slice(0, 160)),
     actionPlan: Array.isArray(value.actionPlan)
       ? value.actionPlan.slice(0, 2).map((item) => ({
-          title: String(item?.title || 'Next step').slice(0, 50),
-          detail: String(item?.detail || '').slice(0, 160),
+          title: String(item?.title || 'Next step').slice(0, 80),
+          detail: String(item?.detail || '').slice(0, 200),
         }))
       : [],
-    watchOut: String(value.watchOut || '').slice(0, 160),
+    watchOut: String(value.watchOut || '').slice(0, 200),
     tone: value.tone,
   }
 }
 
 const systemPrompt = [
-  'You are a cautious financial advisor for Indian gig workers.',
+  'You are a friendly, empathetic, and encouraging financial assistant for Indian gig workers.',
   'Use only the JSON values provided. Do not calculate new numbers or invent products.',
   'Do not promise returns. Do not provide legal, tax, or guaranteed financial advice.',
-  'Make the guidance specific: explain what the numbers mean, what tradeoff matters, and what to do next.',
-  'Avoid generic encouragement. Prefer concrete actions around cash buffer, debt, volatility, and small safe investments.',
+  'Speak directly to the user in a warm, conversational, and supportive tone ("you", "we").',
+  'Instead of just stating numbers, explain what they mean for the user\'s daily life in a very simple and insightful way.',
+  'For example, instead of saying "Debt: 800,000 | Phase: Crisis", say something like: "Your debt is taking up a large chunk of your income, making it hard to save. Let\'s focus on building a small safety net first so you aren\'t forced to take on more debt during slow weeks."',
+  'Provide actionable, bite-sized steps without sounding like a strict accountant. Be encouraging!',
   'Return strict JSON with overview, healthInsight, forecastInsight, decisionInsight, investmentInsight, reasons, actionPlan, watchOut, tone.',
-  'Keep every field concise. No field should be more than two short sentences.',
+  'Keep every field concise. No field should be more than two to three short sentences.',
 ].join(' ')
 
 const generateAiExplanationForUser = async (userId, options = {}) => {

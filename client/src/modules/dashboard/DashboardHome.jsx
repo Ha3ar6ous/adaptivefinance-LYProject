@@ -106,11 +106,11 @@ const DashboardHome = () => {
 
         <div className='dashboard-panel metric-card'>
           <div className='panel-header'>
-            <h3>Income Forecast</h3>
+            <h3>Expected Income</h3>
             <FiTrendingUp />
           </div>
           <h4>{forecastSummary.count ? formatMoney(forecastSummary.total) : 'Pending'}</h4>
-          <p>{forecastSummary.count ? `${forecastSummary.count}-day total, avg ${formatMoney(forecastSummary.average)}/day` : 'Awaiting data'}</p>
+          <p style={{ color: 'var(--text-soft)' }}>{forecastSummary.count ? `Over the next ${forecastSummary.count} days (Avg ${formatMoney(forecastSummary.average)}/day)` : 'We need more data to predict your future earnings.'}</p>
         </div>
 
         <div className='dashboard-panel metric-card'>
@@ -119,20 +119,21 @@ const DashboardHome = () => {
             <FiShield />
           </div>
           <h4 className='capitalize'>{analytics?.volatility?.label || 'Unknown'}</h4>
-          <p>CV {analytics?.volatility?.features?.coefficientOfVariation ?? 'N/A'}</p>
+          <p style={{ color: 'var(--text-soft)' }}>This shows how much your daily earnings bounce around.</p>
         </div>
 
         <div className='dashboard-panel metric-card bento-wide'>
           <div className='panel-header'>
-            <h3>Next Action</h3>
+            <h3>Recommended Move</h3>
             <FiActivity />
           </div>
-          <h4 className='metric-title'>{analytics?.router?.actions?.find((action) => action.allowed)?.label || 'Add data'}</h4>
-          <p>{analytics?.router?.summary || `${analytics?.entryCount || 0} entries analyzed`}</p>
+          <h4 className='metric-title'>{analytics?.router?.actions?.find((action) => action.allowed)?.label || 'Keep tracking income'}</h4>
+          <p style={{ color: 'var(--text-soft)' }}>{analytics?.router?.summary || `We've analyzed ${analytics?.entryCount || 0} entries to find the safest next step for you.`}</p>
         </div>
 
         <div className='dashboard-panel bento-full'>
-          <h3>Investment Suggestion</h3>
+          <h3>Your Micro-Investment Match</h3>
+          <p style={{ color: 'var(--text-soft)', marginBottom: '1rem' }}>We match you with bite-sized investments only when it's safe for your cash flow.</p>
           <InvestmentSuggestions investment={investment} compact />
         </div>
       </div>
