@@ -60,14 +60,33 @@ const ChatPage = () => {
     }
   }
 
+  // Simple bold markdown parser
+  const renderMessageContent = (content) => {
+    return content.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={index}>{part.slice(2, -2)}</strong>
+      }
+      return <span key={index}>{part}</span>
+    })
+  }
+
   return (
-    <div style={{ height: '70vh', minHeight: '550px', display: 'flex', flexDirection: 'column' }}>
-      <div className='title-with-icon' style={{ marginBottom: '1rem' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 180px)', minHeight: '600px' }}>
+      <div className='title-with-icon' style={{ marginBottom: '1rem', flexShrink: 0 }}>
         <FiMessageSquare size={24} />
         <h3 className='page-title' style={{ margin: 0 }}>Talk to Your Data</h3>
       </div>
 
-      <div className='dashboard-panel' style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0, margin: 0 }}>
+      <div className='dashboard-panel' style={{ 
+        flex: 1, 
+        display: 'flex', 
+        flexDirection: 'column', 
+        padding: 0, 
+        margin: 0, 
+        overflow: 'hidden',
+        border: '2px solid var(--border)',
+        boxShadow: '4px 4px 0px var(--border)'
+      }}>
         
         {/* Messages Area */}
         <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', background: 'var(--bg-body)' }}>
@@ -101,7 +120,9 @@ const ChatPage = () => {
                 boxShadow: msg.role !== 'user' ? '4px 4px 0px var(--border)' : 'none',
                 border: msg.role !== 'user' ? '2px solid var(--border)' : 'none',
               }}>
-                <p style={{ margin: 0, whiteSpace: 'pre-wrap', lineHeight: '1.5' }}>{msg.content}</p>
+                <p style={{ margin: 0, whiteSpace: 'pre-wrap', lineHeight: '1.5' }}>
+                  {renderMessageContent(msg.content)}
+                </p>
               </div>
             </div>
           ))}
@@ -119,10 +140,10 @@ const ChatPage = () => {
         </div>
 
         {/* Input Area */}
-        <div style={{ padding: '1rem 1.5rem', borderTop: '2px solid var(--border)', background: 'var(--panel)' }}>
+        <div style={{ padding: '1rem', borderTop: '2px solid var(--border)', background: 'var(--panel)' }}>
           
           {/* Quick Prompts */}
-          <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '1rem' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '0.8rem', flexShrink: 0 }}>
             {quickPrompts.map((prompt, idx) => (
               <button 
                 key={idx} 
@@ -138,7 +159,7 @@ const ChatPage = () => {
 
           <form 
             onSubmit={(e) => { e.preventDefault(); handleSend(); }}
-            style={{ display: 'flex', gap: '0.5rem' }}
+            style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}
           >
             <input 
               type="text" 
