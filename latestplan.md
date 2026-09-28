@@ -2,15 +2,30 @@
 
 This document outlines the remaining planned enhancements for the Adaptive Finance application, expanded with details and ordered by estimated complexity (from least token-intensive/effort to most token-intensive).
 
-## 1. Landing Page Enhancement (Lowest Complexity)
+## 1. Polish Nitty-Gritties & Housekeeping (Lowest Complexity)
+**Overview:** Fix small behind-the-scenes (BTS) naming conventions and meta details to make the app feel professional.
+**Details:** 
+- Change the browser tab title from `client` to `Adaptive Finance`.
+- Rename ambiguous route files like `Route1.jsx`, `Route2.jsx`, and `Route3.jsx` to descriptive names (e.g., `IncomeHistory.jsx`, `Forecasts.jsx`, `HealthDecisions.jsx`).
+- Update internal router paths to match the new readable names.
+- *Why lowest complexity?* This only requires simple string replacements and file renaming across the frontend.
+
+## 2. Landing Page Enhancement
 **Overview:** Overhaul the landing page to make a stronger first impression.
 **Details:** 
 - Refine the hero section with better copy, improved typography, and engaging visuals.
 - Enhance the Neobrutalist design elements (sharper contrast, better drop shadows, interactive hover states).
 - Optimize the layout for mobile responsiveness and ensure the value proposition (helping gig-workers manage volatile income) is instantly clear.
-- *Why lowest complexity?* This is localized to a few frontend files (`LandingPage.jsx`, `index.css`) and requires no backend or database changes.
+- *Complexity:* This is localized to a few frontend files (`LandingPage.jsx`, `index.css`) and requires no backend or database changes.
 
-## 2. App-Wide UI Enhancement
+## 3. Smart Dashboard Prompts (Missing Data Reminders)
+**Overview:** Proactively guide the user with smart, context-aware suggestions directly on the dashboard.
+**Details:** 
+- Implement logic to detect missing days of income data.
+- Surface dynamic UI banners on the dashboard prompting the user with explicit calls to action (e.g., *"You haven't logged your income for Tuesday and Wednesday. Log it now to keep your forecasts accurate!"*).
+- *Complexity:* Requires slight updates to the dashboard frontend to conditionally render the prompt and backend logic to scan the `DailyIncomeEntry` collection for date gaps.
+
+## 4. App-Wide UI Enhancement
 **Overview:** Polish the core application interface to make it feel modern, sleek, and cohesive.
 **Details:**
 - Standardize the design language across all dashboard routes (Menu, Income History, Forecasts, Health).
@@ -18,7 +33,7 @@ This document outlines the remaining planned enhancements for the Adaptive Finan
 - Implement better empty states, loading skeletons, and error handling screens.
 - *Complexity:* Requires touching multiple frontend components and CSS files, but relies on existing data structures.
 
-## 3. Humanized & Insightful Financial Explanations
+## 5. Humanized & Insightful Financial Explanations
 **Overview:** Transform raw financial metrics into empathetic, easily digestible, and actionable insights.
 **Details:**
 - Update the AI prompts in the backend (`aiExplanationService.js`) to adopt a warmer, more encouraging, and less rigid tone (e.g., "financial assistant" rather than "strict accountant").
@@ -26,7 +41,7 @@ This document outlines the remaining planned enhancements for the Adaptive Finan
 - Redesign the insight cards on the frontend to present this text clearly.
 - *Complexity:* Requires adjusting both backend LLM prompts and frontend rendering logic to handle richer text structures.
 
-## 4. "Talk to Your Data" AI Chatbot (Highest Complexity)
+## 6. "Talk to Your Data" AI Chatbot (Highest Complexity)
 **Overview:** A dedicated, interactive chat interface where users can ask specific questions about their finances.
 **Details:**
 - **Frontend:** Build a modern chat interface with message history, typing indicators, and quick-prompt suggestions (e.g., "Can I afford to take next Friday off?").
