@@ -250,4 +250,5 @@ const generateAiExplanationForUser = async (userId, options = {}) => {
 
 module.exports = {
   generateAiExplanationForUser,
+  buildSnapshot,
 }

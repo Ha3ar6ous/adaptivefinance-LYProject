@@ -52,7 +52,49 @@ const callGroqJson = async ({ systemPrompt, userPayload }) => {
   }
 }
 
+const callGroqText = async ({ systemPrompt, messages }) => {
+  const apiKey = process.env.GROQ_API_KEY
+  if (!apiKey) {
+    throw new Error('GROQ_API_KEY is not configured')
+  }
+
+  const controller = new AbortController()
+  const timeout = setTimeout(
+    () => controller.abort(),
+    Number(process.env.GROQ_TIMEOUT_MS || 12000),
+  )
+
+  try {
+    const response = await fetch(GROQ_URL, {
+      method: 'POST',
+      signal: controller.signal,
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          ...messages,
+        ],
+        temperature: 0.7,
+      }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`Groq failed with status ${response.status}`)
+    }
+
+    const data = await response.json()
+    return data.choices?.[0]?.message?.content || ''
+  } finally {
+    clearTimeout(timeout)
+  }
+}
+
 module.exports = {
   callGroqJson,
+  callGroqText,
 }
 

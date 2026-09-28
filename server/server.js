@@ -7,6 +7,7 @@ const dataRoutes = require('./routes/dataRoutes')
 const analyticsRoutes = require('./routes/analyticsRoutes')
 const investmentRoutes = require('./routes/investmentRoutes')
 const aiExplanationRoutes = require('./routes/aiExplanationRoutes')
+const chatRoutes = require('./routes/chatRoutes')
 
 const app = express()
 
@@ -28,6 +29,7 @@ app.use('/api/data', dataRoutes)
 app.use('/api/analytics', analyticsRoutes)
 app.use('/api/investments', investmentRoutes)
 app.use('/api/ai', aiExplanationRoutes)
+app.use('/api/chat', chatRoutes)
 
 app.get('/api/test', (req, res) => {
   res.json({ message: 'API working correctly' })

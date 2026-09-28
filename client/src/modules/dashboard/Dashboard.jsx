@@ -11,6 +11,7 @@ import {
   FiTrendingUp,
   FiUser,
   FiX,
+  FiMessageSquare,
 } from 'react-icons/fi'
 
 const menuItems = [
@@ -19,6 +20,7 @@ const menuItems = [
   { to: 'forecasts', label: 'Forecasts', icon: FiTrendingUp },
   { to: 'health', label: 'Health & Decisions', icon: FiShield },
   { to: 'investments', label: 'Investment Suggestions', icon: FiPieChart },
+  { to: 'chat', label: 'AI Assistant', icon: FiMessageSquare },
 ]
 
 const Dashboard = () => {
