@@ -1294,6 +1294,7 @@ h4,
   gap: 1rem;
 }
 
+.dashboard-content-full { min-width: 0; }
 .dashboard-content-full,
 .sidebar-full {
   background: var(--panel-soft);
