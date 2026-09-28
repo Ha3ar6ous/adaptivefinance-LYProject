@@ -61,18 +61,16 @@ const ChatPage = () => {
   }
 
   return (
-    <div className='dashboard-stack'>
-      <div className='page-head' style={{ marginBottom: '1rem' }}>
-        <div className='title-with-icon'>
-          <FiMessageSquare />
-          <h3 className='page-title'>Talk to Your Data</h3>
-        </div>
+    <div style={{ height: '70vh', minHeight: '550px', display: 'flex', flexDirection: 'column' }}>
+      <div className='title-with-icon' style={{ marginBottom: '1rem' }}>
+        <FiMessageSquare size={24} />
+        <h3 className='page-title' style={{ margin: 0 }}>Talk to Your Data</h3>
       </div>
 
-      <div className='dashboard-panel' style={{ height: '65vh', minHeight: '500px', display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0 }}>
+      <div className='dashboard-panel' style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0, margin: 0 }}>
         
         {/* Messages Area */}
-        <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', background: 'var(--bg-body)' }}>
           {messages.map((msg, idx) => (
             <div key={idx} style={{ 
               display: 'flex', 
@@ -81,24 +79,25 @@ const ChatPage = () => {
               flexDirection: msg.role === 'user' ? 'row-reverse' : 'row'
             }}>
               <div style={{
-                background: msg.role === 'user' ? 'var(--primary)' : 'var(--bg-body)',
+                background: msg.role === 'user' ? 'var(--primary)' : 'var(--panel)',
                 color: msg.role === 'user' ? '#fff' : 'var(--text)',
                 padding: '0.8rem',
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                flexShrink: 0
+                flexShrink: 0,
+                border: msg.role !== 'user' ? '2px solid var(--border)' : 'none'
               }}>
                 {msg.role === 'user' ? <FiUser /> : <FiCpu />}
               </div>
               
               <div style={{
-                background: msg.role === 'user' ? 'var(--primary)' : 'var(--bg-body)',
+                background: msg.role === 'user' ? 'var(--primary)' : 'var(--panel)',
                 color: msg.role === 'user' ? '#fff' : 'var(--text)',
                 padding: '1rem',
-                borderRadius: '8px',
-                maxWidth: '75%',
+                borderRadius: '12px',
+                maxWidth: '85%',
                 boxShadow: msg.role !== 'user' ? '4px 4px 0px var(--border)' : 'none',
                 border: msg.role !== 'user' ? '2px solid var(--border)' : 'none',
               }}>
@@ -108,10 +107,10 @@ const ChatPage = () => {
           ))}
           {loading && (
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-               <div style={{ background: 'var(--bg-body)', padding: '0.8rem', borderRadius: '50%' }}>
+               <div style={{ background: 'var(--panel)', padding: '0.8rem', borderRadius: '50%', border: '2px solid var(--border)' }}>
                   <FiCpu />
                </div>
-               <div style={{ padding: '1rem', background: 'var(--bg-body)', borderRadius: '8px', border: '2px solid var(--border)', boxShadow: '4px 4px 0px var(--border)' }}>
+               <div style={{ padding: '1rem', background: 'var(--panel)', borderRadius: '12px', border: '2px solid var(--border)', boxShadow: '4px 4px 0px var(--border)' }}>
                  <em>Typing...</em>
                </div>
             </div>
@@ -120,7 +119,7 @@ const ChatPage = () => {
         </div>
 
         {/* Input Area */}
-        <div style={{ padding: '1.5rem', borderTop: '2px solid var(--border-soft)', background: 'var(--bg-card)' }}>
+        <div style={{ padding: '1rem 1.5rem', borderTop: '2px solid var(--border)', background: 'var(--panel)' }}>
           
           {/* Quick Prompts */}
           <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '1rem' }}>
@@ -146,7 +145,7 @@ const ChatPage = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask anything about your finances..."
-              style={{ flex: 1, padding: '0.8rem', borderRadius: '8px', border: '2px solid var(--border)' }}
+              style={{ flex: 1, padding: '0.8rem', borderRadius: '8px', border: '2px solid var(--border)', background: 'var(--bg-body)' }}
               disabled={loading}
             />
             <button 
@@ -159,7 +158,6 @@ const ChatPage = () => {
             </button>
           </form>
         </div>
-        
       </div>
     </div>
   )
