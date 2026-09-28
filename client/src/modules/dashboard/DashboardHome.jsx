@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
-import { FiActivity, FiHome, FiRefreshCw, FiShield, FiTrendingUp } from 'react-icons/fi'
+import { FiActivity, FiHome, FiRefreshCw, FiShield, FiTrendingUp, FiAlertCircle } from 'react-icons/fi'
 import AiInsightStrip from '../../components/AiInsightStrip'
 import InvestmentSuggestions from '../../components/InvestmentSuggestions'
 import ScoreGauge from '../../components/charts/ScoreGauge'
@@ -12,6 +12,7 @@ const DashboardHome = () => {
   const [analytics, setAnalytics] = useState(null)
   const [investment, setInvestment] = useState(null)
   const [explanation, setExplanation] = useState(null)
+  const [missingDates, setMissingDates] = useState([])
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState('')
@@ -27,6 +28,28 @@ const DashboardHome = () => {
       setAnalytics(analyticsData)
       setInvestment(investmentData)
       setExplanation(explanationData)
+      
+      const token = localStorage.getItem('token')
+      const userRes = await fetch('http://localhost:5000/api/data/user', {
+        headers: { Authorization: `Bearer ${token}` }
+      }).catch(() => null)
+      
+      if (userRes?.ok) {
+        const data = await userRes.json()
+        const entries = data.entries || []
+        const recordedDates = new Set(entries.map(e => e.date))
+        const today = new Date()
+        const missing = []
+        for (let i = 1; i <= 5; i++) {
+          const d = new Date(today)
+          d.setDate(d.getDate() - i)
+          const dateStr = d.toISOString().split('T')[0]
+          if (!recordedDates.has(dateStr)) {
+            missing.push(dateStr)
+          }
+        }
+        setMissingDates(missing)
+      }
     } catch (err) {
       setError(err.message)
     } finally {
@@ -89,6 +112,18 @@ const DashboardHome = () => {
       </div>
 
       {error && <p className='error'>{error}</p>}
+
+      {missingDates.length > 0 && analytics?.status !== 'insufficient_data' && (
+        <div className='dashboard-panel' style={{ backgroundColor: '#fffbeb', borderColor: '#fcd34d', marginBottom: '1.2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <FiAlertCircle size={32} color="#d97706" />
+          <div>
+            <h3 style={{ color: '#b45309', marginBottom: '0.2rem', fontSize: '1.1rem' }}>Missing Income Data</h3>
+            <p style={{ color: '#92400e', margin: 0, fontSize: '0.95rem' }}>
+              You haven't logged your income for {missingDates.length} recent {missingDates.length === 1 ? 'day' : 'days'} in the past week. Please log it in the <strong>Enter Your Data</strong> page to keep your AI forecasts accurate!
+            </p>
+          </div>
+        </div>
+      )}
 
       {analytics?.status === 'insufficient_data' && (
         <div className='dashboard-panel' style={{ backgroundColor: '#fef2f2', borderColor: '#f87171', marginBottom: '1.2rem' }}>

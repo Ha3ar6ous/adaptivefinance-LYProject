@@ -15,9 +15,9 @@ import {
 
 const menuItems = [
   { to: 'enter-data', label: 'Enter Your Data', icon: FiEdit3 },
-  { to: 'route1', label: 'Income History', icon: FiBarChart2 },
-  { to: 'route2', label: 'Forecasts', icon: FiTrendingUp },
-  { to: 'route3', label: 'Health & Decisions', icon: FiShield },
+  { to: 'income-history', label: 'Income History', icon: FiBarChart2 },
+  { to: 'forecasts', label: 'Forecasts', icon: FiTrendingUp },
+  { to: 'health', label: 'Health & Decisions', icon: FiShield },
   { to: 'investments', label: 'Investment Suggestions', icon: FiPieChart },
 ]
 

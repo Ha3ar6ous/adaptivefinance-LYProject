@@ -8,9 +8,9 @@ import SignupPage from './modules/auth/SignupPage'
 import Dashboard from './modules/dashboard/Dashboard'
 import DashboardHome from './modules/dashboard/DashboardHome'
 import EnterData from './modules/data/EnterData'
-import Route1 from './modules/dashboard/Route1'
-import Route2 from './modules/dashboard/Route2'
-import Route3 from './modules/dashboard/Route3'
+import IncomeHistory from './modules/dashboard/IncomeHistory'
+import Forecasts from './modules/dashboard/Forecasts'
+import HealthDecisions from './modules/dashboard/HealthDecisions'
 import InvestmentEngine from './modules/dashboard/InvestmentEngine'
 import OnboardingPage from './modules/onboarding/OnboardingPage'
 
@@ -106,9 +106,9 @@ function App() {
             >
               <Route index element={<DashboardHome />} />
               <Route path='enter-data' element={<EnterData />} />
-              <Route path='route1' element={<Route1 />} />
-              <Route path='route2' element={<Route2 />} />
-              <Route path='route3' element={<Route3 />} />
+              <Route path='income-history' element={<IncomeHistory />} />
+              <Route path='forecasts' element={<Forecasts />} />
+              <Route path='health' element={<HealthDecisions />} />
               <Route path='investments' element={<InvestmentEngine />} />
             </Route>
           </Routes>
