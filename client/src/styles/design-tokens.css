@@ -1,0 +1,15 @@
+:root {
+  --af-paper: #f7f8f2;
+  --af-ink: #15261d;
+  --af-green: #1b4b35;
+  --af-muted: #6b756c;
+  --af-line: #dde3d7;
+  --af-font: "Inter", "Segoe UI", Arial, sans-serif;
+  --af-sage: #73826c;
+  --af-soft: #edf2e6;
+  --af-white: #fff;
+  --af-warning: #8d6f31;
+  --af-danger: #a04737;
+  --af-radius: 16px;
+  --af-shadow: 0 8px 30px #183b2305;
+}

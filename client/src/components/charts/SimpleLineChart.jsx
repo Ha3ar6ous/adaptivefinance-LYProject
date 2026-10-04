@@ -1,42 +1,140 @@
-import { memo, useMemo } from 'react'
+import { memo, useId, useMemo, useState } from "react";
+import useChartLayout from "./useChartLayout";
+import { dateLabel, money } from "../ui/formatters";
 
-const SimpleLineChart = ({ data = [], xKey = 'date', yKey = 'income', color = 'var(--chart-line)', height = 220 }) => {
-  const width = 640
-  const pad = 28
-  const points = useMemo(() => {
-    const values = data.map((item) => Number(item[yKey] || 0))
-    const max = Math.max(...values, 1)
-    const min = Math.min(...values, 0)
-    const range = max - min || 1
+const pad = { left: 48, right: 16, top: 22, bottom: 22 };
 
-    return data.map((item, index) => {
-      const x = pad + (index / Math.max(data.length - 1, 1)) * (width - pad * 2)
-      const y = height - pad - ((Number(item[yKey] || 0) - min) / range) * (height - pad * 2)
-      return `${x},${y}`
-    })
-  }, [data, height, yKey])
-
-  if (!data.length) {
-    return <p style={{ color: '#666' }}>No chart data yet.</p>
-  }
-
+const SimpleLineChart = ({
+  data = [],
+  xKey = "date",
+  yKey = "income",
+  color = "var(--chart-line)",
+  height = 220,
+}) => {
+  const { ref, width } = useChartLayout(data.length > 0);
+  const [active, setActive] = useState(null);
+  const gradientId = useId();
+  const chart = useMemo(() => {
+    const values = data.map((item) => Number(item[yKey] || 0));
+    const max = Math.max(...values, 1),
+      min = Math.min(...values, 0),
+      range = max - min || 1;
+    const points = data.map((item, index) => ({
+      x:
+        pad.left +
+        (index / Math.max(data.length - 1, 1)) * (width - pad.left - pad.right),
+      y:
+        height -
+        pad.bottom -
+        ((Number(item[yKey] || 0) - min) / range) *
+          (height - pad.top - pad.bottom),
+    }));
+    return { points, max, min, range };
+  }, [data, height, width, yKey]);
+  if (!data.length)
+    return (
+      <p className="af-chart-empty">
+        Your chart will appear when income data is available.
+      </p>
+    );
+  const selected = active !== null ? data[active] : null;
+  const path = chart.points
+    .map((point, index) => `${index ? "L" : "M"} ${point.x} ${point.y}`)
+    .join(" ");
   return (
-    <div className='chart-shell'>
-      <svg viewBox={`0 0 ${width} ${height}`} className='chart-svg' style={{ height }}>
-        <line x1={pad} y1={height - pad} x2={width - pad} y2={height - pad} stroke='var(--border-soft)' />
-        <line x1={pad} y1={pad} x2={pad} y2={height - pad} stroke='var(--border-soft)' />
-        <polyline fill='none' stroke={color} strokeWidth='3' points={points.join(' ')} />
-        {data.map((item, index) => {
-          const [x, y] = points[index].split(',').map(Number)
+    <div ref={ref} className="chart-shell af-interactive-chart">
+      <div className="af-chart-readout" aria-live="polite">
+        {selected ? (
+          <>
+            <span>{dateLabel(selected[xKey])}</span>
+            <strong>{money(selected[yKey])}</strong>
+          </>
+        ) : (
+          <>
+            <span>Daily income</span>
+            <span>Tap a point to explore</span>
+          </>
+        )}
+      </div>
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        className="chart-svg"
+        role="group"
+        aria-label="Daily income trend. Each point can be focused or selected to read its earnings."
+      >
+        <defs>
+          <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#8da977" stopOpacity=".22" />
+            <stop offset="100%" stopColor="#8da977" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {[0, 1, 2, 3].map((index) => {
+          const value = chart.min + (chart.range * (3 - index)) / 3,
+            y = pad.top + (index * (height - pad.top - pad.bottom)) / 3;
           return (
-            <circle key={`${item[xKey]}-${index}`} cx={x} cy={y} r='5' fill={color}>
-              <title>{`${item[xKey]}: ${item[yKey]}`}</title>
-            </circle>
-          )
+            <g key={index}>
+              <line
+                x1={pad.left}
+                x2={width - pad.right}
+                y1={y}
+                y2={y}
+                stroke="#e7edde"
+                strokeDasharray="3 5"
+              />
+              <text x="0" y={y + 3} fontSize="9" fill="#94a782">
+                {value >= 1000
+                  ? "₹" + (value / 1000).toFixed(1) + "k"
+                  : "₹" + Math.round(value)}
+              </text>
+            </g>
+          );
         })}
+        <path
+          d={`${path} L ${chart.points.at(-1).x} ${height - pad.bottom} L ${pad.left} ${height - pad.bottom} Z`}
+          fill={`url(#${gradientId})`}
+        />
+        <path
+          d={path}
+          stroke={color}
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+          fill="none"
+        />
+        {chart.points.map((point, index) => (
+          <g
+            key={`${data[index][xKey]}-${index}`}
+            role="button"
+            tabIndex="0"
+            aria-label={`${dateLabel(data[index][xKey])}: ${money(data[index][yKey])}`}
+            onMouseEnter={() => setActive(index)}
+            onFocus={() => setActive(index)}
+            onClick={() => setActive(index)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                setActive(index);
+              }
+            }}
+          >
+            <circle
+              cx={point.x}
+              cy={point.y}
+              r="9"
+              fill="transparent"
+              className="af-chart-hit-target"
+            />
+            <circle
+              cx={point.x}
+              cy={point.y}
+              r={active === index ? 5 : data.length > 30 ? 2 : 3}
+              fill={active === index ? "#a1bc80" : "#52764b"}
+            />
+            <title>{`${data[index][xKey]}: ${data[index][yKey]}`}</title>
+          </g>
+        ))}
       </svg>
     </div>
-  )
-}
-
-export default memo(SimpleLineChart)
+  );
+};
+export default memo(SimpleLineChart);

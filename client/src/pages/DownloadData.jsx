@@ -36,7 +36,7 @@ const DownloadData = () => {
       link.remove()
       window.URL.revokeObjectURL(url)
       setMessage('CSV download started.')
-    } catch (err) {
+    } catch {
       setError('Error downloading CSV')
     }
   }

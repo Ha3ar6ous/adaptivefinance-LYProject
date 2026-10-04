@@ -24,7 +24,7 @@ const SignupPage = () => {
       }
       localStorage.setItem('token', body.token)
       navigate('/dashboard')
-    } catch (err) {
+    } catch {
       setError('Unable to sign up. Try later.')
     }
   }

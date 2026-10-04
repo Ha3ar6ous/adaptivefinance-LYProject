@@ -1,191 +1,221 @@
-import { useState, useRef, useEffect } from 'react'
-import { FiMessageSquare, FiSend, FiUser, FiCpu } from 'react-icons/fi'
+import { Notice, PageHeading } from "../../components/ui/ProductUi";
+import { FiArrowUpRight, FiShield } from "react-icons/fi";
+import { useState, useRef, useEffect } from "react";
+import { FiMessageSquare, FiSend, FiUser, FiCpu } from "react-icons/fi";
 
 const ChatPage = () => {
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: "Hi there! I'm your Adaptive Finance AI. Ask me anything about your income history, health score, or how much you should save." }
-  ])
-  const [input, setInput] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
-  const messagesEndRef = useRef(null)
+    {
+      role: "assistant",
+      content:
+        "Hi there! I'm your Adaptive Finance AI. Ask me anything about your income history, health score, or how much you should save.",
+    },
+  ]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const messagesEndRef = useRef(null);
 
   const quickPrompts = [
     "Why did my health score drop?",
     "Based on my last 30 days, how much should I save this week?",
     "What's my highest earning platform recently?",
-    "Am I safe to make a large purchase right now?"
-  ]
+    "Am I safe to make a large purchase right now?",
+  ];
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+    const container = messagesEndRef.current?.parentElement;
+    container?.scrollTo({
+      top: container.scrollHeight,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
+  };
 
   useEffect(() => {
-    scrollToBottom()
-  }, [messages])
+    scrollToBottom();
+  }, [messages]);
 
   const handleSend = async (text) => {
-    const messageText = text || input
-    if (!messageText.trim()) return
+    const messageText = text || input;
+    if (!messageText.trim()) return;
 
-    const newMessages = [...messages, { role: 'user', content: messageText }]
-    setMessages(newMessages)
-    setInput('')
-    setLoading(true)
-    setError('')
+    const newMessages = [...messages, { role: "user", content: messageText }];
+    setMessages(newMessages);
+    setInput("");
+    setLoading(true);
+    setError("");
 
     try {
-      const token = localStorage.getItem('token')
-      const response = await fetch('http://localhost:5000/api/chat', {
-        method: 'POST',
+      const token = localStorage.getItem("token");
+      const response = await fetch("http://localhost:5000/api/chat", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ messages: newMessages })
-      })
+        body: JSON.stringify({ messages: newMessages }),
+      });
 
       if (!response.ok) {
-        throw new Error('Failed to get response')
+        throw new Error("Failed to get response");
       }
 
-      const data = await response.json()
-      setMessages([...newMessages, { role: 'assistant', content: data.reply }])
+      const data = await response.json();
+      setMessages([...newMessages, { role: "assistant", content: data.reply }]);
     } catch (err) {
-      setError(err.message)
-      setMessages([...newMessages, { role: 'assistant', content: 'Oops! I had trouble fetching that info. Please try again.' }])
+      setError(err.message);
+      setMessages([
+        ...newMessages,
+        {
+          role: "assistant",
+          content: "Oops! I had trouble fetching that info. Please try again.",
+        },
+      ]);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   // Simple bold markdown parser
   const renderMessageContent = (content) => {
     return content.split(/(\*\*.*?\*\*)/g).map((part, index) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={index}>{part.slice(2, -2)}</strong>
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return <strong key={index}>{part.slice(2, -2)}</strong>;
       }
-      return <span key={index}>{part}</span>
-    })
-  }
+      return <span key={index}>{part}</span>;
+    });
+  };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 180px)', minHeight: '600px', minWidth: 0, width: '100%' }}>
-      <div className='title-with-icon' style={{ marginBottom: '1rem', flexShrink: 0 }}>
-        <FiMessageSquare size={24} />
-        <h3 className='page-title' style={{ margin: 0 }}>Talk to Your Data</h3>
-      </div>
-
-      <div className='dashboard-panel' style={{ 
-        flex: 1, 
-        display: 'flex', 
-        flexDirection: 'column', 
-        padding: 0, 
-        margin: 0, 
-        overflow: 'hidden',
-        border: '2px solid var(--border)',
-        boxShadow: '4px 4px 0px var(--border)',
-        minWidth: 0,
-        width: '100%'
-      }}>
-        
-        {/* Messages Area */}
-        <div style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', background: 'var(--bg-body)' }}>
+    <div className="af-chat-page">
+      <PageHeading
+        eyebrow="A CONVERSATION WITH YOUR FINANCES"
+        title={
+          <>
+            Your numbers.
+            <br />
+            <span>In plain language.</span>
+          </>
+        }
+        description="Ask about your earnings, health score, or next steps. Get context from your financial picture."
+      />
+      <div className="af-chat-surface">
+        <header className="af-chat-header">
+          <span className="af-chat-agent-icon">
+            <FiMessageSquare />
+          </span>
+          <div>
+            <strong>Adaptive assistant</strong>
+            <span>Financial context, made clearer.</span>
+          </div>
+          <span className="af-chat-context">
+            <FiShield /> Your financial context
+          </span>
+        </header>
+        <div
+          className="af-chat-messages"
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions"
+          aria-label="Conversation"
+        >
           {messages.map((msg, idx) => (
-            <div key={idx} style={{ 
-              display: 'flex', 
-              gap: '1rem', 
-              alignItems: 'flex-start',
-              flexDirection: msg.role === 'user' ? 'row-reverse' : 'row',
-              maxWidth: '100%'
-            }}>
-              <div style={{
-                background: msg.role === 'user' ? 'var(--primary)' : 'var(--panel)',
-                color: msg.role === 'user' ? '#fff' : 'var(--text)',
-                padding: '0.8rem',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-                border: msg.role !== 'user' ? '2px solid var(--border)' : 'none'
-              }}>
-                {msg.role === 'user' ? <FiUser /> : <FiCpu />}
-              </div>
-              
-              <div style={{
-                background: msg.role === 'user' ? 'var(--primary)' : 'var(--panel)',
-                color: msg.role === 'user' ? '#fff' : 'var(--text)',
-                padding: '1rem',
-                borderRadius: '12px',
-                maxWidth: '85%',
-                boxShadow: msg.role !== 'user' ? '4px 4px 0px var(--border)' : 'none',
-                border: msg.role !== 'user' ? '2px solid var(--border)' : 'none',
-                wordBreak: 'break-word'
-              }}>
-                <p style={{ margin: 0, whiteSpace: 'pre-wrap', lineHeight: '1.5' }}>
-                  {renderMessageContent(msg.content)}
-                </p>
+            <div
+              key={idx}
+              className={
+                "af-chat-message " +
+                (msg.role === "user"
+                  ? "af-chat-message-user"
+                  : "af-chat-message-assistant")
+              }
+            >
+              <span className="af-chat-avatar" aria-hidden="true">
+                {msg.role === "user" ? <FiUser /> : <FiCpu />}
+              </span>
+              <div className="af-chat-bubble">
+                <span className="af-chat-message-label">
+                  {msg.role === "user" ? "You" : "Adaptive"}
+                </span>
+                <p>{renderMessageContent(msg.content)}</p>
               </div>
             </div>
           ))}
           {loading && (
-            <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-               <div style={{ background: 'var(--panel)', padding: '0.8rem', borderRadius: '50%', border: '2px solid var(--border)' }}>
-                  <FiCpu />
-               </div>
-               <div style={{ padding: '1rem', background: 'var(--panel)', borderRadius: '12px', border: '2px solid var(--border)', boxShadow: '4px 4px 0px var(--border)' }}>
-                 <em>Typing...</em>
-               </div>
+            <div className="af-chat-thinking" role="status">
+              <span className="af-chat-avatar">
+                <FiCpu />
+              </span>
+              <span>
+                Putting your picture into words
+                <span className="af-thinking-dots" aria-hidden="true">
+                  <i />
+                  <i />
+                  <i />
+                </span>
+              </span>
             </div>
           )}
           <div ref={messagesEndRef} />
         </div>
-
-        {/* Input Area */}
-        <div style={{ padding: '1rem', borderTop: '2px solid var(--border)', background: 'var(--panel)', minWidth: 0, width: '100%', boxSizing: 'border-box' }}>
-          
-          {/* Quick Prompts */}
-          <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '0.8rem', flexShrink: 0, minWidth: 0, width: '100%' }}>
-            {quickPrompts.map((prompt, idx) => (
-              <button 
-                key={idx} 
-                className='secondary-btn' 
-                style={{ whiteSpace: 'nowrap', padding: '0.5rem 1rem', fontSize: '0.85rem' }}
-                onClick={() => handleSend(prompt)}
-                disabled={loading}
-              >
-                {prompt}
-              </button>
-            ))}
-          </div>
-
-          <form 
-            onSubmit={(e) => { e.preventDefault(); handleSend(); }}
-            style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}
+        <div className="af-chat-composer">
+          {error && <Notice tone="error">{error}</Notice>}
+          <details
+            className="af-chat-prompts"
+            key={messages.length === 1 ? "welcome" : "conversation"}
           >
-            <input 
-              type="text" 
+            <summary>A place to start</summary>
+            <div>
+              {quickPrompts.map((prompt) => (
+                <button
+                  type="button"
+                  key={prompt}
+                  onClick={() => handleSend(prompt)}
+                  disabled={loading}
+                >
+                  {prompt}
+                  <FiArrowUpRight />
+                </button>
+              ))}
+            </div>
+          </details>
+          <form
+            className="af-chat-input-row"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSend();
+            }}
+          >
+            <label className="af-sr-only" htmlFor="af-chat-input">
+              Message your assistant
+            </label>
+            <input
+              id="af-chat-input"
+              type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask anything about your finances..."
-              style={{ flex: 1, padding: '0.8rem', borderRadius: '8px', border: '2px solid var(--border)', background: 'var(--bg-body)' }}
+              placeholder="Ask about your financial picture…"
               disabled={loading}
+              autoComplete="off"
             />
-            <button 
-              type="submit" 
-              className='accent-cta'
-              style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0 1.5rem' }}
+            <button
+              type="submit"
+              className="af-ui-button"
               disabled={loading || !input.trim()}
+              aria-label="Send message"
             >
-              <FiSend /> Send
+              <FiSend />
+              <span>Send</span>
             </button>
           </form>
+          <p className="af-chat-disclaimer">
+            A guide to understanding your finances. Verify important details
+            before acting.
+          </p>
         </div>
       </div>
     </div>
-  )
-}
-
-export default ChatPage
+  );
+};
+export default ChatPage;

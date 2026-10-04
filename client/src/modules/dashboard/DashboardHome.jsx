@@ -1,179 +1,293 @@
-import { useEffect, useMemo, useState } from 'react'
-import { useOutletContext } from 'react-router-dom'
-import { FiActivity, FiHome, FiRefreshCw, FiShield, FiTrendingUp, FiAlertCircle } from 'react-icons/fi'
-import AiInsightStrip from '../../components/AiInsightStrip'
-import InvestmentSuggestions from '../../components/InvestmentSuggestions'
-import ScoreGauge from '../../components/charts/ScoreGauge'
-import { getAiExplanation } from '../../services/aiApi'
-import { getAnalytics, getInvestmentSuggestion, runAnalytics } from '../../services/analyticsApi'
+import { Link } from "react-router-dom";
+import { FiArrowUpRight, FiPlus } from "react-icons/fi";
+import {
+  EmptyState,
+  LoadingState,
+  Metric,
+  Notice,
+  PageHeading,
+  Panel,
+  StatusBadge,
+} from "../../components/ui/ProductUi";
+import { useEffect, useMemo, useState } from "react";
+import { useOutletContext } from "react-router-dom";
+import {
+  FiActivity,
+  FiRefreshCw,
+  FiShield,
+  FiTrendingUp,
+} from "react-icons/fi";
+import AiInsightStrip from "../../components/AiInsightStrip";
+import InvestmentSuggestions from "../../components/InvestmentSuggestions";
+import ScoreGauge from "../../components/charts/ScoreGauge";
+import { getAiExplanation } from "../../services/aiApi";
+import {
+  getAnalytics,
+  getInvestmentSuggestion,
+  runAnalytics,
+} from "../../services/analyticsApi";
 
 const DashboardHome = () => {
-  const { user } = useOutletContext() || {}
-  const [analytics, setAnalytics] = useState(null)
-  const [investment, setInvestment] = useState(null)
-  const [explanation, setExplanation] = useState(null)
-  const [missingDates, setMissingDates] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [refreshing, setRefreshing] = useState(false)
-  const [error, setError] = useState('')
+  const { user } = useOutletContext() || {};
+  const [analytics, setAnalytics] = useState(null);
+  const [investment, setInvestment] = useState(null);
+  const [explanation, setExplanation] = useState(null);
+  const [missingDates, setMissingDates] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+  const [error, setError] = useState("");
 
   const loadAnalytics = async () => {
     try {
-      setError('')
+      setError("");
       const [analyticsData, investmentData] = await Promise.all([
         getAnalytics(),
         getInvestmentSuggestion(),
-      ])
-      const explanationData = await getAiExplanation().catch(() => null)
-      setAnalytics(analyticsData)
-      setInvestment(investmentData)
-      setExplanation(explanationData)
-      
-      const token = localStorage.getItem('token')
-      const userRes = await fetch('http://localhost:5000/api/data/user', {
-        headers: { Authorization: `Bearer ${token}` }
-      }).catch(() => null)
-      
+      ]);
+      const explanationData = await getAiExplanation().catch(() => null);
+      setAnalytics(analyticsData);
+      setInvestment(investmentData);
+      setExplanation(explanationData);
+
+      const token = localStorage.getItem("token");
+      const userRes = await fetch("http://localhost:5000/api/data/user", {
+        headers: { Authorization: `Bearer ${token}` },
+      }).catch(() => null);
+
       if (userRes?.ok) {
-        const data = await userRes.json()
-        const entries = data.entries || []
-        const recordedDates = new Set(entries.map(e => e.date))
-        const today = new Date()
-        const missing = []
+        const data = await userRes.json();
+        const entries = data.entries || [];
+        const recordedDates = new Set(entries.map((e) => e.date));
+        const today = new Date();
+        const missing = [];
         for (let i = 1; i <= 5; i++) {
-          const d = new Date(today)
-          d.setDate(d.getDate() - i)
-          const dateStr = d.toISOString().split('T')[0]
+          const d = new Date(today);
+          d.setDate(d.getDate() - i);
+          const dateStr = d.toISOString().split("T")[0];
           if (!recordedDates.has(dateStr)) {
-            missing.push(dateStr)
+            missing.push(dateStr);
           }
         }
-        setMissingDates(missing)
+        setMissingDates(missing);
       }
     } catch (err) {
-      setError(err.message)
+      setError(err.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const refreshAnalytics = async () => {
     try {
-      setRefreshing(true)
-      setError('')
-      const analyticsData = await runAnalytics()
+      setRefreshing(true);
+      setError("");
+      const analyticsData = await runAnalytics();
       const [investmentData, explanationData] = await Promise.all([
         getInvestmentSuggestion(),
         getAiExplanation().catch(() => null),
-      ])
-      setAnalytics(analyticsData)
-      setInvestment(investmentData)
-      setExplanation(explanationData)
+      ]);
+      setAnalytics(analyticsData);
+      setInvestment(investmentData);
+      setExplanation(explanationData);
     } catch (err) {
-      setError(err.message)
+      setError(err.message);
     } finally {
-      setRefreshing(false)
+      setRefreshing(false);
     }
-  }
+  };
 
   useEffect(() => {
-    loadAnalytics()
-  }, [])
+    loadAnalytics();
+  }, []);
 
   const forecastSummary = useMemo(() => {
-    const points = analytics?.forecast?.points || []
-    const total = points.reduce((sum, point) => sum + Number(point.income || 0), 0)
-    return { count: points.length, total, average: points.length ? total / points.length : 0 }
-  }, [analytics])
+    const points = analytics?.forecast?.points || [];
+    const total = points.reduce(
+      (sum, point) => sum + Number(point.income || 0),
+      0,
+    );
+    return {
+      count: points.length,
+      total,
+      average: points.length ? total / points.length : 0,
+    };
+  }, [analytics]);
 
-  const formatMoney = (value) => `Rs ${Math.round(Number(value || 0)).toLocaleString('en-IN')}`
+  const formatMoney = (value) =>
+    `₹${Math.round(Number(value || 0)).toLocaleString("en-IN")}`;
 
   const statusText = loading
-    ? 'Loading analytics'
-    : analytics?.status === 'error'
-      ? 'ML service unavailable'
+    ? "Loading analytics"
+    : analytics?.status === "error"
+      ? "ML service unavailable"
       : analytics?.health
-        ? analytics.router?.summary || 'Latest financial health output'
-        : 'Run analytics after adding entries'
+        ? analytics.router?.summary || "Latest financial health output"
+        : "Run analytics after adding entries";
 
   return (
-    <div className='dashboard-stack'>
-      <div className='dashboard-panel welcome-panel'>
-        <div className='panel-icon'>
-          <FiHome size={28} />
-        </div>
-        <div className='welcome-copy'>
-          <h2>Welcome back{user ? `, ${user.name}` : ''}!</h2>
-          <p>{statusText}</p>
-        </div>
-        <button type='button' className='icon-button' onClick={refreshAnalytics} disabled={refreshing}>
-          <FiRefreshCw /> {refreshing ? 'Refreshing...' : 'Refresh'}
-        </button>
-      </div>
-
-      {error && <p className='error'>{error}</p>}
-
-      {missingDates.length > 0 && analytics?.status !== 'insufficient_data' && (
-        <div className='dashboard-panel' style={{ backgroundColor: '#fffbeb', borderColor: '#fcd34d', marginBottom: '1.2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <FiAlertCircle size={32} color="#d97706" />
-          <div>
-            <h3 style={{ color: '#b45309', marginBottom: '0.2rem', fontSize: '1.1rem' }}>Missing Income Data</h3>
-            <p style={{ color: '#92400e', margin: 0, fontSize: '0.95rem' }}>
-              You haven't logged your income for {missingDates.length} recent {missingDates.length === 1 ? 'day' : 'days'} in the past week. Please log it in the <strong>Enter Your Data</strong> page to keep your AI forecasts accurate!
-            </p>
-          </div>
-        </div>
+    <div>
+      <PageHeading
+        eyebrow="YOUR MONEY, IN FOCUS"
+        title={
+          <>Your bigger picture{user ? ", " + user.name.split(" ")[0] : ""}.</>
+        }
+        description={statusText}
+        action={
+          <button
+            type="button"
+            className="af-ui-button af-ui-button-secondary"
+            onClick={refreshAnalytics}
+            disabled={refreshing}
+          >
+            <FiRefreshCw />
+            {refreshing ? "Refreshing…" : "Refresh insights"}
+          </button>
+        }
+      />
+      {error && (
+        <Notice tone="error" title="We couldn’t load your insights.">
+          {error}
+        </Notice>
       )}
-
-      {analytics?.status === 'insufficient_data' && (
-        <div className='dashboard-panel' style={{ backgroundColor: '#fef2f2', borderColor: '#f87171', marginBottom: '1.2rem' }}>
-          <h3 style={{ color: '#b91c1c', marginBottom: '0.5rem' }}>Insufficient Data</h3>
-          <p style={{ color: '#991b1b', margin: 0 }}>Please enter at least 3 days of income history to generate your financial health score and insights. Your current score is artificially skewed because there isn't enough data.</p>
-        </div>
+      {loading ? (
+        <LoadingState />
+      ) : (
+        <>
+          {missingDates.length > 0 &&
+            analytics?.status !== "insufficient_data" && (
+              <Notice
+                tone="warning"
+                title="A few days are missing from the picture."
+              >
+                You haven’t logged {missingDates.length} recent{" "}
+                {missingDates.length === 1 ? "day" : "days"}.{" "}
+                <Link to="/dashboard/enter-data">Add your missing entries</Link>{" "}
+                to keep your outlook grounded in your earnings.
+              </Notice>
+            )}
+          {analytics?.status === "insufficient_data" && (
+            <Notice title="Every entry makes the picture clearer.">
+              Add at least 3 days of income history to generate your health
+              score and insights.{" "}
+              <Link to="/dashboard/enter-data">
+                Log your next day <FiArrowUpRight />
+              </Link>
+            </Notice>
+          )}
+          <div className="af-overview-grid">
+            <Panel className="af-overview-health">
+              <div className="af-health-header">
+                <span>Your financial health</span>
+                <StatusBadge tone="success">Your foundation</StatusBadge>
+              </div>
+              {analytics?.health &&
+              analytics.health.phase !== "insufficient_data" ? (
+                <>
+                  <ScoreGauge
+                    score={analytics?.health?.score || 0}
+                    label={analytics?.health?.phase || "crisis"}
+                  />
+                  <div className="af-health-next">
+                    {analytics?.router?.summary ||
+                      "Your financial health, explained."}
+                    <br />
+                    <Link to="/dashboard/health" className="af-panel-link">
+                      Understand my score <FiArrowUpRight />
+                    </Link>
+                  </div>
+                </>
+              ) : (
+                <EmptyState title="Let’s find your footing.">
+                  Your score appears once there’s enough income history to build
+                  a useful picture.
+                </EmptyState>
+              )}
+            </Panel>
+            <div className="af-overview-right">
+              <div className="af-metrics-grid">
+                <Metric
+                  tone="dark"
+                  label="Estimated income"
+                  value={
+                    forecastSummary.count
+                      ? formatMoney(forecastSummary.total)
+                      : "Not ready yet"
+                  }
+                  detail={
+                    forecastSummary.count
+                      ? "Next " +
+                        forecastSummary.count +
+                        " days · " +
+                        formatMoney(forecastSummary.average) +
+                        "/day on average"
+                      : "Add earnings to build your outlook."
+                  }
+                  icon={FiTrendingUp}
+                />
+                <Metric
+                  label="Income volatility"
+                  value={analytics?.volatility?.label || "Not available"}
+                  detail="How much your daily earnings vary."
+                  icon={FiShield}
+                />
+              </div>
+              <div className="af-next-move">
+                <FiActivity />
+                <div>
+                  <span className="af-ui-eyebrow">YOUR NEXT BEST MOVE</span>
+                  <h2>
+                    {analytics?.router?.actions?.find(
+                      (action) => action.allowed,
+                    )?.label || "Keep tracking income"}
+                  </h2>
+                  <p>
+                    {analytics?.router?.summary ||
+                      "Each daily entry helps make your financial picture clearer."}
+                  </p>
+                  <Link to="/dashboard/health" className="af-panel-link">
+                    See the reasoning <FiArrowUpRight />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="af-content-stack">
+            {analytics?.status !== "insufficient_data" && (
+              <AiInsightStrip explanation={explanation} />
+            )}
+            <Panel
+              title="Small steps, when you’re ready."
+              description="Investment guidance starts with your financial footing."
+              action={
+                <Link to="/dashboard/investments" className="af-panel-link">
+                  View suggestions <FiArrowUpRight />
+                </Link>
+              }
+            >
+              <InvestmentSuggestions investment={investment} compact />
+            </Panel>
+            <div className="af-overview-quick-links">
+              <Link to="/dashboard/enter-data">
+                <FiPlus />
+                <span>
+                  Bring another day into focus.
+                  <small>Log your daily income</small>
+                </span>
+                <FiArrowUpRight />
+              </Link>
+              <Link to="/dashboard/chat">
+                <FiActivity />
+                <span>
+                  Make sense of your numbers.
+                  <small>Talk to your AI assistant</small>
+                </span>
+                <FiArrowUpRight />
+              </Link>
+            </div>
+          </div>
+        </>
       )}
-
-      {analytics?.status !== 'insufficient_data' && <AiInsightStrip explanation={explanation} />}
-
-      <div className='bento-grid'>
-        <div className='dashboard-panel bento-wide bento-tall' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <ScoreGauge score={analytics?.health?.score || 0} label={analytics?.health?.phase === 'insufficient_data' ? 'Missing Data' : analytics?.health?.phase || 'crisis'} />
-        </div>
-
-        <div className='dashboard-panel metric-card'>
-          <div className='panel-header'>
-            <h3>Expected Income</h3>
-            <FiTrendingUp />
-          </div>
-          <h4>{forecastSummary.count ? formatMoney(forecastSummary.total) : 'Pending'}</h4>
-          <p style={{ color: 'var(--text-soft)' }}>{forecastSummary.count ? `Over the next ${forecastSummary.count} days (Avg ${formatMoney(forecastSummary.average)}/day)` : 'We need more data to predict your future earnings.'}</p>
-        </div>
-
-        <div className='dashboard-panel metric-card'>
-          <div className='panel-header'>
-            <h3>Income Volatility</h3>
-            <FiShield />
-          </div>
-          <h4 className='capitalize'>{analytics?.volatility?.label || 'Unknown'}</h4>
-          <p style={{ color: 'var(--text-soft)' }}>This shows how much your daily earnings bounce around.</p>
-        </div>
-
-        <div className='dashboard-panel metric-card bento-wide'>
-          <div className='panel-header'>
-            <h3>Recommended Move</h3>
-            <FiActivity />
-          </div>
-          <h4 className='metric-title'>{analytics?.router?.actions?.find((action) => action.allowed)?.label || 'Keep tracking income'}</h4>
-          <p style={{ color: 'var(--text-soft)' }}>{analytics?.router?.summary || `We've analyzed ${analytics?.entryCount || 0} entries to find the safest next step for you.`}</p>
-        </div>
-
-        <div className='dashboard-panel bento-full'>
-          <h3>Your Micro-Investment Match</h3>
-          <p style={{ color: 'var(--text-soft)', marginBottom: '1rem' }}>We match you with bite-sized investments only when it's safe for your cash flow.</p>
-          <InvestmentSuggestions investment={investment} compact />
-        </div>
-      </div>
     </div>
-  )
-}
-
-export default DashboardHome
+  );
+};
+export default DashboardHome;

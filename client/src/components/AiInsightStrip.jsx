@@ -1,68 +1,91 @@
-import { FiHeart, FiTrendingUp, FiShield, FiTarget } from 'react-icons/fi'
-
-const toneColor = {
-  safe: 'var(--success)',
-  caution: 'var(--warning)',
-  growth: 'var(--primary)',
-}
+import {
+  FiAlertCircle,
+  FiHeart,
+  FiShield,
+  FiTarget,
+  FiTrendingUp,
+} from "react-icons/fi";
+import { Panel, StatusBadge } from "./ui/ProductUi";
 
 const AiInsightStrip = ({ explanation }) => {
-  if (!explanation?.overview) return null
-
-  const color = toneColor[explanation.tone] || toneColor.caution
-
+  if (!explanation?.overview) return null;
   return (
-    <div className='dashboard-panel ai-insight-strip' style={{ padding: '2rem', background: 'var(--bg-card)' }}>
-      <div className='panel-header' style={{ marginBottom: '1rem' }}>
-        <div>
-          <p className='eyebrow-label' style={{ color, fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Your AI Assistant Says:</p>
-          <h2 style={{ marginTop: '0.5rem', marginBottom: '0.5rem', fontSize: '1.4rem' }}>{explanation.overview.headline}</h2>
+    <Panel
+      className="af-insight-summary"
+      title={explanation.overview.headline}
+      action={
+        <StatusBadge
+          tone={
+            explanation.tone === "safe" || explanation.tone === "growth"
+              ? "success"
+              : "warning"
+          }
+        >
+          {explanation.status === "fallback"
+            ? "Basic insight"
+            : "Your financial context"}
+        </StatusBadge>
+      }
+    >
+      <p>{explanation.overview.summary}</p>
+      <details className="af-insight-details">
+        <summary>Explore the reasoning and your next steps</summary>
+        <div className="af-insight-grid">
+          {[
+            {
+              label: "Your health",
+              text: explanation.healthInsight,
+              icon: FiHeart,
+            },
+            {
+              label: "Looking ahead",
+              text: explanation.forecastInsight,
+              icon: FiTrendingUp,
+            },
+            {
+              label: "Safety first",
+              text: explanation.decisionInsight,
+              icon: FiShield,
+            },
+            {
+              label: "Room to grow",
+              text: explanation.investmentInsight,
+              icon: FiTarget,
+            },
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.label} className="af-insight-item">
+                <strong>
+                  <Icon />
+                  {item.label}
+                </strong>
+                <p>{item.text}</p>
+              </div>
+            );
+          })}
         </div>
-        {explanation.status === 'fallback' && <span className='status-pill'>basic insight</span>}
-      </div>
-      
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: 'var(--text-soft)', marginBottom: '2rem' }}>
-        {explanation.overview.summary}
-      </p>
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
-        <div className='soft-row' style={{ padding: '1rem', background: 'var(--bg-body)', borderRadius: '8px' }}>
-          <strong style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.5rem', color: 'var(--primary)' }}><FiHeart /> Health Check</strong>
-          <p style={{ margin: 0, fontSize: '0.95rem' }}>{explanation.healthInsight}</p>
+        <div className="af-insight-action-plan">
+          <h3>Your next steps</h3>
+          <div className="af-insight-grid">
+            {(explanation.actionPlan || []).map((item) => (
+              <div key={item.title} className="af-insight-item">
+                <strong>{item.title}</strong>
+                <p>{item.detail}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className='soft-row' style={{ padding: '1rem', background: 'var(--bg-body)', borderRadius: '8px' }}>
-          <strong style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.5rem', color: 'var(--success)' }}><FiTrendingUp /> Looking Ahead</strong>
-          <p style={{ margin: 0, fontSize: '0.95rem' }}>{explanation.forecastInsight}</p>
-        </div>
-        <div className='soft-row' style={{ padding: '1rem', background: 'var(--bg-body)', borderRadius: '8px' }}>
-          <strong style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.5rem', color: 'var(--warning)' }}><FiShield /> Safety Decision</strong>
-          <p style={{ margin: 0, fontSize: '0.95rem' }}>{explanation.decisionInsight}</p>
-        </div>
-        <div className='soft-row' style={{ padding: '1rem', background: 'var(--bg-body)', borderRadius: '8px' }}>
-          <strong style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.5rem', color: 'var(--accent)' }}><FiTarget /> Investment Path</strong>
-          <p style={{ margin: 0, fontSize: '0.95rem' }}>{explanation.investmentInsight}</p>
-        </div>
-      </div>
-
-      <div style={{ borderTop: '2px dashed var(--border-soft)', paddingTop: '1.5rem' }}>
-        <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Your Next Steps</h3>
-        <div className='action-grid'>
-          {(explanation.actionPlan || []).map((item) => (
-            <div key={item.title} className='soft-row'>
-              <strong>{item.title}</strong>
-              <p>{item.detail}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      </details>
       {explanation.watchOut && (
-        <p className='muted-copy watch-out' style={{ marginTop: '1.5rem', padding: '1rem', background: '#fffbeb', color: '#b45309', borderLeft: '4px solid #f59e0b' }}>
-          <strong>Keep in mind:</strong> {explanation.watchOut}
-        </p>
+        <div className="af-watch-out">
+          <FiAlertCircle />
+          <p>
+            <strong>Keep in mind:</strong> {explanation.watchOut}
+          </p>
+        </div>
       )}
-    </div>
-  )
-}
-
-export default AiInsightStrip
+    </Panel>
+  );
+};
+export default AiInsightStrip;

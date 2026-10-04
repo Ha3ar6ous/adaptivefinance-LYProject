@@ -23,7 +23,7 @@ const LoginPage = () => {
       }
       localStorage.setItem('token', body.token)
       navigate('/dashboard')
-    } catch (err) {
+    } catch {
       setError('Unable to login. Try later.')
     }
   }
