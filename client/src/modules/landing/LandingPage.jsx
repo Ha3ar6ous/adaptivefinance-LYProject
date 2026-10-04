@@ -17,6 +17,9 @@ import Brand from "./Brand";
 import { ForecastPreview, HealthRing, ProductPreview } from "./ProductPreview";
 import { faqs, healthFactors } from "./previewData";
 import useLandingMotion from "./useLandingMotion";
+import RupeeMotif from "./RupeeMotif";
+import FinancialJourney from "./FinancialJourney";
+import "./scroll-story.css";
 import "./landing.css";
 
 function StartLink({ children = "Find my financial footing", light = false }) {
@@ -84,7 +87,8 @@ function SafetyPreview() {
         </p>
         <div className="af-safety-checks">
           <span className={ready ? undefined : "af-check-watch"}>
-            {ready ? <FiCheck /> : <FiAlertCircle />} {ready ? "3.2" : "0.8"} months of expense cover
+            {ready ? <FiCheck /> : <FiAlertCircle />} {ready ? "3.2" : "0.8"}{" "}
+            months of expense cover
           </span>
           <span>
             <FiCheck /> Manageable debt
@@ -152,7 +156,10 @@ export default function LandingPage() {
             <FiCheck /> Start with your earnings. Stay in control.
           </div>
         </div>
-        <ProductPreview />
+        <div className="af-hero-visual">
+          <RupeeMotif />
+          <ProductPreview />
+        </div>
       </section>
 
       <section
@@ -182,7 +189,7 @@ export default function LandingPage() {
       </section>
 
       <section className="af-problem" id="how-it-works">
-        <div className="af-container" data-af-reveal>
+        <div className="af-container">
           <div className="af-section-meta">
             <span className="af-kicker">A DIFFERENT KIND OF PAYDAY</span>
             <span className="af-section-number">01 — THE REALITY</span>
@@ -239,14 +246,16 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <FinancialJourney />
+
       <section className="af-intelligence af-container" id="your-money">
-        <div className="af-section-meta" data-af-reveal>
+        <div className="af-section-meta">
           <span className="af-kicker">
             LESS GUESSWORK. MORE GROUND UNDER YOUR FEET.
           </span>
           <span className="af-section-number">02 — THE CLARITY</span>
         </div>
-        <div className="af-section-intro" data-af-reveal>
+        <div className="af-section-intro">
           <h2>
             Your numbers.
             <br />
@@ -258,7 +267,7 @@ export default function LandingPage() {
             Here’s how the pieces come together.
           </p>
         </div>
-        <div className="af-story-row" data-af-reveal>
+        <div className="af-story-row">
           <div className="af-story-copy">
             <span className="af-chapter">
               01 <span /> KNOW WHAT’S AHEAD
@@ -303,7 +312,7 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-        <div className="af-story-row af-story-reverse" data-af-reveal>
+        <div className="af-story-row af-story-reverse">
           <div className="af-story-copy">
             <span className="af-chapter">
               02 <span /> UNDERSTAND WHERE YOU STAND
@@ -378,13 +387,13 @@ export default function LandingPage() {
 
       <section className="af-safety-section" id="safety-first">
         <div className="af-container">
-          <div className="af-section-meta" data-af-reveal>
+          <div className="af-section-meta">
             <span className="af-kicker">
               PROTECT TODAY. MAKE ROOM FOR TOMORROW.
             </span>
             <span className="af-section-number">03 — THE CONFIDENCE</span>
           </div>
-          <div className="af-safety-layout" data-af-reveal>
+          <div className="af-safety-layout">
             <div className="af-safety-copy">
               <span className="af-outline-icon">
                 <FiShield />
@@ -411,19 +420,25 @@ export default function LandingPage() {
                 </span>
               </div>
             </div>
-            <SafetyPreview />
+            <div className="af-safety-composition">
+              <div className="af-safety-frame" aria-hidden="true">
+                <FiShield />
+                <span>YOUR ESSENTIALS, PROTECTED</span>
+              </div>
+              <SafetyPreview />
+            </div>
           </div>
         </div>
       </section>
 
       <section className="af-steps-section af-container" id="get-started">
-        <div className="af-section-meta" data-af-reveal>
+        <div className="af-section-meta">
           <span className="af-kicker">
             A LITTLE INPUT. A LOT MORE PERSPECTIVE.
           </span>
           <span className="af-section-number">04 — YOUR FIRST STEP</span>
         </div>
-        <div className="af-section-intro" data-af-reveal>
+        <div className="af-section-intro">
           <h2>
             Less overthinking.
             <br />
@@ -431,7 +446,7 @@ export default function LandingPage() {
           </h2>
           <StartLink>Make my next move</StartLink>
         </div>
-        <div className="af-steps" data-af-reveal>
+        <div className="af-steps">
           {[
             {
               icon: FiFileText,
@@ -464,11 +479,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section
-        className="af-faq-section af-container"
-        id="questions"
-        data-af-reveal
-      >
+      <section className="af-faq-section af-container" id="questions">
         <div>
           <span className="af-kicker">GOOD QUESTIONS. CLEAR ANSWERS.</span>
           <h2>
@@ -491,7 +502,7 @@ export default function LandingPage() {
       </section>
 
       <section className="af-final-section">
-        <div className="af-container" data-af-reveal>
+        <div className="af-container">
           <span className="af-eyebrow">
             <span /> FOR EVERY WAY YOU EARN
           </span>
