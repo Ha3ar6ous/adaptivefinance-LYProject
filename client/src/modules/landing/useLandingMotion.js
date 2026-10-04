@@ -34,7 +34,7 @@ export default function useLandingMotion(root) {
 
             // 1. Different depths leave the hero at different speeds; the coin shares its progress.
             const hero = select(".af-hero");
-            const motif = select(".af-rupee-motif");
+            const motif = select(".af-hero .af-rupee-motif");
             const heroTimeline = gsap.timeline({
               scrollTrigger: {
                 trigger: hero,
@@ -120,6 +120,7 @@ export default function useLandingMotion(root) {
               const layers = all(".af-journey-layer");
               const chapters = all(".af-journey-chapter");
               const markers = all(".af-journey-progress > span");
+              const sculpture = select(".af-money-sculpture");
               const journey = gsap.timeline({
                 scrollTrigger: {
                   trigger: track,
@@ -127,6 +128,13 @@ export default function useLandingMotion(root) {
                   end: "bottom 78%",
                   scrub: 0.6,
                   onUpdate: (self) => {
+                    // The shared scene receives continuous progress, not React rerenders.
+                    sculpture.dataset.scrollProgress = self.progress;
+                    sculpture.dispatchEvent(
+                      new CustomEvent("af:rupee-progress", {
+                        detail: self.progress,
+                      }),
+                    );
                     const active = Math.min(
                       4,
                       Math.floor(self.progress * 4.3 + 0.1),
@@ -146,11 +154,23 @@ export default function useLandingMotion(root) {
                   },
                 },
               });
-              gsap.set(layers.slice(1), {
-                opacity: 0,
-                y: 65,
-                rotation: 4,
-                scale: 0.92,
+              // Income → top left → top right → bottom right → back to income's corner.
+              const corners = [
+                { x: -22, y: 22 },
+                { x: -22, y: -22 },
+                { x: 22, y: -22 },
+                { x: 22, y: 22 },
+                { x: -22, y: 22 },
+              ];
+              layers.slice(1).forEach((layer, index) => {
+                const corner = corners[index + 1];
+                gsap.set(layer, {
+                  opacity: 0,
+                  x: corner.x,
+                  y: corner.y,
+                  rotation: corner.x < 0 ? -3 : 3,
+                  scale: 0.96,
+                });
               });
               chapters[0].classList.add("af-journey-active");
               markers[0].classList.add("af-journey-active");
@@ -161,9 +181,9 @@ export default function useLandingMotion(root) {
                     layers[index - 1],
                     {
                       opacity: 0,
-                      y: -45,
-                      x: index % 2 ? -25 : 25,
-                      rotation: -4,
+                      y: corners[index - 1].y,
+                      x: corners[index - 1].x,
+                      rotation: corners[index - 1].x < 0 ? -3 : 3,
                       scale: 0.95,
                       duration: 0.45,
                       ease: "power1.inOut",
@@ -174,6 +194,7 @@ export default function useLandingMotion(root) {
                     layers[index],
                     {
                       opacity: 1,
+                      x: 0,
                       y: 0,
                       rotation: 0,
                       scale: 1,
@@ -233,11 +254,6 @@ export default function useLandingMotion(root) {
                   select(".af-journey-halo"),
                   { rotation: 110, scale: 1.2, duration: 4.3, ease: "none" },
                   0,
-                )
-                .to(
-                  select(".af-journey-currency"),
-                  { y: -70, rotation: 18, duration: 4.3, ease: "none" },
-                  0,
                 );
             }
 
@@ -288,19 +304,124 @@ export default function useLandingMotion(root) {
                 0,
               );
 
+            // 5. Each practical step settles into place as its progress rule fills.
+            const steps = select(".af-steps-section");
+            gsap.fromTo(
+              select(".af-steps-section .af-section-intro h2"),
+              { y: desktop ? 36 : 18 },
+              {
+                y: 0,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: steps,
+                  start: "top 90%",
+                  end: "top 50%",
+                  scrub: 0.5,
+                },
+              },
+            );
+            all(".af-steps article").forEach((step, index) => {
+              const timeline = gsap.timeline({
+                scrollTrigger: {
+                  trigger: step,
+                  start: desktop ? `top ${90 - index * 7}%` : "top 92%",
+                  end: desktop ? `top ${55 - index * 7}%` : "top 65%",
+                  scrub: 0.45,
+                },
+              });
+              timeline
+                .fromTo(
+                  step,
+                  { y: desktop ? 32 + index * 12 : 20 },
+                  { y: 0, duration: 1, ease: "none" },
+                  0,
+                )
+                .fromTo(
+                  step.querySelector(".af-step-progress"),
+                  { scaleX: 0 },
+                  { scaleX: 1, duration: 1, ease: "none" },
+                  0,
+                )
+                .fromTo(
+                  step.querySelector(".af-step-top > svg"),
+                  { rotation: index === 1 ? -45 : -12, scale: 0.85 },
+                  { rotation: 0, scale: 1, duration: 1, ease: "none" },
+                  0,
+                );
+            });
+
+            // Questions gently align; native details and keyboard focus stay available.
+            all(".af-faq-list details").forEach((row) => {
+              gsap.fromTo(
+                row,
+                { x: desktop ? 24 : 0, y: desktop ? 0 : 12 },
+                {
+                  x: 0,
+                  y: 0,
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: row,
+                    start: "top 94%",
+                    end: "top 72%",
+                    scrub: 0.4,
+                  },
+                },
+              );
+            });
+
+            // The closing earnings line draws toward the next move, and unwinds upward.
+            const closing = select(".af-final-section");
+            const closingTimeline = gsap.timeline({
+              scrollTrigger: {
+                trigger: closing,
+                start: "top 94%",
+                end: "center 58%",
+                scrub: 0.6,
+              },
+            });
+            closingTimeline
+              .fromTo(
+                select(".af-final-line path"),
+                { strokeDasharray: "1 1", strokeDashoffset: 1 },
+                { strokeDashoffset: 0, duration: 1, ease: "none" },
+                0,
+              )
+              .fromTo(
+                select(".af-final-section h2"),
+                { y: desktop ? 40 : 20 },
+                { y: 0, duration: 1, ease: "none" },
+                0,
+              )
+              .fromTo(
+                select(".af-final-section .af-button"),
+                { y: desktop ? 24 : 12 },
+                { y: 0, duration: 0.7, ease: "none" },
+                0.3,
+              );
+
             const refresh = () => ScrollTrigger.refresh();
+            // Accordion height changes move every trigger below the questions.
+            const questions = all(".af-faq-list details");
+            questions.forEach((question) =>
+              question.addEventListener("toggle", refresh),
+            );
             document.fonts?.ready.then(() => {
               if (!disposed) refresh();
             });
             return () => {
+              questions.forEach((question) =>
+                question.removeEventListener("toggle", refresh),
+              );
               element.classList.remove("af-scroll-ready");
               all(".af-journey-active").forEach((node) =>
                 node.classList.remove("af-journey-active"),
               );
-              motif.dataset.scrollProgress = "0";
-              motif.dispatchEvent(
-                new CustomEvent("af:rupee-progress", { detail: 0 }),
-              );
+              all(".af-rupee-motif").forEach((scene) => {
+                scene.dataset.scrollProgress = "0";
+                scene.dispatchEvent(
+                  new CustomEvent("af:rupee-progress", { detail: 0 }),
+                );
+              });
             };
           },
           element,

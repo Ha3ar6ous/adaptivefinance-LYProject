@@ -1,3 +1,4 @@
+import { createMoneyChoreography } from "./moneyChoreography";
 import {
   Scene,
   PerspectiveCamera,
@@ -15,7 +16,7 @@ import {
 } from "three";
 
 // Hand-built ₹ geometry: no fonts, textures, model downloads, shadows, or postprocessing.
-export function createRupeeScene(host) {
+export function createRupeeScene(host, { mode = "hero" } = {}) {
   let renderer;
   try {
     renderer = new WebGLRenderer({
@@ -31,7 +32,8 @@ export function createRupeeScene(host) {
   renderer.setClearColor(0x000000, 0);
   const scene = new Scene();
   const camera = new PerspectiveCamera(38, 1, 0.1, 20);
-  camera.position.z = 5.8;
+  const storytelling = mode === "journey";
+  camera.position.z = storytelling ? 8.8 : 5.8;
   const coin = new Group();
   scene.add(coin);
   const face = new MeshStandardMaterial({
@@ -49,14 +51,14 @@ export function createRupeeScene(host) {
     metalness: 0.4,
     roughness: 0.28,
   });
-  const disc = new Mesh(new CylinderGeometry(1.22, 1.22, 0.16, 64), face);
+  const disc = new Mesh(new CylinderGeometry(1.22, 1.22, 0.24, 64), face);
   disc.rotation.x = Math.PI / 2;
   coin.add(disc);
   const rim = new Mesh(new TorusGeometry(1.2, 0.028, 8, 64), edge);
-  rim.position.z = 0.09;
+  rim.position.z = 0.13;
   coin.add(rim);
   const innerRim = new Mesh(new TorusGeometry(1.04, 0.008, 6, 64), edge);
-  innerRim.position.z = 0.085;
+  innerRim.position.z = 0.125;
   coin.add(innerRim);
   const rectangle = (x, y, w, h) => {
     const shape = new Shape();
@@ -99,7 +101,7 @@ export function createRupeeScene(host) {
     ),
     glyphMaterial,
   );
-  glyph.position.set(0, 0.06, 0.1);
+  glyph.position.set(0, 0.06, 0.14);
   coin.add(glyph);
   scene.add(new HemisphereLight("#fff7db", "#284634", 1.2));
   const key = new DirectionalLight("#fff6d9", 2);
@@ -108,22 +110,29 @@ export function createRupeeScene(host) {
   const fill = new DirectionalLight("#b5d3bb", 0.85);
   fill.position.set(3, -1, 2);
   scene.add(fill);
+  const animateMoney = storytelling
+    ? createMoneyChoreography(scene, coin, { face, edge, glyph: glyphMaterial })
+    : null;
   renderer.domElement.className = "af-rupee-canvas";
   host.appendChild(renderer.domElement);
   let frame = 0,
     last = 0,
     visible = false,
-    destroyed = false;
+    destroyed = false,
+    contextLost = false;
   let progress = Number(host.dataset.scrollProgress || 0);
   const resize = () => {
-    const size = Math.max(1, host.clientWidth);
-    renderer.setSize(size, size, false);
+    const width = Math.max(1, host.clientWidth),
+      height = Math.max(1, host.clientHeight);
+    renderer.setSize(width, height, false);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
   };
   resize();
   const resizeObserver = new ResizeObserver(resize);
   resizeObserver.observe(host);
   const render = (time) => {
-    if (destroyed || !visible || document.hidden) {
+    if (destroyed || contextLost || !visible || document.hidden) {
       frame = 0;
       return;
     }
@@ -137,11 +146,12 @@ export function createRupeeScene(host) {
       -0.13 + progress * 0.22,
     );
     coin.position.y = Math.sin(time * 0.0007) * 0.045 - progress * 0.16;
+    animateMoney?.(time, progress);
     renderer.render(scene, camera);
     host.classList.add("af-rupee-rendered");
   };
   const wake = () => {
-    if (visible && !document.hidden && !frame && !destroyed)
+    if (visible && !document.hidden && !frame && !destroyed && !contextLost)
       frame = requestAnimationFrame(render);
     if ((!visible || document.hidden) && frame) {
       cancelAnimationFrame(frame);
@@ -158,11 +168,22 @@ export function createRupeeScene(host) {
   };
   const onContextLost = (event) => {
     event.preventDefault();
-    dispose();
+    contextLost = true;
+    cancelAnimationFrame(frame);
+    frame = 0;
+    host.classList.remove("af-rupee-rendered");
+  };
+  const onContextRestored = () => {
+    contextLost = false;
+    wake();
   };
   host.addEventListener("af:rupee-progress", onProgress);
   document.addEventListener("visibilitychange", wake);
   renderer.domElement.addEventListener("webglcontextlost", onContextLost);
+  renderer.domElement.addEventListener(
+    "webglcontextrestored",
+    onContextRestored,
+  );
   function dispose() {
     if (destroyed) return;
     destroyed = true;
@@ -172,12 +193,19 @@ export function createRupeeScene(host) {
     host.removeEventListener("af:rupee-progress", onProgress);
     document.removeEventListener("visibilitychange", wake);
     renderer.domElement.removeEventListener("webglcontextlost", onContextLost);
+    renderer.domElement.removeEventListener(
+      "webglcontextrestored",
+      onContextRestored,
+    );
+    const geometries = new Set(),
+      materials = new Set();
     scene.traverse((object) => {
-      object.geometry?.dispose();
+      if (object.geometry) geometries.add(object.geometry);
+      if (object.material) materials.add(object.material);
+      if (object.isInstancedMesh) object.dispose();
     });
-    face.dispose();
-    edge.dispose();
-    glyphMaterial.dispose();
+    geometries.forEach((geometry) => geometry.dispose());
+    materials.forEach((material) => material.dispose());
     renderer.dispose();
     renderer.domElement.remove();
     host.classList.remove("af-rupee-rendered");

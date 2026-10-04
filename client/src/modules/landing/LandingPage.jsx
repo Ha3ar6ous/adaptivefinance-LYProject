@@ -262,9 +262,9 @@ export default function LandingPage() {
             <span>A clearer next move.</span>
           </h2>
           <p>
-            From daily earnings to financial confidence.
+            Now bring that picture into your day.
             <br />
-            Here’s how the pieces come together.
+            Explore the outlook, the score, and the reasoning.
           </p>
         </div>
         <div className="af-story-row">
@@ -467,6 +467,7 @@ export default function LandingPage() {
             const Icon = step.icon;
             return (
               <article key={step.title}>
+                <span className="af-step-progress" aria-hidden="true" />
                 <div className="af-step-top">
                   <span>0{index + 1}</span>
                   <Icon />
@@ -516,6 +517,7 @@ export default function LandingPage() {
           <div className="af-final-line" aria-hidden="true">
             <svg viewBox="0 0 1000 130">
               <path
+                pathLength="1"
                 d="M0 115 L100 95 L190 109 L300 66 L390 78 L500 42 L590 65 L710 24 L790 44 L890 8 L1000 20"
                 fill="none"
                 stroke="currentColor"

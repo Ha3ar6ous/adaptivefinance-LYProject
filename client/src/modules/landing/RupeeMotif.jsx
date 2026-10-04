@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 
 // The SVG is also the mobile, reduced-motion, and unavailable-WebGL version.
-export default function RupeeMotif() {
+export default function RupeeMotif({ mode = "hero" }) {
   const root = useRef(null);
+  const gradientId = useId();
   useEffect(() => {
     const host = root.current;
     const media = window.matchMedia(
@@ -25,7 +26,7 @@ export default function RupeeMotif() {
           try {
             const { createRupeeScene } = await import("./rupeeScene");
             if (generation !== current) return;
-            dispose = createRupeeScene(host);
+            dispose = createRupeeScene(host, { mode });
           } catch {
             // The fallback remains visible if the GPU or module is unavailable.
           }
@@ -42,12 +43,17 @@ export default function RupeeMotif() {
       dispose?.();
       media.removeEventListener("change", setup);
     };
-  }, []);
+  }, [mode]);
   return (
-    <div className="af-rupee-motif" ref={root} aria-hidden="true">
+    <div
+      className={`af-rupee-motif ${mode === "journey" ? "af-money-sculpture" : ""}`}
+      data-scene={mode}
+      ref={root}
+      aria-hidden="true"
+    >
       <svg className="af-rupee-fallback" viewBox="0 0 240 240">
         <defs>
-          <linearGradient id="af-coin-face" x1="0" y1="0" x2="1" y2="1">
+          <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
             <stop stopColor="#557950" />
             <stop offset="1" stopColor="#153c2b" />
           </linearGradient>
@@ -56,7 +62,7 @@ export default function RupeeMotif() {
           cx="120"
           cy="120"
           r="86"
-          fill="url(#af-coin-face)"
+          fill={`url(#${gradientId})`}
           stroke="#99b577"
           strokeWidth="3"
         />

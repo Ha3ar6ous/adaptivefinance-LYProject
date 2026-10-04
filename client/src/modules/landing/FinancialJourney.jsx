@@ -1,3 +1,4 @@
+import RupeeMotif from "./RupeeMotif";
 import {
   FiActivity,
   FiArrowDown,
@@ -10,7 +11,7 @@ const chapters = [
   {
     label: "INCOME",
     title: "Start with what came in.",
-    copy: "A busy Monday. A quieter Wednesday. Record each day, including the days you earn nothing.",
+    copy: "First, the money arrives. A busy Monday. A quieter Wednesday. Each payday is a piece of your picture.",
     value: "₹6,490",
     detail: "A week of recorded earnings",
     icon: FiTrendingUp,
@@ -18,7 +19,7 @@ const chapters = [
   {
     label: "VOLATILITY",
     title: "See the space between paydays.",
-    copy: "The total is only part of the story. Changing daily earnings help explain how much breathing room your plan needs.",
+    copy: "Then, the pattern becomes visible. Some days carry the week. Others need breathing room. A plan should account for both.",
     value: "₹0 → ₹1,520",
     detail: "The range matters as much as the total",
     icon: FiActivity,
@@ -26,7 +27,7 @@ const chapters = [
   {
     label: "HEALTH",
     title: "Put your earnings in context.",
-    copy: "Cash cushion, debt, income stability, outlook, and tracking consistency come together. A useful score has a reason behind it.",
+    copy: "Now bring the pieces together. Cash cushion, debt, income stability, outlook, and consistency put your earnings in context.",
     value: "76 / 100",
     detail: "Five factors. One explained score",
     icon: FiActivity,
@@ -34,7 +35,7 @@ const chapters = [
   {
     label: "SAFETY",
     title: "Protect the life you’re building.",
-    copy: "Check your essentials and emergency buffer before taking investment risk. Sometimes the right next move is to wait.",
+    copy: "Give the essentials a place first. Build a cushion around the life you’re earning for. Sometimes the right next move is to wait.",
     value: "Buffer first.",
     detail: "Readiness before recommendations",
     icon: FiShield,
@@ -42,7 +43,7 @@ const chapters = [
   {
     label: "INVESTMENT",
     title: "Grow with what you can spare.",
-    copy: "When your financial footing supports it, explore small investment steps matched to your available surplus and comfort with risk.",
+    copy: "Only then, make room for growth. Explore small investment steps with your available surplus, at a level of risk that fits you.",
     value: "At your pace.",
     detail: "Guidance that starts with your situation",
     icon: FiTrendingUp,
@@ -109,8 +110,12 @@ export default function FinancialJourney() {
               <span>ILLUSTRATIVE EXAMPLE</span>
             </div>
             <div className="af-journey-visual">
+              <RupeeMotif mode="journey" />
               <div className="af-journey-halo" />
-              <span className="af-journey-currency">₹</span>
+              <div className="af-scene-caption-line">
+                <span>EVERY RUPEE HAS A ROLE.</span>
+                <span>INCOME → DIRECTION</span>
+              </div>
               <div className="af-journey-income af-journey-layer">
                 <div className="af-journey-card-label">
                   YOUR RECORDED WEEK <span>01</span>

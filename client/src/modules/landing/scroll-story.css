@@ -602,3 +602,233 @@
     margin-right: 55px;
   }
 }
+
+/* A continuous money sculpture, with product details as quiet annotations. */
+@media (min-width: 1024px) {
+  .af-hero .af-rupee-motif {
+    width: 230px;
+    height: 230px;
+    top: -95px;
+    right: -60px;
+  }
+  .af-hero-visual .af-stage-top > span:last-child {
+    margin-right: 110px;
+  }
+  .af-journey-track {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 65px;
+  }
+  .af-journey-chapter {
+    min-height: 510px;
+  }
+  .af-journey-sticky {
+    top: max(100px, calc((100vh - 630px) / 2));
+    padding-block: 16px;
+  }
+  .af-journey-board {
+    padding: 24px;
+    background: radial-gradient(ellipse at 55% 42%, #edf3e2 0%, #f1f4ea 65%);
+    border-color: #dfe6d5;
+  }
+  .af-journey-visual {
+    height: 470px;
+    margin-block: 12px 25px;
+  }
+  .af-money-sculpture {
+    position: absolute;
+    inset: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .af-money-sculpture .af-rupee-fallback {
+    width: 55%;
+    height: 70%;
+    left: 24%;
+    top: 10%;
+  }
+  .af-money-sculpture .af-rupee-shadow {
+    display: none;
+  }
+  .af-journey-halo {
+    width: 410px;
+    height: 410px;
+    opacity: 0.6;
+  }
+  .af-scene-caption-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 7px;
+    letter-spacing: 1.1px;
+    color: #879776;
+  }
+  .af-journey-layer {
+    top: auto;
+    bottom: 0;
+    left: 8px;
+    width: 210px;
+    min-height: 0;
+    max-width: none;
+    padding: 16px;
+    z-index: 1;
+    box-shadow: 0 10px 26px #1b442312;
+    border-radius: 12px;
+  }
+  .af-journey-card-label {
+    font-size: 6px;
+    letter-spacing: 0.7px;
+  }
+  .af-journey-amount {
+    font-size: 29px;
+    margin-top: 13px;
+  }
+  .af-journey-bars {
+    height: 66px;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .af-journey-bars small {
+    font-size: 6px;
+  }
+  .af-journey-volatility svg {
+    height: 75px;
+    margin-top: 12px;
+  }
+  .af-journey-range {
+    font-size: 8px;
+    margin-top: 7px;
+  }
+  .af-journey-range strong {
+    font-size: 18px;
+  }
+  .af-journey-score {
+    height: 80px;
+    width: 80px;
+    margin: 10px auto;
+  }
+  .af-journey-score strong {
+    font-size: 27px;
+  }
+  .af-journey-score small {
+    font-size: 5px;
+  }
+  .af-journey-factor-chips {
+    gap: 3px;
+  }
+  .af-journey-factor-chips span {
+    font-size: 6px;
+    padding: 4px;
+  }
+  .af-journey-shield,
+  .af-journey-growth {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 14px auto 12px;
+  }
+  .af-journey .af-journey-layer h4 {
+    font-size: 20px;
+  }
+  .af-journey-layer > p {
+    font-size: 9px;
+    margin-top: 9px;
+  }
+  .af-journey-check {
+    font-size: 8px;
+    margin-top: 12px;
+  }
+  .af-journey-allocation {
+    font-size: 6px;
+    margin-top: 13px;
+  }
+  .af-journey-footnote {
+    margin-top: 14px !important;
+  }
+}
+@media (min-width: 1024px) and (max-height: 760px) {
+  .af-journey-sticky {
+    top: 92px;
+  }
+  .af-journey-visual {
+    height: 380px;
+  }
+  .af-journey-board {
+    padding: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .af-money-sculpture {
+    display: none;
+  }
+}
+
+.af-rupee-canvas {
+  opacity: 0;
+}
+.af-rupee-rendered .af-rupee-canvas {
+  opacity: 1;
+}
+@media (min-width: 1024px) {
+  .af-journey-card-label {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .af-journey-layer {
+    width: 225px;
+  }
+  .af-journey-factor-chips span {
+    font-size: 7px;
+  }
+  .af-journey-allocation {
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .af-journey-chapter {
+    min-height: 0;
+  }
+}
+
+/* Annotations make a clockwise circuit while the money scene stays centred. */
+@media (min-width: 1024px) {
+  .af-journey-layer {
+    width: clamp(180px, 18vw, 225px);
+  }
+  .af-journey-income,
+  .af-journey-investment {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 8px;
+    transform-origin: bottom left;
+  }
+  .af-journey-volatility {
+    top: 42px;
+    right: auto;
+    bottom: auto;
+    left: 8px;
+    transform-origin: top left;
+  }
+  .af-journey-health {
+    top: 42px;
+    right: 8px;
+    bottom: auto;
+    left: auto;
+    transform-origin: top right;
+  }
+  .af-journey-safety {
+    top: auto;
+    right: 8px;
+    bottom: 0;
+    left: auto;
+    transform-origin: bottom right;
+  }
+}
