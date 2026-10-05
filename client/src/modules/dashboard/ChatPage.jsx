@@ -1,19 +1,12 @@
 import { Notice, PageHeading } from "../../components/ui/ProductUi";
 import { FiArrowUpRight, FiShield } from "react-icons/fi";
-import { useState, useRef, useEffect } from "react";
+import { useContext, useRef, useEffect } from "react";
+import { ChatContext } from "./chatContext";
 import { FiMessageSquare, FiSend, FiUser, FiCpu } from "react-icons/fi";
 
 const ChatPage = () => {
-  const [messages, setMessages] = useState([
-    {
-      role: "assistant",
-      content:
-        "Hi there! I'm your Adaptive Finance AI. Ask me anything about your income history, health score, or how much you should save.",
-    },
-  ]);
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const { messages, input, setInput, loading, error, handleSend } =
+    useContext(ChatContext);
   const messagesEndRef = useRef(null);
 
   const quickPrompts = [
@@ -36,47 +29,6 @@ const ChatPage = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-
-  const handleSend = async (text) => {
-    const messageText = text || input;
-    if (!messageText.trim()) return;
-
-    const newMessages = [...messages, { role: "user", content: messageText }];
-    setMessages(newMessages);
-    setInput("");
-    setLoading(true);
-    setError("");
-
-    try {
-      const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ messages: newMessages }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to get response");
-      }
-
-      const data = await response.json();
-      setMessages([...newMessages, { role: "assistant", content: data.reply }]);
-    } catch (err) {
-      setError(err.message);
-      setMessages([
-        ...newMessages,
-        {
-          role: "assistant",
-          content: "Oops! I had trouble fetching that info. Please try again.",
-        },
-      ]);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   // Simple bold markdown parser
   const renderMessageContent = (content) => {
@@ -107,7 +59,7 @@ const ChatPage = () => {
             <FiMessageSquare />
           </span>
           <div>
-            <strong>Adaptive assistant</strong>
+            <strong>Finspire assistant</strong>
             <span>Financial context, made clearer.</span>
           </div>
           <span className="af-chat-context">
@@ -136,7 +88,7 @@ const ChatPage = () => {
               </span>
               <div className="af-chat-bubble">
                 <span className="af-chat-message-label">
-                  {msg.role === "user" ? "You" : "Adaptive"}
+                  {msg.role === "user" ? "You" : "Finspire"}
                 </span>
                 <p>{renderMessageContent(msg.content)}</p>
               </div>

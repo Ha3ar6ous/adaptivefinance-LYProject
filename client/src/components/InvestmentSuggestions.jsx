@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FiArrowUpRight, FiLock, FiShield, FiTrendingUp } from "react-icons/fi";
 import { EmptyState, StatusBadge } from "./ui/ProductUi";
 import { money } from "./ui/formatters";
+import InvestmentIdentity from "./InvestmentIdentity";
 
 const InvestmentSuggestions = ({ investment, compact = false }) => {
   if (!investment)
@@ -53,6 +54,7 @@ const InvestmentSuggestions = ({ investment, compact = false }) => {
           .slice(0, compact ? 1 : 5)
           .map((suggestion, index) => (
             <article className="af-investment-card" key={suggestion.optionId}>
+              <InvestmentIdentity suggestion={suggestion} />
               <div className="af-investment-card-top">
                 <span className="af-investment-order">0{index + 1}</span>
                 <div>

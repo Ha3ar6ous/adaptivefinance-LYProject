@@ -195,13 +195,13 @@
   font-weight: 650;
   line-height: 0.95;
 }
-.af-brand-finance {
-  display: block;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 3.7px;
-  padding-left: 2px;
-  margin-top: 6px;
+.af-brand-wordmark {
+  white-space: nowrap;
+  letter-spacing: -0.055em;
+}
+.af-brand-rupee {
+  display: inline-block;
+  font-size: 0.98em;
 }
 .af-brand-mark {
   width: 34px;
@@ -682,15 +682,83 @@
   color: #58634f;
   font-weight: 500;
 }
-.af-audience > div {
+.af-audience-marquee {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  padding-block: 8px;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 48px,
+    #000 calc(100% - 48px),
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 48px,
+    #000 calc(100% - 48px),
+    transparent
+  );
+}
+.af-audience-marquee:focus-visible {
+  outline: 2px solid var(--af-green);
+  outline-offset: 5px;
+}
+.af-audience-track {
+  display: flex;
+  width: max-content;
+  animation: af-audience-drift 95s linear infinite;
+}
+.af-audience-group {
+  display: flex;
+  flex: 0 0 auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.af-audience-group li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex: 1;
-  gap: 12px;
+  gap: 44px;
+  padding-right: 44px;
+  white-space: nowrap;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: -0.3px;
+}
+.af-audience-marquee:hover .af-audience-track,
+.af-audience-marquee:focus-within .af-audience-track {
+  animation-play-state: paused;
+}
+@keyframes af-audience-drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .af-audience-marquee {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .af-audience-track {
+    animation: none;
+    width: 100%;
+  }
+  .af-audience-group {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  .af-audience-group[aria-hidden="true"],
+  .af-audience-group .af-audience-star {
+    display: none;
+  }
+  .af-audience-group li {
+    padding-right: 0;
+  }
 }
 .af-audience-star {
   color: #9dab88;
@@ -1384,9 +1452,6 @@
 .af-footer-top .af-brand {
   font-size: 21px;
 }
-.af-footer-top .af-brand-finance {
-  font-size: 8px;
-}
 .af-footer-top .af-brand-mark {
   width: 30px;
   height: 30px;
@@ -1532,7 +1597,7 @@
   .af-audience {
     gap: 35px;
   }
-  .af-audience > div {
+  .af-audience-group li {
     font-size: 12px;
   }
   .af-earnings-strip {
@@ -1654,13 +1719,9 @@
   .af-audience {
     gap: 25px;
   }
-  .af-audience > div {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 13px 20px;
-  }
-  .af-audience-star {
-    display: none;
+  .af-audience-group li {
+    gap: 28px;
+    padding-right: 28px;
   }
   .af-problem-heading {
     align-items: flex-start;
@@ -1764,11 +1825,6 @@
   .af-brand-mark svg {
     width: 23px;
     height: 23px;
-  }
-  .af-brand-finance {
-    font-size: 8px;
-    letter-spacing: 3.1px;
-    margin-top: 5px;
   }
   .af-header-actions {
     gap: 7px;
@@ -1923,17 +1979,24 @@
   .af-audience > p strong {
     margin-left: 4px;
   }
-  .af-audience > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 13px;
+  .af-audience-group li {
     font-size: 13px;
   }
-  .af-audience > div > span:not(.af-audience-star):before {
-    content: "↗";
-    color: #96aa83;
-    font-size: 12px;
-    margin-right: 7px;
+  .af-audience-marquee {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 24px,
+      #000 calc(100% - 24px),
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 24px,
+      #000 calc(100% - 24px),
+      transparent
+    );
   }
   .af-problem {
     padding-block: 39px;
@@ -2239,9 +2302,6 @@
     font-size: 18px;
     gap: 6px;
   }
-  .af-brand-finance {
-    font-size: 7px;
-  }
   .af-brand-mark {
     width: 26px;
     height: 26px;
@@ -2306,5 +2366,91 @@
   }
   html {
     scroll-behavior: auto !important;
+  }
+}
+
+/* Origin is part of the product story, with a faithfully proportioned tricolour. */
+.af-india-flag {
+  width: 27px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.af-hero-assurance > .af-india-flag {
+  width: 24px;
+  height: 16px;
+}
+.af-footer-bottom > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.af-india-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  padding-block: 56px 70px;
+  border-top: 1px solid var(--af-line);
+}
+.af-india-origin > .af-india-flag {
+  width: 45px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.af-india-origin .af-kicker {
+  display: block;
+  margin-bottom: 15px;
+}
+.af-india-origin h2 {
+  font-size: clamp(32px, 3.4vw, 48px);
+  line-height: 1.12;
+}
+.af-india-origin h2 span {
+  color: #718168;
+}
+.af-india-copy {
+  align-self: center;
+}
+.af-india-copy > p {
+  font-size: clamp(18px, 1.9vw, 24px);
+  line-height: 1.5;
+  max-width: 550px;
+  letter-spacing: -0.5px;
+}
+.af-india-copy > span {
+  display: block;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #78856e;
+  margin-top: 18px;
+  max-width: 510px;
+}
+.af-india-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+.af-india-pillars span {
+  font-size: 9px;
+  padding: 8px 11px;
+  border: 1px solid var(--af-line);
+  border-radius: 5px;
+}
+@media (max-width: 767px) {
+  .af-india-section {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-block: 35px 45px;
+  }
+  .af-india-origin > .af-india-flag {
+    width: 36px;
+    height: 24px;
+    margin-bottom: 16px;
+  }
+  .af-india-origin h2 br {
+    display: none;
+  }
+  .af-india-origin h2 span::before {
+    content: " ";
   }
 }

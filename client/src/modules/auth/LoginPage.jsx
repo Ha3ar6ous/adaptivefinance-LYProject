@@ -73,12 +73,12 @@ const LoginPage = () => {
           className="af-ui-button af-form-submit"
           disabled={loading}
         >
-          {loading ? "Logging in…" : "Log in to Adaptive"}
+          {loading ? "Logging in…" : "Log in to Finspire"}
           <FiArrowUpRight aria-hidden="true" />
         </button>
       </form>
       <p className="af-auth-switch">
-        New to Adaptive?{" "}
+        New to Finspire?{" "}
         <Link to="/signup">
           Create an account <FiArrowUpRight />
         </Link>

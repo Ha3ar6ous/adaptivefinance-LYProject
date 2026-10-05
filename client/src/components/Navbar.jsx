@@ -27,7 +27,7 @@ const Navbar = () => {
           <Link
             className="af-home-link"
             to="/"
-            aria-label="Adaptive Finance home"
+            aria-label="Finspire home"
             onClick={() => setMenuOpen(false)}
           >
             <Brand />
@@ -116,7 +116,7 @@ const Navbar = () => {
   return (
     <header className="af-header af-quiet-header">
       <div className="af-header-inner">
-        <Link to="/" aria-label="Adaptive Finance home">
+        <Link to="/" aria-label="Finspire home">
           <Brand />
         </Link>
         <div className="af-header-actions">

@@ -11,9 +11,9 @@ export default function AuthShell({
 }) {
   return (
     <main
-      className={`af-app af-auth ${onboarding ? "af-auth-onboarding" : ""}`}
+      className={`af-app af-auth ${onboarding ? "af-auth-onboarding" : "af-auth-gateway"}`}
     >
-      <aside className="af-auth-story" aria-label="Adaptive Finance approach">
+      <aside className="af-auth-story" aria-label="Finspire approach">
         <span className="af-ui-eyebrow">FOR EVERY WAY YOU EARN</span>
         <h2>
           A little clarity.
@@ -68,7 +68,7 @@ export default function AuthShell({
       <div className="af-auth-form-side">
         <div className="af-auth-form-wrap">
           <Link className="af-auth-back" to="/">
-            <FiArrowLeft /> Back to Adaptive
+            <FiArrowLeft /> Back to Finspire
           </Link>
           <p className="af-ui-eyebrow">{eyebrow}</p>
           <h1>{title}</h1>
@@ -76,7 +76,7 @@ export default function AuthShell({
           {children}
         </div>
         <div className="af-auth-foot">
-          <span>Adaptive Finance</span>
+          <span>Finspire</span>
           <span>At your pace. On your terms.</span>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # Demo User Profiles
 
-These two profiles have been seeded into the database to demonstrate how Adaptive Finance handles different financial situations and adapts its recommendations accordingly.
+These two profiles have been seeded into the database to demonstrate how Finspire handles different financial situations and adapts its recommendations accordingly.
 
 ## Profile 1: Aditya Singh (Good Metrics)
 **Email:** `aditya.s@gmail.com`  

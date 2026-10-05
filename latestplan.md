@@ -1,11 +1,11 @@
-# Adaptive Finance - Latest Feature Plan
+# Finspire - Latest Feature Plan
 
-This document outlines the remaining planned enhancements for the Adaptive Finance application, expanded with details and ordered by estimated complexity (from least token-intensive/effort to most token-intensive).
+This document outlines the remaining planned enhancements for the Finspire application, expanded with details and ordered by estimated complexity (from least token-intensive/effort to most token-intensive).
 
 ## 1. Polish Nitty-Gritties & Housekeeping (Lowest Complexity)
 **Overview:** Fix small behind-the-scenes (BTS) naming conventions and meta details to make the app feel professional.
 **Details:** 
-- Change the browser tab title from `client` to `Adaptive Finance`.
+- Change the browser tab title from `client` to `Finspire`.
 - Rename ambiguous route files like `Route1.jsx`, `Route2.jsx`, and `Route3.jsx` to descriptive names (e.g., `IncomeHistory.jsx`, `Forecasts.jsx`, `HealthDecisions.jsx`).
 - Update internal router paths to match the new readable names.
 - *Why lowest complexity?* This only requires simple string replacements and file renaming across the frontend.

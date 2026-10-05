@@ -2869,3 +2869,257 @@
     font-size: 10px;
   }
 }
+
+.af-investment-identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.af-investment-identity .af-provider-logo {
+  display: grid;
+  place-items: center;
+  width: 124px;
+  height: 56px;
+  padding: 8px 10px;
+  border: 1px solid #e0e7d8;
+  border-radius: 8px;
+  background: #fff;
+}
+.af-provider-logo img {
+  width: 104px;
+  height: 40px;
+  object-fit: contain;
+}
+.af-provider-logo > span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #315540;
+  text-align: center;
+}
+.af-investment-category-art {
+  width: 64px;
+  height: 48px;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .af-investment-identity {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .af-investment-identity .af-provider-logo {
+    width: 110px;
+    height: 50px;
+    padding: 7px;
+  }
+  .af-provider-logo img {
+    width: 96px;
+    height: 36px;
+  }
+}
+
+.af-investment-identity .af-provider-logo-dark {
+  background: #153c2b;
+  border-color: #153c2b;
+}
+.af-investment-identity .af-provider-logo-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.af-provider-logo-symbol img {
+  width: 32px;
+  height: 32px;
+}
+.af-provider-logo-symbol > span {
+  font-size: 13px;
+  color: #244b37;
+  font-weight: 600;
+}
+.af-provider-logo .af-provider-fallback {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+}
+.af-provider-fallback img {
+  width: 24px;
+  height: 24px;
+}
+.af-provider-logo-dark > span {
+  color: #f2f4e8;
+}
+
+/* Login/signup use the space below the quiet header, with height-aware density.
+   Let exceptionally short screens scroll naturally rather than clipping forms. */
+.af-auth-gateway {
+  --af-auth-header-height: 81px;
+  width: 100%;
+  max-width: none;
+  min-height: calc(100dvh - var(--af-auth-header-height));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.af-auth-gateway .af-auth-story,
+.af-auth-gateway .af-auth-form-side {
+  min-width: 0;
+  padding: clamp(28px, 4dvh, 48px) clamp(28px, 5vw, 88px);
+}
+.af-auth-gateway .af-auth-story h2 {
+  font-size: clamp(36px, 5.8dvh, 56px);
+  margin-top: 22px;
+}
+.af-auth-gateway .af-auth-story > p {
+  margin-top: 20px;
+}
+.af-auth-gateway .af-auth-visual {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 26px;
+  padding: 20px;
+}
+.af-auth-gateway .af-auth-promise {
+  margin-top: 22px;
+}
+.af-auth-gateway .af-auth-side-foot {
+  padding-top: 24px;
+}
+.af-auth-gateway .af-auth-form-wrap {
+  max-width: 400px;
+}
+.af-auth-gateway .af-auth-back {
+  margin-bottom: 24px;
+}
+.af-auth-gateway .af-auth-form-wrap h1 {
+  font-size: clamp(32px, 4.8dvh, 44px);
+  margin-top: 12px;
+}
+.af-auth-gateway .af-auth-description {
+  margin-top: 14px !important;
+  line-height: 1.7;
+}
+.af-auth-gateway .af-form {
+  margin-top: 24px;
+  gap: 18px;
+}
+.af-auth-gateway .af-auth-foot {
+  margin-top: 24px;
+}
+@media (min-width: 768px) and (max-height: 800px) {
+  .af-auth-gateway .af-auth-story,
+  .af-auth-gateway .af-auth-form-side {
+    padding-block: 22px;
+  }
+  .af-auth-gateway .af-auth-story h2 {
+    font-size: clamp(34px, 5.5dvh, 44px);
+    margin-top: 18px;
+  }
+  .af-auth-gateway .af-auth-story > p {
+    margin-top: 16px;
+    font-size: 12px;
+  }
+  .af-auth-gateway .af-auth-visual {
+    margin-top: 20px;
+    padding: 16px;
+    max-width: 330px;
+  }
+  .af-auth-gateway .af-auth-score {
+    margin-top: 16px;
+  }
+  .af-auth-gateway .af-auth-next {
+    margin-top: 16px;
+    padding: 12px;
+  }
+  .af-auth-gateway .af-auth-pattern,
+  .af-auth-gateway .af-auth-promise {
+    display: none;
+  }
+  .af-auth-gateway .af-auth-side-foot {
+    padding-top: 18px;
+  }
+  .af-auth-gateway .af-auth-back {
+    margin-bottom: 16px;
+  }
+  .af-auth-gateway .af-auth-form-wrap h1 {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  .af-auth-gateway .af-auth-description {
+    font-size: 12px;
+    margin-top: 12px !important;
+  }
+  .af-auth-gateway .af-form {
+    margin-top: 20px;
+    gap: 14px;
+  }
+  .af-auth-gateway .af-field {
+    gap: 6px;
+  }
+  .af-auth-gateway .af-field input {
+    min-height: 44px;
+    padding-block: 11px;
+  }
+  .af-auth-gateway .af-form-submit {
+    min-height: 46px;
+    padding-block: 12px;
+  }
+  .af-auth-gateway .af-auth-switch {
+    margin-top: 16px !important;
+  }
+  .af-auth-gateway .af-auth-foot {
+    margin-top: 18px;
+  }
+}
+@media (min-width: 768px) and (max-height: 700px) {
+  .af-auth-gateway .af-auth-story,
+  .af-auth-gateway .af-auth-form-side {
+    padding-block: 16px;
+  }
+  .af-auth-gateway .af-auth-back {
+    margin-bottom: 12px;
+  }
+  .af-auth-gateway .af-auth-form-wrap h1 {
+    font-size: 30px;
+    margin-top: 8px;
+  }
+  .af-auth-gateway .af-auth-description {
+    margin-top: 10px !important;
+  }
+  .af-auth-gateway .af-form {
+    margin-top: 16px;
+    gap: 12px;
+  }
+  .af-auth-gateway .af-field {
+    gap: 5px;
+  }
+  .af-auth-gateway .af-auth-switch {
+    margin-top: 12px !important;
+  }
+  .af-auth-gateway .af-auth-foot {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .af-auth-gateway {
+    --af-auth-header-height: 72px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .af-auth-gateway .af-auth-form-side {
+    padding: 24px 24px 20px;
+  }
+  .af-auth-gateway .af-auth-form-wrap {
+    max-width: 440px;
+    margin-block: auto;
+  }
+  .af-auth-gateway .af-auth-form-wrap h1 {
+    font-size: clamp(30px, 8vw, 37px);
+  }
+  .af-auth-gateway .af-form {
+    gap: 18px;
+  }
+  .af-auth-gateway .af-auth-foot {
+    padding-top: 24px;
+    margin-top: 0;
+  }
+}

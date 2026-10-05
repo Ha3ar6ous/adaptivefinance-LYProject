@@ -1,6 +1,6 @@
-# Adaptive Finance - New Modules
+# Finspire - New Modules
 
-This document details the newer modules and architectures implemented in the Adaptive Finance backend. It supplements the main `README.md` and focuses on the **Micro-Investment Framework**, **Investment Recommendation Engine**, and the **AI/LLM Explanation Layer**.
+This document details the newer modules and architectures implemented in the Finspire backend. It supplements the main `README.md` and focuses on the **Micro-Investment Framework**, **Investment Recommendation Engine**, and the **AI/LLM Explanation Layer**.
 
 ---
 

@@ -7,7 +7,7 @@ const LandingPage = () => {
     <div className='landing-body'>
       <div className='landing-hero-layout'>
         <div className='hero-left'>
-          <p className='eyebrow'>Adaptive Finance</p>
+          <p className='eyebrow' aria-label='Finspire' translate='no'>FINSPI₹E</p>
           <h1>Smarter Decisions for Your Financial Future</h1>
           <p className='hero-subtitle'>
             Empower your financial journey with AI-driven forecasting, volatility modeling, and personalized investment suggestions.
@@ -53,7 +53,7 @@ const LandingPage = () => {
       </div>
 
       <footer className='landing-footer'>
-        <div>© 2026 Adaptive Finance. All rights reserved.</div>
+        <div>© 2026 Finspire. All rights reserved.</div>
         <div className='footer-links'>
           <a href="#">Privacy</a>
           <a href="#">Terms</a>

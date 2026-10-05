@@ -19,6 +19,7 @@ import IncomeHistory from "./modules/dashboard/IncomeHistory";
 import Forecasts from "./modules/dashboard/Forecasts";
 import HealthDecisions from "./modules/dashboard/HealthDecisions";
 import ChatPage from "./modules/dashboard/ChatPage";
+import ChatProvider from "./modules/dashboard/ChatProvider";
 import InvestmentEngine from "./modules/dashboard/InvestmentEngine";
 import OnboardingPage from "./modules/onboarding/OnboardingPage";
 
@@ -70,7 +71,9 @@ function App() {
               path="/dashboard"
               element={
                 <PrivateRoute>
-                  <Dashboard />
+                  <ChatProvider>
+                    <Dashboard />
+                  </ChatProvider>
                 </PrivateRoute>
               }
             >

@@ -109,7 +109,7 @@ const Dashboard = () => {
         Skip to content
       </a>
       <header className="af-mobile-workspace-header">
-        <Link to="/" aria-label="Adaptive Finance home">
+        <Link to="/" aria-label="Finspire home">
           <Brand />
         </Link>
         <div>
@@ -141,7 +141,7 @@ const Dashboard = () => {
         className={`af-workspace-sidebar ${open ? "af-drawer-open" : ""}`}
       >
         <div className="af-sidebar-brand">
-          <Link to="/" aria-label="Adaptive Finance home">
+          <Link to="/" aria-label="Finspire home">
             <Brand />
           </Link>
           <button
@@ -223,7 +223,7 @@ const Dashboard = () => {
           </div>
           <footer className="af-workspace-foot">
             <span>At your pace. On firmer ground.</span>
-            <span>Adaptive Finance</span>
+            <span>Finspire</span>
           </footer>
         </main>
       </div>

@@ -8,6 +8,7 @@ export default function useLandingMotion(root) {
     let disposed = false,
       loading = false,
       mediaContext;
+    let animationTargets = [];
     const setup = async () => {
       if (disposed || loading || mediaContext || reduced.matches) return;
       loading = true;
@@ -30,6 +31,11 @@ export default function useLandingMotion(root) {
             const desktop = context.conditions.desktop;
             const select = (selector) => element.querySelector(selector);
             const all = (selector) => [...element.querySelectorAll(selector)];
+            // React can replace these descendants during a live component update
+            // while retaining the main element and this effect's stable root ref.
+            animationTargets = all(
+              ".af-rupee-motif, .af-product-stage, .af-earning-day, .af-journey-track, .af-journey-layer, .af-journey-chapter, .af-safety-composition, .af-steps article, .af-faq-list details, .af-final-section",
+            );
             element.classList.add("af-scroll-ready");
 
             // 1. Different depths leave the hero at different speeds; the coin shares its progress.
@@ -426,16 +432,39 @@ export default function useLandingMotion(root) {
           },
           element,
         );
-      } catch {
+      } catch (error) {
         // Content is already complete and readable without motion dependencies.
+        mediaContext?.revert();
+        mediaContext = undefined;
+        animationTargets = [];
+        element.classList.remove("af-scroll-ready");
+        if (import.meta.env.DEV)
+          console.warn("Landing motion could not initialize:", error);
       } finally {
         loading = false;
       }
     };
+    const descendants = new MutationObserver(() => {
+      if (
+        disposed ||
+        loading ||
+        !mediaContext ||
+        !animationTargets.some((target) => !element.contains(target))
+      )
+        return;
+      // Rebind only if an animated element was replaced, never for per-frame
+      // style changes, chart interactions, or the canvas being lazy-mounted.
+      mediaContext.revert();
+      mediaContext = undefined;
+      animationTargets = [];
+      setup();
+    });
+    descendants.observe(element, { childList: true, subtree: true });
     setup();
     reduced.addEventListener("change", setup);
     return () => {
       disposed = true;
+      descendants.disconnect();
       mediaContext?.revert();
       reduced.removeEventListener("change", setup);
     };

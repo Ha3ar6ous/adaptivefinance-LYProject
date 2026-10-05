@@ -19,7 +19,7 @@ class AnalyzeRequest(BaseModel):
     horizon: int = 15
 
 
-app = FastAPI(title="Adaptive Finance ML Service")
+app = FastAPI(title="Finspire ML Service")
 
 
 @app.get("/health")

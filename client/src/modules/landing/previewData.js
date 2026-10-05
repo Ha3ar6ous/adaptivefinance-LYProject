@@ -49,7 +49,7 @@ export const healthFactors = [
 ];
 export const faqs = [
   {
-    question: "Who is Adaptive Finance for?",
+    question: "Who is Finspire for?",
     answer:
       "Delivery partners, drivers, freelancers, and anyone whose income changes from day to day. Your financial plan should fit how you earn.",
   },

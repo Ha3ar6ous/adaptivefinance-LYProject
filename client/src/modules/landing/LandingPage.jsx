@@ -14,6 +14,7 @@ import {
   FiTrendingUp,
 } from "react-icons/fi";
 import Brand from "./Brand";
+import IndiaFlag from "../../components/ui/IndiaFlag";
 import { ForecastPreview, HealthRing, ProductPreview } from "./ProductPreview";
 import { faqs, healthFactors } from "./previewData";
 import useLandingMotion from "./useLandingMotion";
@@ -21,6 +22,19 @@ import RupeeMotif from "./RupeeMotif";
 import FinancialJourney from "./FinancialJourney";
 import "./scroll-story.css";
 import "./landing.css";
+
+const gigRoles = [
+  "Delivery partners",
+  "Drivers & riders",
+  "Freelancers",
+  "Independent earners",
+  "Home service pros",
+  "Content creators",
+  "Online tutors",
+  "Local entrepreneurs",
+  "Creative professionals",
+  "Consultants",
+];
 
 function StartLink({ children = "Find my financial footing", light = false }) {
   const destination = localStorage.getItem("token") ? "/dashboard" : "/signup";
@@ -153,7 +167,7 @@ export default function LandingPage() {
             </a>
           </div>
           <div className="af-hero-assurance">
-            <FiCheck /> Start with your earnings. Stay in control.
+            <IndiaFlag /> Built in India. For every way India earns.
           </div>
         </div>
         <div className="af-hero-visual">
@@ -171,20 +185,60 @@ export default function LandingPage() {
           <br />
           <strong>One shared ambition.</strong>
         </p>
-        <div>
-          <span>Delivery partners</span>
-          <span className="af-audience-star" aria-hidden="true">
-            ✳
+        <div
+          className="af-audience-marquee"
+          tabIndex={0}
+          role="region"
+          aria-label="Ways you earn. Hover or focus to pause the scrolling list."
+        >
+          <div className="af-audience-track">
+            {[0, 1].map((copy) => (
+              <ul
+                className="af-audience-group"
+                key={copy}
+                aria-hidden={copy === 1 ? true : undefined}
+              >
+                {gigRoles.map((role) => (
+                  <li key={role}>
+                    <span>{role}</span>
+                    <span className="af-audience-star" aria-hidden="true">
+                      ✳
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="af-india-section af-container"
+        aria-labelledby="af-india-title"
+      >
+        <div className="af-india-origin">
+          <IndiaFlag />
+          <span className="af-kicker">OUR ROOTS. YOUR REALITY.</span>
+          <h2 id="af-india-title">
+            Built in India.
+            <br />
+            <span>For India.</span>
+          </h2>
+        </div>
+        <div className="af-india-copy">
+          <p>
+            For the rider’s next delivery. The freelancer’s next invoice. The
+            ambition behind every rupee.
+          </p>
+          <span>
+            A financial picture shaped around how India earns — daily paydays,
+            changing income, and small steps toward a stronger tomorrow.
           </span>
-          <span>Drivers & riders</span>
-          <span className="af-audience-star" aria-hidden="true">
-            ✳
-          </span>
-          <span>Freelancers</span>
-          <span className="af-audience-star" aria-hidden="true">
-            ✳
-          </span>
-          <span>Independent earners</span>
+          <div className="af-india-pillars">
+            <span>₹ Your money, your context</span>
+            <span>Irregular income, understood</span>
+            <span>Small steps that fit your life</span>
+          </div>
         </div>
       </section>
 
@@ -238,7 +292,7 @@ export default function LandingPage() {
               <strong>Your plan can still be intentional.</strong>
             </span>
             <p>
-              Adaptive connects your daily earnings to the decisions that
+              Finspire connects your daily earnings to the decisions that
               matter: what to set aside, when to be cautious, and when there’s
               room to grow.
             </p>
@@ -530,7 +584,7 @@ export default function LandingPage() {
 
       <footer className="af-footer af-container">
         <div className="af-footer-top">
-          <Link to="/" aria-label="Adaptive Finance home">
+          <Link to="/" aria-label="Finspire home">
             <Brand />
           </Link>
           <p>Financial footing for independent India.</p>
@@ -544,14 +598,14 @@ export default function LandingPage() {
           </nav>
         </div>
         <div className="af-footer-bottom">
-          <span>© {new Date().getFullYear()} Adaptive Finance</span>
+          <span>© {new Date().getFullYear()} Finspire</span>
           <p>
             Forecasts are estimates. Product previews use illustrative data.
             Investment guidance is informational; market returns are not
             guaranteed.
           </p>
           <span>
-            Made for India. <span className="af-india-dot" aria-hidden="true" />
+            <IndiaFlag /> Built in India. For India.
           </span>
         </div>
       </footer>
