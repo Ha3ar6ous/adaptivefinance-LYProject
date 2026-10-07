@@ -44,6 +44,7 @@ const Navbar = () => {
                 className="af-login-link"
                 onClick={() => {
                   localStorage.removeItem("token");
+                  localStorage.removeItem("chatMessages");
                   navigate("/");
                 }}
               >
@@ -103,6 +104,7 @@ const Navbar = () => {
                 className="af-mobile-logout"
                 onClick={() => {
                   localStorage.removeItem("token");
+                  localStorage.removeItem("chatMessages");
                   navigate("/");
                 }}
               >
@@ -127,6 +129,7 @@ const Navbar = () => {
                 className="af-login-link"
                 onClick={() => {
                   localStorage.removeItem("token");
+                  localStorage.removeItem("chatMessages");
                   navigate("/");
                 }}
               >

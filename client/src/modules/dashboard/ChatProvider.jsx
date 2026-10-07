@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChatContext } from "./chatContext";
 
 export default function ChatProvider({ children }) {
-  const [messages, setMessages] = useState([
-    {
-      role: "assistant",
-      content:
-        "Hi there! I'm your Finspire AI. Ask me anything about your income history, health score, or how much you should save.",
-    },
-  ]);
+  const [messages, setMessages] = useState(() => {
+    const saved = localStorage.getItem("chatMessages");
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (e) {
+        console.error("Failed to parse chat messages from localStorage", e);
+      }
+    }
+    return [
+      {
+        role: "assistant",
+        content:
+          "Hi there! I'm your Finspire AI. Ask me anything about your income history, health score, or how much you should save.",
+      },
+    ];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("chatMessages", JSON.stringify(messages));
+  }, [messages]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

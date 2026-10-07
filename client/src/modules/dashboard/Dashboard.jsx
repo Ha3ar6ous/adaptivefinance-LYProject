@@ -94,6 +94,7 @@ const Dashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("chatMessages");
     navigate("/");
   };
   const section =
