@@ -1,9 +1,8 @@
-const InvestmentSuggestion = require('../models/InvestmentSuggestion')
-const { refreshInvestmentSuggestionForUser } = require('../services/investmentEngineService')
+const { getInvestmentSuggestionForUser, refreshInvestmentSuggestionForUser } = require('../services/investmentEngineService')
 
 exports.getMyInvestmentSuggestion = async (req, res) => {
   try {
-    const investment = await InvestmentSuggestion.findOne({ userId: req.user.id })
+    const investment = await getInvestmentSuggestionForUser(req.user.id)
     return res.json({
       investment: investment || {
         eligible: false,

@@ -1,0 +1,228 @@
+[
+  {
+    "name": "router_0",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "router_sim/simulate.py",
+      "--out",
+      "revision_audit/prompt3/router",
+      "--stage",
+      "prepare"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "volatility_0",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/run.py",
+      "--out",
+      "revision_audit/prompt3/volatility",
+      "--stage",
+      "prepare"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "volatility_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/run.py",
+      "--out",
+      "revision_audit/prompt3/volatility",
+      "--stage",
+      "select"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "volatility_2",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/compare.py",
+      "--out",
+      "revision_audit/prompt3/volatility",
+      "--stage",
+      "freeze"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "router_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "router_sim/simulate.py",
+      "--out",
+      "revision_audit/prompt3/router",
+      "--stage",
+      "validation"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "volatility_3",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/run.py",
+      "--out",
+      "revision_audit/prompt3/volatility",
+      "--stage",
+      "test"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "volatility_4",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/compare.py",
+      "--out",
+      "revision_audit/prompt3/volatility",
+      "--stage",
+      "test"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "router_2",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "router_sim/simulate.py",
+      "--out",
+      "revision_audit/prompt3/router",
+      "--stage",
+      "test"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "forecast_tests",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "forecast_audit",
+      "-p",
+      "test_forecast.py",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "volatility_tests",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "volatility_audit",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "router_tests",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "router_sim",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "score_tests",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "score_audit",
+      "-p",
+      "test_score.py",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "data_tests",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "data_audit",
+      "-p",
+      "test_data.py",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "deployment_tests",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "revision_audit",
+      "-p",
+      "test_deployment.py",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "legacy_python_tests",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "research_eval",
+      "-p",
+      "evaluate_python.py",
+      "-v"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "paper_tests",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "paper_audit",
+      "-p",
+      "test_experiments.py",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "node_tests",
+    "command": [
+      "node",
+      "--test",
+      "server/tests/engineExplanation.test.cjs",
+      "server/tests/routerSafety.test.cjs"
+    ],
+    "exit_code": 0
+  }
+]

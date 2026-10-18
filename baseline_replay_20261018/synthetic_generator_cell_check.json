@@ -1,0 +1,32 @@
+[
+  {
+    "seed": 11,
+    "n": 900,
+    "exact_after_newline_normalization": true,
+    "cell_differences": []
+  },
+  {
+    "seed": 23,
+    "n": 900,
+    "exact_after_newline_normalization": true,
+    "cell_differences": []
+  },
+  {
+    "seed": 37,
+    "n": 900,
+    "exact_after_newline_normalization": true,
+    "cell_differences": []
+  },
+  {
+    "seed": 53,
+    "n": 900,
+    "exact_after_newline_normalization": true,
+    "cell_differences": []
+  },
+  {
+    "seed": 71,
+    "n": 900,
+    "exact_after_newline_normalization": true,
+    "cell_differences": []
+  }
+]

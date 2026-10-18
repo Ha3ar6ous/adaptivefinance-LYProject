@@ -164,7 +164,47 @@ const fallbackFromSnapshot = (snapshot, error = '') => {
   }
 }
 
-const validateExplanation = (value) => {
+const explanationFacts = (snapshot) => ({
+  healthScore: snapshot.health.score,
+  forecastTotal: snapshot.forecast.total,
+  investmentEligible: snapshot.investment.eligible,
+  productName: snapshot.investment.topSuggestion?.name || null,
+  allocationAmount: snapshot.investment.topSuggestion?.allocationAmount || 0,
+})
+
+const renderTemplate = (snapshot, templateId) => {
+  const standard = fallbackFromSnapshot(snapshot)
+  if (templateId === 'standard') return standard
+  const facts = explanationFacts(snapshot)
+  return { ...standard,
+    overview: { headline: 'Your financial snapshot',
+      summary: `Health score ${facts.healthScore}; phase ${snapshot.health.phase}; income volatility ${snapshot.volatility.label}.`,
+      nextAction: standard.overview.nextAction },
+    healthInsight: `Health score: ${facts.healthScore}. Phase: ${snapshot.health.phase}.`,
+    forecastInsight: `Forecast total: ${snapshot.forecast.total} over ${snapshot.forecast.horizon} days.`,
+    investmentInsight: facts.investmentEligible
+      ? `Selected product: ${facts.productName}. Monthly allocation: Rs ${facts.allocationAmount}.`
+      : snapshot.investment.blockedReason || 'Investing is currently blocked.',
+  }
+}
+
+const validateExplanation = (value, snapshot) => {
+  if (!snapshot) throw new Error('Snapshot is required for semantic validation')
+  if (value && Object.hasOwn(value, 'templateId')) {
+    if (Object.keys(value).sort().join(',') !== 'facts,templateId'
+      || !['standard', 'concise'].includes(value.templateId)) throw new Error('Invalid template schema')
+    const expected = explanationFacts(snapshot)
+    if (!value.facts || Object.keys(value.facts).sort().join(',') !== Object.keys(expected).sort().join(',')
+      || Object.entries(expected).some(([k, v]) => value.facts[k] !== v)) throw new Error('Snapshot facts changed')
+    return renderTemplate(snapshot, value.templateId)
+  }
+  // Legacy full-text responses are accepted only when exactly snapshot-rendered.
+  // Any invented number, product, decision or extra prose fails closed.
+  const approved = renderTemplate(snapshot, 'standard')
+  for (const k of Object.keys(approved).filter((k) => !['status', 'error'].includes(k))) {
+    if (JSON.stringify(value?.[k]) !== JSON.stringify(approved[k])) throw new Error('Unapproved explanation content')
+  }
+  if (Object.keys(value).some((k) => !Object.hasOwn(approved, k))) throw new Error('Unapproved explanation field')
   const required = ['healthInsight', 'forecastInsight', 'decisionInsight', 'investmentInsight']
   if (!value?.overview?.headline || !value?.overview?.summary || !value?.overview?.nextAction) {
     throw new Error('Missing overview fields')
@@ -203,15 +243,10 @@ const validateExplanation = (value) => {
 }
 
 const systemPrompt = [
-  'You are a friendly, empathetic, and encouraging financial assistant for Indian gig workers.',
-  'Use only the JSON values provided. Do not calculate new numbers or invent products.',
-  'Do not promise returns. Do not provide legal, tax, or guaranteed financial advice.',
-  'Speak directly to the user in a warm, conversational, and supportive tone ("you", "we").',
-  'Instead of just stating numbers, explain what they mean for the user\'s daily life in a very simple and insightful way.',
-  'For example, instead of saying "Debt: 800,000 | Phase: Crisis", say something like: "Your debt is taking up a large chunk of your income, making it hard to save. Let\'s focus on building a small safety net first so you aren\'t forced to take on more debt during slow weeks."',
-  'Provide actionable, bite-sized steps without sounding like a strict accountant. Be encouraging!',
-  'Return strict JSON with overview, healthInsight, forecastInsight, decisionInsight, investmentInsight, reasons, actionPlan, watchOut, tone.',
-  'Keep every field concise. No field should be more than two to three short sentences.',
+  'Return a JSON object with exactly templateId and facts. No prose or extra fields.',
+  'templateId must be "concise" or "standard". Choose concise for caution or blocked investing, otherwise standard.',
+  'facts must exactly copy provided expectedFacts, preserving numbers, booleans, strings and null.',
+  'Never compute, change or invent facts. The server renders the chosen approved explanation.',
 ].join(' ')
 
 const generateAiExplanationForUser = async (userId, options = {}) => {
@@ -224,10 +259,10 @@ const generateAiExplanationForUser = async (userId, options = {}) => {
     try {
       const groqOutput = await callGroqJson({
         systemPrompt,
-        userPayload: sourceSnapshot,
+        userPayload: { snapshot: sourceSnapshot, expectedFacts: explanationFacts(sourceSnapshot) },
       })
       payload = {
-        ...validateExplanation(groqOutput),
+        ...validateExplanation(groqOutput, sourceSnapshot),
         status: 'ready',
         error: '',
       }

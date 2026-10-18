@@ -1,0 +1,437 @@
+[
+  {
+    "seed": 101,
+    "scenario": "central",
+    "hash": "bc7067712f4ead8bb643c9477348a5d006c361b1217026bc4c11fd0dc2fb2d88",
+    "adverse_user_months": 20171,
+    "medical_events": 2968,
+    "vehicle_events": 4815,
+    "analytics_missing_forecast": 2408,
+    "analytics_missing_volatility": 2440,
+    "analytics_error_status": 1211,
+    "regime_counts": [
+      5978,
+      3047,
+      975
+    ],
+    "source_counts": [
+      904,
+      909,
+      905,
+      917,
+      927,
+      899,
+      901,
+      913,
+      905,
+      900,
+      920
+    ]
+  },
+  {
+    "seed": 101,
+    "scenario": "neutral",
+    "hash": "45b603b5c4f4e680f0c6695366b3ac59dcbe336d5abeb43b46f5580bf1982723",
+    "adverse_user_months": 20171,
+    "medical_events": 2968,
+    "vehicle_events": 4815,
+    "analytics_missing_forecast": 2408,
+    "analytics_missing_volatility": 2440,
+    "analytics_error_status": 1211,
+    "regime_counts": [
+      5978,
+      3047,
+      975
+    ],
+    "source_counts": [
+      904,
+      909,
+      905,
+      917,
+      927,
+      899,
+      901,
+      913,
+      905,
+      900,
+      920
+    ]
+  },
+  {
+    "seed": 101,
+    "scenario": "stress",
+    "hash": "9d515d764aaca27a81db546566e45e01bd6597fcc8c0c48dd54ec27a24e1c660",
+    "adverse_user_months": 20171,
+    "medical_events": 6014,
+    "vehicle_events": 9674,
+    "analytics_missing_forecast": 2408,
+    "analytics_missing_volatility": 2440,
+    "analytics_error_status": 1211,
+    "regime_counts": [
+      5978,
+      3047,
+      975
+    ],
+    "source_counts": [
+      904,
+      909,
+      905,
+      917,
+      927,
+      899,
+      901,
+      913,
+      905,
+      900,
+      920
+    ]
+  },
+  {
+    "seed": 211,
+    "scenario": "central",
+    "hash": "470353cce9743ad4a67d9d40db7b6f17ca2fcfdba8b786927952f99f2050f5ff",
+    "adverse_user_months": 20108,
+    "medical_events": 3033,
+    "vehicle_events": 4828,
+    "analytics_missing_forecast": 2370,
+    "analytics_missing_volatility": 2434,
+    "analytics_error_status": 1217,
+    "regime_counts": [
+      6018,
+      2974,
+      1008
+    ],
+    "source_counts": [
+      882,
+      898,
+      901,
+      909,
+      904,
+      959,
+      910,
+      909,
+      926,
+      900,
+      902
+    ]
+  },
+  {
+    "seed": 211,
+    "scenario": "neutral",
+    "hash": "6d11c01f5429ca9679c35481432b4d58d7f54319f01cec84499ac89c5484ed1a",
+    "adverse_user_months": 20108,
+    "medical_events": 3033,
+    "vehicle_events": 4828,
+    "analytics_missing_forecast": 2370,
+    "analytics_missing_volatility": 2434,
+    "analytics_error_status": 1217,
+    "regime_counts": [
+      6018,
+      2974,
+      1008
+    ],
+    "source_counts": [
+      882,
+      898,
+      901,
+      909,
+      904,
+      959,
+      910,
+      909,
+      926,
+      900,
+      902
+    ]
+  },
+  {
+    "seed": 211,
+    "scenario": "stress",
+    "hash": "619931224a0e2e2251216a284e50be58826550f4cdc5bd3590637f82ee92329a",
+    "adverse_user_months": 20108,
+    "medical_events": 5975,
+    "vehicle_events": 9752,
+    "analytics_missing_forecast": 2370,
+    "analytics_missing_volatility": 2434,
+    "analytics_error_status": 1217,
+    "regime_counts": [
+      6018,
+      2974,
+      1008
+    ],
+    "source_counts": [
+      882,
+      898,
+      901,
+      909,
+      904,
+      959,
+      910,
+      909,
+      926,
+      900,
+      902
+    ]
+  },
+  {
+    "seed": 307,
+    "scenario": "central",
+    "hash": "5dabb72aa470f95dc22a86e73970d2fc2ed364ab0c77e1497e52bca1fb21ca19",
+    "adverse_user_months": 19895,
+    "medical_events": 3031,
+    "vehicle_events": 4709,
+    "analytics_missing_forecast": 2455,
+    "analytics_missing_volatility": 2332,
+    "analytics_error_status": 1155,
+    "regime_counts": [
+      5960,
+      3008,
+      1032
+    ],
+    "source_counts": [
+      903,
+      1002,
+      968,
+      884,
+      866,
+      906,
+      903,
+      873,
+      909,
+      886,
+      900
+    ]
+  },
+  {
+    "seed": 307,
+    "scenario": "neutral",
+    "hash": "e0e8d54ca7f2731e32f8ec39e75dfcf2bc2fda53d7ee77fab334a744f0fc5840",
+    "adverse_user_months": 19895,
+    "medical_events": 3031,
+    "vehicle_events": 4709,
+    "analytics_missing_forecast": 2455,
+    "analytics_missing_volatility": 2332,
+    "analytics_error_status": 1155,
+    "regime_counts": [
+      5960,
+      3008,
+      1032
+    ],
+    "source_counts": [
+      903,
+      1002,
+      968,
+      884,
+      866,
+      906,
+      903,
+      873,
+      909,
+      886,
+      900
+    ]
+  },
+  {
+    "seed": 307,
+    "scenario": "stress",
+    "hash": "129a04d902ceb936d0cd881644525814cbd788359605c170023c566413d0f8ad",
+    "adverse_user_months": 19895,
+    "medical_events": 6020,
+    "vehicle_events": 9532,
+    "analytics_missing_forecast": 2455,
+    "analytics_missing_volatility": 2332,
+    "analytics_error_status": 1155,
+    "regime_counts": [
+      5960,
+      3008,
+      1032
+    ],
+    "source_counts": [
+      903,
+      1002,
+      968,
+      884,
+      866,
+      906,
+      903,
+      873,
+      909,
+      886,
+      900
+    ]
+  },
+  {
+    "seed": 401,
+    "scenario": "central",
+    "hash": "1293259e6b2d2e1bf5babd3ad4d58914f1b916da1350dffd543dfc7bbe7877e7",
+    "adverse_user_months": 19959,
+    "medical_events": 2882,
+    "vehicle_events": 4860,
+    "analytics_missing_forecast": 2417,
+    "analytics_missing_volatility": 2421,
+    "analytics_error_status": 1195,
+    "regime_counts": [
+      6084,
+      2967,
+      949
+    ],
+    "source_counts": [
+      879,
+      965,
+      882,
+      898,
+      933,
+      883,
+      899,
+      915,
+      896,
+      914,
+      936
+    ]
+  },
+  {
+    "seed": 401,
+    "scenario": "neutral",
+    "hash": "42806c6c06033e3993e9a8db542992c46b980bf4a90553976b9cf8652769ed3d",
+    "adverse_user_months": 19959,
+    "medical_events": 2882,
+    "vehicle_events": 4860,
+    "analytics_missing_forecast": 2417,
+    "analytics_missing_volatility": 2421,
+    "analytics_error_status": 1195,
+    "regime_counts": [
+      6084,
+      2967,
+      949
+    ],
+    "source_counts": [
+      879,
+      965,
+      882,
+      898,
+      933,
+      883,
+      899,
+      915,
+      896,
+      914,
+      936
+    ]
+  },
+  {
+    "seed": 401,
+    "scenario": "stress",
+    "hash": "c7230c291e028e0992454d4ffae3aa15eb0b3331e3f35edf524b194cb4669649",
+    "adverse_user_months": 19959,
+    "medical_events": 5888,
+    "vehicle_events": 9617,
+    "analytics_missing_forecast": 2417,
+    "analytics_missing_volatility": 2421,
+    "analytics_error_status": 1195,
+    "regime_counts": [
+      6084,
+      2967,
+      949
+    ],
+    "source_counts": [
+      879,
+      965,
+      882,
+      898,
+      933,
+      883,
+      899,
+      915,
+      896,
+      914,
+      936
+    ]
+  },
+  {
+    "seed": 503,
+    "scenario": "central",
+    "hash": "1702c21cbde003201cabc377b488a1c5a203be1cace0317fc224c44d9ab773ce",
+    "adverse_user_months": 19668,
+    "medical_events": 2879,
+    "vehicle_events": 4655,
+    "analytics_missing_forecast": 2404,
+    "analytics_missing_volatility": 2467,
+    "analytics_error_status": 1261,
+    "regime_counts": [
+      6004,
+      3010,
+      986
+    ],
+    "source_counts": [
+      863,
+      922,
+      925,
+      888,
+      934,
+      981,
+      899,
+      856,
+      886,
+      898,
+      948
+    ]
+  },
+  {
+    "seed": 503,
+    "scenario": "neutral",
+    "hash": "9dc3595136da63f3e0ea5531839bb0f287a3425c3de2697c1f511021348848c1",
+    "adverse_user_months": 19668,
+    "medical_events": 2879,
+    "vehicle_events": 4655,
+    "analytics_missing_forecast": 2404,
+    "analytics_missing_volatility": 2467,
+    "analytics_error_status": 1261,
+    "regime_counts": [
+      6004,
+      3010,
+      986
+    ],
+    "source_counts": [
+      863,
+      922,
+      925,
+      888,
+      934,
+      981,
+      899,
+      856,
+      886,
+      898,
+      948
+    ]
+  },
+  {
+    "seed": 503,
+    "scenario": "stress",
+    "hash": "178c2f2fdb437fb632f35d17e6cabb54a57a016f8cf2bff891339b87ec9b98b5",
+    "adverse_user_months": 19668,
+    "medical_events": 5943,
+    "vehicle_events": 9557,
+    "analytics_missing_forecast": 2404,
+    "analytics_missing_volatility": 2467,
+    "analytics_error_status": 1261,
+    "regime_counts": [
+      6004,
+      3010,
+      986
+    ],
+    "source_counts": [
+      863,
+      922,
+      925,
+      888,
+      934,
+      981,
+      899,
+      856,
+      886,
+      898,
+      948
+    ]
+  }
+]

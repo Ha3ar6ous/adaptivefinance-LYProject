@@ -1,0 +1,19 @@
+{
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "command": [
+    "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "forecast_audit",
+    "-p",
+    "test_forecast.py",
+    "-v"
+  ],
+  "exit_code": 0
+}

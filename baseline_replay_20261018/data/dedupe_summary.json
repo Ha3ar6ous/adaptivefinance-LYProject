@@ -1,0 +1,14 @@
+{
+  "raw_rows": 1380,
+  "canonical_rows": 660,
+  "removed_rows": 720,
+  "duplicate_key_groups": 600,
+  "conflicting_income_key_groups": 587,
+  "chosen_files": [
+    "blinkit_stable.csv",
+    "snabbit_stable.csv",
+    "swiggy_stable.csv",
+    "uber_stable.csv",
+    "gig_income_data.csv"
+  ]
+}

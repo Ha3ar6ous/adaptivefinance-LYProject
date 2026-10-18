@@ -1,0 +1,18 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "os": "Windows-10-10.0.22631-SP0",
+  "numpy": "2.3.4",
+  "pandas": "2.3.3",
+  "scipy": "1.16.3",
+  "sklearn": "1.7.2",
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "bootstrap_draws_per_seed": 1000,
+  "artifact_existed": false,
+  "runtime_role": "frozen historical .35/.75 comparator; not current deployment"
+}

@@ -1,0 +1,49 @@
+{
+  "choices": {
+    "engine_budget": {
+      "L": 3.0,
+      "D": 2.0,
+      "policy": "sweep_L3_D2.0",
+      "shortfall_rate": 0.2693,
+      "months_below_1": 2.60776,
+      "ever_contributed": 0.47237999999999997
+    },
+    "reserve_free": {
+      "L": 1.0,
+      "D": 2.0,
+      "policy": "sweep_L1_D2.0",
+      "shortfall_rate": 0.26934,
+      "months_below_1": 2.62642,
+      "ever_contributed": 0.53478
+    }
+  },
+  "criterion": "predeclared protocol risk budgets then participation, wealth, higher L, lower D",
+  "fingerprints": {
+    "environment.json": "d86ff2ffdbca0919cec638ad5b4b07027db552b0ebee3a557e7d16336d88e347",
+    "preserved_sha256.json": "a6f332793e2e8dfaedf2c31eb0ae5fa5b47c953718b899cf1731306594a39ad7",
+    "product_snapshot.json": "be977eae96b7e13b0e92dba032fca69baad9833e8c5a16173672fc2cd7a99adb",
+    "runtime_thresholds.json": "a97110e40f95989638dca21bfb988b3cc9b58a814c016ec9a6529f721c89f03f",
+    "source_inventory.csv": "b511861682bec036d2c01a1e34b5e7bd6fd7f16084e5fa2ae010c3082b5c1571",
+    "validation_cohorts.json": "617f07d66c02ea28f78941d3c1fe3fd3631da3c0db81f0fffeb231c61134d9cf",
+    "validation_fixtures.json": "fc6ce7fd6982763067fd11a06e52180932d80907b1507a5c1ca5faef6daece84",
+    "validation_implementation_checks.json": "62c40b0756b6bfd3f02c69b67bd7fe25a15971f3f09f3afb1dcc9a9035998396",
+    "validation_mean.csv": "885d7f05358beffeede56b5ad3a05f3d4b187e6268d8b5813d5c707b7b72e754",
+    "validation_paired_deltas.csv": "f10eefd71bce16fc0e72cc5712cbc4d01120dc09846defbfc272bb045040f2ef",
+    "validation_pareto_grid.csv": "9482eb4ae66d8cf28b2e4bd2372a4eaefcdc7524a446245888cccc4e3c015a72",
+    "validation_per_seed.csv": "150e1f4f8f0d5cc0a2c70d08ac180bd9254e60e253e9d93bebaaea36f1051d7e",
+    "validation_sd.csv": "0b27ab8c1854050e95fd8d097546904fb2e29acc4115d06473c107eafdacbf29",
+    "snapshots/.gitignore": "e99f6ee4eb88882ea6589ecb717e10a41401763241b246b6821bc091cfe2227e",
+    "snapshots/bridge.cjs": "df6eb64d9d571b75b398665fbe14b7030855e4b047059fa080f887ae2370af31",
+    "snapshots/engine.js": "bd81dda9312e5095cdca8e5d5d5b0e2398a05bc802927a26106d38cebcce637a",
+    "snapshots/forecast.py": "6cc72b3c374c1ec31e178b1d9e920d7e36f4cbedf39e44e0254e7da7f54c0a72",
+    "snapshots/health.js": "7a1abff763b3a6bc4454e67f635f5d4b52c9b48f9c9b0e5ee12e394431176e12",
+    "snapshots/original.js": "cb7be007451894813f800ca31a4bafa65474d3b7db23c49ee6c751b9041e6f0e",
+    "snapshots/PROTOCOL.md": "11ebe4c89fc931cdc172a9d95cbc5fefaa819b97bef6143e2b1d139128a9e45f",
+    "snapshots/requirements.txt": "205559a3f707b2fd7610fcbdd591b9611c43fc731b6ceb23ac2353774bbab97d",
+    "snapshots/revised.js": "a0e17a3f6802556e717bebdc9693b1b78b8010a195e9f045395f5c16df927f63",
+    "snapshots/simulate.py": "69f47e2195da70ead5a0bb01ee6298ac16761c6f1dfd16a80c143884faefd3e8",
+    "snapshots/test_simulator.py": "a71b48ddb2cc5965471b2475c863565e11813330322f6482e5575342f899dab4",
+    "snapshots/volatility.py": "8db81fd3c2a2de5ca52581b027b9f4bc5becc157fc7a432d1b7516a624014c46",
+    "snapshots/__pycache__/forecast.cpython-311.pyc": "08a1384bb77a4cf91d69713c4eb65dd18b8017658342c3932608a3e87c1de417"
+  }
+}

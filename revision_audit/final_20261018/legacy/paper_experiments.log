@@ -1,0 +1,171 @@
+FORECAST SELECTION {'name': 'mean_median_0.75', 'kind': 'median_mix', 'weight': 0.75} deploy eligible False
+VOLATILITY SELECTION {'name': 'gaussian_nb_1e-06', 'kind': 'nb', 'smoothing': 1e-06} validation {'n': 150, 'accuracy': 0.56, 'macro_f1': 0.5519433906399439, 'balanced_accuracy': 0.5683924389427902, 'macro_precision': 0.5566534914361001, 'per_class': {'low': {'precision': 0.5757575757575758, 'recall': 0.475, 'f1': 0.5205479452054794, 'support': 40, 'predicted': 33}, 'medium': {'precision': 0.5, 'recall': 0.39344262295081966, 'f1': 0.4403669724770642, 'support': 61, 'predicted': 48}, 'high': {'precision': 0.5942028985507246, 'recall': 0.8367346938775511, 'f1': 0.6949152542372882, 'support': 49, 'predicted': 69}}, 'confusion_matrix': [[19, 16, 5], [14, 24, 23], [0, 8, 41]]}
+FORECAST TEST {
+  "original": {
+    "n": 330,
+    "mae": 581.8167575757576,
+    "rmse": 820.5946827243365,
+    "windows": 22,
+    "window_mae_std": 224.8090759978383,
+    "window_rmse_std": 312.5202642737421
+  },
+  "historical_mean": {
+    "n": 330,
+    "mae": 532.9885151515151,
+    "rmse": 776.6021086949185,
+    "windows": 22,
+    "window_mae_std": 207.72596229569865,
+    "window_rmse_std": 319.97291306726754
+  },
+  "mean_median_0.75": {
+    "n": 330,
+    "mae": 512.0437575757576,
+    "rmse": 769.8048785905544,
+    "windows": 22,
+    "window_mae_std": 214.38993739620642,
+    "window_rmse_std": 324.9787767787536
+  }
+}
+VOLATILITY TEST {
+  "original_30": {
+    "n": 150,
+    "accuracy": 0.30666666666666664,
+    "macro_f1": 0.2377403846153846,
+    "balanced_accuracy": 0.3097356066221893,
+    "macro_precision": 0.21512868801004395,
+    "per_class": {
+      "low": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 41,
+        "predicted": 1
+      },
+      "medium": {
+        "precision": 0.3898305084745763,
+        "recall": 0.323943661971831,
+        "f1": 0.3538461538461538,
+        "support": 71,
+        "predicted": 59
+      },
+      "high": {
+        "precision": 0.25555555555555554,
+        "recall": 0.6052631578947368,
+        "f1": 0.359375,
+        "support": 38,
+        "predicted": 90
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        22,
+        19
+      ],
+      [
+        0,
+        23,
+        48
+      ],
+      [
+        1,
+        14,
+        23
+      ]
+    ]
+  },
+  "majority": {
+    "n": 150,
+    "accuracy": 0.47333333333333333,
+    "macro_f1": 0.21417797888386123,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_precision": 0.15777777777777777,
+    "per_class": {
+      "low": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 41,
+        "predicted": 0
+      },
+      "medium": {
+        "precision": 0.47333333333333333,
+        "recall": 1.0,
+        "f1": 0.6425339366515836,
+        "support": 71,
+        "predicted": 150
+      },
+      "high": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 38,
+        "predicted": 0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        41,
+        0
+      ],
+      [
+        0,
+        71,
+        0
+      ],
+      [
+        0,
+        38,
+        0
+      ]
+    ]
+  },
+  "gaussian_nb_1e-06": {
+    "n": 150,
+    "accuracy": 0.5533333333333333,
+    "macro_f1": 0.5635986733001658,
+    "balanced_accuracy": 0.5714772158840936,
+    "macro_precision": 0.5683411495911496,
+    "per_class": {
+      "low": {
+        "precision": 0.509090909090909,
+        "recall": 0.6829268292682927,
+        "f1": 0.5833333333333334,
+        "support": 41,
+        "predicted": 55
+      },
+      "medium": {
+        "precision": 0.5396825396825397,
+        "recall": 0.4788732394366197,
+        "f1": 0.5074626865671641,
+        "support": 71,
+        "predicted": 63
+      },
+      "high": {
+        "precision": 0.65625,
+        "recall": 0.5526315789473685,
+        "f1": 0.6,
+        "support": 38,
+        "predicted": 32
+      }
+    },
+    "confusion_matrix": [
+      [
+        28,
+        13,
+        0
+      ],
+      [
+        26,
+        34,
+        11
+      ],
+      [
+        1,
+        16,
+        21
+      ]
+    ]
+  }
+}

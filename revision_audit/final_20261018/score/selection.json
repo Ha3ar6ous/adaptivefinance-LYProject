@@ -1,0 +1,77 @@
+{
+  "chosen": {
+    "original_calibrated": {
+      "model": "original_calibrated",
+      "C": 0.01,
+      "columns": [
+        "original_score"
+      ],
+      "n": 50000,
+      "events": 6642,
+      "auc": 0.8143877335532124,
+      "brier": 0.09733992341964837,
+      "ece10": 0.02554907448456594
+    },
+    "corrected_calibrated": {
+      "model": "corrected_calibrated",
+      "C": 0.01,
+      "columns": [
+        "corrected_score"
+      ],
+      "n": 50000,
+      "events": 6642,
+      "auc": 0.7565982192833907,
+      "brier": 0.10562119502813373,
+      "ece10": 0.03165529678515355
+    },
+    "fit_original_factors": {
+      "model": "fit_original_factors",
+      "C": 0.01,
+      "columns": [
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "n": 50000,
+      "events": 6642,
+      "auc": 0.8533734129439124,
+      "brier": 0.08994872549585252,
+      "ece10": 0.030138362236416
+    },
+    "fit_corrected_factors": {
+      "model": "fit_corrected_factors",
+      "C": 0.01,
+      "columns": [
+        "g0",
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "n": 50000,
+      "events": 6642,
+      "auc": 0.8739760831576672,
+      "brier": 0.08323503990380139,
+      "ece10": 0.026280638230721878
+    }
+  },
+  "criterion": "validation Brier, then AUC, then smaller C",
+  "hashes": {
+    "cohort_hashes_train_validation.json": "65d20870d000f26a82ecb5e853e43bad809f6a7408eeb76d36759a6c19b8ff45",
+    "corrected_expense_monotonicity.json": "eb4a3b14ab309aee938ac32d0d0d7dddcca2dfa227441b68bd9f52895a3c5510",
+    "health_original.js": "7a1abff763b3a6bc4454e67f635f5d4b52c9b48f9c9b0e5ee12e394431176e12",
+    "original_expense_monotonicity.json": "f9f4c2932b61480ec6598c50a5aa7e26a1c2ea022911a7df821f52f64cfc5c36",
+    "preservation.json": "e3f826ac146327e08221613748c03b189af0a8dcd1dcd9354a2806e31e1598aa",
+    "PROTOCOL.md": "b1d41a993f1a36466c374f797e3c4b36f6e72b727ce838a52473f4c50dfe2dd5",
+    "run.py": "bfef8a093d3e8909a71806ccfa5e0ff7664e623d4befd074a53b5f6965847f09",
+    "simulator_snapshot.py": "4f7e1e1f01301ea27440bc60a72d6ac60152837cb07bfdb271dea41d52b1f78c",
+    "thresholds.json": "770ade9acb99a139c195ad99b2a1d9b8bc4401a20c24f5449a3b2f719c690a62",
+    "train.csv": "bbdb9bcab265dc212d2079d08cd3df0daeadf311ef8d2ad463b564de838b6b8a",
+    "validation.csv": "1ef52d768b33686ff5a17d884080c210e6079efe67f1c75fe9e7573c0f0ee8b0",
+    "validation_candidates.csv": "c447a1fc21aac0398debd3df6776a38340e7931ba2ab63f1755f564816b43153",
+    "validation_weight_sensitivity.csv": "595af4853cd36c6e36525238cdd821c4b2eb716b5cc05be06f1335e09737317b"
+  }
+}

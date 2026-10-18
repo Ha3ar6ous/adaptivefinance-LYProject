@@ -1,0 +1,24 @@
+{
+  "eligible_candidate": "corrected fixed-weight scalar",
+  "passed": false,
+  "checks": {
+    "validation": {
+      "auc_improves": false,
+      "brier_improves": false,
+      "candidate_auc": 0.7565982192833907,
+      "baseline_auc": 0.8143877335532124,
+      "candidate_brier": 0.10562119502813373,
+      "baseline_brier": 0.09733992341964837
+    },
+    "test": {
+      "auc_improves": false,
+      "brier_improves": false,
+      "candidate_auc": 0.7646143812399299,
+      "baseline_auc": 0.828172078762587,
+      "candidate_brier": 0.1121924118340255,
+      "baseline_brier": 0.099471363143902
+    }
+  },
+  "diagnostic_learned_models": "Not eligible under the existing adoption guard; risk probabilities lack validated health-phase mapping.",
+  "production_health_changed": false
+}

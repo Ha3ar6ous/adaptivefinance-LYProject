@@ -1,0 +1,21 @@
+Validation fit 0 {'family': 'NB', 'var_smoothing': 1e-09}
+Validation fit 1 {'family': 'NB', 'var_smoothing': 0.001}
+Validation fit 2 {'family': 'NB', 'var_smoothing': 0.1}
+Validation fit 3 {'family': 'kNN', 'k': 5, 'weights': 'uniform'}
+Validation fit 4 {'family': 'kNN', 'k': 5, 'weights': 'distance'}
+Validation fit 5 {'family': 'kNN', 'k': 15, 'weights': 'uniform'}
+Validation fit 6 {'family': 'kNN', 'k': 15, 'weights': 'distance'}
+Validation fit 7 {'family': 'kNN', 'k': 31, 'weights': 'uniform'}
+Validation fit 8 {'family': 'kNN', 'k': 31, 'weights': 'distance'}
+Validation fit 9 {'family': 'logistic', 'C': 0.1, 'class_weight': None}
+Validation fit 10 {'family': 'logistic', 'C': 0.1, 'class_weight': 'balanced'}
+Validation fit 11 {'family': 'logistic', 'C': 1.0, 'class_weight': None}
+Validation fit 12 {'family': 'logistic', 'C': 1.0, 'class_weight': 'balanced'}
+Validation fit 13 {'family': 'logistic', 'C': 10.0, 'class_weight': None}
+Validation fit 14 {'family': 'logistic', 'C': 10.0, 'class_weight': 'balanced'}
+Validation fit 15 {'family': 'GB', 'depth': 1, 'balanced': False}
+Validation fit 16 {'family': 'GB', 'depth': 1, 'balanced': True}
+Validation fit 17 {'family': 'GB', 'depth': 2, 'balanced': False}
+Validation fit 18 {'family': 'GB', 'depth': 2, 'balanced': True}
+FROZEN SELECTION: {"name": "grid_cv30_0.45_0.75", "family": "grid", "low": 0.45, "high": 0.75, "order": 107, "n": 187, "macro_f1": 0.6839962886474514, "high_recall": 0.9090909090909091, "balanced_accuracy": 0.7414332449793443, "accuracy": 0.7165775401069518, "high_support": 66, "high_to_low": 0, "high_to_medium": 6, "actual_low_pred_low": 54, "actual_low_pred_medium": 33, "actual_low_pred_high": 7, "actual_medium_pred_low": 0, "actual_medium_pred_medium": 20, "actual_medium_pred_high": 7, "actual_high_pred_low": 0, "actual_high_pred_medium": 6, "actual_high_pred_high": 60}
+Wall seconds: 4.491907099996752

@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: all conservative threshold combinations match independent policy oracle
+ok 1 - all conservative threshold combinations match independent policy oracle
+  ---
+  duration_ms: 60.3855
+  type: 'test'
+  ...
+# Subtest: all malformed/missing analytics and financial cases fail closed without throwing
+ok 2 - all malformed/missing analytics and financial cases fail closed without throwing
+  ---
+  duration_ms: 4.0745
+  type: 'test'
+  ...
+# Subtest: missing or malformed entire request fails closed
+ok 3 - missing or malformed entire request fails closed
+  ---
+  duration_ms: 0.1231
+  type: 'test'
+  ...
+# Subtest: exact liquidity, debt and health equality boundaries are accepted
+ok 4 - exact liquidity, debt and health equality boundaries are accepted
+  ---
+  duration_ms: 0.1206
+  type: 'test'
+  ...
+# Subtest: ready cached and fresh analytics both accepted
+ok 5 - ready cached and fresh analytics both accepted
+  ---
+  duration_ms: 0.1487
+  type: 'test'
+  ...
+# Subtest: ML service failure is closed even with formerly sufficient score
+ok 6 - ML service failure is closed even with formerly sufficient score
+  ---
+  duration_ms: 0.1331
+  type: 'test'
+  ...
+# Subtest: investment engine revalidates stale/forged allowed flag
+ok 7 - investment engine revalidates stale/forged allowed flag
+  ---
+  duration_ms: 65.9726
+  type: 'test'
+  ...
+# Subtest: valid safe users still obtain recommendations
+ok 8 - valid safe users still obtain recommendations
+  ---
+  duration_ms: 5.65
+  type: 'test'
+  ...
+# Subtest: sub-rupee boundaries preserve strict inequalities
+ok 9 - sub-rupee boundaries preserve strict inequalities
+  ---
+  duration_ms: 0.4792
+  type: 'test'
+  ...
+# Subtest: real Python outputs and health scorer remain compatible with router/engine
+ok 10 - real Python outputs and health scorer remain compatible with router/engine
+  ---
+  duration_ms: 18.0151
+  type: 'test'
+  ...
+# Subtest: read endpoint rebuilds recommendations from current profile instead of stored permission
+ok 11 - read endpoint rebuilds recommendations from current profile instead of stored permission
+  ---
+  duration_ms: 5.0975
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 819.1326

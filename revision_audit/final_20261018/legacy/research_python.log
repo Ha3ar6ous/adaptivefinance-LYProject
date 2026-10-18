@@ -1,0 +1,134 @@
+test_forecast_chronological_cleaning (__main__.CoreTests.test_forecast_chronological_cleaning) ... ok
+test_forecast_constant (__main__.CoreTests.test_forecast_constant) ... ok
+test_forecast_empty (__main__.CoreTests.test_forecast_empty) ... ok
+test_forecast_horizon_bounds (__main__.CoreTests.test_forecast_horizon_bounds) ... ok
+test_volatility_constant (__main__.CoreTests.test_volatility_constant) ... ok
+test_volatility_high (__main__.CoreTests.test_volatility_high) ... ok
+test_volatility_insufficient (__main__.CoreTests.test_volatility_insufficient) ... ok
+test_volatility_last30 (__main__.CoreTests.test_volatility_last30) ... ok
+test_volatility_sample_std (__main__.CoreTests.test_volatility_sample_std) ... ok
+test_zero_income_is_not_low_risk (__main__.CoreTests.test_zero_income_is_not_low_risk) ... FAIL
+
+======================================================================
+FAIL: test_zero_income_is_not_low_risk (__main__.CoreTests.test_zero_income_is_not_low_risk)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "research_eval/evaluate_python.py", line 57, in test_zero_income_is_not_low_risk
+    self.assertNotEqual(classify_volatility([{'income':0}]*30)['label'],'low')
+AssertionError: 'low' == 'low'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.003s
+
+FAILED (failures=1)
+{
+  "forecast": {
+    "historical_mean": {
+      "samples": 720,
+      "windows": 48,
+      "mae": 529.5235166673348,
+      "rmse": 791.6344204881062,
+      "window_mae_mean": 529.5235166673348,
+      "window_mae_std": 233.86885504502067,
+      "window_rmse_mean": 708.8454955019097,
+      "window_rmse_std": 352.45300283611147
+    },
+    "moving_average_14": {
+      "samples": 720,
+      "windows": 48,
+      "mae": 547.4607946428572,
+      "rmse": 815.7333816471183,
+      "window_mae_mean": 547.4607946428572,
+      "window_mae_std": 249.2511370257234,
+      "window_rmse_mean": 727.593305749809,
+      "window_rmse_std": 368.82100179017476
+    },
+    "seasonal_naive_7": {
+      "samples": 720,
+      "windows": 48,
+      "mae": 705.4466111111111,
+      "rmse": 1074.8569437711492,
+      "window_mae_mean": 705.4466111111111,
+      "window_mae_std": 363.13277200714,
+      "window_rmse_mean": 950.557760208106,
+      "window_rmse_std": 501.7543164549803
+    },
+    "proposed": {
+      "samples": 720,
+      "windows": 48,
+      "mae": 575.6465416666666,
+      "rmse": 847.2633567411316,
+      "window_mae_mean": 575.6465416666666,
+      "window_mae_std": 274.4169339807267,
+      "window_rmse_mean": 756.1785324451232,
+      "window_rmse_std": 382.1638689690454
+    },
+    "paired_proposed_vs_mean": {
+      "mae_better_windows": 12,
+      "rmse_better_windows": 15
+    },
+    "old_holdout": {
+      "proposed": {
+        "mae": 352.0653333333333,
+        "rmse": 431.345712965057
+      },
+      "mean_last15": {
+        "mae": 348.4757333333333,
+        "rmse": 411.2809857938433
+      }
+    }
+  },
+  "volatility_reconstruction": {
+    "n": 600,
+    "max_abs_errors": {
+      "mean_abs_error": 4.547473508864641e-13,
+      "std_abs_error": 3.069544618483633e-12,
+      "cv_abs_error": 3.6637359812630166e-14
+    },
+    "stat_matches": 600
+  },
+  "tests": {
+    "total": 10,
+    "passed": 9,
+    "failed": 1,
+    "errors": 0,
+    "failures": [
+      {
+        "test": "test_zero_income_is_not_low_risk (__main__.CoreTests.test_zero_income_is_not_low_risk)",
+        "trace": "Traceback (most recent call last):\n  File \"research_eval/evaluate_python.py\", line 57, in test_zero_income_is_not_low_risk\n    self.assertNotEqual(classify_volatility([{'income':0}]*30)['label'],'low')\nAssertionError: 'low' == 'low'\n"
+      }
+    ]
+  },
+  "performance": {
+    "forecast_30_on60": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.1242046,
+      "std_ms": 0.0915742743287655,
+      "median_ms": 0.0861,
+      "p95_ms": 0.1916,
+      "min_ms": 0.0803,
+      "max_ms": 1.6379
+    },
+    "forecast_15_on180": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.1699312,
+      "std_ms": 0.05093383773642037,
+      "median_ms": 0.14805000000000001,
+      "p95_ms": 0.2898,
+      "min_ms": 0.1363,
+      "max_ms": 0.4082
+    },
+    "forecast_volatility_on60": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.1147678,
+      "std_ms": 0.04155611463022019,
+      "median_ms": 0.0919,
+      "p95_ms": 0.1905,
+      "min_ms": 0.0825,
+      "max_ms": 0.321
+    }
+  }
+}

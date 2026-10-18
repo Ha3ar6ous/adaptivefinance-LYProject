@@ -1,0 +1,35 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "temperature": 0,
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "timeout_ms": 12000,
+  "pacing_ms": 2100,
+  "rows": [
+    {
+      "id": "11_0",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 626.8572,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 0,
+          "forecastTotal": 40882,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    }
+  ]
+}

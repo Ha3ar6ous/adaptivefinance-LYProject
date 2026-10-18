@@ -1,0 +1,25 @@
+test_actual_calibration_quantile_ranks (test_forecast.ForecastTests.test_actual_calibration_quantile_ranks) ... ok
+test_all_fixed_candidates_fit_and_produce_nonnegative_30_steps (test_forecast.ForecastTests.test_all_fixed_candidates_fit_and_produce_nonnegative_30_steps) ... D:\Ritesh\Documents\RJ\AllWork\LYProject\forecast_audit\.venv\Lib\site-packages\statsmodels\tsa\statespace\sarimax.py:978: UserWarning: Non-invertible starting MA parameters found. Using zeros as starting parameters.
+  warn('Non-invertible starting MA parameters found.'
+D:\Ritesh\Documents\RJ\AllWork\LYProject\forecast_audit\.venv\Lib\site-packages\statsmodels\tsa\statespace\sarimax.py:1009: UserWarning: Non-invertible starting seasonal moving average Using zeros as starting parameters.
+  warn('Non-invertible starting seasonal moving average'
+ok
+test_bootstrap_uses_whole_clusters_and_five_seeds (test_forecast.ForecastTests.test_bootstrap_uses_whole_clusters_and_five_seeds) ... ok
+test_calibration_target_blocks_do_not_overlap (test_forecast.ForecastTests.test_calibration_target_blocks_do_not_overlap) ... ok
+test_dm_rejects_inadequate_or_identical_series (test_forecast.ForecastTests.test_dm_rejects_inadequate_or_identical_series) ... ok
+test_frozen_selection_and_quantiles_unchanged (test_forecast.ForecastTests.test_frozen_selection_and_quantiles_unchanged) ... ok
+test_future_poison_does_not_enter_lag_features (test_forecast.ForecastTests.test_future_poison_does_not_enter_lag_features) ... ok
+test_historical_mean_baseline_is_full_prefix (test_forecast.ForecastTests.test_historical_mean_baseline_is_full_prefix) ... ok
+test_no_seed_or_forecast_instances_dropped (test_forecast.ForecastTests.test_no_seed_or_forecast_instances_dropped) ... ok
+test_seed_model_reproducibility (test_forecast.ForecastTests.test_seed_model_reproducibility) ... ok
+test_smape_zero_and_mase_undefined (test_forecast.ForecastTests.test_smape_zero_and_mase_undefined) ... ok
+test_splits_never_cross_boundaries (test_forecast.ForecastTests.test_splits_never_cross_boundaries) ... ok
+test_target_values_excluded_from_features (test_forecast.ForecastTests.test_target_values_excluded_from_features) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.593s
+
+OK
+
+{"preserved_files": 69, "changed": []}
+

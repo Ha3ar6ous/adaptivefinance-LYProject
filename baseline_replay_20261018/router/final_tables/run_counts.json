@@ -1,0 +1,8 @@
+{
+  "validation_rows": 530,
+  "test_rows": 180,
+  "validation_households_per_policy": 50000,
+  "test_households_per_policy_per_scenario": 50000,
+  "distinct_seed_cohorts": 10,
+  "source_donors": 11
+}

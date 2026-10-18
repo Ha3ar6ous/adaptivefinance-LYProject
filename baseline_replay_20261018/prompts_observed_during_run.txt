@@ -1,0 +1,29 @@
+prompt 2 : 
+Audit where the data files came from. Inspect git history (first commit that added each file under data/, including the volatility/ folder), file metadata, READMEs, notebooks, scripts, commit messages, and any references to Kaggle, Zomato, or a generator. Write PROVENANCE.md with: (1) each data file, its first-commit date and author, and what evidence shows about its origin; (2) which statements are confirmed by evidence and which are unknown. Do not guess or infer origins that the repo does not support. End with a 3-sentence plain-language provenance statement that is safe to put in a paper, and list anything I must confirm manually with my team.
+
+Prompt 3 : 
+Two documented defects exist in the deployed system.
+
+(a) Volatility runtime cutoffs are 0.35/0.75, but the validation-selected rule is 0.45/0.75. Change the runtime classifier to 0.45/0.75, keep the high cutoff at 0.75, and update every place the cutoffs appear (code, comments, docs, fixtures, tests). The forward-CV experiment must still use training-only terciles and the same frozen selection.
+
+(b) The health score rises with expenses for many profiles because debt is divided by expenses. Evaluate the repaired score candidates on the existing train/validation/test partitions using the pre-declared adoption guard (improves AUC and Brier on validation and test over the hand score). If a candidate passes, deploy it. If none passes, do NOT deploy; leave the score unchanged and write one paragraph to `score_decision.md` explaining why, and note that the router's hard predicates (balance >= 3E, debt <= 0.5E) are independent of the score.
+
+Update tests, re-run all suites, and write a diff summary of what changed in the router outcome numbers. Do not tune anything on the test partition.
+
+prompt 4 : 
+Extend the household router simulator with these additional policies. Use identical households, shocks and seeds as the existing policies, the same 50,000 test households, and the same engine budget Eq. (6):
+
+1. liquidity-only gate (balance >= 3E)
+2. liquidity + debt gate (balance >= 3E, debt <= 0.5E)
+3. liquidity + debt + volatility gate (no score)
+4. full revised gate (existing)
+5. full gate minus volatility check
+6. full gate minus score (same as 3; confirm equivalence, or note the difference)
+7. matched-participation random gate: clears a random subset with the same cleared share as the revised gate (use several seeds)
+8. matched-participation savings-ranked gate: clears the top-k households by liquidity months, with k set to match the revised gate's cleared share
+9. suitability-style proxy: a simple checklist of the kind used in regulated advice (positive monthly surplus, a stated risk tolerance consistent with the product, minimum emergency months of 1). Label it clearly in code and docs as our own simplified proxy, not an implementation of any regulation.
+
+For every policy report: shortfall %, forced-sale %, months below one expense, mean final wealth, cleared %, investing %, with paired cluster-bootstrap 95% CIs against the revised gate on forced sales. Run central, stress and neutral scenarios, and the reserve-free diagnostic. Key question to answer honestly: at matched participation, does the revised gate (with volatility and score) have fewer forced sales than a savings-only or random gate? Save outputs to `ablation_results.json` and `ablation_table.tex` (compact IEEE-style table, booktabs, single-column width). Do not hide results that are unfavorable to the revised gate.
+
+prompt 5 : 
+Re-run all experiments and tests after the changes in prompts 3 and 4. Produce `results_for_paper.json` containing every number the paper cites (forecast tables, volatility table with the deployed 0.45 cutoff, router simulation, ablations, fixture tables, health-score tables, engine table, LLM-layer tests), plus LaTeX snippets for any table whose values changed. Then run these consistency checks and report each as PASS/FAIL with the values: (1) Table VI wealth difference between original and revised gates versus any number quoted in text; (2) the volatility macro-F1 paired gain and whether its point estimate lies inside its CI, and recompute the CI if not; (3) every percentage in the paper-facing JSON matches the counts it was derived from; (4) test-suite counts. Also write `changes_summary.md`: what changed versus baseline_results.json and why.

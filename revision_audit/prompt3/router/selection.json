@@ -1,0 +1,51 @@
+{
+  "choices": {
+    "engine_budget": {
+      "L": 3.0,
+      "D": 2.0,
+      "policy": "sweep_L3_D2.0",
+      "shortfall_rate": 0.2693,
+      "months_below_1": 2.6084199999999997,
+      "ever_contributed": 0.47587999999999997
+    },
+    "reserve_free": {
+      "L": 1.0,
+      "D": 2.0,
+      "policy": "sweep_L1_D2.0",
+      "shortfall_rate": 0.26934,
+      "months_below_1": 2.63294,
+      "ever_contributed": 0.54606
+    }
+  },
+  "criterion": "predeclared protocol risk budgets then participation, wealth, higher L, lower D",
+  "fingerprints": {
+    "environment.json": "d86ff2ffdbca0919cec638ad5b4b07027db552b0ebee3a557e7d16336d88e347",
+    "preserved_sha256.json": "060f6e103a90245a3272704829bb97af16063cebb3ce441fed9bd0e59dc8660e",
+    "product_snapshot.json": "d0a7f06d6a45bb0670ea0ffff290cc6a723ddf4b34b9e3d810bb501dae5553fc",
+    "runtime_thresholds.json": "770ade9acb99a139c195ad99b2a1d9b8bc4401a20c24f5449a3b2f719c690a62",
+    "source_inventory.csv": "b511861682bec036d2c01a1e34b5e7bd6fd7f16084e5fa2ae010c3082b5c1571",
+    "validation_cohorts.json": "617f07d66c02ea28f78941d3c1fe3fd3631da3c0db81f0fffeb231c61134d9cf",
+    "validation_fixtures.json": "3a24fa2a856e7ce5250e8601ef11d2052d9e718ba32f549f3f049e51489d206b",
+    "validation_implementation_checks.json": "62c40b0756b6bfd3f02c69b67bd7fe25a15971f3f09f3afb1dcc9a9035998396",
+    "validation_mean.csv": "505ebaaa09bfdb339034959691a8eb6ac46a9f655569617eff63c9757c0088b9",
+    "validation_paired_deltas.csv": "52674a4643de06fbedf395884de7c2462cf039ac71fb2a12c16dab06e5694962",
+    "validation_pareto_grid.csv": "a175f91185c1d50c20b4f1143e6167a5da3413d6dffd03772d5c730e8c5e98c5",
+    "validation_per_seed.csv": "c47f1c897aa8b4cc87cc8503223fd8dfaa542387370a1eb346f827f6af4d8876",
+    "validation_sd.csv": "73d051028a128bf78f27aafcb56464ce859377b4a4bf265aa7787aacb8c8f201",
+    "snapshots/.gitignore": "e99f6ee4eb88882ea6589ecb717e10a41401763241b246b6821bc091cfe2227e",
+    "snapshots/bridge.cjs": "df6eb64d9d571b75b398665fbe14b7030855e4b047059fa080f887ae2370af31",
+    "snapshots/engine.js": "d71c82c49a18fa661912a6958047cb1e87cf02e5b4ac2b8a015a2ebf0b345f67",
+    "snapshots/finalize.py": "d8410dbf0356a83141f4551c49998d226e0098a555229a3f7df56b8c6a7cf69d",
+    "snapshots/forecast.py": "6cc72b3c374c1ec31e178b1d9e920d7e36f4cbedf39e44e0254e7da7f54c0a72",
+    "snapshots/health.js": "7a1abff763b3a6bc4454e67f635f5d4b52c9b48f9c9b0e5ee12e394431176e12",
+    "snapshots/original.js": "cb7be007451894813f800ca31a4bafa65474d3b7db23c49ee6c751b9041e6f0e",
+    "snapshots/PROTOCOL.md": "11ebe4c89fc931cdc172a9d95cbc5fefaa819b97bef6143e2b1d139128a9e45f",
+    "snapshots/report.py": "c4480d7c6927a9fe2800bcdc19925debca2a4ff5889a1d8b85c90e80463d1916",
+    "snapshots/requirements.txt": "205559a3f707b2fd7610fcbdd591b9611c43fc731b6ceb23ac2353774bbab97d",
+    "snapshots/revised.js": "a0e17a3f6802556e717bebdc9693b1b78b8010a195e9f045395f5c16df927f63",
+    "snapshots/simulate.py": "835b5c3682e43ab8d3d2d08e8a24ec05be9fb3ceeb467faac0982082d240decd",
+    "snapshots/test_results.py": "ab4fba8ccd56eb9354af00bddc1de1ec59b54e69a32d187c33ddc1b04f6d0bcb",
+    "snapshots/test_simulator.py": "b7bd8d9a09f22453f67421e3c860ba70a165a302a15e86d2d74ee0feb4855572",
+    "snapshots/volatility.py": "179da1ffe8f1b183038309d1d78f57ce1f8a3731f2f48fc4cb0ab5b0096b0647"
+  }
+}

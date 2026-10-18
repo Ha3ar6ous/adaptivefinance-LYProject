@@ -1,0 +1,9 @@
+import os,subprocess,json,sys
+from pathlib import Path
+R=Path.cwd();P=str(R/'forecast_audit/.venv/Scripts/python.exe');O=R/'baseline_replay_20261018';env=os.environ.copy();env.update(PYTHONUTF8='1',PYTHONDONTWRITEBYTECODE='1',SCORE_AUDIT_RESULTS='baseline_replay_20261018/score_default_threads');env={k:v for k,v in env.items() if k not in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS']};rows=[]
+for s in ['prepare','select','test','tests']:
+ cmd=[P,'score_audit/run.py','--out','baseline_replay_20261018/score_default_threads','--stage',s] if s!='tests' else [P,'-m','unittest','discover','-s','score_audit','-p','test_*.py','-v']
+ with (O/'logs'/('score_default_'+s+'.txt')).open('x',encoding='utf-8') as h:p=subprocess.run(cmd,cwd=R,env=env,stdout=h,stderr=subprocess.STDOUT)
+ rows.append(dict(command=cmd,exit_code=p.returncode,removed_thread_overrides=['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS']));print(s,p.returncode,flush=True)
+ if p.returncode:break
+(O/'score_default_commands.json').write_text(json.dumps(rows,indent=2))

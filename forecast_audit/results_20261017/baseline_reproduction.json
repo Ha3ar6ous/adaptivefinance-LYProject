@@ -1,0 +1,130 @@
+{
+  "metrics": {
+    "original": {
+      "n": 720,
+      "windows": 48,
+      "mae": 575.6465416666666,
+      "rmse": 847.2633567411316
+    },
+    "historical_mean": {
+      "n": 720,
+      "windows": 48,
+      "mae": 529.5235166673348,
+      "rmse": 791.6344204881062
+    }
+  },
+  "inventory": [
+    {
+      "file": "data/normal/blinkit_stable.csv",
+      "n": 120,
+      "platforms": [
+        "blinkit"
+      ],
+      "sha256": "95075157d64b690a682b25c3194bfc6b245b98e56dc1511a2ae8710efaceb3bf",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/blinkit_volatile.csv",
+      "n": 120,
+      "platforms": [
+        "blinkit"
+      ],
+      "sha256": "d97bb544b0e732da06c2c717a76ab32b345951473ed940b335605dab2fe1b781",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/gig_income_data.csv",
+      "n": 180,
+      "platforms": [
+        "zomato"
+      ],
+      "sha256": "f5f522984470a5baa298b079a6c8e3cd23a426843cc55a5a38239d8fb999f4e2",
+      "first_date": "2024-01-01",
+      "last_date": "2024-06-28"
+    },
+    {
+      "file": "data/normal/snabbit_stable.csv",
+      "n": 120,
+      "platforms": [
+        "snabbit"
+      ],
+      "sha256": "fb9103061e2e08753d57b7b22f51b7c84c6fb780247c91af7a9df82cea359d14",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/snabbit_volatile.csv",
+      "n": 120,
+      "platforms": [
+        "snabbit"
+      ],
+      "sha256": "868b061b89046d2b0a9524ec5c8ca0b65e0efa377b98e4f63bc7b1a5618b9279",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/swiggy_stable.csv",
+      "n": 120,
+      "platforms": [
+        "swiggy"
+      ],
+      "sha256": "0cd7fb42993e63ccc6f94b17b1d00c643d80736b93e2a5809b8e8ac882a39ead",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/swiggy_volatile.csv",
+      "n": 120,
+      "platforms": [
+        "swiggy"
+      ],
+      "sha256": "8eba5deff8201b930fbdcf6863ac8e37dca7bbb15f0e4a888e264ab703f5ba93",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/uber_stable.csv",
+      "n": 120,
+      "platforms": [
+        "uber"
+      ],
+      "sha256": "4357937b41d426019db525fe340e1a0956c2cb24ad922ad54bf1fc7cc6313800",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/uber_volatile.csv",
+      "n": 120,
+      "platforms": [
+        "uber"
+      ],
+      "sha256": "835ec36f74424b9045b46ad7911453f51a82cf5f45e3fef89a828628ceb899cb",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/zomato_stable.csv",
+      "n": 120,
+      "platforms": [
+        "zomato"
+      ],
+      "sha256": "895b12284ab1de813f52f5ca8a2ddb43905428d3230453c997bf45185028ee26",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    },
+    {
+      "file": "data/normal/zomato_volatile.csv",
+      "n": 120,
+      "platforms": [
+        "zomato"
+      ],
+      "sha256": "b5033d93d454eb911a131cd579c4b6fe81cef943c6da0e2a5cee28cd982aab66",
+      "first_date": "2024-01-01",
+      "last_date": "2024-04-29"
+    }
+  ],
+  "git_commit": "db3fc1d56a8f38042a91e21ec6164ac8be0dfe40",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]"
+}

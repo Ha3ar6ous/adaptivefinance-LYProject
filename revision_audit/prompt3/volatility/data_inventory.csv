@@ -1,0 +1,12 @@
+series,platform,rows,first,last,zero_income,purged_origins
+blinkit_stable.csv,blinkit,120,2024-01-01,2024-04-29,14,26
+blinkit_volatile.csv,blinkit,120,2024-01-01,2024-04-29,13,26
+gig_income_data.csv,zomato,180,2024-01-01,2024-06-28,11,26
+snabbit_stable.csv,snabbit,120,2024-01-01,2024-04-29,34,26
+snabbit_volatile.csv,snabbit,120,2024-01-01,2024-04-29,28,26
+swiggy_stable.csv,swiggy,120,2024-01-01,2024-04-29,11,26
+swiggy_volatile.csv,swiggy,120,2024-01-01,2024-04-29,19,26
+uber_stable.csv,uber,120,2024-01-01,2024-04-29,11,26
+uber_volatile.csv,uber,120,2024-01-01,2024-04-29,11,26
+zomato_stable.csv,zomato,120,2024-01-01,2024-04-29,20,26
+zomato_volatile.csv,zomato,120,2024-01-01,2024-04-29,20,26

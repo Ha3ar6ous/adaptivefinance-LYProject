@@ -1,0 +1,87 @@
+{
+  "winners": {
+    "NB": {
+      "name": "NB_2_.2",
+      "family": "NB",
+      "order": 18,
+      "n": 187,
+      "macro_f1": 0.543957351892138,
+      "high_recall": 0.5303030303030303,
+      "balanced_accuracy": 0.5449053179549633,
+      "accuracy": 0.6096256684491979,
+      "high_support": 66,
+      "high_to_low": 1,
+      "high_to_medium": 30,
+      "config": {
+        "family": "NB",
+        "var_smoothing": 0.1
+      },
+      "decision": ".2",
+      "admissible_for_selection": false
+    },
+    "kNN": {
+      "name": "kNN_7_.35",
+      "family": "kNN",
+      "order": 39,
+      "n": 187,
+      "macro_f1": 0.5544097773077149,
+      "high_recall": 0.8333333333333334,
+      "balanced_accuracy": 0.570133963750985,
+      "accuracy": 0.6951871657754011,
+      "high_support": 66,
+      "high_to_low": 5,
+      "high_to_medium": 6,
+      "config": {
+        "family": "kNN",
+        "k": 31,
+        "weights": "uniform"
+      },
+      "decision": ".35",
+      "admissible_for_selection": false
+    },
+    "logistic": {
+      "name": "logistic_9_.35",
+      "family": "logistic",
+      "order": 47,
+      "n": 187,
+      "macro_f1": 0.535169405757641,
+      "high_recall": 0.5,
+      "balanced_accuracy": 0.5349356448647229,
+      "accuracy": 0.6256684491978609,
+      "high_support": 66,
+      "high_to_low": 5,
+      "high_to_medium": 28,
+      "config": {
+        "C": 0.1,
+        "class_weight": null,
+        "family": "logistic"
+      },
+      "decision": ".35",
+      "admissible_for_selection": false
+    },
+    "GB": {
+      "name": "GB_15_.2",
+      "family": "GB",
+      "order": 70,
+      "n": 187,
+      "macro_f1": 0.4694113878828196,
+      "high_recall": 0.7272727272727273,
+      "balanced_accuracy": 0.4835589941972921,
+      "accuracy": 0.6203208556149733,
+      "high_support": 66,
+      "high_to_low": 0,
+      "high_to_medium": 18,
+      "config": {
+        "balanced": false,
+        "depth": 1,
+        "family": "GB"
+      },
+      "decision": ".2",
+      "admissible_for_selection": false
+    }
+  },
+  "selection_sha256": "bed5e899322304039135ff0553f50af78e44aa0191be84518cc9cc14a43d917a",
+  "rationale": "Report all requested model families even if rejected by HIGH-recall selection constraint. Diagnostic only.",
+  "frozen_before_forward_test": true,
+  "validation_sha256": "7feff405a00034171e3985822c18c54a12cf4db2e2433f18be5a90c4e2098732"
+}

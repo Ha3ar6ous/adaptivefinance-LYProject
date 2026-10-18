@@ -1,0 +1,300 @@
+{
+  "score_equivalence": [
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "all_outcomes_identical": true
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "all_outcomes_identical": true
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "all_outcomes_identical": true
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "all_outcomes_identical": true
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "all_outcomes_identical": true
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "all_outcomes_identical": true
+    }
+  ],
+  "matched_comparisons": [
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "comparator": "matched_savings",
+      "forced_delta_vs_full": -0.43399999999999994,
+      "ci": {
+        "lower95": -0.8838439497465286,
+        "upper95": -0.06040637012630426,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 39.42,
+      "full_investing_percent": 43.012
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "comparator": "matched_random",
+      "forced_delta_vs_full": 0.994,
+      "ci": {
+        "lower95": 0.6638323299186749,
+        "upper95": 1.2834947907146774,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 46.0696,
+      "full_investing_percent": 43.012
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "comparator": "matched_savings",
+      "forced_delta_vs_full": -0.45399999999999996,
+      "ci": {
+        "lower95": -0.905884945999559,
+        "upper95": -0.07786762503743634,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 39.362,
+      "full_investing_percent": 43.016
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "comparator": "matched_random",
+      "forced_delta_vs_full": 9.0592,
+      "ci": {
+        "lower95": 8.223067173637515,
+        "upper95": 9.997803259962215,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 64.242,
+      "full_investing_percent": 43.016
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "comparator": "matched_savings",
+      "forced_delta_vs_full": -0.9839999999999998,
+      "ci": {
+        "lower95": -1.7544633017412388,
+        "upper95": -0.3314365578516521,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 36.5,
+      "full_investing_percent": 39.854
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "comparator": "matched_random",
+      "forced_delta_vs_full": 1.2608000000000001,
+      "ci": {
+        "lower95": 0.756016780746302,
+        "upper95": 1.7011081162024557,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 41.8452,
+      "full_investing_percent": 39.854
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "comparator": "matched_savings",
+      "forced_delta_vs_full": -1.0199999999999998,
+      "ci": {
+        "lower95": -1.7941370949966937,
+        "upper95": -0.3593890386343215,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 36.38,
+      "full_investing_percent": 39.856
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "comparator": "matched_random",
+      "forced_delta_vs_full": 11.5444,
+      "ci": {
+        "lower95": 10.674521454373586,
+        "upper95": 12.85024154589372,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 60.7892,
+      "full_investing_percent": 39.856
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "comparator": "matched_savings",
+      "forced_delta_vs_full": -0.43399999999999994,
+      "ci": {
+        "lower95": -0.8838439497465286,
+        "upper95": -0.06040637012630426,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 39.42,
+      "full_investing_percent": 43.012
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "comparator": "matched_random",
+      "forced_delta_vs_full": 0.994,
+      "ci": {
+        "lower95": 0.6638323299186749,
+        "upper95": 1.2834947907146774,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 46.0696,
+      "full_investing_percent": 43.012
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "comparator": "matched_savings",
+      "forced_delta_vs_full": -0.45399999999999996,
+      "ci": {
+        "lower95": -0.905884945999559,
+        "upper95": -0.07786762503743634,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 39.362,
+      "full_investing_percent": 43.016
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "comparator": "matched_random",
+      "forced_delta_vs_full": 9.0592,
+      "ci": {
+        "lower95": 8.223067173637515,
+        "upper95": 9.997803259962215,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      },
+      "investing_percent": 64.242,
+      "full_investing_percent": 43.016
+    }
+  ]
+}

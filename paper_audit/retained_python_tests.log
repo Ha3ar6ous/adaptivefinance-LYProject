@@ -1,0 +1,23 @@
+test_forecast_chronological_cleaning (evaluate_python.CoreTests.test_forecast_chronological_cleaning) ... ok
+test_forecast_constant (evaluate_python.CoreTests.test_forecast_constant) ... ok
+test_forecast_empty (evaluate_python.CoreTests.test_forecast_empty) ... ok
+test_forecast_horizon_bounds (evaluate_python.CoreTests.test_forecast_horizon_bounds) ... ok
+test_volatility_constant (evaluate_python.CoreTests.test_volatility_constant) ... ok
+test_volatility_high (evaluate_python.CoreTests.test_volatility_high) ... ok
+test_volatility_insufficient (evaluate_python.CoreTests.test_volatility_insufficient) ... ok
+test_volatility_last30 (evaluate_python.CoreTests.test_volatility_last30) ... ok
+test_volatility_sample_std (evaluate_python.CoreTests.test_volatility_sample_std) ... ok
+test_zero_income_is_not_low_risk (evaluate_python.CoreTests.test_zero_income_is_not_low_risk) ... FAIL
+
+======================================================================
+FAIL: test_zero_income_is_not_low_risk (evaluate_python.CoreTests.test_zero_income_is_not_low_risk)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Ritesh\Documents\RJ\AllWork\LYProject\research_eval\evaluate_python.py", line 57, in test_zero_income_is_not_low_risk
+    self.assertNotEqual(classify_volatility([{'income':0}]*30)['label'],'low')
+AssertionError: 'low' == 'low'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.004s
+
+FAILED (failures=1)

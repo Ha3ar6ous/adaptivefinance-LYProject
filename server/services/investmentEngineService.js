@@ -3,6 +3,7 @@ const IncomeAnalytics = require('../models/IncomeAnalytics')
 const InvestmentSuggestion = require('../models/InvestmentSuggestion')
 const User = require('../models/User')
 const { loadInvestmentOptions } = require('../data/investmentOptions')
+const { buildDecisionRouter } = require('./decisionRouterService')
 
 const average = (values) =>
   values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0
@@ -124,6 +125,7 @@ const scoreOption = (option, inputs) => {
     score: Math.round(score),
     allocationAmount: 0,
     allocationPct: 0,
+    minMonthlyAmount: option.minMonthlyAmount,
     expectedReturnPct: option.expectedReturnPct,
     returnNote: option.returnNote,
     riskLevel: option.riskLevel,
@@ -132,6 +134,37 @@ const scoreOption = (option, inputs) => {
     projection: null,
     reasonTags,
   }
+}
+
+// Stable largest-remainder rounding preserves the integer total exactly.
+const largestRemainder = (total, weights) => {
+  const sum = weights.reduce((a, b) => a + b, 0)
+  if (!weights.length || sum <= 0) return []
+  const raw = weights.map((w) => total * w / sum)
+  const values = raw.map(Math.floor)
+  const order = raw.map((v, i) => ({ i, remainder: v - values[i] }))
+    .sort((a, b) => b.remainder - a.remainder || a.i - b.i)
+  const remaining = total - values.reduce((a, b) => a + b, 0)
+  for (let i = 0; i < remaining; i += 1) values[order[i].i] += 1
+  return values
+}
+
+const allocateRecommendations = (candidates, budget) => {
+  if (!Number.isSafeInteger(budget) || budget <= 0) return []
+  let selected = candidates.slice(0, 5)
+  while (selected.length) {
+    const amounts = largestRemainder(budget, selected.map((o) => Math.max(o.score, 1)))
+    // Drop the lowest-ranked infeasible product, then redistribute the budget.
+    let drop = -1
+    for (let i = 0; i < selected.length; i += 1) {
+      if (amounts[i] < Math.max(1, Math.ceil(selected[i].minMonthlyAmount || 0))) drop = i
+    }
+    if (drop >= 0) { selected.splice(drop, 1); continue }
+    const percentages = largestRemainder(100, amounts)
+    return selected.map((option, i) => ({ ...option, allocationAmount: amounts[i],
+      allocationPct: percentages[i], projection: projectionFor(amounts[i], option) }))
+  }
+  return []
 }
 
 const buildBlockedSuggestion = ({ userId, investAction, investableAmount, riskProfile }) => ({
@@ -145,10 +178,14 @@ const buildBlockedSuggestion = ({ userId, investAction, investableAmount, riskPr
 })
 
 const buildInvestmentSuggestion = ({ userId, user, entries, analytics }) => {
-  const investAction = getInvestAction(analytics)
+  // Recheck current inputs; a cached allowed flag must not bypass safety policy.
+  const investAction = getInvestAction({ router: buildDecisionRouter({ user, health: analytics?.health, analytics }) })
+  if (!investAction.allowed) {
+    return buildBlockedSuggestion({ userId, investAction, investableAmount: 0, riskProfile: user?.riskPreference || 'low' })
+  }
   const inputs = deriveInputs({ user, entries, analytics })
 
-  if (!investAction?.allowed || inputs.investableAmount <= 0) {
+  if (inputs.investableAmount <= 0) {
     return buildBlockedSuggestion({
       userId,
       investAction,
@@ -163,17 +200,7 @@ const buildInvestmentSuggestion = ({ userId, user, entries, analytics }) => {
     .sort((a, b) => b.score - a.score)
     .slice(0, 5)
 
-  const totalScore = scored.reduce((sum, option) => sum + option.score, 0) || 1
-  const suggestions = scored.map((option) => {
-    const allocationPct = option.score / totalScore
-    const allocationAmount = Math.max(Math.floor(inputs.investableAmount * allocationPct), 0)
-    return {
-      ...option,
-      allocationPct: Math.round(allocationPct * 100),
-      allocationAmount,
-      projection: projectionFor(allocationAmount, option),
-    }
-  })
+  const suggestions = allocateRecommendations(scored, inputs.investableAmount)
 
   return {
     userId,
@@ -186,20 +213,25 @@ const buildInvestmentSuggestion = ({ userId, user, entries, analytics }) => {
   }
 }
 
-const refreshInvestmentSuggestionForUser = async (userId) => {
+// Read current inputs and recompute; cached recommendations are never authorization.
+const getInvestmentSuggestionForUser = async (userId) => {
   const [user, entries, analytics] = await Promise.all([
     User.findById(userId).lean(),
     DailyIncomeEntry.find({ userId }).sort({ date: 1 }).lean(),
     IncomeAnalytics.findOne({ userId }).lean(),
   ])
 
-  const payload = buildInvestmentSuggestion({
+  return buildInvestmentSuggestion({
     userId,
     user: user || {},
     entries,
     analytics: analytics || {},
   })
 
+}
+
+const refreshInvestmentSuggestionForUser = async (userId) => {
+  const payload = await getInvestmentSuggestionForUser(userId)
   return InvestmentSuggestion.findOneAndUpdate({ userId }, payload, {
     new: true,
     upsert: true,
@@ -209,6 +241,7 @@ const refreshInvestmentSuggestionForUser = async (userId) => {
 
 module.exports = {
   buildInvestmentSuggestion,
+  getInvestmentSuggestionForUser,
   refreshInvestmentSuggestionForUser,
 }
 

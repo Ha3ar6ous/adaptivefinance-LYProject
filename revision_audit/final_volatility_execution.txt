@@ -1,0 +1,177 @@
+{
+  "target": "next14 realized sampleCV; training-only global terciles",
+  "target_cutoffs": {
+    "cutoffs": [
+      0.531709662312071,
+      0.7739171644202268
+    ],
+    "fit_split": "train",
+    "n": 187,
+    "quantile_method": "linear",
+    "ties_at_cutoffs": [
+      1,
+      1
+    ]
+  },
+  "frozen_selection": {
+    "name": "grid_cv30_0.45_0.75",
+    "family": "grid",
+    "low": 0.45,
+    "high": 0.75,
+    "order": 107,
+    "n": 187,
+    "macro_f1": 0.6839962886474514,
+    "high_recall": 0.9090909090909091,
+    "balanced_accuracy": 0.7414332449793443,
+    "accuracy": 0.7165775401069518,
+    "high_support": 66,
+    "high_to_low": 0,
+    "high_to_medium": 6,
+    "actual_low_pred_low": 54,
+    "actual_low_pred_medium": 33,
+    "actual_low_pred_high": 7,
+    "actual_medium_pred_low": 0,
+    "actual_medium_pred_medium": 20,
+    "actual_medium_pred_high": 7,
+    "actual_high_pred_low": 0,
+    "actual_high_pred_medium": 6,
+    "actual_high_pred_high": 60
+  },
+  "legacy_cutoffs": [
+    0.35,
+    0.75
+  ],
+  "deployed_cutoffs": [
+    0.45,
+    0.75
+  ],
+  "original": {
+    "n": 247,
+    "accuracy": 0.32793522267206476,
+    "macro_f1": 0.32435757244395846,
+    "high_recall": 0.72,
+    "balanced_accuracy": 0.4454794520547945,
+    "confusion_matrix": [
+      [
+        0,
+        116,
+        8
+      ],
+      [
+        4,
+        45,
+        24
+      ],
+      [
+        0,
+        14,
+        36
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "LOW",
+        "support": 124,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "label": "MEDIUM",
+        "support": 73,
+        "precision": 0.2571428571428571,
+        "recall": 0.6164383561643836,
+        "f1": 0.3629032258064516
+      },
+      {
+        "label": "HIGH",
+        "support": 50,
+        "precision": 0.5294117647058824,
+        "recall": 0.72,
+        "f1": 0.6101694915254238
+      }
+    ]
+  },
+  "deployed": {
+    "n": 247,
+    "accuracy": 0.6356275303643725,
+    "macro_f1": 0.6033091202582729,
+    "high_recall": 0.72,
+    "balanced_accuracy": 0.6216099572838415,
+    "confusion_matrix": [
+      [
+        91,
+        25,
+        8
+      ],
+      [
+        19,
+        30,
+        24
+      ],
+      [
+        2,
+        12,
+        36
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "LOW",
+        "support": 124,
+        "precision": 0.8125,
+        "recall": 0.7338709677419355,
+        "f1": 0.7711864406779662
+      },
+      {
+        "label": "MEDIUM",
+        "support": 73,
+        "precision": 0.44776119402985076,
+        "recall": 0.410958904109589,
+        "f1": 0.42857142857142855
+      },
+      {
+        "label": "HIGH",
+        "support": 50,
+        "precision": 0.5294117647058824,
+        "recall": 0.72,
+        "f1": 0.6101694915254238
+      }
+    ]
+  },
+  "paired_macro_f1_gain": 0.2789515478143144,
+  "paired_ci": {
+    "macro_f1": {
+      "lower95": 0.01340388007054677,
+      "upper95": 0.3380322580645161,
+      "draws": 5000,
+      "valid_draws": 5000,
+      "clusters": 5,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71
+      ]
+    },
+    "high_recall": {
+      "lower95": 0.0,
+      "upper95": 0.0,
+      "draws": 5000,
+      "valid_draws": 5000,
+      "clusters": 5,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71
+      ]
+    }
+  },
+  "point_inside_ci": true,
+  "test_selection_performed": false,
+  "labels_changed": false,
+  "qualification": "Reconstruction of a synthetic statistic is not independent financial-risk validation; only five platform clusters."
+}

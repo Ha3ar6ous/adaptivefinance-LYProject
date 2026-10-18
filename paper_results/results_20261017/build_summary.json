@@ -1,0 +1,14 @@
+{
+  "rows": 71,
+  "input_tables": 23,
+  "change_logs": [
+    "CHANGES_data.md",
+    "CHANGES_engine_llm.md",
+    "CHANGES_forecast.md",
+    "CHANGES_results.md",
+    "CHANGES_router.md",
+    "CHANGES_score.md",
+    "CHANGES_volatility.md"
+  ],
+  "report": "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\RESULTS_FOR_PAPER.md"
+}

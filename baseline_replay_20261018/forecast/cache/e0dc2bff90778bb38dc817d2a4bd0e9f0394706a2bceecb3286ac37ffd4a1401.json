@@ -1,0 +1,41 @@
+{
+  "prediction": [
+    476.77,
+    2197.4,
+    680.22,
+    1187.93,
+    2465.93,
+    1440.77,
+    1979.89,
+    684.94,
+    2405.57,
+    888.39,
+    1396.11,
+    2674.1,
+    1648.94,
+    2188.06,
+    893.11,
+    2613.75,
+    1096.56,
+    1604.28,
+    2882.27,
+    1857.11,
+    2396.23,
+    1101.28,
+    2821.92,
+    1304.73,
+    1812.45,
+    3090.45,
+    2065.29,
+    2604.4,
+    1309.46,
+    3030.09
+  ],
+  "error": "",
+  "converged": true,
+  "warnings": [
+    "Non-invertible starting MA parameters found. Using zeros as starting parameters.",
+    "Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros."
+  ],
+  "seconds": 0.05633030000171857
+}

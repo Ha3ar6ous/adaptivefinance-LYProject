@@ -1,0 +1,371 @@
+{
+  "health": {
+    "n": 6480,
+    "phases": {
+      "survival": 2511,
+      "crisis": 1875,
+      "stability": 1686,
+      "growth": 408
+    },
+    "monotonicity": [
+      {
+        "factor": "liq",
+        "pairs": 5184,
+        "violations": 0,
+        "equalities": 1296,
+        "min_delta": 0,
+        "max_delta": 20
+      },
+      {
+        "factor": "debtRatio",
+        "pairs": 4860,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": -13,
+        "max_delta": -4
+      },
+      {
+        "factor": "vol",
+        "pairs": 3240,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": 6,
+        "max_delta": 6
+      },
+      {
+        "factor": "trend",
+        "pairs": 4320,
+        "violations": 0,
+        "equalities": 1440,
+        "min_delta": 0,
+        "max_delta": 8
+      },
+      {
+        "factor": "n",
+        "pairs": 4320,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": 2,
+        "max_delta": 4
+      },
+      {
+        "factor": "income",
+        "pairs": 2160,
+        "violations": 0,
+        "equalities": 2160,
+        "min_delta": 0,
+        "max_delta": 0
+      }
+    ]
+  },
+  "router": {
+    "n": 1792,
+    "allowed": 0,
+    "implemented": {
+      "passed": 1468,
+      "failed": 324,
+      "false_allow": 0,
+      "false_block": 324
+    },
+    "conservative": {
+      "passed": 1711,
+      "failed": 81,
+      "false_allow": 0,
+      "false_block": 81
+    },
+    "unknown_allowed": 0,
+    "boundaries": [
+      {
+        "liq": 0.99,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 1,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 1.01,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 2.99,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 3,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 3.01,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.49,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.5,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.51,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 1.99,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 2,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 2.01,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 69,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 70,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 71,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      }
+    ],
+    "rule_coverage": {
+      "liq_below": 448,
+      "debt_above": 448,
+      "high_vol": 448,
+      "low_health": 1024,
+      "all_clear": 324
+    },
+    "ml_outage": {
+      "score": 74,
+      "phase": "stability",
+      "volatility": "unknown",
+      "allowed": false,
+      "recommended": 0,
+      "investable": 0
+    }
+  },
+  "investment": {
+    "n": 1728,
+    "eligible": 0,
+    "blocked": 1728,
+    "allocations": 0,
+    "violations": {
+      "budget": 0,
+      "negative": 0,
+      "minimum_allocated": 0,
+      "hard_filter": 0,
+      "top5": 0,
+      "router_bypass": 0,
+      "pct_sum_not100": 0
+    },
+    "unused": {},
+    "recommended_distribution": {
+      "0": 1728
+    }
+  },
+  "llm": {
+    "transport": [
+      {
+        "mode": "valid_json",
+        "success": true,
+        "ms": 1.2653
+      },
+      {
+        "mode": "fenced_json",
+        "success": true,
+        "ms": 0.3505
+      },
+      {
+        "mode": "malformed",
+        "success": false,
+        "error": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+        "ms": 0.5584
+      },
+      {
+        "mode": "missing_json",
+        "success": false,
+        "error": "Groq response did not contain JSON",
+        "ms": 0.4433
+      },
+      {
+        "mode": "http_429",
+        "success": false,
+        "error": "Groq failed with status 429",
+        "ms": 0.5941
+      },
+      {
+        "mode": "timeout",
+        "success": false,
+        "error": "Controlled timeout",
+        "ms": 30.9482
+      }
+    ],
+    "live": [
+      {
+        "cfg": {},
+        "api_success": true,
+        "schema_success": false,
+        "fallback": true,
+        "latency_ms": 1167.1993,
+        "error": "Missing overview fields"
+      }
+    ]
+  },
+  "tests": {
+    "total": 24,
+    "passed": 21,
+    "failed": 3
+  },
+  "failures": [
+    {
+      "name": "score income-sensitive with all other factors fixed",
+      "passed": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(health.calculateHealthScore(fixture({income:1500})).score>health.calculateHealthScore(fixture({income:500})).score)\n"
+    },
+    {
+      "name": "router exact implemented truth table",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n324 !== 0\n"
+    },
+    {
+      "name": "fallback detects falling and rising forecasts",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'steady'\n- 'softening'\n"
+    }
+  ],
+  "performance": {
+    "health_router_investment": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.09549919999999994,
+      "std_ms": 0.04018557003900779,
+      "median_ms": 0.1012,
+      "p95_ms": 0.1297,
+      "min_ms": 0.0576,
+      "max_ms": 0.679
+    },
+    "health_router": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.1370662000000001,
+      "std_ms": 0.07598870177572452,
+      "median_ms": 0.11975,
+      "p95_ms": 0.2475,
+      "min_ms": 0.0569,
+      "max_ms": 1.0903
+    },
+    "investment_only": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.0034749999999999976,
+      "std_ms": 0.007431467889993201,
+      "median_ms": 0.0027,
+      "p95_ms": 0.0033,
+      "min_ms": 0.0021,
+      "max_ms": 0.1334
+    },
+    "fixture_only": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.13897239999999997,
+      "std_ms": 0.04319185013680243,
+      "median_ms": 0.1522,
+      "p95_ms": 0.1894,
+      "min_ms": 0.052,
+      "max_ms": 0.4553
+    },
+    "fallback": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.006117800000000006,
+      "std_ms": 0.0012824286178965282,
+      "median_ms": 0.0057,
+      "p95_ms": 0.0091,
+      "min_ms": 0.0055,
+      "max_ms": 0.0187
+    }
+  }
+}

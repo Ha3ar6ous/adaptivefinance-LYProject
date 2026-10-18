@@ -1,0 +1,41 @@
+{
+  "prediction": [
+    783.83,
+    992.99,
+    757.01,
+    1029.69,
+    1024.86,
+    868.35,
+    799.64,
+    889.83,
+    1098.99,
+    863.01,
+    1135.69,
+    1130.86,
+    974.35,
+    905.64,
+    995.83,
+    1204.99,
+    969.01,
+    1241.69,
+    1236.86,
+    1080.35,
+    1011.64,
+    1101.83,
+    1310.99,
+    1075.01,
+    1347.69,
+    1342.86,
+    1186.35,
+    1117.64,
+    1207.83,
+    1416.99
+  ],
+  "error": "",
+  "converged": true,
+  "warnings": [
+    "Non-invertible starting MA parameters found. Using zeros as starting parameters.",
+    "Non-invertible starting seasonal moving average Using zeros as starting parameters."
+  ],
+  "seconds": 0.13480259999778355
+}

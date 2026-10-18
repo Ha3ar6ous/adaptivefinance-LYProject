@@ -1,0 +1,2 @@
+Protocol/sources frozen; no simulations scored.
+Wall seconds: 2.5381667999972706

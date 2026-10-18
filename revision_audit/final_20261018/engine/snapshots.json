@@ -1,0 +1,6975 @@
+[
+  {
+    "seed": 11,
+    "id": "11_0",
+    "snapshot": {
+      "health": {
+        "score": 0,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 27,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 20,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 40882,
+        "average": 2725,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.598
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 104440,
+        "debt": 16861,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_1",
+    "snapshot": {
+      "health": {
+        "score": 71,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 10,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 55,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 81192,
+        "average": 5413,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.127
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 9029,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Nifty 50 ETF (SBI / Nippon India)",
+          "allocationAmount": 9029,
+          "riskLevel": "high",
+          "liquidity": "High",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 21639,
+        "debt": 14746,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_2",
+    "snapshot": {
+      "health": {
+        "score": 95,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 37,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 48,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 23136,
+        "average": 1542,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.935
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 51748,
+        "debt": 14890,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_3",
+    "snapshot": {
+      "health": {
+        "score": 43,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 30,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 41,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 6439,
+        "average": 429,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.407
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 98011,
+        "debt": 22413,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_4",
+    "snapshot": {
+      "health": {
+        "score": 25,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 46,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 16,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 24481,
+        "average": 1632,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.031
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 42973,
+        "debt": 557,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_5",
+    "snapshot": {
+      "health": {
+        "score": 21,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 14,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 3,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 39770,
+        "average": 2651,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.037
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 43203,
+        "debt": 24176,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_6",
+    "snapshot": {
+      "health": {
+        "score": 92,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 51,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 78,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 64530,
+        "average": 4302,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.683
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 15863,
+        "debt": 8301,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_7",
+    "snapshot": {
+      "health": {
+        "score": 9,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 67,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 40,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 84303,
+        "average": 5620,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.644
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 88110,
+        "debt": 11887,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_8",
+    "snapshot": {
+      "health": {
+        "score": 91,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 80,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 22,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 20103,
+        "average": 1340,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.514
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 31425,
+        "debt": 16238,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_9",
+    "snapshot": {
+      "health": {
+        "score": 59,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 94,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 15,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 52341,
+        "average": 3489,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.108
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 17167,
+        "debt": 11675,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_10",
+    "snapshot": {
+      "health": {
+        "score": 93,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 22,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 19,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 68803,
+        "average": 4587,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.613
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 50129,
+        "debt": 20941,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_11",
+    "snapshot": {
+      "health": {
+        "score": 25,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 85,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 33,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 73776,
+        "average": 4918,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.209
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 33254,
+        "debt": 21939,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_12",
+    "snapshot": {
+      "health": {
+        "score": 58,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 32,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 43,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 50111,
+        "average": 3341,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.542
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 91540,
+        "debt": 15292,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_13",
+    "snapshot": {
+      "health": {
+        "score": 72,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 73,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 50,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 21911,
+        "average": 1461,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.942
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 6304,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Sovereign Gold Bond (Current Series)",
+          "allocationAmount": 6304,
+          "riskLevel": "medium",
+          "liquidity": "Medium",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 67245,
+        "debt": 17474,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_14",
+    "snapshot": {
+      "health": {
+        "score": 83,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 12,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 9,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 21608,
+        "average": 1441,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.193
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 3612,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Sukanya Samriddhi Yojana (SSY)",
+          "allocationAmount": 3612,
+          "riskLevel": "low",
+          "liquidity": "Low",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 91441,
+        "debt": 22314,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_15",
+    "snapshot": {
+      "health": {
+        "score": 56,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 62,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 6,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 78994,
+        "average": 5266,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.105
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 67098,
+        "debt": 1027,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_16",
+    "snapshot": {
+      "health": {
+        "score": 77,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 20,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 27,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 69899,
+        "average": 4660,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.46
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 15039,
+        "debt": 28572,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_17",
+    "snapshot": {
+      "health": {
+        "score": 47,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 17,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 54,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 11325,
+        "average": 755,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.067
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 82227,
+        "debt": 10610,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_18",
+    "snapshot": {
+      "health": {
+        "score": 66,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 9,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 92,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 100301,
+        "average": 6687,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.535
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 45337,
+        "debt": 27103,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_19",
+    "snapshot": {
+      "health": {
+        "score": 58,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 64,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 57,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 99646,
+        "average": 6643,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.634
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 61444,
+        "debt": 23909,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_20",
+    "snapshot": {
+      "health": {
+        "score": 47,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 44,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 86,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 89096,
+        "average": 5940,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.605
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 70978,
+        "debt": 3864,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_21",
+    "snapshot": {
+      "health": {
+        "score": 91,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 32,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 99,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 87825,
+        "average": 5855,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.567
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 37617,
+        "debt": 22356,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_22",
+    "snapshot": {
+      "health": {
+        "score": 89,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 44,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 95,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 32437,
+        "average": 2162,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.024
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 43904,
+        "debt": 5030,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_23",
+    "snapshot": {
+      "health": {
+        "score": 97,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 74,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 60,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 23679,
+        "average": 1579,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.62
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 4456,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Public Provident Fund (PPF)",
+          "allocationAmount": 4456,
+          "riskLevel": "low",
+          "liquidity": "Low",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 44484,
+        "debt": 2954,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "id": "11_24",
+    "snapshot": {
+      "health": {
+        "score": 95,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 56,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 93,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 94470,
+        "average": 6298,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.593
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 52273,
+        "debt": 19214,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_0",
+    "snapshot": {
+      "health": {
+        "score": 0,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 8,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 96,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 6381,
+        "average": 425,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.908
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 49461,
+        "debt": 17185,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_1",
+    "snapshot": {
+      "health": {
+        "score": 6,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 78,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 57,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 79008,
+        "average": 5267,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.056
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 9573,
+        "debt": 14550,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_2",
+    "snapshot": {
+      "health": {
+        "score": 10,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 62,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 3,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 66656,
+        "average": 4444,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.59
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 84112,
+        "debt": 24497,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_3",
+    "snapshot": {
+      "health": {
+        "score": 7,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 3,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 79,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 5639,
+        "average": 376,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.764
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 84308,
+        "debt": 9855,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_4",
+    "snapshot": {
+      "health": {
+        "score": 48,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 76,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 49,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 7945,
+        "average": 530,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.349
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 96558,
+        "debt": 27688,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_5",
+    "snapshot": {
+      "health": {
+        "score": 97,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 57,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 71,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 51155,
+        "average": 3410,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.968
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 6681,
+        "debt": 18980,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_6",
+    "snapshot": {
+      "health": {
+        "score": 61,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 18,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 97,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 70352,
+        "average": 4690,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.073
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 40857,
+        "debt": 22358,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_7",
+    "snapshot": {
+      "health": {
+        "score": 87,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 50,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 91,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 11101,
+        "average": 740,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.187
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 9803,
+        "debt": 1644,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_8",
+    "snapshot": {
+      "health": {
+        "score": 66,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 95,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 60,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 44439,
+        "average": 2963,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.372
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 74592,
+        "debt": 19413,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_9",
+    "snapshot": {
+      "health": {
+        "score": 5,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 54,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 67,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 49374,
+        "average": 3292,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.253
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 73721,
+        "debt": 25218,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_10",
+    "snapshot": {
+      "health": {
+        "score": 1,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 22,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 9,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 92776,
+        "average": 6185,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.178
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 29408,
+        "debt": 28232,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_11",
+    "snapshot": {
+      "health": {
+        "score": 41,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 68,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 82,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 20600,
+        "average": 1373,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.74
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 47129,
+        "debt": 9612,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_12",
+    "snapshot": {
+      "health": {
+        "score": 23,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 93,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 41,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 68887,
+        "average": 4592,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.156
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 97130,
+        "debt": 7641,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_13",
+    "snapshot": {
+      "health": {
+        "score": 81,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 74,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 9,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 34784,
+        "average": 2319,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.634
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 2124,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Digital Gold (Groww / Paytm)",
+          "allocationAmount": 2124,
+          "riskLevel": "medium",
+          "liquidity": "High",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 70671,
+        "debt": 26323,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_14",
+    "snapshot": {
+      "health": {
+        "score": 82,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 81,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 36,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 76667,
+        "average": 5111,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.239
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 72373,
+        "debt": 19113,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_15",
+    "snapshot": {
+      "health": {
+        "score": 26,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 58,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 15,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 20213,
+        "average": 1348,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.436
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 94221,
+        "debt": 28524,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_16",
+    "snapshot": {
+      "health": {
+        "score": 6,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 17,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 66,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 60926,
+        "average": 4062,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.206
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 29949,
+        "debt": 12527,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_17",
+    "snapshot": {
+      "health": {
+        "score": 21,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 81,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 9,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 25028,
+        "average": 1669,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.685
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 68959,
+        "debt": 15673,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_18",
+    "snapshot": {
+      "health": {
+        "score": 62,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 39,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 54,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 36974,
+        "average": 2465,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.616
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 65571,
+        "debt": 19288,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_19",
+    "snapshot": {
+      "health": {
+        "score": 51,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 77,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 63,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 25175,
+        "average": 1678,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.963
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 38511,
+        "debt": 10872,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_20",
+    "snapshot": {
+      "health": {
+        "score": 53,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 74,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 16,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 4235,
+        "average": 282,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.567
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 52954,
+        "debt": 25623,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_21",
+    "snapshot": {
+      "health": {
+        "score": 91,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 91,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 72,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 79664,
+        "average": 5311,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.777
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 34629,
+        "debt": 24344,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_22",
+    "snapshot": {
+      "health": {
+        "score": 30,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 45,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 52,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 37994,
+        "average": 2533,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.162
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 45827,
+        "debt": 27795,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_23",
+    "snapshot": {
+      "health": {
+        "score": 14,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 15,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 80,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 19106,
+        "average": 1274,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.774
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 90253,
+        "debt": 22789,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "id": "23_24",
+    "snapshot": {
+      "health": {
+        "score": 72,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 0,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 91,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 96289,
+        "average": 6419,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.055
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 31238,
+        "debt": 29696,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_0",
+    "snapshot": {
+      "health": {
+        "score": 0,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 44,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 16,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 26545,
+        "average": 1770,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.425
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 20023,
+        "debt": 10740,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_1",
+    "snapshot": {
+      "health": {
+        "score": 99,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 41,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 23,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 56414,
+        "average": 3761,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.169
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 78542,
+        "debt": 1740,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_2",
+    "snapshot": {
+      "health": {
+        "score": 69,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 87,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 8,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 67371,
+        "average": 4491,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.07
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 93892,
+        "debt": 11013,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_3",
+    "snapshot": {
+      "health": {
+        "score": 61,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 92,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 88,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 4705,
+        "average": 314,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.149
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 64148,
+        "debt": 1362,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_4",
+    "snapshot": {
+      "health": {
+        "score": 83,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 96,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 50,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 77595,
+        "average": 5173,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.549
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 47068,
+        "debt": 23852,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_5",
+    "snapshot": {
+      "health": {
+        "score": 12,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 34,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 12,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 38765,
+        "average": 2584,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.399
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 63090,
+        "debt": 7566,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_6",
+    "snapshot": {
+      "health": {
+        "score": 30,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 73,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 59,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 52525,
+        "average": 3502,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.287
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 48006,
+        "debt": 21794,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_7",
+    "snapshot": {
+      "health": {
+        "score": 88,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 94,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 35,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 75404,
+        "average": 5027,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.346
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 4970,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Post Office 5-Year Time Deposit",
+          "allocationAmount": 4970,
+          "riskLevel": "low",
+          "liquidity": "Low",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 91476,
+        "debt": 21661,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_8",
+    "snapshot": {
+      "health": {
+        "score": 89,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 82,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 67,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 20288,
+        "average": 1353,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.237
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 52293,
+        "debt": 18034,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_9",
+    "snapshot": {
+      "health": {
+        "score": 46,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 87,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 49,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 99859,
+        "average": 6657,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.378
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 93470,
+        "debt": 12250,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_10",
+    "snapshot": {
+      "health": {
+        "score": 11,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 3,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 33,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 3184,
+        "average": 212,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.363
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 5365,
+        "debt": 10345,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_11",
+    "snapshot": {
+      "health": {
+        "score": 1,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 41,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 82,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 49607,
+        "average": 3307,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.802
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 91943,
+        "debt": 12013,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_12",
+    "snapshot": {
+      "health": {
+        "score": 43,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 82,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 63,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 98480,
+        "average": 6565,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.558
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 81648,
+        "debt": 4510,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_13",
+    "snapshot": {
+      "health": {
+        "score": 48,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 66,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 4,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 20921,
+        "average": 1395,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.877
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 38160,
+        "debt": 1791,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_14",
+    "snapshot": {
+      "health": {
+        "score": 34,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 32,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 22,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 30488,
+        "average": 2033,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.472
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 70787,
+        "debt": 3536,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_15",
+    "snapshot": {
+      "health": {
+        "score": 48,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 97,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 66,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 25610,
+        "average": 1707,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.843
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 90464,
+        "debt": 29933,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_16",
+    "snapshot": {
+      "health": {
+        "score": 10,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 63,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 56,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 85497,
+        "average": 5700,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.895
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 12741,
+        "debt": 16178,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_17",
+    "snapshot": {
+      "health": {
+        "score": 79,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 68,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 3,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 13626,
+        "average": 908,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.264
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 3882,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Post Office Savings Account",
+          "allocationAmount": 3882,
+          "riskLevel": "low",
+          "liquidity": "High",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 75848,
+        "debt": 1143,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_18",
+    "snapshot": {
+      "health": {
+        "score": 64,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 55,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 76,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 70389,
+        "average": 4693,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.627
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 44207,
+        "debt": 2206,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_19",
+    "snapshot": {
+      "health": {
+        "score": 57,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 7,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 72,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 41271,
+        "average": 2751,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.9
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 22884,
+        "debt": 2170,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_20",
+    "snapshot": {
+      "health": {
+        "score": 1,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 34,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 8,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 43536,
+        "average": 2902,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.94
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 38797,
+        "debt": 1023,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_21",
+    "snapshot": {
+      "health": {
+        "score": 2,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 5,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 83,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 57094,
+        "average": 3806,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.647
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 103798,
+        "debt": 14216,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_22",
+    "snapshot": {
+      "health": {
+        "score": 84,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 98,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 44,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 19419,
+        "average": 1295,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.411
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 15854,
+        "debt": 4586,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_23",
+    "snapshot": {
+      "health": {
+        "score": 58,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 27,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 97,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 68478,
+        "average": 4565,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.078
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 48697,
+        "debt": 15098,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 37,
+    "id": "37_24",
+    "snapshot": {
+      "health": {
+        "score": 3,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 59,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 93,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 71708,
+        "average": 4781,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.692
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 65655,
+        "debt": 29687,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_0",
+    "snapshot": {
+      "health": {
+        "score": 0,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 10,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 82,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 91055,
+        "average": 6070,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.668
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 8801,
+        "debt": 25963,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_1",
+    "snapshot": {
+      "health": {
+        "score": 84,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 99,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 11,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 13004,
+        "average": 867,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.276
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 32309,
+        "debt": 26078,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_2",
+    "snapshot": {
+      "health": {
+        "score": 22,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 67,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 67,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 70489,
+        "average": 4699,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.997
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 95700,
+        "debt": 20237,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_3",
+    "snapshot": {
+      "health": {
+        "score": 63,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 72,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 31,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 68894,
+        "average": 4593,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.674
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 31500,
+        "debt": 11555,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_4",
+    "snapshot": {
+      "health": {
+        "score": 84,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 1,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 64,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 21140,
+        "average": 1409,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.925
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 2651,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Bharat Bond ETF - April 2031",
+          "allocationAmount": 2651,
+          "riskLevel": "low",
+          "liquidity": "High",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 96473,
+        "debt": 9542,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_5",
+    "snapshot": {
+      "health": {
+        "score": 15,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 31,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 33,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 30461,
+        "average": 2031,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.027
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 27158,
+        "debt": 3277,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_6",
+    "snapshot": {
+      "health": {
+        "score": 18,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 31,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 22,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 59620,
+        "average": 3975,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.077
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 84078,
+        "debt": 6570,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_7",
+    "snapshot": {
+      "health": {
+        "score": 77,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 46,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 32,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 83088,
+        "average": 5539,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.475
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 56963,
+        "debt": 20725,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_8",
+    "snapshot": {
+      "health": {
+        "score": 53,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 9,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 25,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 57777,
+        "average": 3852,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.379
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 48170,
+        "debt": 26616,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_9",
+    "snapshot": {
+      "health": {
+        "score": 94,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 92,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 8,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 48852,
+        "average": 3257,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.826
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 7394,
+        "debt": 3109,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_10",
+    "snapshot": {
+      "health": {
+        "score": 36,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 57,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 80,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 97390,
+        "average": 6493,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.064
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 88542,
+        "debt": 10941,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_11",
+    "snapshot": {
+      "health": {
+        "score": 55,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 28,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 82,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 97263,
+        "average": 6484,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.841
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 79308,
+        "debt": 26726,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_12",
+    "snapshot": {
+      "health": {
+        "score": 27,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 27,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 31,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 7911,
+        "average": 527,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.203
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 34855,
+        "debt": 1786,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_13",
+    "snapshot": {
+      "health": {
+        "score": 73,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 93,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 9,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 45605,
+        "average": 3040,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.539
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 34059,
+        "debt": 21221,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_14",
+    "snapshot": {
+      "health": {
+        "score": 10,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 86,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 65,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 64433,
+        "average": 4296,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.169
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 13314,
+        "debt": 12400,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_15",
+    "snapshot": {
+      "health": {
+        "score": 67,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 24,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 32,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 86346,
+        "average": 5756,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.962
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 29503,
+        "debt": 4796,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_16",
+    "snapshot": {
+      "health": {
+        "score": 29,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 10,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 78,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 40862,
+        "average": 2724,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.518
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 89539,
+        "debt": 11658,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_17",
+    "snapshot": {
+      "health": {
+        "score": 93,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 51,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 72,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 56734,
+        "average": 3782,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.416
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 3868,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "7.75% GOI Savings Bond (legacy reference)",
+          "allocationAmount": 3868,
+          "riskLevel": "low",
+          "liquidity": "Low",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 17054,
+        "debt": 24779,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_18",
+    "snapshot": {
+      "health": {
+        "score": 40,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 96,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 54,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 94319,
+        "average": 6288,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.571
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 32343,
+        "debt": 9267,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_19",
+    "snapshot": {
+      "health": {
+        "score": 77,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 52,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 11,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 50401,
+        "average": 3360,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.216
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 1433,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Nippon India Gold BeES ETF",
+          "allocationAmount": 1433,
+          "riskLevel": "medium",
+          "liquidity": "High",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 52222,
+        "debt": 13419,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_20",
+    "snapshot": {
+      "health": {
+        "score": 96,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 73,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 96,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 5856,
+        "average": 390,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.921
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 74343,
+        "debt": 28431,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_21",
+    "snapshot": {
+      "health": {
+        "score": 88,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 17,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 9,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 96019,
+        "average": 6401,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.705
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 5720,
+        "debt": 13898,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_22",
+    "snapshot": {
+      "health": {
+        "score": 33,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 43,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 36,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 43471,
+        "average": 2898,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.896
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 42755,
+        "debt": 217,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_23",
+    "snapshot": {
+      "health": {
+        "score": 65,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 89,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 44,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 88353,
+        "average": 5890,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.277
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 52507,
+        "debt": 4020,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 53,
+    "id": "53_24",
+    "snapshot": {
+      "health": {
+        "score": 5,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 5,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 84,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 39633,
+        "average": 2642,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.337
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 85186,
+        "debt": 15485,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_0",
+    "snapshot": {
+      "health": {
+        "score": 0,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 1,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 50,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 1855,
+        "average": 124,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.845
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 87405,
+        "debt": 6942,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_1",
+    "snapshot": {
+      "health": {
+        "score": 74,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 82,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 72,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 14198,
+        "average": 947,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.845
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 4542,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Post Office 5-Year Time Deposit",
+          "allocationAmount": 4542,
+          "riskLevel": "low",
+          "liquidity": "Low",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 79343,
+        "debt": 23416,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_2",
+    "snapshot": {
+      "health": {
+        "score": 82,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 64,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 24,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 82826,
+        "average": 5522,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.512
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 11017,
+        "debt": 12631,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_3",
+    "snapshot": {
+      "health": {
+        "score": 66,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 88,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 88,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 70211,
+        "average": 4681,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.881
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 31165,
+        "debt": 19977,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_4",
+    "snapshot": {
+      "health": {
+        "score": 62,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 38,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 79,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 55091,
+        "average": 3673,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.901
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 71897,
+        "debt": 14015,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_5",
+    "snapshot": {
+      "health": {
+        "score": 72,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 46,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 81,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 93556,
+        "average": 6237,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.943
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 7886,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Post Office 5-Year Time Deposit",
+          "allocationAmount": 7886,
+          "riskLevel": "low",
+          "liquidity": "Low",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 96557,
+        "debt": 13347,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_6",
+    "snapshot": {
+      "health": {
+        "score": 22,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 32,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 85,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 53219,
+        "average": 3548,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.324
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 37463,
+        "debt": 9021,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_7",
+    "snapshot": {
+      "health": {
+        "score": 11,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 93,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 35,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 40606,
+        "average": 2707,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.185
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 85932,
+        "debt": 19607,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_8",
+    "snapshot": {
+      "health": {
+        "score": 51,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 84,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 97,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 61225,
+        "average": 4082,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.036
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 24730,
+        "debt": 11585,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_9",
+    "snapshot": {
+      "health": {
+        "score": 87,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 84,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 30,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 52188,
+        "average": 3479,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.93
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 827,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Mahila Samman Savings Certificate",
+          "allocationAmount": 827,
+          "riskLevel": "low",
+          "liquidity": "Low",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 99552,
+        "debt": 12852,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_10",
+    "snapshot": {
+      "health": {
+        "score": 23,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 49,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 81,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 3381,
+        "average": 225,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.013
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 47490,
+        "debt": 23823,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_11",
+    "snapshot": {
+      "health": {
+        "score": 37,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 73,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 6,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 37273,
+        "average": 2485,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.097
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 38176,
+        "debt": 7986,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_12",
+    "snapshot": {
+      "health": {
+        "score": 51,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 1,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 8,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 8724,
+        "average": 582,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.224
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 48476,
+        "debt": 603,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_13",
+    "snapshot": {
+      "health": {
+        "score": 85,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 80,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 22,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Investing can begin conservatively.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": true,
+            "reason": "Readiness checks passed."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 91148,
+        "average": 6077,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.324
+      },
+      "investment": {
+        "eligible": true,
+        "investableAmount": 7809,
+        "blockedReason": "",
+        "topSuggestion": {
+          "name": "Digital Gold (Groww / Paytm)",
+          "allocationAmount": 7809,
+          "riskLevel": "medium",
+          "liquidity": "High",
+          "projection": null,
+          "reasonTags": []
+        }
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 96864,
+        "debt": 11624,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_14",
+    "snapshot": {
+      "health": {
+        "score": 79,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 51,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 52,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 17348,
+        "average": 1157,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.6
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 91090,
+        "debt": 27448,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_15",
+    "snapshot": {
+      "health": {
+        "score": 68,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 4,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 24,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 70873,
+        "average": 4725,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.649
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 52603,
+        "debt": 16707,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_16",
+    "snapshot": {
+      "health": {
+        "score": 17,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 58,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 80,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 39886,
+        "average": 2659,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.576
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 85183,
+        "debt": 25207,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_17",
+    "snapshot": {
+      "health": {
+        "score": 61,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 93,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 53,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 75053,
+        "average": 5004,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "medium",
+        "cv": 0.563
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 80707,
+        "debt": 22182,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_18",
+    "snapshot": {
+      "health": {
+        "score": 53,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 52,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 22,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 100339,
+        "average": 6689,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.642
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 65150,
+        "debt": 10387,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_19",
+    "snapshot": {
+      "health": {
+        "score": 71,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 52,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 32,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 28764,
+        "average": 1918,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.339
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 10082,
+        "debt": 19181,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_20",
+    "snapshot": {
+      "health": {
+        "score": 72,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 87,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 17,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 96366,
+        "average": 6424,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.672
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 16892,
+        "debt": 25053,
+        "riskPreference": "medium"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_21",
+    "snapshot": {
+      "health": {
+        "score": 50,
+        "phase": "survival",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 53,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 6,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 33971,
+        "average": 2265,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.9
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 60622,
+        "debt": 27558,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_22",
+    "snapshot": {
+      "health": {
+        "score": 65,
+        "phase": "stability",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 86,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 7,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 64919,
+        "average": 4328,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "low",
+        "cv": 0.303
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 27139,
+        "debt": 5013,
+        "riskPreference": "low"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_23",
+    "snapshot": {
+      "health": {
+        "score": 96,
+        "phase": "growth",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 28,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 21,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 97972,
+        "average": 6531,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "high",
+        "cv": 0.655
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 49788,
+        "debt": 12600,
+        "riskPreference": "high"
+      }
+    }
+  },
+  {
+    "seed": 71,
+    "id": "71_24",
+    "snapshot": {
+      "health": {
+        "score": 8,
+        "phase": "crisis",
+        "weakFactors": [
+          {
+            "key": "liquidity",
+            "score": 92,
+            "detail": "cash buffer"
+          },
+          {
+            "key": "incomeStability",
+            "score": 16,
+            "detail": "recent variation"
+          }
+        ]
+      },
+      "router": {
+        "summary": "Focus on safety actions before investing.",
+        "actions": [
+          {
+            "label": "Start conservative investing",
+            "allowed": false,
+            "reason": "Build cash reserves first."
+          }
+        ]
+      },
+      "forecast": {
+        "horizon": 15,
+        "total": 41587,
+        "average": 2772,
+        "method": "trend_weekday",
+        "note": "Synthetic audit snapshot"
+      },
+      "volatility": {
+        "label": "unknown",
+        "cv": 0.962
+      },
+      "investment": {
+        "eligible": false,
+        "investableAmount": 0,
+        "blockedReason": "Build cash reserves first.",
+        "topSuggestion": null
+      },
+      "userContext": {
+        "balanceBucket": "3+ months of expenses",
+        "monthlyExpenses": 12644,
+        "debt": 11231,
+        "riskPreference": "high"
+      }
+    }
+  }
+]

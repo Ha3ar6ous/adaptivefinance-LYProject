@@ -1,0 +1,4 @@
+,macro_f1,macro_f1,macro_f1,macro_f1,high_recall,high_recall,high_recall,high_recall,balanced_accuracy,balanced_accuracy,balanced_accuracy,balanced_accuracy
+,mean,std,min,max,mean,std,min,max,mean,std,min,max
+model,,,,,,,,,,,,
+GB_15_.2,0.535053022454709,0.0002665565786796149,0.534576191550887,0.5351722301806644,0.9,0.0,0.9,0.9,0.6257843570481662,0.0,0.6257843570481662,0.6257843570481662

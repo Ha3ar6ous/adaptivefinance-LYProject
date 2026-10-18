@@ -1,0 +1,4574 @@
+{
+  "policy": "paper_audit/PROTOCOL.md",
+  "splits": {
+    "boundary_grid": {
+      "original": {
+        "n": 1792,
+        "tp": 54,
+        "fp": 270,
+        "fn": 0,
+        "tn": 1468,
+        "exceptions": 0,
+        "failures": [
+          {
+            "name": "L=1,D=0,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          }
+        ],
+        "accuracy": 0.8493303571428571,
+        "precision": 0.16666666666666666,
+        "recall": 1,
+        "false_allow": 270,
+        "false_block": 0
+      },
+      "revised": {
+        "n": 1792,
+        "tp": 54,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1738,
+        "exceptions": 0,
+        "failures": [],
+        "accuracy": 1,
+        "precision": 1,
+        "recall": 1,
+        "false_allow": 0,
+        "false_block": 0
+      }
+    },
+    "invalid_inputs": {
+      "original": {
+        "n": 122,
+        "tp": 0,
+        "fp": 97,
+        "fn": 0,
+        "tn": 25,
+        "exceptions": 6,
+        "failures": [
+          {
+            "name": "user.monthlyExpenses=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=-Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=20000",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=true",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=[object Object]",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.bankBalance=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.bankBalance=20000",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.bankBalance=[object Object]",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=-Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=20000",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=true",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=[object Object]",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "zero expenses",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "score=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "score=101",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "score=80",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "phase inconsistent",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user missing/malformed undefined",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of undefined (reading 'monthlyExpenses')"
+          },
+          {
+            "name": "user missing/malformed null",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of null (reading 'monthlyExpenses')"
+          },
+          {
+            "name": "health missing/malformed undefined",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of undefined (reading 'score')"
+          },
+          {
+            "name": "health missing/malformed null",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of null (reading 'score')"
+          },
+          {
+            "name": "analytics missing/malformed undefined",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of undefined (reading 'volatility')"
+          },
+          {
+            "name": "analytics missing/malformed null",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of null (reading 'volatility')"
+          },
+          {
+            "name": "analytics missing/malformed ",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "analytics missing/malformed true",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "missing forecast",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "missing volatility",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "status=error",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "status=insufficient_data",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "status=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "status=",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "analytics error message",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "missing forecast points",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "empty forecast",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "wrong horizon length",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=0",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=31",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=1.5",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=15",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=error",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=insufficient_data",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=bogus",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=1000",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast date=bad",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast date=2024-02-30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast date=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast date=2024-2-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "duplicate forecast dates",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "reversed forecast dates",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "zero-only forecast",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "overflowing forecast total",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "null forecast point",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "missing features",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "too few volatility entries",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "noninteger entry count",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "zero income mean",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "inconsistent CV",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "volatility=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "volatility=bogus",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "volatility=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          }
+        ],
+        "accuracy": 0.20491803278688525,
+        "precision": 0,
+        "recall": null,
+        "false_allow": 97,
+        "false_block": 0
+      },
+      "revised": {
+        "n": 122,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 122,
+        "exceptions": 0,
+        "failures": [],
+        "accuracy": 1,
+        "precision": null,
+        "recall": null,
+        "false_allow": 0,
+        "false_block": 0
+      }
+    },
+    "combined": {
+      "original": {
+        "n": 1914,
+        "tp": 54,
+        "fp": 367,
+        "fn": 0,
+        "tn": 1493,
+        "exceptions": 6,
+        "failures": [
+          {
+            "name": "L=1,D=0,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=1.01,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=2.99,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=3.01,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.49,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.49,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.49,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.5,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.5,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.5,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=0.51,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=1.99,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=70,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=70,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=70,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=71,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=71,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=71,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=100,V=low",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=100,V=medium",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "L=6,D=2,S=100,V=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=-Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=20000",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=true",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=[object Object]",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.monthlyExpenses=",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.bankBalance=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.bankBalance=20000",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.bankBalance=[object Object]",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=-Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=20000",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=true",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=[object Object]",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user.debts=",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "zero expenses",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "score=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "score=101",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "score=80",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "phase inconsistent",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "user missing/malformed undefined",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of undefined (reading 'monthlyExpenses')"
+          },
+          {
+            "name": "user missing/malformed null",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of null (reading 'monthlyExpenses')"
+          },
+          {
+            "name": "health missing/malformed undefined",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of undefined (reading 'score')"
+          },
+          {
+            "name": "health missing/malformed null",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of null (reading 'score')"
+          },
+          {
+            "name": "analytics missing/malformed undefined",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of undefined (reading 'volatility')"
+          },
+          {
+            "name": "analytics missing/malformed null",
+            "expected": false,
+            "actual": false,
+            "error": "Cannot read properties of null (reading 'volatility')"
+          },
+          {
+            "name": "analytics missing/malformed ",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "analytics missing/malformed true",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "missing forecast",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "missing volatility",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "status=error",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "status=insufficient_data",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "status=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "status=",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "analytics error message",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "missing forecast points",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "empty forecast",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "wrong horizon length",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=0",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=31",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=1.5",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=15",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "horizon=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=error",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=insufficient_data",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=bogus",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "method=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=1000",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast income=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast date=bad",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast date=2024-02-30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast date=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "forecast date=2024-2-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "duplicate forecast dates",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "reversed forecast dates",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "zero-only forecast",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "overflowing forecast total",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "null forecast point",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "missing features",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "entryCount=30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentAverageIncome=30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "recentStdIncome=30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=undefined",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=NaN",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=Infinity",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=-1",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "coefficientOfVariation=30",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "too few volatility entries",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "noninteger entry count",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "zero income mean",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "inconsistent CV",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "volatility=unknown",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "volatility=bogus",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          },
+          {
+            "name": "volatility=null",
+            "expected": false,
+            "actual": true,
+            "error": ""
+          }
+        ],
+        "accuracy": 0.8082549634273772,
+        "precision": 0.12826603325415678,
+        "recall": 1,
+        "false_allow": 367,
+        "false_block": 0
+      },
+      "revised": {
+        "n": 1914,
+        "tp": 54,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1860,
+        "exceptions": 0,
+        "failures": [],
+        "accuracy": 1,
+        "precision": 1,
+        "recall": 1,
+        "false_allow": 0,
+        "false_block": 0
+      }
+    }
+  }
+}

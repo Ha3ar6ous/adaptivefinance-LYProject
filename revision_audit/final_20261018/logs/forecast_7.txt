@@ -1,0 +1,1 @@
+Exported pooled/platform/series primary-variant tables; fingerprinted 44 files

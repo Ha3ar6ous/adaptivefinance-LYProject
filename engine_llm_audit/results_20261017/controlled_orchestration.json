@@ -1,0 +1,5002 @@
+[
+  {
+    "id": "11_0",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 12.547500000000003,
+    "score_preserved": true
+  },
+  {
+    "id": "11_0",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.17780000000000484,
+    "score_preserved": true
+  },
+  {
+    "id": "11_0",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.14999999999999858,
+    "score_preserved": true
+  },
+  {
+    "id": "11_0",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.07329999999999615,
+    "score_preserved": true
+  },
+  {
+    "id": "11_0",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.052300000000002456,
+    "score_preserved": true
+  },
+  {
+    "id": "11_1",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.14930000000000376,
+    "score_preserved": true
+  },
+  {
+    "id": "11_1",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.06389999999999674,
+    "score_preserved": true
+  },
+  {
+    "id": "11_1",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.14639999999999986,
+    "score_preserved": true
+  },
+  {
+    "id": "11_1",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.13419999999999987,
+    "score_preserved": true
+  },
+  {
+    "id": "11_1",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.07670000000000243,
+    "score_preserved": true
+  },
+  {
+    "id": "11_2",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.5042000000000044,
+    "score_preserved": true
+  },
+  {
+    "id": "11_2",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.07050000000000267,
+    "score_preserved": true
+  },
+  {
+    "id": "11_2",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.038500000000006196,
+    "score_preserved": true
+  },
+  {
+    "id": "11_2",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03410000000000224,
+    "score_preserved": true
+  },
+  {
+    "id": "11_2",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.04449999999999932,
+    "score_preserved": true
+  },
+  {
+    "id": "11_3",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.03179999999999694,
+    "score_preserved": true
+  },
+  {
+    "id": "11_3",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.029800000000001603,
+    "score_preserved": true
+  },
+  {
+    "id": "11_3",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.029299999999999216,
+    "score_preserved": true
+  },
+  {
+    "id": "11_3",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.023800000000001376,
+    "score_preserved": true
+  },
+  {
+    "id": "11_3",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.02200000000000557,
+    "score_preserved": true
+  },
+  {
+    "id": "11_4",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.02400000000000091,
+    "score_preserved": true
+  },
+  {
+    "id": "11_4",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.024200000000000443,
+    "score_preserved": true
+  },
+  {
+    "id": "11_4",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02750000000000341,
+    "score_preserved": true
+  },
+  {
+    "id": "11_4",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.024200000000000443,
+    "score_preserved": true
+  },
+  {
+    "id": "11_4",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.020600000000001728,
+    "score_preserved": true
+  },
+  {
+    "id": "11_5",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.023499999999998522,
+    "score_preserved": true
+  },
+  {
+    "id": "11_5",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.023299999999998988,
+    "score_preserved": true
+  },
+  {
+    "id": "11_5",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02659999999999485,
+    "score_preserved": true
+  },
+  {
+    "id": "11_5",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.023999999999993804,
+    "score_preserved": true
+  },
+  {
+    "id": "11_5",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.020600000000001728,
+    "score_preserved": true
+  },
+  {
+    "id": "11_6",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.02289999999999992,
+    "score_preserved": true
+  },
+  {
+    "id": "11_6",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.022800000000003706,
+    "score_preserved": true
+  },
+  {
+    "id": "11_6",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02650000000000574,
+    "score_preserved": true
+  },
+  {
+    "id": "11_6",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.023800000000001376,
+    "score_preserved": true
+  },
+  {
+    "id": "11_6",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.02090000000000458,
+    "score_preserved": true
+  },
+  {
+    "id": "11_7",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.023800000000001376,
+    "score_preserved": true
+  },
+  {
+    "id": "11_7",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "11_7",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.026499999999998636,
+    "score_preserved": true
+  },
+  {
+    "id": "11_7",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.023999999999993804,
+    "score_preserved": true
+  },
+  {
+    "id": "11_7",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.020699999999997942,
+    "score_preserved": true
+  },
+  {
+    "id": "11_8",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.029000000000003467,
+    "score_preserved": true
+  },
+  {
+    "id": "11_8",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.02459999999999951,
+    "score_preserved": true
+  },
+  {
+    "id": "11_8",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02640000000000242,
+    "score_preserved": true
+  },
+  {
+    "id": "11_8",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.023800000000001376,
+    "score_preserved": true
+  },
+  {
+    "id": "11_8",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.02109999999999701,
+    "score_preserved": true
+  },
+  {
+    "id": "11_9",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.0227999999999966,
+    "score_preserved": true
+  },
+  {
+    "id": "11_9",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.029199999999995896,
+    "score_preserved": true
+  },
+  {
+    "id": "11_9",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.026099999999999568,
+    "score_preserved": true
+  },
+  {
+    "id": "11_9",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.022700000000000387,
+    "score_preserved": true
+  },
+  {
+    "id": "11_9",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.021500000000003183,
+    "score_preserved": true
+  },
+  {
+    "id": "11_10",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.02209999999999468,
+    "score_preserved": true
+  },
+  {
+    "id": "11_10",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.023599999999994736,
+    "score_preserved": true
+  },
+  {
+    "id": "11_10",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.026600000000001955,
+    "score_preserved": true
+  },
+  {
+    "id": "11_10",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.34259999999999735,
+    "score_preserved": true
+  },
+  {
+    "id": "11_10",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.026200000000002888,
+    "score_preserved": true
+  },
+  {
+    "id": "11_11",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.020500000000005514,
+    "score_preserved": true
+  },
+  {
+    "id": "11_11",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.024399999999999977,
+    "score_preserved": true
+  },
+  {
+    "id": "11_11",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.025799999999996714,
+    "score_preserved": true
+  },
+  {
+    "id": "11_11",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020400000000002194,
+    "score_preserved": true
+  },
+  {
+    "id": "11_11",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.0175000000000054,
+    "score_preserved": true
+  },
+  {
+    "id": "11_12",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.018000000000000682,
+    "score_preserved": true
+  },
+  {
+    "id": "11_12",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "11_12",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.022800000000003706,
+    "score_preserved": true
+  },
+  {
+    "id": "11_12",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019700000000000273,
+    "score_preserved": true
+  },
+  {
+    "id": "11_12",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017399999999994975,
+    "score_preserved": true
+  },
+  {
+    "id": "11_13",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.02449999999999619,
+    "score_preserved": true
+  },
+  {
+    "id": "11_13",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.022599999999997067,
+    "score_preserved": true
+  },
+  {
+    "id": "11_13",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.025900000000000034,
+    "score_preserved": true
+  },
+  {
+    "id": "11_13",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.022199999999998,
+    "score_preserved": true
+  },
+  {
+    "id": "11_13",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.019300000000001205,
+    "score_preserved": true
+  },
+  {
+    "id": "11_14",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.019400000000004525,
+    "score_preserved": true
+  },
+  {
+    "id": "11_14",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.019800000000003593,
+    "score_preserved": true
+  },
+  {
+    "id": "11_14",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.0257000000000005,
+    "score_preserved": true
+  },
+  {
+    "id": "11_14",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02130000000000365,
+    "score_preserved": true
+  },
+  {
+    "id": "11_14",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.019300000000001205,
+    "score_preserved": true
+  },
+  {
+    "id": "11_15",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "11_15",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "11_15",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.022199999999998,
+    "score_preserved": true
+  },
+  {
+    "id": "11_15",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01960000000000406,
+    "score_preserved": true
+  },
+  {
+    "id": "11_15",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017399999999994975,
+    "score_preserved": true
+  },
+  {
+    "id": "11_16",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01729999999999876,
+    "score_preserved": true
+  },
+  {
+    "id": "11_16",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018000000000000682,
+    "score_preserved": true
+  },
+  {
+    "id": "11_16",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.022100000000001785,
+    "score_preserved": true
+  },
+  {
+    "id": "11_16",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019599999999996953,
+    "score_preserved": true
+  },
+  {
+    "id": "11_16",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017399999999994975,
+    "score_preserved": true
+  },
+  {
+    "id": "11_17",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01839999999999975,
+    "score_preserved": true
+  },
+  {
+    "id": "11_17",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01769999999999783,
+    "score_preserved": true
+  },
+  {
+    "id": "11_17",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02209999999999468,
+    "score_preserved": true
+  },
+  {
+    "id": "11_17",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01960000000000406,
+    "score_preserved": true
+  },
+  {
+    "id": "11_17",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "11_18",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01759999999999451,
+    "score_preserved": true
+  },
+  {
+    "id": "11_18",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "11_18",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.022199999999998,
+    "score_preserved": true
+  },
+  {
+    "id": "11_18",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01960000000000406,
+    "score_preserved": true
+  },
+  {
+    "id": "11_18",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01769999999999783,
+    "score_preserved": true
+  },
+  {
+    "id": "11_19",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.0175000000000054,
+    "score_preserved": true
+  },
+  {
+    "id": "11_19",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017900000000004468,
+    "score_preserved": true
+  },
+  {
+    "id": "11_19",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.021999999999998465,
+    "score_preserved": true
+  },
+  {
+    "id": "11_19",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01950000000000074,
+    "score_preserved": true
+  },
+  {
+    "id": "11_19",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017099999999999227,
+    "score_preserved": true
+  },
+  {
+    "id": "11_20",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017099999999999227,
+    "score_preserved": true
+  },
+  {
+    "id": "11_20",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01769999999999783,
+    "score_preserved": true
+  },
+  {
+    "id": "11_20",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.021999999999998465,
+    "score_preserved": true
+  },
+  {
+    "id": "11_20",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020000000000003126,
+    "score_preserved": true
+  },
+  {
+    "id": "11_20",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01729999999999876,
+    "score_preserved": true
+  },
+  {
+    "id": "11_21",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01759999999999451,
+    "score_preserved": true
+  },
+  {
+    "id": "11_21",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017700000000004934,
+    "score_preserved": true
+  },
+  {
+    "id": "11_21",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02400000000000091,
+    "score_preserved": true
+  },
+  {
+    "id": "11_21",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019700000000000273,
+    "score_preserved": true
+  },
+  {
+    "id": "11_21",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01769999999999783,
+    "score_preserved": true
+  },
+  {
+    "id": "11_22",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "11_22",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "11_22",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02200000000000557,
+    "score_preserved": true
+  },
+  {
+    "id": "11_22",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019400000000004525,
+    "score_preserved": true
+  },
+  {
+    "id": "11_22",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017200000000002547,
+    "score_preserved": true
+  },
+  {
+    "id": "11_23",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.019800000000003593,
+    "score_preserved": true
+  },
+  {
+    "id": "11_23",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01950000000000074,
+    "score_preserved": true
+  },
+  {
+    "id": "11_23",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02559999999999718,
+    "score_preserved": true
+  },
+  {
+    "id": "11_23",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.021700000000002717,
+    "score_preserved": true
+  },
+  {
+    "id": "11_23",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01939999999999742,
+    "score_preserved": true
+  },
+  {
+    "id": "11_24",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.11950000000000216,
+    "score_preserved": true
+  },
+  {
+    "id": "11_24",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.02489999999999526,
+    "score_preserved": true
+  },
+  {
+    "id": "11_24",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024099999999997124,
+    "score_preserved": true
+  },
+  {
+    "id": "11_24",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02009999999999934,
+    "score_preserved": true
+  },
+  {
+    "id": "11_24",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "23_0",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.018000000000000682,
+    "score_preserved": true
+  },
+  {
+    "id": "23_0",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018200000000000216,
+    "score_preserved": true
+  },
+  {
+    "id": "23_0",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02269999999999328,
+    "score_preserved": true
+  },
+  {
+    "id": "23_0",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019899999999999807,
+    "score_preserved": true
+  },
+  {
+    "id": "23_0",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "23_1",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "23_1",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "23_1",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.022500000000000853,
+    "score_preserved": true
+  },
+  {
+    "id": "23_1",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019700000000000273,
+    "score_preserved": true
+  },
+  {
+    "id": "23_1",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "23_2",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01839999999999975,
+    "score_preserved": true
+  },
+  {
+    "id": "23_2",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018000000000000682,
+    "score_preserved": true
+  },
+  {
+    "id": "23_2",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02230000000000132,
+    "score_preserved": true
+  },
+  {
+    "id": "23_2",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02009999999999934,
+    "score_preserved": true
+  },
+  {
+    "id": "23_2",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "23_3",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.021100000000004115,
+    "score_preserved": true
+  },
+  {
+    "id": "23_3",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.021700000000002717,
+    "score_preserved": true
+  },
+  {
+    "id": "23_3",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.022100000000001785,
+    "score_preserved": true
+  },
+  {
+    "id": "23_3",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01950000000000074,
+    "score_preserved": true
+  },
+  {
+    "id": "23_3",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "23_4",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "23_4",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "23_4",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.021899999999995146,
+    "score_preserved": true
+  },
+  {
+    "id": "23_4",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01939999999999742,
+    "score_preserved": true
+  },
+  {
+    "id": "23_4",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "23_5",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017499999999998295,
+    "score_preserved": true
+  },
+  {
+    "id": "23_5",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018000000000000682,
+    "score_preserved": true
+  },
+  {
+    "id": "23_5",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02230000000000132,
+    "score_preserved": true
+  },
+  {
+    "id": "23_5",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019799999999996487,
+    "score_preserved": true
+  },
+  {
+    "id": "23_5",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017700000000004934,
+    "score_preserved": true
+  },
+  {
+    "id": "23_6",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.12280000000000513,
+    "score_preserved": true
+  },
+  {
+    "id": "23_6",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.02449999999999619,
+    "score_preserved": true
+  },
+  {
+    "id": "23_6",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.03909999999999769,
+    "score_preserved": true
+  },
+  {
+    "id": "23_6",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02669999999999817,
+    "score_preserved": true
+  },
+  {
+    "id": "23_6",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01950000000000074,
+    "score_preserved": true
+  },
+  {
+    "id": "23_7",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.018300000000003536,
+    "score_preserved": true
+  },
+  {
+    "id": "23_7",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.021700000000002717,
+    "score_preserved": true
+  },
+  {
+    "id": "23_7",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02499999999999858,
+    "score_preserved": true
+  },
+  {
+    "id": "23_7",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019700000000000273,
+    "score_preserved": true
+  },
+  {
+    "id": "23_7",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017499999999998295,
+    "score_preserved": true
+  },
+  {
+    "id": "23_8",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016899999999999693,
+    "score_preserved": true
+  },
+  {
+    "id": "23_8",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01960000000000406,
+    "score_preserved": true
+  },
+  {
+    "id": "23_8",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.03399999999999892,
+    "score_preserved": true
+  },
+  {
+    "id": "23_8",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.10790000000000077,
+    "score_preserved": true
+  },
+  {
+    "id": "23_8",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.073599999999999,
+    "score_preserved": true
+  },
+  {
+    "id": "23_9",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.04080000000000439,
+    "score_preserved": true
+  },
+  {
+    "id": "23_9",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.0432000000000059,
+    "score_preserved": true
+  },
+  {
+    "id": "23_9",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04630000000000223,
+    "score_preserved": true
+  },
+  {
+    "id": "23_9",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03519999999999612,
+    "score_preserved": true
+  },
+  {
+    "id": "23_9",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.07730000000000103,
+    "score_preserved": true
+  },
+  {
+    "id": "23_10",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.03020000000000067,
+    "score_preserved": true
+  },
+  {
+    "id": "23_10",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.027899999999995373,
+    "score_preserved": true
+  },
+  {
+    "id": "23_10",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.026899999999997704,
+    "score_preserved": true
+  },
+  {
+    "id": "23_10",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02009999999999934,
+    "score_preserved": true
+  },
+  {
+    "id": "23_10",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "23_11",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016899999999999693,
+    "score_preserved": true
+  },
+  {
+    "id": "23_11",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018000000000000682,
+    "score_preserved": true
+  },
+  {
+    "id": "23_11",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02389999999999759,
+    "score_preserved": true
+  },
+  {
+    "id": "23_11",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019899999999999807,
+    "score_preserved": true
+  },
+  {
+    "id": "23_11",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "23_12",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01649999999999352,
+    "score_preserved": true
+  },
+  {
+    "id": "23_12",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018099999999996896,
+    "score_preserved": true
+  },
+  {
+    "id": "23_12",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.21340000000000003,
+    "score_preserved": true
+  },
+  {
+    "id": "23_12",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.036700000000003286,
+    "score_preserved": true
+  },
+  {
+    "id": "23_12",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.020899999999997476,
+    "score_preserved": true
+  },
+  {
+    "id": "23_13",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.022500000000000853,
+    "score_preserved": true
+  },
+  {
+    "id": "23_13",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.028100000000002012,
+    "score_preserved": true
+  },
+  {
+    "id": "23_13",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.029900000000004923,
+    "score_preserved": true
+  },
+  {
+    "id": "23_13",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02179999999999893,
+    "score_preserved": true
+  },
+  {
+    "id": "23_13",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.0192999999999941,
+    "score_preserved": true
+  },
+  {
+    "id": "23_14",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017499999999998295,
+    "score_preserved": true
+  },
+  {
+    "id": "23_14",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.019000000000005457,
+    "score_preserved": true
+  },
+  {
+    "id": "23_14",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024299999999996658,
+    "score_preserved": true
+  },
+  {
+    "id": "23_14",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01939999999999742,
+    "score_preserved": true
+  },
+  {
+    "id": "23_14",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01729999999999876,
+    "score_preserved": true
+  },
+  {
+    "id": "23_15",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.07580000000000098,
+    "score_preserved": true
+  },
+  {
+    "id": "23_15",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.021700000000002717,
+    "score_preserved": true
+  },
+  {
+    "id": "23_15",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.027300000000003877,
+    "score_preserved": true
+  },
+  {
+    "id": "23_15",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.024200000000000443,
+    "score_preserved": true
+  },
+  {
+    "id": "23_15",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.018200000000000216,
+    "score_preserved": true
+  },
+  {
+    "id": "23_16",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "23_16",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018499999999995964,
+    "score_preserved": true
+  },
+  {
+    "id": "23_16",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02459999999999951,
+    "score_preserved": true
+  },
+  {
+    "id": "23_16",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01960000000000406,
+    "score_preserved": true
+  },
+  {
+    "id": "23_16",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017399999999994975,
+    "score_preserved": true
+  },
+  {
+    "id": "23_17",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01680000000000348,
+    "score_preserved": true
+  },
+  {
+    "id": "23_17",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "23_17",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023999999999993804,
+    "score_preserved": true
+  },
+  {
+    "id": "23_17",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019700000000000273,
+    "score_preserved": true
+  },
+  {
+    "id": "23_17",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "23_18",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01670000000000016,
+    "score_preserved": true
+  },
+  {
+    "id": "23_18",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.019899999999999807,
+    "score_preserved": true
+  },
+  {
+    "id": "23_18",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02410000000000423,
+    "score_preserved": true
+  },
+  {
+    "id": "23_18",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01950000000000074,
+    "score_preserved": true
+  },
+  {
+    "id": "23_18",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "23_19",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01670000000000016,
+    "score_preserved": true
+  },
+  {
+    "id": "23_19",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018599999999999284,
+    "score_preserved": true
+  },
+  {
+    "id": "23_19",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02470000000000283,
+    "score_preserved": true
+  },
+  {
+    "id": "23_19",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020299999999998875,
+    "score_preserved": true
+  },
+  {
+    "id": "23_19",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "23_20",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "23_20",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.0192999999999941,
+    "score_preserved": true
+  },
+  {
+    "id": "23_20",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04970000000000141,
+    "score_preserved": true
+  },
+  {
+    "id": "23_20",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.024300000000003763,
+    "score_preserved": true
+  },
+  {
+    "id": "23_20",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01829999999999643,
+    "score_preserved": true
+  },
+  {
+    "id": "23_21",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017000000000003013,
+    "score_preserved": true
+  },
+  {
+    "id": "23_21",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01899999999999835,
+    "score_preserved": true
+  },
+  {
+    "id": "23_21",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.025099999999994793,
+    "score_preserved": true
+  },
+  {
+    "id": "23_21",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020000000000003126,
+    "score_preserved": true
+  },
+  {
+    "id": "23_21",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017900000000004468,
+    "score_preserved": true
+  },
+  {
+    "id": "23_22",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016500000000000625,
+    "score_preserved": true
+  },
+  {
+    "id": "23_22",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01839999999999975,
+    "score_preserved": true
+  },
+  {
+    "id": "23_22",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024300000000003763,
+    "score_preserved": true
+  },
+  {
+    "id": "23_22",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019800000000003593,
+    "score_preserved": true
+  },
+  {
+    "id": "23_22",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.07260000000000133,
+    "score_preserved": true
+  },
+  {
+    "id": "23_23",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.018899999999995032,
+    "score_preserved": true
+  },
+  {
+    "id": "23_23",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.022399999999997533,
+    "score_preserved": true
+  },
+  {
+    "id": "23_23",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02459999999999951,
+    "score_preserved": true
+  },
+  {
+    "id": "23_23",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018700000000002603,
+    "score_preserved": true
+  },
+  {
+    "id": "23_23",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017000000000003013,
+    "score_preserved": true
+  },
+  {
+    "id": "23_24",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016200000000004877,
+    "score_preserved": true
+  },
+  {
+    "id": "23_24",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "23_24",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023499999999998522,
+    "score_preserved": true
+  },
+  {
+    "id": "23_24",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01899999999999835,
+    "score_preserved": true
+  },
+  {
+    "id": "23_24",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016600000000003945,
+    "score_preserved": true
+  },
+  {
+    "id": "37_0",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "37_0",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "37_0",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023099999999999454,
+    "score_preserved": true
+  },
+  {
+    "id": "37_0",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "37_0",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01680000000000348,
+    "score_preserved": true
+  },
+  {
+    "id": "37_1",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.13520000000000465,
+    "score_preserved": true
+  },
+  {
+    "id": "37_1",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.023400000000002308,
+    "score_preserved": true
+  },
+  {
+    "id": "37_1",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02389999999999759,
+    "score_preserved": true
+  },
+  {
+    "id": "37_1",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019099999999994566,
+    "score_preserved": true
+  },
+  {
+    "id": "37_1",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017200000000002547,
+    "score_preserved": true
+  },
+  {
+    "id": "37_2",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016099999999994452,
+    "score_preserved": true
+  },
+  {
+    "id": "37_2",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "37_2",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024300000000003763,
+    "score_preserved": true
+  },
+  {
+    "id": "37_2",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01939999999999742,
+    "score_preserved": true
+  },
+  {
+    "id": "37_2",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016899999999999693,
+    "score_preserved": true
+  },
+  {
+    "id": "37_3",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015900000000002024,
+    "score_preserved": true
+  },
+  {
+    "id": "37_3",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "37_3",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023400000000002308,
+    "score_preserved": true
+  },
+  {
+    "id": "37_3",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "37_3",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016600000000003945,
+    "score_preserved": true
+  },
+  {
+    "id": "37_4",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016600000000003945,
+    "score_preserved": true
+  },
+  {
+    "id": "37_4",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "37_4",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023499999999998522,
+    "score_preserved": true
+  },
+  {
+    "id": "37_4",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019199999999997885,
+    "score_preserved": true
+  },
+  {
+    "id": "37_4",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "37_5",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015999999999998238,
+    "score_preserved": true
+  },
+  {
+    "id": "37_5",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017499999999998295,
+    "score_preserved": true
+  },
+  {
+    "id": "37_5",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023499999999998522,
+    "score_preserved": true
+  },
+  {
+    "id": "37_5",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019800000000003593,
+    "score_preserved": true
+  },
+  {
+    "id": "37_5",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016999999999995907,
+    "score_preserved": true
+  },
+  {
+    "id": "37_6",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01570000000000249,
+    "score_preserved": true
+  },
+  {
+    "id": "37_6",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017499999999998295,
+    "score_preserved": true
+  },
+  {
+    "id": "37_6",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023200000000002774,
+    "score_preserved": true
+  },
+  {
+    "id": "37_6",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01899999999999835,
+    "score_preserved": true
+  },
+  {
+    "id": "37_6",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.0169000000000068,
+    "score_preserved": true
+  },
+  {
+    "id": "37_7",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.02049999999999841,
+    "score_preserved": true
+  },
+  {
+    "id": "37_7",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.021700000000002717,
+    "score_preserved": true
+  },
+  {
+    "id": "37_7",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.026799999999994384,
+    "score_preserved": true
+  },
+  {
+    "id": "37_7",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020800000000001262,
+    "score_preserved": true
+  },
+  {
+    "id": "37_7",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01860000000000639,
+    "score_preserved": true
+  },
+  {
+    "id": "37_8",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "37_8",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "37_8",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023400000000002308,
+    "score_preserved": true
+  },
+  {
+    "id": "37_8",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01899999999999835,
+    "score_preserved": true
+  },
+  {
+    "id": "37_8",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017200000000002547,
+    "score_preserved": true
+  },
+  {
+    "id": "37_9",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015999999999998238,
+    "score_preserved": true
+  },
+  {
+    "id": "37_9",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017000000000003013,
+    "score_preserved": true
+  },
+  {
+    "id": "37_9",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023200000000002774,
+    "score_preserved": true
+  },
+  {
+    "id": "37_9",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019199999999997885,
+    "score_preserved": true
+  },
+  {
+    "id": "37_9",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016600000000003945,
+    "score_preserved": true
+  },
+  {
+    "id": "37_10",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "37_10",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.0175000000000054,
+    "score_preserved": true
+  },
+  {
+    "id": "37_10",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023200000000002774,
+    "score_preserved": true
+  },
+  {
+    "id": "37_10",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01850000000000307,
+    "score_preserved": true
+  },
+  {
+    "id": "37_10",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016899999999999693,
+    "score_preserved": true
+  },
+  {
+    "id": "37_11",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01559999999999917,
+    "score_preserved": true
+  },
+  {
+    "id": "37_11",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01729999999999876,
+    "score_preserved": true
+  },
+  {
+    "id": "37_11",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02400000000000091,
+    "score_preserved": true
+  },
+  {
+    "id": "37_11",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "37_11",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01719999999999544,
+    "score_preserved": true
+  },
+  {
+    "id": "37_12",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "37_12",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.020400000000002194,
+    "score_preserved": true
+  },
+  {
+    "id": "37_12",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023800000000001376,
+    "score_preserved": true
+  },
+  {
+    "id": "37_12",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019099999999994566,
+    "score_preserved": true
+  },
+  {
+    "id": "37_12",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01670000000000016,
+    "score_preserved": true
+  },
+  {
+    "id": "37_13",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015799999999998704,
+    "score_preserved": true
+  },
+  {
+    "id": "37_13",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "37_13",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023299999999998988,
+    "score_preserved": true
+  },
+  {
+    "id": "37_13",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01910000000000167,
+    "score_preserved": true
+  },
+  {
+    "id": "37_13",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017200000000002547,
+    "score_preserved": true
+  },
+  {
+    "id": "37_14",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016199999999997772,
+    "score_preserved": true
+  },
+  {
+    "id": "37_14",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018300000000003536,
+    "score_preserved": true
+  },
+  {
+    "id": "37_14",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "37_14",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01899999999999835,
+    "score_preserved": true
+  },
+  {
+    "id": "37_14",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016600000000003945,
+    "score_preserved": true
+  },
+  {
+    "id": "37_15",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.10649999999999693,
+    "score_preserved": true
+  },
+  {
+    "id": "37_15",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "37_15",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024299999999996658,
+    "score_preserved": true
+  },
+  {
+    "id": "37_15",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019499999999993634,
+    "score_preserved": true
+  },
+  {
+    "id": "37_15",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017099999999999227,
+    "score_preserved": true
+  },
+  {
+    "id": "37_16",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015900000000002024,
+    "score_preserved": true
+  },
+  {
+    "id": "37_16",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018000000000000682,
+    "score_preserved": true
+  },
+  {
+    "id": "37_16",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "37_16",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018700000000002603,
+    "score_preserved": true
+  },
+  {
+    "id": "37_16",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "37_17",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.018499999999995964,
+    "score_preserved": true
+  },
+  {
+    "id": "37_17",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.019199999999997885,
+    "score_preserved": true
+  },
+  {
+    "id": "37_17",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02669999999999817,
+    "score_preserved": true
+  },
+  {
+    "id": "37_17",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02049999999999841,
+    "score_preserved": true
+  },
+  {
+    "id": "37_17",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "37_18",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01630000000000109,
+    "score_preserved": true
+  },
+  {
+    "id": "37_18",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01839999999999975,
+    "score_preserved": true
+  },
+  {
+    "id": "37_18",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02370000000000516,
+    "score_preserved": true
+  },
+  {
+    "id": "37_18",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "37_18",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017100000000006332,
+    "score_preserved": true
+  },
+  {
+    "id": "37_19",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "37_19",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01769999999999783,
+    "score_preserved": true
+  },
+  {
+    "id": "37_19",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02360000000000184,
+    "score_preserved": true
+  },
+  {
+    "id": "37_19",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "37_19",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "37_20",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01559999999999917,
+    "score_preserved": true
+  },
+  {
+    "id": "37_20",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017399999999994975,
+    "score_preserved": true
+  },
+  {
+    "id": "37_20",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023800000000001376,
+    "score_preserved": true
+  },
+  {
+    "id": "37_20",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01899999999999835,
+    "score_preserved": true
+  },
+  {
+    "id": "37_20",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "37_21",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015699999999995384,
+    "score_preserved": true
+  },
+  {
+    "id": "37_21",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01769999999999783,
+    "score_preserved": true
+  },
+  {
+    "id": "37_21",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023299999999998988,
+    "score_preserved": true
+  },
+  {
+    "id": "37_21",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018599999999999284,
+    "score_preserved": true
+  },
+  {
+    "id": "37_21",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016899999999999693,
+    "score_preserved": true
+  },
+  {
+    "id": "37_22",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016199999999997772,
+    "score_preserved": true
+  },
+  {
+    "id": "37_22",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01769999999999783,
+    "score_preserved": true
+  },
+  {
+    "id": "37_22",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02360000000000184,
+    "score_preserved": true
+  },
+  {
+    "id": "37_22",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01920000000000499,
+    "score_preserved": true
+  },
+  {
+    "id": "37_22",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "37_23",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015999999999998238,
+    "score_preserved": true
+  },
+  {
+    "id": "37_23",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017900000000004468,
+    "score_preserved": true
+  },
+  {
+    "id": "37_23",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023200000000002774,
+    "score_preserved": true
+  },
+  {
+    "id": "37_23",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "37_23",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016600000000003945,
+    "score_preserved": true
+  },
+  {
+    "id": "37_24",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015500000000002956,
+    "score_preserved": true
+  },
+  {
+    "id": "37_24",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01769999999999783,
+    "score_preserved": true
+  },
+  {
+    "id": "37_24",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02300000000000324,
+    "score_preserved": true
+  },
+  {
+    "id": "37_24",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01899999999999835,
+    "score_preserved": true
+  },
+  {
+    "id": "37_24",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017100000000006332,
+    "score_preserved": true
+  },
+  {
+    "id": "53_0",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01570000000000249,
+    "score_preserved": true
+  },
+  {
+    "id": "53_0",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017200000000002547,
+    "score_preserved": true
+  },
+  {
+    "id": "53_0",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "53_0",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018599999999999284,
+    "score_preserved": true
+  },
+  {
+    "id": "53_0",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016899999999999693,
+    "score_preserved": true
+  },
+  {
+    "id": "53_1",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015799999999998704,
+    "score_preserved": true
+  },
+  {
+    "id": "53_1",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018700000000002603,
+    "score_preserved": true
+  },
+  {
+    "id": "53_1",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023299999999998988,
+    "score_preserved": true
+  },
+  {
+    "id": "53_1",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019400000000004525,
+    "score_preserved": true
+  },
+  {
+    "id": "53_1",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "53_2",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015999999999998238,
+    "score_preserved": true
+  },
+  {
+    "id": "53_2",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01740000000000208,
+    "score_preserved": true
+  },
+  {
+    "id": "53_2",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "53_2",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018899999999995032,
+    "score_preserved": true
+  },
+  {
+    "id": "53_2",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "53_3",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "53_3",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "53_3",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "53_3",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01910000000000167,
+    "score_preserved": true
+  },
+  {
+    "id": "53_3",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017099999999999227,
+    "score_preserved": true
+  },
+  {
+    "id": "53_4",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.10790000000000077,
+    "score_preserved": true
+  },
+  {
+    "id": "53_4",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.024799999999999045,
+    "score_preserved": true
+  },
+  {
+    "id": "53_4",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.028300000000001546,
+    "score_preserved": true
+  },
+  {
+    "id": "53_4",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.021700000000002717,
+    "score_preserved": true
+  },
+  {
+    "id": "53_4",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.019300000000001205,
+    "score_preserved": true
+  },
+  {
+    "id": "53_5",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017200000000002547,
+    "score_preserved": true
+  },
+  {
+    "id": "53_5",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "53_5",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02360000000000184,
+    "score_preserved": true
+  },
+  {
+    "id": "53_5",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01910000000000167,
+    "score_preserved": true
+  },
+  {
+    "id": "53_5",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017900000000004468,
+    "score_preserved": true
+  },
+  {
+    "id": "53_6",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016399999999997306,
+    "score_preserved": true
+  },
+  {
+    "id": "53_6",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "53_6",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023900000000004695,
+    "score_preserved": true
+  },
+  {
+    "id": "53_6",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02030000000000598,
+    "score_preserved": true
+  },
+  {
+    "id": "53_6",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017499999999998295,
+    "score_preserved": true
+  },
+  {
+    "id": "53_7",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01659999999999684,
+    "score_preserved": true
+  },
+  {
+    "id": "53_7",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03179999999999694,
+    "score_preserved": true
+  },
+  {
+    "id": "53_7",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.0251000000000019,
+    "score_preserved": true
+  },
+  {
+    "id": "53_7",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02020000000000266,
+    "score_preserved": true
+  },
+  {
+    "id": "53_7",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "53_8",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01630000000000109,
+    "score_preserved": true
+  },
+  {
+    "id": "53_8",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018200000000000216,
+    "score_preserved": true
+  },
+  {
+    "id": "53_8",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024299999999996658,
+    "score_preserved": true
+  },
+  {
+    "id": "53_8",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019400000000004525,
+    "score_preserved": true
+  },
+  {
+    "id": "53_8",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01829999999999643,
+    "score_preserved": true
+  },
+  {
+    "id": "53_9",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01670000000000016,
+    "score_preserved": true
+  },
+  {
+    "id": "53_9",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "53_9",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.025500000000000966,
+    "score_preserved": true
+  },
+  {
+    "id": "53_9",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01960000000000406,
+    "score_preserved": true
+  },
+  {
+    "id": "53_9",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017499999999998295,
+    "score_preserved": true
+  },
+  {
+    "id": "53_10",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "53_10",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01960000000000406,
+    "score_preserved": true
+  },
+  {
+    "id": "53_10",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.025199999999998113,
+    "score_preserved": true
+  },
+  {
+    "id": "53_10",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020700000000005048,
+    "score_preserved": true
+  },
+  {
+    "id": "53_10",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017200000000002547,
+    "score_preserved": true
+  },
+  {
+    "id": "53_11",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.0175000000000054,
+    "score_preserved": true
+  },
+  {
+    "id": "53_11",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01910000000000167,
+    "score_preserved": true
+  },
+  {
+    "id": "53_11",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024099999999997124,
+    "score_preserved": true
+  },
+  {
+    "id": "53_11",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019800000000003593,
+    "score_preserved": true
+  },
+  {
+    "id": "53_11",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017800000000001148,
+    "score_preserved": true
+  },
+  {
+    "id": "53_12",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016999999999995907,
+    "score_preserved": true
+  },
+  {
+    "id": "53_12",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018000000000000682,
+    "score_preserved": true
+  },
+  {
+    "id": "53_12",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024200000000000443,
+    "score_preserved": true
+  },
+  {
+    "id": "53_12",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019799999999996487,
+    "score_preserved": true
+  },
+  {
+    "id": "53_12",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "53_13",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "53_13",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01839999999999975,
+    "score_preserved": true
+  },
+  {
+    "id": "53_13",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023699999999998056,
+    "score_preserved": true
+  },
+  {
+    "id": "53_13",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019899999999999807,
+    "score_preserved": true
+  },
+  {
+    "id": "53_13",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.018300000000003536,
+    "score_preserved": true
+  },
+  {
+    "id": "53_14",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016999999999995907,
+    "score_preserved": true
+  },
+  {
+    "id": "53_14",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.02009999999999934,
+    "score_preserved": true
+  },
+  {
+    "id": "53_14",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.026499999999998636,
+    "score_preserved": true
+  },
+  {
+    "id": "53_14",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.022999999999996135,
+    "score_preserved": true
+  },
+  {
+    "id": "53_14",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01950000000000074,
+    "score_preserved": true
+  },
+  {
+    "id": "53_15",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.019199999999997885,
+    "score_preserved": true
+  },
+  {
+    "id": "53_15",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.020699999999997942,
+    "score_preserved": true
+  },
+  {
+    "id": "53_15",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.025900000000000034,
+    "score_preserved": true
+  },
+  {
+    "id": "53_15",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02370000000000516,
+    "score_preserved": true
+  },
+  {
+    "id": "53_15",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.018599999999999284,
+    "score_preserved": true
+  },
+  {
+    "id": "53_16",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017300000000005866,
+    "score_preserved": true
+  },
+  {
+    "id": "53_16",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01999999999999602,
+    "score_preserved": true
+  },
+  {
+    "id": "53_16",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.025799999999996714,
+    "score_preserved": true
+  },
+  {
+    "id": "53_16",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020400000000002194,
+    "score_preserved": true
+  },
+  {
+    "id": "53_16",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01680000000000348,
+    "score_preserved": true
+  },
+  {
+    "id": "53_17",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "53_17",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.02020000000000266,
+    "score_preserved": true
+  },
+  {
+    "id": "53_17",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02769999999999584,
+    "score_preserved": true
+  },
+  {
+    "id": "53_17",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.021899999999995146,
+    "score_preserved": true
+  },
+  {
+    "id": "53_17",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01950000000000074,
+    "score_preserved": true
+  },
+  {
+    "id": "53_18",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "53_18",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.12880000000000535,
+    "score_preserved": true
+  },
+  {
+    "id": "53_18",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02960000000000207,
+    "score_preserved": true
+  },
+  {
+    "id": "53_18",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02120000000000033,
+    "score_preserved": true
+  },
+  {
+    "id": "53_18",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016999999999995907,
+    "score_preserved": true
+  },
+  {
+    "id": "53_19",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.018700000000002603,
+    "score_preserved": true
+  },
+  {
+    "id": "53_19",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.020500000000005514,
+    "score_preserved": true
+  },
+  {
+    "id": "53_19",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.027100000000004343,
+    "score_preserved": true
+  },
+  {
+    "id": "53_19",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020400000000002194,
+    "score_preserved": true
+  },
+  {
+    "id": "53_19",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.019199999999997885,
+    "score_preserved": true
+  },
+  {
+    "id": "53_20",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016199999999997772,
+    "score_preserved": true
+  },
+  {
+    "id": "53_20",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "53_20",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024399999999999977,
+    "score_preserved": true
+  },
+  {
+    "id": "53_20",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.02009999999999934,
+    "score_preserved": true
+  },
+  {
+    "id": "53_20",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "53_21",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.01630000000000109,
+    "score_preserved": true
+  },
+  {
+    "id": "53_21",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "53_21",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.024300000000003763,
+    "score_preserved": true
+  },
+  {
+    "id": "53_21",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "53_21",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "53_22",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015899999999994918,
+    "score_preserved": true
+  },
+  {
+    "id": "53_22",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01729999999999876,
+    "score_preserved": true
+  },
+  {
+    "id": "53_22",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023099999999999454,
+    "score_preserved": true
+  },
+  {
+    "id": "53_22",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "53_22",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01670000000000016,
+    "score_preserved": true
+  },
+  {
+    "id": "53_23",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "53_23",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01839999999999975,
+    "score_preserved": true
+  },
+  {
+    "id": "53_23",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "53_23",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.019099999999994566,
+    "score_preserved": true
+  },
+  {
+    "id": "53_23",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016500000000000625,
+    "score_preserved": true
+  },
+  {
+    "id": "53_24",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.015900000000002024,
+    "score_preserved": true
+  },
+  {
+    "id": "53_24",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017899999999997362,
+    "score_preserved": true
+  },
+  {
+    "id": "53_24",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023399999999995202,
+    "score_preserved": true
+  },
+  {
+    "id": "53_24",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018900000000002137,
+    "score_preserved": true
+  },
+  {
+    "id": "53_24",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.016899999999999693,
+    "score_preserved": true
+  },
+  {
+    "id": "71_0",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016799999999996373,
+    "score_preserved": true
+  },
+  {
+    "id": "71_0",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.017300000000005866,
+    "score_preserved": true
+  },
+  {
+    "id": "71_0",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.023099999999999454,
+    "score_preserved": true
+  },
+  {
+    "id": "71_0",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.018799999999998818,
+    "score_preserved": true
+  },
+  {
+    "id": "71_0",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01670000000000016,
+    "score_preserved": true
+  },
+  {
+    "id": "71_1",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.018300000000003536,
+    "score_preserved": true
+  },
+  {
+    "id": "71_1",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.01920000000000499,
+    "score_preserved": true
+  },
+  {
+    "id": "71_1",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.026799999999994384,
+    "score_preserved": true
+  },
+  {
+    "id": "71_1",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.020600000000001728,
+    "score_preserved": true
+  },
+  {
+    "id": "71_1",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.01850000000000307,
+    "score_preserved": true
+  },
+  {
+    "id": "71_2",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.016100000000001558,
+    "score_preserved": true
+  },
+  {
+    "id": "71_2",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.0175000000000054,
+    "score_preserved": true
+  },
+  {
+    "id": "71_2",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.02360000000000184,
+    "score_preserved": true
+  },
+  {
+    "id": "71_2",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.01899999999999835,
+    "score_preserved": true
+  },
+  {
+    "id": "71_2",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.017600000000001614,
+    "score_preserved": true
+  },
+  {
+    "id": "71_3",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.017099999999999227,
+    "score_preserved": true
+  },
+  {
+    "id": "71_3",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.018800000000005923,
+    "score_preserved": true
+  },
+  {
+    "id": "71_3",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.034900000000000375,
+    "score_preserved": true
+  },
+  {
+    "id": "71_3",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.038400000000002876,
+    "score_preserved": true
+  },
+  {
+    "id": "71_3",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.031899999999993156,
+    "score_preserved": true
+  },
+  {
+    "id": "71_4",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.031500000000001194,
+    "score_preserved": true
+  },
+  {
+    "id": "71_4",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03800000000000381,
+    "score_preserved": true
+  },
+  {
+    "id": "71_4",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04420000000000357,
+    "score_preserved": true
+  },
+  {
+    "id": "71_4",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03999999999999915,
+    "score_preserved": true
+  },
+  {
+    "id": "71_4",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.033299999999997,
+    "score_preserved": true
+  },
+  {
+    "id": "71_5",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.03580000000000183,
+    "score_preserved": true
+  },
+  {
+    "id": "71_5",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.04469999999999885,
+    "score_preserved": true
+  },
+  {
+    "id": "71_5",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.054400000000001114,
+    "score_preserved": true
+  },
+  {
+    "id": "71_5",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.04279999999999973,
+    "score_preserved": true
+  },
+  {
+    "id": "71_5",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.03470000000000084,
+    "score_preserved": true
+  },
+  {
+    "id": "71_6",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.030699999999995953,
+    "score_preserved": true
+  },
+  {
+    "id": "71_6",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03690000000000282,
+    "score_preserved": true
+  },
+  {
+    "id": "71_6",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04460000000000264,
+    "score_preserved": true
+  },
+  {
+    "id": "71_6",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03640000000000043,
+    "score_preserved": true
+  },
+  {
+    "id": "71_6",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.03020000000000067,
+    "score_preserved": true
+  },
+  {
+    "id": "71_7",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.02930000000000632,
+    "score_preserved": true
+  },
+  {
+    "id": "71_7",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.2407000000000039,
+    "score_preserved": true
+  },
+  {
+    "id": "71_7",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.06749999999999545,
+    "score_preserved": true
+  },
+  {
+    "id": "71_7",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.04310000000000258,
+    "score_preserved": true
+  },
+  {
+    "id": "71_7",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.03119999999999834,
+    "score_preserved": true
+  },
+  {
+    "id": "71_8",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.03020000000000067,
+    "score_preserved": true
+  },
+  {
+    "id": "71_8",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.0362000000000009,
+    "score_preserved": true
+  },
+  {
+    "id": "71_8",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04189999999999827,
+    "score_preserved": true
+  },
+  {
+    "id": "71_8",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.034300000000001774,
+    "score_preserved": true
+  },
+  {
+    "id": "71_8",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.02939999999999543,
+    "score_preserved": true
+  },
+  {
+    "id": "71_9",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.034099999999995134,
+    "score_preserved": true
+  },
+  {
+    "id": "71_9",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03710000000000235,
+    "score_preserved": true
+  },
+  {
+    "id": "71_9",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04660000000000508,
+    "score_preserved": true
+  },
+  {
+    "id": "71_9",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03820000000000334,
+    "score_preserved": true
+  },
+  {
+    "id": "71_9",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.03289999999999793,
+    "score_preserved": true
+  },
+  {
+    "id": "71_10",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.029800000000001603,
+    "score_preserved": true
+  },
+  {
+    "id": "71_10",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03410000000000224,
+    "score_preserved": true
+  },
+  {
+    "id": "71_10",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.044399999999996,
+    "score_preserved": true
+  },
+  {
+    "id": "71_10",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03470000000000084,
+    "score_preserved": true
+  },
+  {
+    "id": "71_10",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.02960000000000207,
+    "score_preserved": true
+  },
+  {
+    "id": "71_11",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.030100000000004457,
+    "score_preserved": true
+  },
+  {
+    "id": "71_11",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03450000000000131,
+    "score_preserved": true
+  },
+  {
+    "id": "71_11",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04350000000000165,
+    "score_preserved": true
+  },
+  {
+    "id": "71_11",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03529999999999944,
+    "score_preserved": true
+  },
+  {
+    "id": "71_11",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.030400000000000205,
+    "score_preserved": true
+  },
+  {
+    "id": "71_12",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.029699999999998283,
+    "score_preserved": true
+  },
+  {
+    "id": "71_12",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03399999999999892,
+    "score_preserved": true
+  },
+  {
+    "id": "71_12",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.042099999999997806,
+    "score_preserved": true
+  },
+  {
+    "id": "71_12",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03349999999999653,
+    "score_preserved": true
+  },
+  {
+    "id": "71_12",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.029699999999998283,
+    "score_preserved": true
+  },
+  {
+    "id": "71_13",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.03399999999999892,
+    "score_preserved": true
+  },
+  {
+    "id": "71_13",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.036000000000001364,
+    "score_preserved": true
+  },
+  {
+    "id": "71_13",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04719999999999658,
+    "score_preserved": true
+  },
+  {
+    "id": "71_13",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.037599999999997635,
+    "score_preserved": true
+  },
+  {
+    "id": "71_13",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.03229999999999933,
+    "score_preserved": true
+  },
+  {
+    "id": "71_14",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.03030000000000399,
+    "score_preserved": true
+  },
+  {
+    "id": "71_14",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.033799999999999386,
+    "score_preserved": true
+  },
+  {
+    "id": "71_14",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04129999999999967,
+    "score_preserved": true
+  },
+  {
+    "id": "71_14",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.033200000000000784,
+    "score_preserved": true
+  },
+  {
+    "id": "71_14",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.02970000000000539,
+    "score_preserved": true
+  },
+  {
+    "id": "71_15",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.02909999999999968,
+    "score_preserved": true
+  },
+  {
+    "id": "71_15",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03229999999999933,
+    "score_preserved": true
+  },
+  {
+    "id": "71_15",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.040600000000004854,
+    "score_preserved": true
+  },
+  {
+    "id": "71_15",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.033799999999999386,
+    "score_preserved": true
+  },
+  {
+    "id": "71_15",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.03009999999999735,
+    "score_preserved": true
+  },
+  {
+    "id": "71_16",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.029199999999995896,
+    "score_preserved": true
+  },
+  {
+    "id": "71_16",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03260000000000218,
+    "score_preserved": true
+  },
+  {
+    "id": "71_16",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.041100000000000136,
+    "score_preserved": true
+  },
+  {
+    "id": "71_16",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03289999999999793,
+    "score_preserved": true
+  },
+  {
+    "id": "71_16",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.030100000000004457,
+    "score_preserved": true
+  },
+  {
+    "id": "71_17",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.028199999999998226,
+    "score_preserved": true
+  },
+  {
+    "id": "71_17",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03160000000000451,
+    "score_preserved": true
+  },
+  {
+    "id": "71_17",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.040399999999998215,
+    "score_preserved": true
+  },
+  {
+    "id": "71_17",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03429999999999467,
+    "score_preserved": true
+  },
+  {
+    "id": "71_17",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.030400000000000205,
+    "score_preserved": true
+  },
+  {
+    "id": "71_18",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.029199999999995896,
+    "score_preserved": true
+  },
+  {
+    "id": "71_18",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.033799999999999386,
+    "score_preserved": true
+  },
+  {
+    "id": "71_18",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.046599999999997976,
+    "score_preserved": true
+  },
+  {
+    "id": "71_18",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.034300000000001774,
+    "score_preserved": true
+  },
+  {
+    "id": "71_18",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.03030000000000399,
+    "score_preserved": true
+  },
+  {
+    "id": "71_19",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.029299999999999216,
+    "score_preserved": true
+  },
+  {
+    "id": "71_19",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03319999999999368,
+    "score_preserved": true
+  },
+  {
+    "id": "71_19",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04140000000000299,
+    "score_preserved": true
+  },
+  {
+    "id": "71_19",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03359999999999985,
+    "score_preserved": true
+  },
+  {
+    "id": "71_19",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.029899999999997817,
+    "score_preserved": true
+  },
+  {
+    "id": "71_20",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.030299999999996885,
+    "score_preserved": true
+  },
+  {
+    "id": "71_20",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03349999999999653,
+    "score_preserved": true
+  },
+  {
+    "id": "71_20",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04070000000000107,
+    "score_preserved": true
+  },
+  {
+    "id": "71_20",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03410000000000224,
+    "score_preserved": true
+  },
+  {
+    "id": "71_20",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.02960000000000207,
+    "score_preserved": true
+  },
+  {
+    "id": "71_21",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.029200000000003,
+    "score_preserved": true
+  },
+  {
+    "id": "71_21",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.2587000000000046,
+    "score_preserved": true
+  },
+  {
+    "id": "71_21",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.05579999999999785,
+    "score_preserved": true
+  },
+  {
+    "id": "71_21",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.04240000000000066,
+    "score_preserved": true
+  },
+  {
+    "id": "71_21",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.032099999999999795,
+    "score_preserved": true
+  },
+  {
+    "id": "71_22",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.031200000000005446,
+    "score_preserved": true
+  },
+  {
+    "id": "71_22",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.035600000000002296,
+    "score_preserved": true
+  },
+  {
+    "id": "71_22",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04159999999999542,
+    "score_preserved": true
+  },
+  {
+    "id": "71_22",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.035100000000007014,
+    "score_preserved": true
+  },
+  {
+    "id": "71_22",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.028999999999996362,
+    "score_preserved": true
+  },
+  {
+    "id": "71_23",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.028700000000000614,
+    "score_preserved": true
+  },
+  {
+    "id": "71_23",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.03370000000000317,
+    "score_preserved": true
+  },
+  {
+    "id": "71_23",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.04070000000000107,
+    "score_preserved": true
+  },
+  {
+    "id": "71_23",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.0338999999999956,
+    "score_preserved": true
+  },
+  {
+    "id": "71_23",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.03059999999999974,
+    "score_preserved": true
+  },
+  {
+    "id": "71_24",
+    "mode": "valid",
+    "status": "ready",
+    "error": "",
+    "local_latency_ms": 0.028900000000000148,
+    "score_preserved": true
+  },
+  {
+    "id": "71_24",
+    "mode": "timeout",
+    "status": "fallback",
+    "error": "Controlled transport timeout",
+    "local_latency_ms": 0.033200000000000784,
+    "score_preserved": true
+  },
+  {
+    "id": "71_24",
+    "mode": "schema",
+    "status": "fallback",
+    "error": "Unapproved explanation content",
+    "local_latency_ms": 0.0409000000000006,
+    "score_preserved": true
+  },
+  {
+    "id": "71_24",
+    "mode": "number999",
+    "status": "fallback",
+    "error": "Snapshot facts changed",
+    "local_latency_ms": 0.03580000000000183,
+    "score_preserved": true
+  },
+  {
+    "id": "71_24",
+    "mode": "free_prose",
+    "status": "fallback",
+    "error": "Invalid template schema",
+    "local_latency_ms": 0.02909999999999968,
+    "score_preserved": true
+  }
+]

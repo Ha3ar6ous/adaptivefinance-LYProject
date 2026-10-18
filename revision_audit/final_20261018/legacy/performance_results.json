@@ -1,0 +1,44 @@
+{
+  "dataset": "data/normal/gig_income_data.csv",
+  "entries": 60,
+  "user": {
+    "bankBalance": 100000,
+    "monthlyExpenses": 20000,
+    "debts": 0,
+    "riskPreference": "low"
+  },
+  "horizon": 15,
+  "python_service": "existing ml_service/app.py",
+  "volatility": "low",
+  "recommendations": 5,
+  "local_health_router_investment": {
+    "n": 500,
+    "warmup": 50,
+    "mean_ms": 0.3602556000000003,
+    "std_ms": 0.14043150482936506,
+    "median_ms": 0.2917,
+    "p95_ms": 0.637,
+    "min_ms": 0.2448,
+    "max_ms": 0.9367
+  },
+  "loopback_analyze": {
+    "n": 50,
+    "warmup": 10,
+    "mean_ms": 2.100636,
+    "std_ms": 0.37787137798991866,
+    "median_ms": 2.0307000000000004,
+    "p95_ms": 2.6386,
+    "min_ms": 1.5279,
+    "max_ms": 3.9463
+  },
+  "loopback_analyze_health_router_investment": {
+    "n": 50,
+    "warmup": 10,
+    "mean_ms": 2.599202000000001,
+    "std_ms": 0.4154407757984283,
+    "median_ms": 2.52425,
+    "p95_ms": 3.3463,
+    "min_ms": 1.9605,
+    "max_ms": 4.4547
+  }
+}

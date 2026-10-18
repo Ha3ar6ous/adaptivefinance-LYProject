@@ -1,0 +1,522 @@
+[
+  {
+    "name": "forecast_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "forecast_audit/preserve.py",
+      "--out",
+      "revision_audit/final_20261018/forecast"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 0.20804095268249512,
+    "log": "revision_audit\\final_20261018\\logs\\forecast_1.txt"
+  },
+  {
+    "name": "data_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "data_audit/run.py",
+      "--out",
+      "revision_audit/final_20261018/data",
+      "--stage",
+      "clone"
+    ],
+    "environment_overrides": {
+      "DATA_AUDIT_RESULTS": "revision_audit/final_20261018/data"
+    },
+    "exit_code": 0,
+    "seconds": 2.2463977336883545,
+    "log": "revision_audit\\final_20261018\\logs\\data_1.txt"
+  },
+  {
+    "name": "data_2",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "data_audit/run.py",
+      "--out",
+      "revision_audit/final_20261018/data",
+      "--stage",
+      "evaluate"
+    ],
+    "environment_overrides": {
+      "DATA_AUDIT_RESULTS": "revision_audit/final_20261018/data"
+    },
+    "exit_code": 0,
+    "seconds": 3.6100709438323975,
+    "log": "revision_audit\\final_20261018\\logs\\data_2.txt"
+  },
+  {
+    "name": "router_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "router_sim/simulate.py",
+      "--out",
+      "revision_audit/final_20261018/router",
+      "--stage",
+      "prepare"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 6.130557537078857,
+    "log": "revision_audit\\final_20261018\\logs\\router_1.txt"
+  },
+  {
+    "name": "volatility_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/run.py",
+      "--out",
+      "revision_audit/final_20261018/volatility",
+      "--stage",
+      "prepare"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 6.963599681854248,
+    "log": "revision_audit\\final_20261018\\logs\\volatility_1.txt"
+  },
+  {
+    "name": "score_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "revision_audit/final_20261018/score",
+      "--stage",
+      "prepare"
+    ],
+    "environment_overrides": {
+      "SCORE_AUDIT_RESULTS": "revision_audit/final_20261018/score"
+    },
+    "exit_code": 0,
+    "seconds": 11.497170209884644,
+    "log": "revision_audit\\final_20261018\\logs\\score_1.txt"
+  },
+  {
+    "name": "data_3",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "data_audit/report.py"
+    ],
+    "environment_overrides": {
+      "DATA_AUDIT_RESULTS": "revision_audit/final_20261018/data"
+    },
+    "exit_code": 0,
+    "seconds": 6.298863410949707,
+    "log": "revision_audit\\final_20261018\\logs\\data_3.txt"
+  },
+  {
+    "name": "engine_1",
+    "command": [
+      "node",
+      "engine_llm_audit/evaluate.cjs",
+      "before",
+      "--archive-before"
+    ],
+    "environment_overrides": {
+      "ENGINE_AUDIT_OUT": "revision_audit/final_20261018/engine"
+    },
+    "exit_code": 0,
+    "seconds": 0.5739428997039795,
+    "log": "revision_audit\\final_20261018\\logs\\engine_1.txt"
+  },
+  {
+    "name": "engine_2",
+    "command": [
+      "node",
+      "engine_llm_audit/evaluate.cjs",
+      "after"
+    ],
+    "environment_overrides": {
+      "ENGINE_AUDIT_OUT": "revision_audit/final_20261018/engine"
+    },
+    "exit_code": 0,
+    "seconds": 0.48135972023010254,
+    "log": "revision_audit\\final_20261018\\logs\\engine_2.txt"
+  },
+  {
+    "name": "engine_3",
+    "command": [
+      "node",
+      "engine_llm_audit/orchestration.cjs"
+    ],
+    "environment_overrides": {
+      "ENGINE_AUDIT_OUT": "revision_audit/final_20261018/engine"
+    },
+    "exit_code": 0,
+    "seconds": 0.12352466583251953,
+    "log": "revision_audit\\final_20261018\\logs\\engine_3.txt"
+  },
+  {
+    "name": "volatility_2",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/run.py",
+      "--out",
+      "revision_audit/final_20261018/volatility",
+      "--stage",
+      "select"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 7.395115852355957,
+    "log": "revision_audit\\final_20261018\\logs\\volatility_2.txt"
+  },
+  {
+    "name": "score_2",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "revision_audit/final_20261018/score",
+      "--stage",
+      "select"
+    ],
+    "environment_overrides": {
+      "SCORE_AUDIT_RESULTS": "revision_audit/final_20261018/score"
+    },
+    "exit_code": 0,
+    "seconds": 5.021886587142944,
+    "log": "revision_audit\\final_20261018\\logs\\score_2.txt"
+  },
+  {
+    "name": "volatility_3",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/compare.py",
+      "--out",
+      "revision_audit/final_20261018/volatility",
+      "--stage",
+      "freeze"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 2.8956761360168457,
+    "log": "revision_audit\\final_20261018\\logs\\volatility_3.txt"
+  },
+  {
+    "name": "router_2",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "router_sim/simulate.py",
+      "--out",
+      "revision_audit/final_20261018/router",
+      "--stage",
+      "validation"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 13.04318356513977,
+    "log": "revision_audit\\final_20261018\\logs\\router_2.txt"
+  },
+  {
+    "name": "volatility_4",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/run.py",
+      "--out",
+      "revision_audit/final_20261018/volatility",
+      "--stage",
+      "test"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 3.4567835330963135,
+    "log": "revision_audit\\final_20261018\\logs\\volatility_4.txt"
+  },
+  {
+    "name": "score_3",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "revision_audit/final_20261018/score",
+      "--stage",
+      "test"
+    ],
+    "environment_overrides": {
+      "SCORE_AUDIT_RESULTS": "revision_audit/final_20261018/score"
+    },
+    "exit_code": 0,
+    "seconds": 6.99397873878479,
+    "log": "revision_audit\\final_20261018\\logs\\score_3.txt"
+  },
+  {
+    "name": "volatility_5",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/compare.py",
+      "--out",
+      "revision_audit/final_20261018/volatility",
+      "--stage",
+      "test"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 4.503942251205444,
+    "log": "revision_audit\\final_20261018\\logs\\volatility_5.txt"
+  },
+  {
+    "name": "score_4",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "score_audit",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "environment_overrides": {
+      "SCORE_AUDIT_RESULTS": "revision_audit/final_20261018/score"
+    },
+    "exit_code": 0,
+    "seconds": 4.321357250213623,
+    "log": "revision_audit\\final_20261018\\logs\\score_4.txt"
+  },
+  {
+    "name": "router_3",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "router_sim/simulate.py",
+      "--out",
+      "revision_audit/final_20261018/router",
+      "--stage",
+      "test"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 8.673648595809937,
+    "log": "revision_audit\\final_20261018\\logs\\router_3.txt"
+  },
+  {
+    "name": "node_tests_1",
+    "command": [
+      "node",
+      "--test",
+      "server/tests/engineExplanation.test.cjs",
+      "server/tests/routerSafety.test.cjs"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 1.040053367614746,
+    "log": "revision_audit\\final_20261018\\logs\\node_tests_1.txt"
+  },
+  {
+    "name": "legacy_tests_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "research_eval",
+      "-p",
+      "evaluate_python.py",
+      "-v"
+    ],
+    "environment_overrides": {},
+    "exit_code": 1,
+    "seconds": 0.18829846382141113,
+    "log": "revision_audit\\final_20261018\\logs\\legacy_tests_1.txt"
+  },
+  {
+    "name": "paper_tests_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "paper_audit",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 2.1921393871307373,
+    "log": "revision_audit\\final_20261018\\logs\\paper_tests_1.txt"
+  },
+  {
+    "name": "volatility_6",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "volatility_audit/report.py",
+      "--out",
+      "revision_audit/final_20261018/volatility"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 6.941277027130127,
+    "log": "revision_audit\\final_20261018\\logs\\volatility_6.txt"
+  },
+  {
+    "name": "router_4",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "router_sim/report.py",
+      "--out",
+      "revision_audit/final_20261018/router"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 5.588050603866577,
+    "log": "revision_audit\\final_20261018\\logs\\router_4.txt"
+  },
+  {
+    "name": "revision_tests_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "revision_audit",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 2.5213921070098877,
+    "log": "revision_audit\\final_20261018\\logs\\revision_tests_1.txt"
+  },
+  {
+    "name": "router_5",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "router_sim/finalize.py",
+      "--out",
+      "revision_audit/final_20261018/router"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 2.4151980876922607,
+    "log": "revision_audit\\final_20261018\\logs\\router_5.txt"
+  },
+  {
+    "name": "ablations_1",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "revision_audit/ablate.py",
+      "--out",
+      "revision_audit/final_20261018/ablations",
+      "--no-publish"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 20.936174392700195,
+    "log": "revision_audit\\final_20261018\\logs\\ablations_1.txt"
+  },
+  {
+    "name": "forecast_2",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "forecast_audit/run.py",
+      "select",
+      "--out",
+      "revision_audit/final_20261018/forecast"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 180.3517348766327,
+    "log": "revision_audit\\final_20261018\\logs\\forecast_2.txt"
+  },
+  {
+    "name": "forecast_3",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "forecast_audit/run.py",
+      "calibrate",
+      "--out",
+      "revision_audit/final_20261018/forecast"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 112.54454398155212,
+    "log": "revision_audit\\final_20261018\\logs\\forecast_3.txt"
+  },
+  {
+    "name": "engine_4",
+    "command": [
+      "node",
+      "engine_llm_audit/live.cjs"
+    ],
+    "environment_overrides": {
+      "ENGINE_AUDIT_OUT": "revision_audit/final_20261018/engine"
+    },
+    "exit_code": 0,
+    "seconds": 310.1454818248749,
+    "log": "revision_audit\\final_20261018\\logs\\engine_4.txt"
+  },
+  {
+    "name": "engine_5",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "engine_llm_audit/summarize.py"
+    ],
+    "environment_overrides": {
+      "ENGINE_AUDIT_OUT": "revision_audit/final_20261018/engine"
+    },
+    "exit_code": 0,
+    "seconds": 1.8597629070281982,
+    "log": "revision_audit\\final_20261018\\logs\\engine_5.txt"
+  },
+  {
+    "name": "forecast_4",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "forecast_audit/run.py",
+      "test",
+      "--out",
+      "revision_audit/final_20261018/forecast"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 235.0925772190094,
+    "log": "revision_audit\\final_20261018\\logs\\forecast_4.txt"
+  },
+  {
+    "name": "forecast_5",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "forecast_audit/analyze.py",
+      "--out",
+      "revision_audit/final_20261018/forecast"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 18.182843446731567,
+    "log": "revision_audit\\final_20261018\\logs\\forecast_5.txt"
+  },
+  {
+    "name": "forecast_6",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "forecast_audit/check_results.py",
+      "--out",
+      "revision_audit/final_20261018/forecast"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 4.5475709438323975,
+    "log": "revision_audit\\final_20261018\\logs\\forecast_6.txt"
+  },
+  {
+    "name": "forecast_7",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "forecast_audit/export_tables.py",
+      "--out",
+      "revision_audit/final_20261018/forecast"
+    ],
+    "environment_overrides": {},
+    "exit_code": 0,
+    "seconds": 1.3051748275756836,
+    "log": "revision_audit\\final_20261018\\logs\\forecast_7.txt"
+  }
+]

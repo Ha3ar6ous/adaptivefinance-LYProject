@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/nrrb/uber-analytics-project",
+  "commit": "4221faf501de74ecd68aec17ddf1045a29202175",
+  "url": "https://raw.githubusercontent.com/nrrb/uber-analytics-project/4221faf501de74ecd68aec17ddf1045a29202175/data/rides.csv",
+  "source_sha256": "ee4b1b89a3100ab2635d587449c4948d49b8018eb18637426a856da8aa0c3bb3",
+  "license_sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+  "license": "Repository AGPL-3.0",
+  "source_rows": 4270,
+  "trip_id_duplicates_removed": 0,
+  "excluded_invalid_or_noncompleted": 0,
+  "retained_trips": 4270,
+  "daily_rows": 626,
+  "observed_trip_days": 361,
+  "zero_filled_unrecorded_days": 265,
+  "first": "2023-01-10",
+  "last": "2024-09-26",
+  "currency": "USD",
+  "earnings": "published trip earnings including listed tips/surge, before operating costs",
+  "timezone": "source naive recorded dates; not independently verified"
+}

@@ -1,0 +1,1 @@
+Frozen diagnostic family configurations before test: {'NB': 'NB_2_.2', 'kNN': 'kNN_7_.35', 'logistic': 'logistic_9_.35', 'GB': 'GB_15_.2'}

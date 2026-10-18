@@ -1,0 +1,7 @@
+Validation seed 11
+Validation seed 23
+Validation seed 37
+Validation seed 53
+Validation seed 71
+FROZEN threshold choices: {'engine_budget': {'L': 3.0, 'D': 2.0, 'policy': 'sweep_L3_D2.0', 'shortfall_rate': 0.2693, 'months_below_1': 2.6084199999999997, 'ever_contributed': 0.47587999999999997}, 'reserve_free': {'L': 1.0, 'D': 2.0, 'policy': 'sweep_L1_D2.0', 'shortfall_rate': 0.26934, 'months_below_1': 2.63294, 'ever_contributed': 0.54606}}
+Wall seconds: 9.2580025999996

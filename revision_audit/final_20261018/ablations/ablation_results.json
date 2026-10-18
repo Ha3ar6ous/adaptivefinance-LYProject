@@ -1,0 +1,4710 @@
+{
+  "simulation_based": true,
+  "protocol": "revision_audit/PROTOCOL.md",
+  "runtime_cutoffs": {
+    "low_max_cv": 0.45,
+    "medium_max_cv": 0.75
+  },
+  "household_seeds": [
+    101,
+    211,
+    307,
+    401,
+    503
+  ],
+  "random_gate_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "bootstrap_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "n_unique_households_per_scenario": 50000,
+  "months": 12,
+  "matched_participation_definition": "Exact monthly clearance counts, not ever-cleared union or positive investment participation.",
+  "random_gate_denominator": "Five assignments on the same50000 households:250000 dependent assignment-household trials, not250000 independent users.",
+  "suitability_proxy": "Own illustrative surplus/risk/liquidity checklist; not a regulatory or commercial-advisor implementation.",
+  "cohort_hashes": [
+    {
+      "seed": 101,
+      "scenario": "central",
+      "n": 10000,
+      "hash": "bc7067712f4ead8bb643c9477348a5d006c361b1217026bc4c11fd0dc2fb2d88",
+      "matches_baseline": true
+    },
+    {
+      "seed": 101,
+      "scenario": "stress",
+      "n": 10000,
+      "hash": "9d515d764aaca27a81db546566e45e01bd6597fcc8c0c48dd54ec27a24e1c660",
+      "matches_baseline": true
+    },
+    {
+      "seed": 101,
+      "scenario": "neutral",
+      "n": 10000,
+      "hash": "45b603b5c4f4e680f0c6695366b3ac59dcbe336d5abeb43b46f5580bf1982723",
+      "matches_baseline": true
+    },
+    {
+      "seed": 211,
+      "scenario": "central",
+      "n": 10000,
+      "hash": "470353cce9743ad4a67d9d40db7b6f17ca2fcfdba8b786927952f99f2050f5ff",
+      "matches_baseline": true
+    },
+    {
+      "seed": 211,
+      "scenario": "stress",
+      "n": 10000,
+      "hash": "619931224a0e2e2251216a284e50be58826550f4cdc5bd3590637f82ee92329a",
+      "matches_baseline": true
+    },
+    {
+      "seed": 211,
+      "scenario": "neutral",
+      "n": 10000,
+      "hash": "6d11c01f5429ca9679c35481432b4d58d7f54319f01cec84499ac89c5484ed1a",
+      "matches_baseline": true
+    },
+    {
+      "seed": 307,
+      "scenario": "central",
+      "n": 10000,
+      "hash": "5dabb72aa470f95dc22a86e73970d2fc2ed364ab0c77e1497e52bca1fb21ca19",
+      "matches_baseline": true
+    },
+    {
+      "seed": 307,
+      "scenario": "stress",
+      "n": 10000,
+      "hash": "129a04d902ceb936d0cd881644525814cbd788359605c170023c566413d0f8ad",
+      "matches_baseline": true
+    },
+    {
+      "seed": 307,
+      "scenario": "neutral",
+      "n": 10000,
+      "hash": "e0e8d54ca7f2731e32f8ec39e75dfcf2bc2fda53d7ee77fab334a744f0fc5840",
+      "matches_baseline": true
+    },
+    {
+      "seed": 401,
+      "scenario": "central",
+      "n": 10000,
+      "hash": "1293259e6b2d2e1bf5babd3ad4d58914f1b916da1350dffd543dfc7bbe7877e7",
+      "matches_baseline": true
+    },
+    {
+      "seed": 401,
+      "scenario": "stress",
+      "n": 10000,
+      "hash": "c7230c291e028e0992454d4ffae3aa15eb0b3331e3f35edf524b194cb4669649",
+      "matches_baseline": true
+    },
+    {
+      "seed": 401,
+      "scenario": "neutral",
+      "n": 10000,
+      "hash": "42806c6c06033e3993e9a8db542992c46b980bf4a90553976b9cf8652769ed3d",
+      "matches_baseline": true
+    },
+    {
+      "seed": 503,
+      "scenario": "central",
+      "n": 10000,
+      "hash": "1702c21cbde003201cabc377b488a1c5a203be1cace0317fc224c44d9ab773ce",
+      "matches_baseline": true
+    },
+    {
+      "seed": 503,
+      "scenario": "stress",
+      "n": 10000,
+      "hash": "178c2f2fdb437fb632f35d17e6cabb54a57a016f8cf2bff891339b87ec9b98b5",
+      "matches_baseline": true
+    },
+    {
+      "seed": 503,
+      "scenario": "neutral",
+      "n": 10000,
+      "hash": "9dc3595136da63f3e0ea5531839bb0f287a3425c3de2697c1f511021348848c1",
+      "matches_baseline": true
+    }
+  ],
+  "checks": [
+    {
+      "seed": 101,
+      "scenario": "central",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1551,
+        1837,
+        1927,
+        1988,
+        2088,
+        2116,
+        2225,
+        2395,
+        2642,
+        2869,
+        3318,
+        3256
+      ]
+    },
+    {
+      "seed": 101,
+      "scenario": "central",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1551,
+        1836,
+        1923,
+        1988,
+        2085,
+        2108,
+        2220,
+        2386,
+        2635,
+        2849,
+        3306,
+        3240
+      ]
+    },
+    {
+      "seed": 101,
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1551,
+        1808,
+        1868,
+        1898,
+        1963,
+        1943,
+        2008,
+        2118,
+        2306,
+        2475,
+        2817,
+        2718
+      ]
+    },
+    {
+      "seed": 101,
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1551,
+        1807,
+        1863,
+        1898,
+        1956,
+        1932,
+        1999,
+        2108,
+        2294,
+        2453,
+        2796,
+        2703
+      ]
+    },
+    {
+      "seed": 101,
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1551,
+        1837,
+        1927,
+        1988,
+        2088,
+        2116,
+        2225,
+        2395,
+        2642,
+        2869,
+        3318,
+        3256
+      ]
+    },
+    {
+      "seed": 101,
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1551,
+        1836,
+        1923,
+        1988,
+        2085,
+        2108,
+        2220,
+        2386,
+        2635,
+        2849,
+        3306,
+        3240
+      ]
+    },
+    {
+      "seed": 211,
+      "scenario": "central",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1573,
+        1857,
+        1940,
+        1968,
+        2010,
+        2136,
+        2240,
+        2343,
+        2543,
+        2862,
+        3362,
+        3269
+      ]
+    },
+    {
+      "seed": 211,
+      "scenario": "central",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1573,
+        1855,
+        1937,
+        1961,
+        2006,
+        2132,
+        2234,
+        2332,
+        2532,
+        2853,
+        3352,
+        3258
+      ]
+    },
+    {
+      "seed": 211,
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1573,
+        1832,
+        1877,
+        1879,
+        1880,
+        1951,
+        2023,
+        2089,
+        2214,
+        2476,
+        2860,
+        2732
+      ]
+    },
+    {
+      "seed": 211,
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1573,
+        1830,
+        1872,
+        1873,
+        1877,
+        1947,
+        2015,
+        2077,
+        2203,
+        2460,
+        2849,
+        2722
+      ]
+    },
+    {
+      "seed": 211,
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1573,
+        1857,
+        1940,
+        1968,
+        2010,
+        2136,
+        2240,
+        2343,
+        2543,
+        2862,
+        3362,
+        3269
+      ]
+    },
+    {
+      "seed": 211,
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1573,
+        1855,
+        1937,
+        1961,
+        2006,
+        2132,
+        2234,
+        2332,
+        2532,
+        2853,
+        3352,
+        3258
+      ]
+    },
+    {
+      "seed": 307,
+      "scenario": "central",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1545,
+        1806,
+        1885,
+        1938,
+        1999,
+        2117,
+        2274,
+        2378,
+        2599,
+        2881,
+        3301,
+        3203
+      ]
+    },
+    {
+      "seed": 307,
+      "scenario": "central",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1545,
+        1805,
+        1883,
+        1935,
+        1997,
+        2111,
+        2257,
+        2370,
+        2592,
+        2874,
+        3290,
+        3186
+      ]
+    },
+    {
+      "seed": 307,
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1545,
+        1786,
+        1824,
+        1833,
+        1860,
+        1945,
+        2062,
+        2141,
+        2282,
+        2474,
+        2818,
+        2700
+      ]
+    },
+    {
+      "seed": 307,
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1545,
+        1784,
+        1821,
+        1828,
+        1856,
+        1936,
+        2043,
+        2133,
+        2264,
+        2465,
+        2799,
+        2682
+      ]
+    },
+    {
+      "seed": 307,
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1545,
+        1806,
+        1885,
+        1938,
+        1999,
+        2117,
+        2274,
+        2378,
+        2599,
+        2881,
+        3301,
+        3203
+      ]
+    },
+    {
+      "seed": 307,
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1545,
+        1805,
+        1883,
+        1935,
+        1997,
+        2111,
+        2257,
+        2370,
+        2592,
+        2874,
+        3290,
+        3186
+      ]
+    },
+    {
+      "seed": 401,
+      "scenario": "central",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1520,
+        1755,
+        1800,
+        1911,
+        1980,
+        2051,
+        2199,
+        2348,
+        2554,
+        2852,
+        3323,
+        3222
+      ]
+    },
+    {
+      "seed": 401,
+      "scenario": "central",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1520,
+        1753,
+        1799,
+        1908,
+        1970,
+        2040,
+        2193,
+        2343,
+        2551,
+        2843,
+        3314,
+        3208
+      ]
+    },
+    {
+      "seed": 401,
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1520,
+        1727,
+        1745,
+        1811,
+        1849,
+        1894,
+        1991,
+        2087,
+        2218,
+        2425,
+        2776,
+        2658
+      ]
+    },
+    {
+      "seed": 401,
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1520,
+        1725,
+        1744,
+        1808,
+        1837,
+        1886,
+        1982,
+        2083,
+        2214,
+        2415,
+        2766,
+        2643
+      ]
+    },
+    {
+      "seed": 401,
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1520,
+        1755,
+        1800,
+        1911,
+        1980,
+        2051,
+        2199,
+        2348,
+        2554,
+        2852,
+        3323,
+        3222
+      ]
+    },
+    {
+      "seed": 401,
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1520,
+        1753,
+        1799,
+        1908,
+        1970,
+        2040,
+        2193,
+        2343,
+        2551,
+        2843,
+        3314,
+        3208
+      ]
+    },
+    {
+      "seed": 503,
+      "scenario": "central",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1533,
+        1828,
+        1848,
+        1929,
+        2009,
+        2063,
+        2223,
+        2333,
+        2561,
+        2884,
+        3328,
+        3277
+      ]
+    },
+    {
+      "seed": 503,
+      "scenario": "central",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1533,
+        1827,
+        1846,
+        1924,
+        2008,
+        2054,
+        2216,
+        2324,
+        2557,
+        2870,
+        3318,
+        3266
+      ]
+    },
+    {
+      "seed": 503,
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1533,
+        1796,
+        1797,
+        1839,
+        1874,
+        1899,
+        1989,
+        2068,
+        2230,
+        2458,
+        2793,
+        2708
+      ]
+    },
+    {
+      "seed": 503,
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1533,
+        1795,
+        1795,
+        1832,
+        1873,
+        1887,
+        1981,
+        2054,
+        2216,
+        2442,
+        2778,
+        2694
+      ]
+    },
+    {
+      "seed": 503,
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1533,
+        1828,
+        1848,
+        1929,
+        2009,
+        2063,
+        2223,
+        2333,
+        2561,
+        2884,
+        3328,
+        3277
+      ]
+    },
+    {
+      "seed": 503,
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "original_policy_execution_identical": true,
+      "no_score_equivalence": true,
+      "exact_monthly_matching": true,
+      "reference_monthly_cleared": [
+        1533,
+        1827,
+        1846,
+        1924,
+        2008,
+        2054,
+        2216,
+        2324,
+        2557,
+        2870,
+        3318,
+        3266
+      ]
+    }
+  ],
+  "results": [
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "always_invest",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15560,
+        "denominator": 50000,
+        "percent": 31.12
+      },
+      "forced_sale": {
+        "events": 3785,
+        "denominator": 50000,
+        "percent": 7.57
+      },
+      "ever_cleared": {
+        "events": 50000,
+        "denominator": 50000,
+        "percent": 100.0
+      },
+      "ever_invested": {
+        "events": 32686,
+        "denominator": 50000,
+        "percent": 65.372
+      },
+      "months_below_one_expense": 3.03248,
+      "mean_final_wealth": 52099.267567608986,
+      "cleared_user_months": {
+        "events": 600000,
+        "denominator": 600000,
+        "percent": 100.0
+      },
+      "forced_sale_delta_pp_vs_revised": 6.438000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.411373903800159,
+        "upper95": 8.313198046736394,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "original_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 1697,
+        "denominator": 50000,
+        "percent": 3.394
+      },
+      "ever_cleared": {
+        "events": 37991,
+        "denominator": 50000,
+        "percent": 75.982
+      },
+      "ever_invested": {
+        "events": 26847,
+        "denominator": 50000,
+        "percent": 53.694
+      },
+      "months_below_one_expense": 3.02106,
+      "mean_final_wealth": 52075.12115931623,
+      "cleared_user_months": {
+        "events": 279519,
+        "denominator": 600000,
+        "percent": 46.5865
+      },
+      "forced_sale_delta_pp_vs_revised": 2.2620000000000005,
+      "forced_sale_delta_95ci": {
+        "lower95": 1.5147774430262713,
+        "upper95": 2.9138197046506504,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "revised_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 566,
+        "denominator": 50000,
+        "percent": 1.132
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21506,
+        "denominator": 50000,
+        "percent": 43.012
+      },
+      "months_below_one_expense": 3.0141999999999998,
+      "mean_final_wealth": 52052.45638158225,
+      "cleared_user_months": {
+        "events": 139572,
+        "denominator": 600000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "score_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 2255,
+        "denominator": 50000,
+        "percent": 4.51
+      },
+      "ever_cleared": {
+        "events": 39888,
+        "denominator": 50000,
+        "percent": 79.776
+      },
+      "ever_invested": {
+        "events": 30053,
+        "denominator": 50000,
+        "percent": 60.106
+      },
+      "months_below_one_expense": 3.02446,
+      "mean_final_wealth": 52088.17969836545,
+      "cleared_user_months": {
+        "events": 355923,
+        "denominator": 600000,
+        "percent": 59.3205
+      },
+      "forced_sale_delta_pp_vs_revised": 3.378,
+      "forced_sale_delta_95ci": {
+        "lower95": 2.35219046361696,
+        "upper95": 4.127874558572564,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "no_investing",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_cleared": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_invested": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "months_below_one_expense": 3.0102,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 0,
+        "denominator": 600000,
+        "percent": 0.0
+      },
+      "forced_sale_delta_pp_vs_revised": -1.132,
+      "forced_sale_delta_95ci": {
+        "lower95": -1.520828741459114,
+        "upper95": -0.7442713107241063,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "liquidity_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15560,
+        "denominator": 50000,
+        "percent": 31.12
+      },
+      "forced_sale": {
+        "events": 3665,
+        "denominator": 50000,
+        "percent": 7.33
+      },
+      "ever_cleared": {
+        "events": 35892,
+        "denominator": 50000,
+        "percent": 71.784
+      },
+      "ever_invested": {
+        "events": 32446,
+        "denominator": 50000,
+        "percent": 64.892
+      },
+      "months_below_one_expense": 3.0314799999999997,
+      "mean_final_wealth": 52095.58557334839,
+      "cleared_user_months": {
+        "events": 308043,
+        "denominator": 600000,
+        "percent": 51.3405
+      },
+      "forced_sale_delta_pp_vs_revised": 6.198,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.2873593763840905,
+        "upper95": 7.975263166787759,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "liquidity_debt",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 894,
+        "denominator": 50000,
+        "percent": 1.788
+      },
+      "ever_cleared": {
+        "events": 28782,
+        "denominator": 50000,
+        "percent": 57.564
+      },
+      "ever_invested": {
+        "events": 25262,
+        "denominator": 50000,
+        "percent": 50.524
+      },
+      "months_below_one_expense": 3.01616,
+      "mean_final_wealth": 52061.544123726926,
+      "cleared_user_months": {
+        "events": 189497,
+        "denominator": 600000,
+        "percent": 31.582833333333333
+      },
+      "forced_sale_delta_pp_vs_revised": 0.6560000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.13247957606535682,
+        "upper95": 1.1878411030194482,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "liquidity_debt_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 566,
+        "denominator": 50000,
+        "percent": 1.132
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21506,
+        "denominator": 50000,
+        "percent": 43.012
+      },
+      "months_below_one_expense": 3.0141999999999998,
+      "mean_final_wealth": 52052.45638158225,
+      "cleared_user_months": {
+        "events": 139572,
+        "denominator": 600000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "full_minus_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 894,
+        "denominator": 50000,
+        "percent": 1.788
+      },
+      "ever_cleared": {
+        "events": 28782,
+        "denominator": 50000,
+        "percent": 57.564
+      },
+      "ever_invested": {
+        "events": 25262,
+        "denominator": 50000,
+        "percent": 50.524
+      },
+      "months_below_one_expense": 3.01616,
+      "mean_final_wealth": 52061.544123726926,
+      "cleared_user_months": {
+        "events": 189497,
+        "denominator": 600000,
+        "percent": 31.582833333333333
+      },
+      "forced_sale_delta_pp_vs_revised": 0.6560000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.13247957606535682,
+        "upper95": 1.1878411030194482,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "full_minus_score",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 566,
+        "denominator": 50000,
+        "percent": 1.132
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21506,
+        "denominator": 50000,
+        "percent": 43.012
+      },
+      "months_below_one_expense": 3.0141999999999998,
+      "mean_final_wealth": 52052.45638158225,
+      "cleared_user_months": {
+        "events": 139572,
+        "denominator": 600000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "matched_savings",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 349,
+        "denominator": 50000,
+        "percent": 0.698
+      },
+      "ever_cleared": {
+        "events": 21022,
+        "denominator": 50000,
+        "percent": 42.044
+      },
+      "ever_invested": {
+        "events": 19710,
+        "denominator": 50000,
+        "percent": 39.42
+      },
+      "months_below_one_expense": 3.0125,
+      "mean_final_wealth": 52061.46157784738,
+      "cleared_user_months": {
+        "events": 139572,
+        "denominator": 600000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": -0.43399999999999994,
+      "forced_sale_delta_95ci": {
+        "lower95": -0.8838439497465286,
+        "upper95": -0.06040637012630426,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "suitability_proxy",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15560,
+        "denominator": 50000,
+        "percent": 31.12
+      },
+      "forced_sale": {
+        "events": 3665,
+        "denominator": 50000,
+        "percent": 7.33
+      },
+      "ever_cleared": {
+        "events": 41466,
+        "denominator": 50000,
+        "percent": 82.932
+      },
+      "ever_invested": {
+        "events": 32446,
+        "denominator": 50000,
+        "percent": 64.892
+      },
+      "months_below_one_expense": 3.0314799999999997,
+      "mean_final_wealth": 52095.58557334839,
+      "cleared_user_months": {
+        "events": 280028,
+        "denominator": 600000,
+        "percent": 46.67133333333334
+      },
+      "forced_sale_delta_pp_vs_revised": 6.198,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.2873593763840905,
+        "upper95": 7.975263166787759,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "always_invest",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15570,
+        "denominator": 50000,
+        "percent": 31.14
+      },
+      "forced_sale": {
+        "events": 13052,
+        "denominator": 50000,
+        "percent": 26.104
+      },
+      "ever_cleared": {
+        "events": 50000,
+        "denominator": 50000,
+        "percent": 100.0
+      },
+      "ever_invested": {
+        "events": 45078,
+        "denominator": 50000,
+        "percent": 90.156
+      },
+      "months_below_one_expense": 3.2181200000000003,
+      "mean_final_wealth": 52117.73791165826,
+      "cleared_user_months": {
+        "events": 600000,
+        "denominator": 600000,
+        "percent": 100.0
+      },
+      "forced_sale_delta_pp_vs_revised": 24.951999999999998,
+      "forced_sale_delta_95ci": {
+        "lower95": 20.450194732325567,
+        "upper95": 27.86933274738153,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "original_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15563,
+        "denominator": 50000,
+        "percent": 31.126
+      },
+      "forced_sale": {
+        "events": 3423,
+        "denominator": 50000,
+        "percent": 6.846
+      },
+      "ever_cleared": {
+        "events": 37991,
+        "denominator": 50000,
+        "percent": 75.982
+      },
+      "ever_invested": {
+        "events": 31700,
+        "denominator": 50000,
+        "percent": 63.4
+      },
+      "months_below_one_expense": 3.0474799999999997,
+      "mean_final_wealth": 52087.819480392376,
+      "cleared_user_months": {
+        "events": 277579,
+        "denominator": 600000,
+        "percent": 46.26316666666666
+      },
+      "forced_sale_delta_pp_vs_revised": 5.694,
+      "forced_sale_delta_95ci": {
+        "lower95": 3.913419175124345,
+        "upper95": 7.1060171919770765,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "revised_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15563,
+        "denominator": 50000,
+        "percent": 31.126
+      },
+      "forced_sale": {
+        "events": 576,
+        "denominator": 50000,
+        "percent": 1.152
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21508,
+        "denominator": 50000,
+        "percent": 43.016
+      },
+      "months_below_one_expense": 3.01554,
+      "mean_final_wealth": 52054.296985990324,
+      "cleared_user_months": {
+        "events": 139182,
+        "denominator": 600000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "score_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15564,
+        "denominator": 50000,
+        "percent": 31.128
+      },
+      "forced_sale": {
+        "events": 4119,
+        "denominator": 50000,
+        "percent": 8.238
+      },
+      "ever_cleared": {
+        "events": 39888,
+        "denominator": 50000,
+        "percent": 79.776
+      },
+      "ever_invested": {
+        "events": 34973,
+        "denominator": 50000,
+        "percent": 69.946
+      },
+      "months_below_one_expense": 3.0545400000000003,
+      "mean_final_wealth": 52103.120336521184,
+      "cleared_user_months": {
+        "events": 353393,
+        "denominator": 600000,
+        "percent": 58.898833333333336
+      },
+      "forced_sale_delta_pp_vs_revised": 7.085999999999999,
+      "forced_sale_delta_95ci": {
+        "lower95": 5.027834620547011,
+        "upper95": 8.28389364974731,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "no_investing",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_cleared": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_invested": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "months_below_one_expense": 3.0102,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 0,
+        "denominator": 600000,
+        "percent": 0.0
+      },
+      "forced_sale_delta_pp_vs_revised": -1.152,
+      "forced_sale_delta_95ci": {
+        "lower95": -1.5428697377121445,
+        "upper95": -0.7626031164069661,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "liquidity_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15561,
+        "denominator": 50000,
+        "percent": 31.122
+      },
+      "forced_sale": {
+        "events": 3698,
+        "denominator": 50000,
+        "percent": 7.396
+      },
+      "ever_cleared": {
+        "events": 35892,
+        "denominator": 50000,
+        "percent": 71.784
+      },
+      "ever_invested": {
+        "events": 32448,
+        "denominator": 50000,
+        "percent": 64.896
+      },
+      "months_below_one_expense": 3.03756,
+      "mean_final_wealth": 52101.229658450044,
+      "cleared_user_months": {
+        "events": 306257,
+        "denominator": 600000,
+        "percent": 51.042833333333334
+      },
+      "forced_sale_delta_pp_vs_revised": 6.244,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.356010275489415,
+        "upper95": 8.005677305983138,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "liquidity_debt",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15563,
+        "denominator": 50000,
+        "percent": 31.126
+      },
+      "forced_sale": {
+        "events": 912,
+        "denominator": 50000,
+        "percent": 1.824
+      },
+      "ever_cleared": {
+        "events": 28782,
+        "denominator": 50000,
+        "percent": 57.564
+      },
+      "ever_invested": {
+        "events": 25264,
+        "denominator": 50000,
+        "percent": 50.528
+      },
+      "months_below_one_expense": 3.01808,
+      "mean_final_wealth": 52064.18686640561,
+      "cleared_user_months": {
+        "events": 188871,
+        "denominator": 600000,
+        "percent": 31.4785
+      },
+      "forced_sale_delta_pp_vs_revised": 0.6720000000000002,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.15014351954073768,
+        "upper95": 1.1996688238176505,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "liquidity_debt_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15563,
+        "denominator": 50000,
+        "percent": 31.126
+      },
+      "forced_sale": {
+        "events": 576,
+        "denominator": 50000,
+        "percent": 1.152
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21508,
+        "denominator": 50000,
+        "percent": 43.016
+      },
+      "months_below_one_expense": 3.01554,
+      "mean_final_wealth": 52054.296985990324,
+      "cleared_user_months": {
+        "events": 139182,
+        "denominator": 600000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "full_minus_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15563,
+        "denominator": 50000,
+        "percent": 31.126
+      },
+      "forced_sale": {
+        "events": 912,
+        "denominator": 50000,
+        "percent": 1.824
+      },
+      "ever_cleared": {
+        "events": 28782,
+        "denominator": 50000,
+        "percent": 57.564
+      },
+      "ever_invested": {
+        "events": 25264,
+        "denominator": 50000,
+        "percent": 50.528
+      },
+      "months_below_one_expense": 3.01808,
+      "mean_final_wealth": 52064.18686640561,
+      "cleared_user_months": {
+        "events": 188871,
+        "denominator": 600000,
+        "percent": 31.4785
+      },
+      "forced_sale_delta_pp_vs_revised": 0.6720000000000002,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.15014351954073768,
+        "upper95": 1.1996688238176505,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "full_minus_score",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15563,
+        "denominator": 50000,
+        "percent": 31.126
+      },
+      "forced_sale": {
+        "events": 576,
+        "denominator": 50000,
+        "percent": 1.152
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21508,
+        "denominator": 50000,
+        "percent": 43.016
+      },
+      "months_below_one_expense": 3.01554,
+      "mean_final_wealth": 52054.296985990324,
+      "cleared_user_months": {
+        "events": 139182,
+        "denominator": 600000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "matched_savings",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 349,
+        "denominator": 50000,
+        "percent": 0.698
+      },
+      "ever_cleared": {
+        "events": 20982,
+        "denominator": 50000,
+        "percent": 41.964
+      },
+      "ever_invested": {
+        "events": 19681,
+        "denominator": 50000,
+        "percent": 39.362
+      },
+      "months_below_one_expense": 3.0125,
+      "mean_final_wealth": 52061.438986154215,
+      "cleared_user_months": {
+        "events": 139182,
+        "denominator": 600000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": -0.45399999999999996,
+      "forced_sale_delta_95ci": {
+        "lower95": -0.905884945999559,
+        "upper95": -0.07786762503743634,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "suitability_proxy",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15570,
+        "denominator": 50000,
+        "percent": 31.14
+      },
+      "forced_sale": {
+        "events": 9275,
+        "denominator": 50000,
+        "percent": 18.55
+      },
+      "ever_cleared": {
+        "events": 41466,
+        "denominator": 50000,
+        "percent": 82.932
+      },
+      "ever_invested": {
+        "events": 41457,
+        "denominator": 50000,
+        "percent": 82.914
+      },
+      "months_below_one_expense": 3.1352400000000005,
+      "mean_final_wealth": 52115.57829503335,
+      "cleared_user_months": {
+        "events": 277392,
+        "denominator": 600000,
+        "percent": 46.232
+      },
+      "forced_sale_delta_pp_vs_revised": 17.398,
+      "forced_sale_delta_95ci": {
+        "lower95": 13.912909542984133,
+        "upper95": 19.928512137690365,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "always_invest",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19994,
+        "denominator": 50000,
+        "percent": 39.988
+      },
+      "forced_sale": {
+        "events": 5972,
+        "denominator": 50000,
+        "percent": 11.944
+      },
+      "ever_cleared": {
+        "events": 50000,
+        "denominator": 50000,
+        "percent": 100.0
+      },
+      "ever_invested": {
+        "events": 31849,
+        "denominator": 50000,
+        "percent": 63.698
+      },
+      "months_below_one_expense": 3.6749400000000003,
+      "mean_final_wealth": 19385.52188004465,
+      "cleared_user_months": {
+        "events": 600000,
+        "denominator": 600000,
+        "percent": 100.0
+      },
+      "forced_sale_delta_pp_vs_revised": 9.608,
+      "forced_sale_delta_95ci": {
+        "lower95": 7.276607916914207,
+        "upper95": 11.672270753425815,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "original_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19984,
+        "denominator": 50000,
+        "percent": 39.968
+      },
+      "forced_sale": {
+        "events": 3004,
+        "denominator": 50000,
+        "percent": 6.008
+      },
+      "ever_cleared": {
+        "events": 36862,
+        "denominator": 50000,
+        "percent": 73.724
+      },
+      "ever_invested": {
+        "events": 25691,
+        "denominator": 50000,
+        "percent": 51.382
+      },
+      "months_below_one_expense": 3.65818,
+      "mean_final_wealth": 19426.357865502912,
+      "cleared_user_months": {
+        "events": 259588,
+        "denominator": 600000,
+        "percent": 43.26466666666666
+      },
+      "forced_sale_delta_pp_vs_revised": 3.672,
+      "forced_sale_delta_95ci": {
+        "lower95": 2.5230566534914365,
+        "upper95": 4.758651091029313,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "revised_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19980,
+        "denominator": 50000,
+        "percent": 39.96
+      },
+      "forced_sale": {
+        "events": 1168,
+        "denominator": 50000,
+        "percent": 2.336
+      },
+      "ever_cleared": {
+        "events": 23904,
+        "denominator": 50000,
+        "percent": 47.808
+      },
+      "ever_invested": {
+        "events": 19927,
+        "denominator": 50000,
+        "percent": 39.854
+      },
+      "months_below_one_expense": 3.6464799999999995,
+      "mean_final_wealth": 19472.395686379725,
+      "cleared_user_months": {
+        "events": 125814,
+        "denominator": 600000,
+        "percent": 20.969
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "score_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19986,
+        "denominator": 50000,
+        "percent": 39.972
+      },
+      "forced_sale": {
+        "events": 3911,
+        "denominator": 50000,
+        "percent": 7.822
+      },
+      "ever_cleared": {
+        "events": 38868,
+        "denominator": 50000,
+        "percent": 77.736
+      },
+      "ever_invested": {
+        "events": 28921,
+        "denominator": 50000,
+        "percent": 57.842
+      },
+      "months_below_one_expense": 3.66336,
+      "mean_final_wealth": 19407.753303952624,
+      "cleared_user_months": {
+        "events": 329648,
+        "denominator": 600000,
+        "percent": 54.94133333333333
+      },
+      "forced_sale_delta_pp_vs_revised": 5.486000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.108081941602306,
+        "upper95": 6.463004579017624,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "no_investing",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19974,
+        "denominator": 50000,
+        "percent": 39.948
+      },
+      "forced_sale": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_cleared": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_invested": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "months_below_one_expense": 3.63958,
+      "mean_final_wealth": 19524.649964769826,
+      "cleared_user_months": {
+        "events": 0,
+        "denominator": 600000,
+        "percent": 0.0
+      },
+      "forced_sale_delta_pp_vs_revised": -2.336,
+      "forced_sale_delta_95ci": {
+        "lower95": -3.0767205056179776,
+        "upper95": -1.5582237132515229,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "liquidity_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19993,
+        "denominator": 50000,
+        "percent": 39.986
+      },
+      "forced_sale": {
+        "events": 5812,
+        "denominator": 50000,
+        "percent": 11.624
+      },
+      "ever_cleared": {
+        "events": 35169,
+        "denominator": 50000,
+        "percent": 70.338
+      },
+      "ever_invested": {
+        "events": 31580,
+        "denominator": 50000,
+        "percent": 63.16
+      },
+      "months_below_one_expense": 3.67318,
+      "mean_final_wealth": 19392.461300152376,
+      "cleared_user_months": {
+        "events": 281263,
+        "denominator": 600000,
+        "percent": 46.87716666666667
+      },
+      "forced_sale_delta_pp_vs_revised": 9.288,
+      "forced_sale_delta_95ci": {
+        "lower95": 7.107179791845447,
+        "upper95": 11.226196711893618,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "liquidity_debt",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19981,
+        "denominator": 50000,
+        "percent": 39.962
+      },
+      "forced_sale": {
+        "events": 1736,
+        "denominator": 50000,
+        "percent": 3.472
+      },
+      "ever_cleared": {
+        "events": 26673,
+        "denominator": 50000,
+        "percent": 53.346
+      },
+      "ever_invested": {
+        "events": 23458,
+        "denominator": 50000,
+        "percent": 46.916
+      },
+      "months_below_one_expense": 3.6494,
+      "mean_final_wealth": 19460.70198243021,
+      "cleared_user_months": {
+        "events": 170766,
+        "denominator": 600000,
+        "percent": 28.461
+      },
+      "forced_sale_delta_pp_vs_revised": 1.1360000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.31795098255685617,
+        "upper95": 1.8704695605156887,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "liquidity_debt_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19980,
+        "denominator": 50000,
+        "percent": 39.96
+      },
+      "forced_sale": {
+        "events": 1168,
+        "denominator": 50000,
+        "percent": 2.336
+      },
+      "ever_cleared": {
+        "events": 23904,
+        "denominator": 50000,
+        "percent": 47.808
+      },
+      "ever_invested": {
+        "events": 19927,
+        "denominator": 50000,
+        "percent": 39.854
+      },
+      "months_below_one_expense": 3.6464799999999995,
+      "mean_final_wealth": 19472.395686379725,
+      "cleared_user_months": {
+        "events": 125814,
+        "denominator": 600000,
+        "percent": 20.969
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "full_minus_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19981,
+        "denominator": 50000,
+        "percent": 39.962
+      },
+      "forced_sale": {
+        "events": 1736,
+        "denominator": 50000,
+        "percent": 3.472
+      },
+      "ever_cleared": {
+        "events": 26673,
+        "denominator": 50000,
+        "percent": 53.346
+      },
+      "ever_invested": {
+        "events": 23458,
+        "denominator": 50000,
+        "percent": 46.916
+      },
+      "months_below_one_expense": 3.6494,
+      "mean_final_wealth": 19460.70198243021,
+      "cleared_user_months": {
+        "events": 170766,
+        "denominator": 600000,
+        "percent": 28.461
+      },
+      "forced_sale_delta_pp_vs_revised": 1.1360000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.31795098255685617,
+        "upper95": 1.8704695605156887,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "full_minus_score",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19980,
+        "denominator": 50000,
+        "percent": 39.96
+      },
+      "forced_sale": {
+        "events": 1168,
+        "denominator": 50000,
+        "percent": 2.336
+      },
+      "ever_cleared": {
+        "events": 23904,
+        "denominator": 50000,
+        "percent": 47.808
+      },
+      "ever_invested": {
+        "events": 19927,
+        "denominator": 50000,
+        "percent": 39.854
+      },
+      "months_below_one_expense": 3.6464799999999995,
+      "mean_final_wealth": 19472.395686379725,
+      "cleared_user_months": {
+        "events": 125814,
+        "denominator": 600000,
+        "percent": 20.969
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "matched_savings",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19976,
+        "denominator": 50000,
+        "percent": 39.952
+      },
+      "forced_sale": {
+        "events": 676,
+        "denominator": 50000,
+        "percent": 1.352
+      },
+      "ever_cleared": {
+        "events": 19530,
+        "denominator": 50000,
+        "percent": 39.06
+      },
+      "ever_invested": {
+        "events": 18250,
+        "denominator": 50000,
+        "percent": 36.5
+      },
+      "months_below_one_expense": 3.64342,
+      "mean_final_wealth": 19465.291515839093,
+      "cleared_user_months": {
+        "events": 125814,
+        "denominator": 600000,
+        "percent": 20.969
+      },
+      "forced_sale_delta_pp_vs_revised": -0.9839999999999998,
+      "forced_sale_delta_95ci": {
+        "lower95": -1.7544633017412388,
+        "upper95": -0.3314365578516521,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "suitability_proxy",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19993,
+        "denominator": 50000,
+        "percent": 39.986
+      },
+      "forced_sale": {
+        "events": 5812,
+        "denominator": 50000,
+        "percent": 11.624
+      },
+      "ever_cleared": {
+        "events": 41052,
+        "denominator": 50000,
+        "percent": 82.104
+      },
+      "ever_invested": {
+        "events": 31580,
+        "denominator": 50000,
+        "percent": 63.16
+      },
+      "months_below_one_expense": 3.67318,
+      "mean_final_wealth": 19392.461300152376,
+      "cleared_user_months": {
+        "events": 267307,
+        "denominator": 600000,
+        "percent": 44.55116666666667
+      },
+      "forced_sale_delta_pp_vs_revised": 9.288,
+      "forced_sale_delta_95ci": {
+        "lower95": 7.107179791845447,
+        "upper95": 11.226196711893618,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "always_invest",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 20043,
+        "denominator": 50000,
+        "percent": 40.086
+      },
+      "forced_sale": {
+        "events": 17138,
+        "denominator": 50000,
+        "percent": 34.276
+      },
+      "ever_cleared": {
+        "events": 50000,
+        "denominator": 50000,
+        "percent": 100.0
+      },
+      "ever_invested": {
+        "events": 44955,
+        "denominator": 50000,
+        "percent": 89.91
+      },
+      "months_below_one_expense": 3.8796399999999998,
+      "mean_final_wealth": 19248.432244386924,
+      "cleared_user_months": {
+        "events": 600000,
+        "denominator": 600000,
+        "percent": 100.0
+      },
+      "forced_sale_delta_pp_vs_revised": 31.908000000000005,
+      "forced_sale_delta_95ci": {
+        "lower95": 27.618942488133346,
+        "upper95": 34.5610254911986,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "original_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19997,
+        "denominator": 50000,
+        "percent": 39.994
+      },
+      "forced_sale": {
+        "events": 5566,
+        "denominator": 50000,
+        "percent": 11.132
+      },
+      "ever_cleared": {
+        "events": 36862,
+        "denominator": 50000,
+        "percent": 73.724
+      },
+      "ever_invested": {
+        "events": 30667,
+        "denominator": 50000,
+        "percent": 61.334
+      },
+      "months_below_one_expense": 3.6971200000000004,
+      "mean_final_wealth": 19383.152336893574,
+      "cleared_user_months": {
+        "events": 257207,
+        "denominator": 600000,
+        "percent": 42.86783333333333
+      },
+      "forced_sale_delta_pp_vs_revised": 8.764,
+      "forced_sale_delta_95ci": {
+        "lower95": 6.295886790752775,
+        "upper95": 10.800088163985013,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "revised_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19980,
+        "denominator": 50000,
+        "percent": 39.96
+      },
+      "forced_sale": {
+        "events": 1184,
+        "denominator": 50000,
+        "percent": 2.368
+      },
+      "ever_cleared": {
+        "events": 23904,
+        "denominator": 50000,
+        "percent": 47.808
+      },
+      "ever_invested": {
+        "events": 19928,
+        "denominator": 50000,
+        "percent": 39.856
+      },
+      "months_below_one_expense": 3.6488,
+      "mean_final_wealth": 19466.538687347456,
+      "cleared_user_months": {
+        "events": 125317,
+        "denominator": 600000,
+        "percent": 20.886166666666668
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "score_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 20001,
+        "denominator": 50000,
+        "percent": 40.002
+      },
+      "forced_sale": {
+        "events": 6627,
+        "denominator": 50000,
+        "percent": 13.254
+      },
+      "ever_cleared": {
+        "events": 38868,
+        "denominator": 50000,
+        "percent": 77.736
+      },
+      "ever_invested": {
+        "events": 33907,
+        "denominator": 50000,
+        "percent": 67.814
+      },
+      "months_below_one_expense": 3.7068800000000004,
+      "mean_final_wealth": 19359.43498838239,
+      "cleared_user_months": {
+        "events": 326598,
+        "denominator": 600000,
+        "percent": 54.433
+      },
+      "forced_sale_delta_pp_vs_revised": 10.886,
+      "forced_sale_delta_95ci": {
+        "lower95": 8.348835149260342,
+        "upper95": 12.347103200761737,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "no_investing",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19974,
+        "denominator": 50000,
+        "percent": 39.948
+      },
+      "forced_sale": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_cleared": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_invested": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "months_below_one_expense": 3.63958,
+      "mean_final_wealth": 19524.649964769826,
+      "cleared_user_months": {
+        "events": 0,
+        "denominator": 600000,
+        "percent": 0.0
+      },
+      "forced_sale_delta_pp_vs_revised": -2.368,
+      "forced_sale_delta_95ci": {
+        "lower95": -3.133778089887641,
+        "upper95": -1.578087754921868,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "liquidity_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19997,
+        "denominator": 50000,
+        "percent": 39.994
+      },
+      "forced_sale": {
+        "events": 5865,
+        "denominator": 50000,
+        "percent": 11.73
+      },
+      "ever_cleared": {
+        "events": 35169,
+        "denominator": 50000,
+        "percent": 70.338
+      },
+      "ever_invested": {
+        "events": 31580,
+        "denominator": 50000,
+        "percent": 63.16
+      },
+      "months_below_one_expense": 3.6833600000000004,
+      "mean_final_wealth": 19376.08781912534,
+      "cleared_user_months": {
+        "events": 279370,
+        "denominator": 600000,
+        "percent": 46.56166666666667
+      },
+      "forced_sale_delta_pp_vs_revised": 9.362,
+      "forced_sale_delta_95ci": {
+        "lower95": 7.228275312250863,
+        "upper95": 11.293783687883344,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "liquidity_debt",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19981,
+        "denominator": 50000,
+        "percent": 39.962
+      },
+      "forced_sale": {
+        "events": 1757,
+        "denominator": 50000,
+        "percent": 3.514
+      },
+      "ever_cleared": {
+        "events": 26673,
+        "denominator": 50000,
+        "percent": 53.346
+      },
+      "ever_invested": {
+        "events": 23459,
+        "denominator": 50000,
+        "percent": 46.918
+      },
+      "months_below_one_expense": 3.6528,
+      "mean_final_wealth": 19453.46718706713,
+      "cleared_user_months": {
+        "events": 170013,
+        "denominator": 600000,
+        "percent": 28.3355
+      },
+      "forced_sale_delta_pp_vs_revised": 1.146,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.33119894016339146,
+        "upper95": 1.8806076069141475,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "liquidity_debt_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19980,
+        "denominator": 50000,
+        "percent": 39.96
+      },
+      "forced_sale": {
+        "events": 1184,
+        "denominator": 50000,
+        "percent": 2.368
+      },
+      "ever_cleared": {
+        "events": 23904,
+        "denominator": 50000,
+        "percent": 47.808
+      },
+      "ever_invested": {
+        "events": 19928,
+        "denominator": 50000,
+        "percent": 39.856
+      },
+      "months_below_one_expense": 3.6488,
+      "mean_final_wealth": 19466.538687347456,
+      "cleared_user_months": {
+        "events": 125317,
+        "denominator": 600000,
+        "percent": 20.886166666666668
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "full_minus_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19981,
+        "denominator": 50000,
+        "percent": 39.962
+      },
+      "forced_sale": {
+        "events": 1757,
+        "denominator": 50000,
+        "percent": 3.514
+      },
+      "ever_cleared": {
+        "events": 26673,
+        "denominator": 50000,
+        "percent": 53.346
+      },
+      "ever_invested": {
+        "events": 23459,
+        "denominator": 50000,
+        "percent": 46.918
+      },
+      "months_below_one_expense": 3.6528,
+      "mean_final_wealth": 19453.46718706713,
+      "cleared_user_months": {
+        "events": 170013,
+        "denominator": 600000,
+        "percent": 28.3355
+      },
+      "forced_sale_delta_pp_vs_revised": 1.146,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.33119894016339146,
+        "upper95": 1.8806076069141475,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "full_minus_score",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19980,
+        "denominator": 50000,
+        "percent": 39.96
+      },
+      "forced_sale": {
+        "events": 1184,
+        "denominator": 50000,
+        "percent": 2.368
+      },
+      "ever_cleared": {
+        "events": 23904,
+        "denominator": 50000,
+        "percent": 47.808
+      },
+      "ever_invested": {
+        "events": 19928,
+        "denominator": 50000,
+        "percent": 39.856
+      },
+      "months_below_one_expense": 3.6488,
+      "mean_final_wealth": 19466.538687347456,
+      "cleared_user_months": {
+        "events": 125317,
+        "denominator": 600000,
+        "percent": 20.886166666666668
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "matched_savings",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 19976,
+        "denominator": 50000,
+        "percent": 39.952
+      },
+      "forced_sale": {
+        "events": 674,
+        "denominator": 50000,
+        "percent": 1.348
+      },
+      "ever_cleared": {
+        "events": 19459,
+        "denominator": 50000,
+        "percent": 38.918
+      },
+      "ever_invested": {
+        "events": 18190,
+        "denominator": 50000,
+        "percent": 36.38
+      },
+      "months_below_one_expense": 3.64342,
+      "mean_final_wealth": 19465.42343217846,
+      "cleared_user_months": {
+        "events": 125317,
+        "denominator": 600000,
+        "percent": 20.886166666666668
+      },
+      "forced_sale_delta_pp_vs_revised": -1.0199999999999998,
+      "forced_sale_delta_95ci": {
+        "lower95": -1.7941370949966937,
+        "upper95": -0.3593890386343215,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "suitability_proxy",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 20022,
+        "denominator": 50000,
+        "percent": 40.044
+      },
+      "forced_sale": {
+        "events": 12943,
+        "denominator": 50000,
+        "percent": 25.886
+      },
+      "ever_cleared": {
+        "events": 41052,
+        "denominator": 50000,
+        "percent": 82.104
+      },
+      "ever_invested": {
+        "events": 41043,
+        "denominator": 50000,
+        "percent": 82.086
+      },
+      "months_below_one_expense": 3.7946599999999995,
+      "mean_final_wealth": 19301.480497012653,
+      "cleared_user_months": {
+        "events": 263921,
+        "denominator": 600000,
+        "percent": 43.98683333333334
+      },
+      "forced_sale_delta_pp_vs_revised": 23.518,
+      "forced_sale_delta_95ci": {
+        "lower95": 20.324486730095142,
+        "upper95": 25.783955545881067,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "always_invest",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 3785,
+        "denominator": 50000,
+        "percent": 7.57
+      },
+      "ever_cleared": {
+        "events": 50000,
+        "denominator": 50000,
+        "percent": 100.0
+      },
+      "ever_invested": {
+        "events": 32686,
+        "denominator": 50000,
+        "percent": 65.372
+      },
+      "months_below_one_expense": 3.03248,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 600000,
+        "denominator": 600000,
+        "percent": 100.0
+      },
+      "forced_sale_delta_pp_vs_revised": 6.438000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.411373903800159,
+        "upper95": 8.313198046736394,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "original_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 1697,
+        "denominator": 50000,
+        "percent": 3.394
+      },
+      "ever_cleared": {
+        "events": 37991,
+        "denominator": 50000,
+        "percent": 75.982
+      },
+      "ever_invested": {
+        "events": 26847,
+        "denominator": 50000,
+        "percent": 53.694
+      },
+      "months_below_one_expense": 3.02106,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 279519,
+        "denominator": 600000,
+        "percent": 46.5865
+      },
+      "forced_sale_delta_pp_vs_revised": 2.2620000000000005,
+      "forced_sale_delta_95ci": {
+        "lower95": 1.5147774430262713,
+        "upper95": 2.9138197046506504,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "revised_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 566,
+        "denominator": 50000,
+        "percent": 1.132
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21506,
+        "denominator": 50000,
+        "percent": 43.012
+      },
+      "months_below_one_expense": 3.0141999999999998,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 139572,
+        "denominator": 600000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "score_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 2255,
+        "denominator": 50000,
+        "percent": 4.51
+      },
+      "ever_cleared": {
+        "events": 39888,
+        "denominator": 50000,
+        "percent": 79.776
+      },
+      "ever_invested": {
+        "events": 30053,
+        "denominator": 50000,
+        "percent": 60.106
+      },
+      "months_below_one_expense": 3.02446,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 355923,
+        "denominator": 600000,
+        "percent": 59.3205
+      },
+      "forced_sale_delta_pp_vs_revised": 3.378,
+      "forced_sale_delta_95ci": {
+        "lower95": 2.35219046361696,
+        "upper95": 4.127874558572564,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "no_investing",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_cleared": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_invested": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "months_below_one_expense": 3.0102,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 0,
+        "denominator": 600000,
+        "percent": 0.0
+      },
+      "forced_sale_delta_pp_vs_revised": -1.132,
+      "forced_sale_delta_95ci": {
+        "lower95": -1.520828741459114,
+        "upper95": -0.7442713107241063,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "liquidity_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 3665,
+        "denominator": 50000,
+        "percent": 7.33
+      },
+      "ever_cleared": {
+        "events": 35892,
+        "denominator": 50000,
+        "percent": 71.784
+      },
+      "ever_invested": {
+        "events": 32446,
+        "denominator": 50000,
+        "percent": 64.892
+      },
+      "months_below_one_expense": 3.0314799999999997,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 308043,
+        "denominator": 600000,
+        "percent": 51.3405
+      },
+      "forced_sale_delta_pp_vs_revised": 6.198,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.2873593763840905,
+        "upper95": 7.975263166787759,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "liquidity_debt",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 894,
+        "denominator": 50000,
+        "percent": 1.788
+      },
+      "ever_cleared": {
+        "events": 28782,
+        "denominator": 50000,
+        "percent": 57.564
+      },
+      "ever_invested": {
+        "events": 25262,
+        "denominator": 50000,
+        "percent": 50.524
+      },
+      "months_below_one_expense": 3.01616,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 189497,
+        "denominator": 600000,
+        "percent": 31.582833333333333
+      },
+      "forced_sale_delta_pp_vs_revised": 0.6560000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.13247957606535682,
+        "upper95": 1.1878411030194482,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "liquidity_debt_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 566,
+        "denominator": 50000,
+        "percent": 1.132
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21506,
+        "denominator": 50000,
+        "percent": 43.012
+      },
+      "months_below_one_expense": 3.0141999999999998,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 139572,
+        "denominator": 600000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "full_minus_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 894,
+        "denominator": 50000,
+        "percent": 1.788
+      },
+      "ever_cleared": {
+        "events": 28782,
+        "denominator": 50000,
+        "percent": 57.564
+      },
+      "ever_invested": {
+        "events": 25262,
+        "denominator": 50000,
+        "percent": 50.524
+      },
+      "months_below_one_expense": 3.01616,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 189497,
+        "denominator": 600000,
+        "percent": 31.582833333333333
+      },
+      "forced_sale_delta_pp_vs_revised": 0.6560000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.13247957606535682,
+        "upper95": 1.1878411030194482,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "full_minus_score",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 566,
+        "denominator": 50000,
+        "percent": 1.132
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21506,
+        "denominator": 50000,
+        "percent": 43.012
+      },
+      "months_below_one_expense": 3.0141999999999998,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 139572,
+        "denominator": 600000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "matched_savings",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 349,
+        "denominator": 50000,
+        "percent": 0.698
+      },
+      "ever_cleared": {
+        "events": 21022,
+        "denominator": 50000,
+        "percent": 42.044
+      },
+      "ever_invested": {
+        "events": 19710,
+        "denominator": 50000,
+        "percent": 39.42
+      },
+      "months_below_one_expense": 3.0125,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 139572,
+        "denominator": 600000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": -0.43399999999999994,
+      "forced_sale_delta_95ci": {
+        "lower95": -0.8838439497465286,
+        "upper95": -0.06040637012630426,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "suitability_proxy",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 3665,
+        "denominator": 50000,
+        "percent": 7.33
+      },
+      "ever_cleared": {
+        "events": 41466,
+        "denominator": 50000,
+        "percent": 82.932
+      },
+      "ever_invested": {
+        "events": 32446,
+        "denominator": 50000,
+        "percent": 64.892
+      },
+      "months_below_one_expense": 3.0314799999999997,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 280028,
+        "denominator": 600000,
+        "percent": 46.67133333333334
+      },
+      "forced_sale_delta_pp_vs_revised": 6.198,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.2873593763840905,
+        "upper95": 7.975263166787759,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "always_invest",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 13052,
+        "denominator": 50000,
+        "percent": 26.104
+      },
+      "ever_cleared": {
+        "events": 50000,
+        "denominator": 50000,
+        "percent": 100.0
+      },
+      "ever_invested": {
+        "events": 45078,
+        "denominator": 50000,
+        "percent": 90.156
+      },
+      "months_below_one_expense": 3.2180799999999996,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 600000,
+        "denominator": 600000,
+        "percent": 100.0
+      },
+      "forced_sale_delta_pp_vs_revised": 24.951999999999998,
+      "forced_sale_delta_95ci": {
+        "lower95": 20.450194732325567,
+        "upper95": 27.86933274738153,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "original_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 3423,
+        "denominator": 50000,
+        "percent": 6.846
+      },
+      "ever_cleared": {
+        "events": 37991,
+        "denominator": 50000,
+        "percent": 75.982
+      },
+      "ever_invested": {
+        "events": 31700,
+        "denominator": 50000,
+        "percent": 63.4
+      },
+      "months_below_one_expense": 3.04746,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 277580,
+        "denominator": 600000,
+        "percent": 46.263333333333335
+      },
+      "forced_sale_delta_pp_vs_revised": 5.694,
+      "forced_sale_delta_95ci": {
+        "lower95": 3.913419175124345,
+        "upper95": 7.1060171919770765,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "revised_gate",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 576,
+        "denominator": 50000,
+        "percent": 1.152
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21508,
+        "denominator": 50000,
+        "percent": 43.016
+      },
+      "months_below_one_expense": 3.01554,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 139182,
+        "denominator": 600000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "score_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 4119,
+        "denominator": 50000,
+        "percent": 8.238
+      },
+      "ever_cleared": {
+        "events": 39888,
+        "denominator": 50000,
+        "percent": 79.776
+      },
+      "ever_invested": {
+        "events": 34973,
+        "denominator": 50000,
+        "percent": 69.946
+      },
+      "months_below_one_expense": 3.0545199999999997,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 353393,
+        "denominator": 600000,
+        "percent": 58.898833333333336
+      },
+      "forced_sale_delta_pp_vs_revised": 7.085999999999999,
+      "forced_sale_delta_95ci": {
+        "lower95": 5.027834620547011,
+        "upper95": 8.28389364974731,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "no_investing",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_cleared": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "ever_invested": {
+        "events": 0,
+        "denominator": 50000,
+        "percent": 0.0
+      },
+      "months_below_one_expense": 3.0102,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 0,
+        "denominator": 600000,
+        "percent": 0.0
+      },
+      "forced_sale_delta_pp_vs_revised": -1.152,
+      "forced_sale_delta_95ci": {
+        "lower95": -1.5428697377121445,
+        "upper95": -0.7626031164069661,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "liquidity_only",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 3698,
+        "denominator": 50000,
+        "percent": 7.396
+      },
+      "ever_cleared": {
+        "events": 35892,
+        "denominator": 50000,
+        "percent": 71.784
+      },
+      "ever_invested": {
+        "events": 32448,
+        "denominator": 50000,
+        "percent": 64.896
+      },
+      "months_below_one_expense": 3.03756,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 306257,
+        "denominator": 600000,
+        "percent": 51.042833333333334
+      },
+      "forced_sale_delta_pp_vs_revised": 6.244,
+      "forced_sale_delta_95ci": {
+        "lower95": 4.356010275489415,
+        "upper95": 8.005677305983138,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "liquidity_debt",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 912,
+        "denominator": 50000,
+        "percent": 1.824
+      },
+      "ever_cleared": {
+        "events": 28782,
+        "denominator": 50000,
+        "percent": 57.564
+      },
+      "ever_invested": {
+        "events": 25264,
+        "denominator": 50000,
+        "percent": 50.528
+      },
+      "months_below_one_expense": 3.01808,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 188871,
+        "denominator": 600000,
+        "percent": 31.4785
+      },
+      "forced_sale_delta_pp_vs_revised": 0.6720000000000002,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.15014351954073768,
+        "upper95": 1.1996688238176505,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "liquidity_debt_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 576,
+        "denominator": 50000,
+        "percent": 1.152
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21508,
+        "denominator": 50000,
+        "percent": 43.016
+      },
+      "months_below_one_expense": 3.01554,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 139182,
+        "denominator": 600000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "full_minus_volatility",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 912,
+        "denominator": 50000,
+        "percent": 1.824
+      },
+      "ever_cleared": {
+        "events": 28782,
+        "denominator": 50000,
+        "percent": 57.564
+      },
+      "ever_invested": {
+        "events": 25264,
+        "denominator": 50000,
+        "percent": 50.528
+      },
+      "months_below_one_expense": 3.01808,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 188871,
+        "denominator": 600000,
+        "percent": 31.4785
+      },
+      "forced_sale_delta_pp_vs_revised": 0.6720000000000002,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.15014351954073768,
+        "upper95": 1.1996688238176505,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "full_minus_score",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 576,
+        "denominator": 50000,
+        "percent": 1.152
+      },
+      "ever_cleared": {
+        "events": 25884,
+        "denominator": 50000,
+        "percent": 51.768
+      },
+      "ever_invested": {
+        "events": 21508,
+        "denominator": 50000,
+        "percent": 43.016
+      },
+      "months_below_one_expense": 3.01554,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 139182,
+        "denominator": 600000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": 0.0,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "matched_savings",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 349,
+        "denominator": 50000,
+        "percent": 0.698
+      },
+      "ever_cleared": {
+        "events": 20982,
+        "denominator": 50000,
+        "percent": 41.964
+      },
+      "ever_invested": {
+        "events": 19681,
+        "denominator": 50000,
+        "percent": 39.362
+      },
+      "months_below_one_expense": 3.0125,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 139182,
+        "denominator": 600000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": -0.45399999999999996,
+      "forced_sale_delta_95ci": {
+        "lower95": -0.905884945999559,
+        "upper95": -0.07786762503743634,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "suitability_proxy",
+      "unique_households": 50000,
+      "random_assignments": 1,
+      "event_trials": 50000,
+      "shortfall": {
+        "events": 15562,
+        "denominator": 50000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 9275,
+        "denominator": 50000,
+        "percent": 18.55
+      },
+      "ever_cleared": {
+        "events": 41466,
+        "denominator": 50000,
+        "percent": 82.932
+      },
+      "ever_invested": {
+        "events": 41457,
+        "denominator": 50000,
+        "percent": 82.914
+      },
+      "months_below_one_expense": 3.1352400000000005,
+      "mean_final_wealth": 52022.539574262504,
+      "cleared_user_months": {
+        "events": 277392,
+        "denominator": 600000,
+        "percent": 46.232
+      },
+      "forced_sale_delta_pp_vs_revised": 17.398,
+      "forced_sale_delta_95ci": {
+        "lower95": 13.912909542984133,
+        "upper95": 19.928512137690365,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "engine_budget",
+      "policy": "matched_random",
+      "unique_households": 50000,
+      "random_assignments": 5,
+      "event_trials": 250000,
+      "shortfall": {
+        "events": 77812,
+        "denominator": 250000,
+        "percent": 31.1248
+      },
+      "forced_sale": {
+        "events": 5315,
+        "denominator": 250000,
+        "percent": 2.126
+      },
+      "ever_cleared": {
+        "events": 239925,
+        "denominator": 250000,
+        "percent": 95.97
+      },
+      "ever_invested": {
+        "events": 115174,
+        "denominator": 250000,
+        "percent": 46.0696
+      },
+      "months_below_one_expense": 3.0144760000000006,
+      "mean_final_wealth": 52038.078817258414,
+      "cleared_user_months": {
+        "events": 697860,
+        "denominator": 3000000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": 0.994,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.6638323299186749,
+        "upper95": 1.2834947907146774,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "central",
+      "execution": "reserve_free",
+      "policy": "matched_random",
+      "unique_households": 50000,
+      "random_assignments": 5,
+      "event_trials": 250000,
+      "shortfall": {
+        "events": 77811,
+        "denominator": 250000,
+        "percent": 31.1244
+      },
+      "forced_sale": {
+        "events": 25528,
+        "denominator": 250000,
+        "percent": 10.2112
+      },
+      "ever_cleared": {
+        "events": 239810,
+        "denominator": 250000,
+        "percent": 95.924
+      },
+      "ever_invested": {
+        "events": 160605,
+        "denominator": 250000,
+        "percent": 64.242
+      },
+      "months_below_one_expense": 3.047104,
+      "mean_final_wealth": 52041.87474937195,
+      "cleared_user_months": {
+        "events": 695910,
+        "denominator": 3000000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": 9.0592,
+      "forced_sale_delta_95ci": {
+        "lower95": 8.223067173637515,
+        "upper95": 9.997803259962215,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "engine_budget",
+      "policy": "matched_random",
+      "unique_households": 50000,
+      "random_assignments": 5,
+      "event_trials": 250000,
+      "shortfall": {
+        "events": 77810,
+        "denominator": 250000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 5315,
+        "denominator": 250000,
+        "percent": 2.126
+      },
+      "ever_cleared": {
+        "events": 239925,
+        "denominator": 250000,
+        "percent": 95.97
+      },
+      "ever_invested": {
+        "events": 115174,
+        "denominator": 250000,
+        "percent": 46.0696
+      },
+      "months_below_one_expense": 3.0144760000000006,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 697860,
+        "denominator": 3000000,
+        "percent": 23.262
+      },
+      "forced_sale_delta_pp_vs_revised": 0.994,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.6638323299186749,
+        "upper95": 1.2834947907146774,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "neutral",
+      "execution": "reserve_free",
+      "policy": "matched_random",
+      "unique_households": 50000,
+      "random_assignments": 5,
+      "event_trials": 250000,
+      "shortfall": {
+        "events": 77810,
+        "denominator": 250000,
+        "percent": 31.124
+      },
+      "forced_sale": {
+        "events": 25528,
+        "denominator": 250000,
+        "percent": 10.2112
+      },
+      "ever_cleared": {
+        "events": 239810,
+        "denominator": 250000,
+        "percent": 95.924
+      },
+      "ever_invested": {
+        "events": 160605,
+        "denominator": 250000,
+        "percent": 64.242
+      },
+      "months_below_one_expense": 3.047092,
+      "mean_final_wealth": 52022.5395742625,
+      "cleared_user_months": {
+        "events": 695910,
+        "denominator": 3000000,
+        "percent": 23.197
+      },
+      "forced_sale_delta_pp_vs_revised": 9.0592,
+      "forced_sale_delta_95ci": {
+        "lower95": 8.223067173637515,
+        "upper95": 9.997803259962215,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "engine_budget",
+      "policy": "matched_random",
+      "unique_households": 50000,
+      "random_assignments": 5,
+      "event_trials": 250000,
+      "shortfall": {
+        "events": 99887,
+        "denominator": 250000,
+        "percent": 39.9548
+      },
+      "forced_sale": {
+        "events": 8992,
+        "denominator": 250000,
+        "percent": 3.5968
+      },
+      "ever_cleared": {
+        "events": 235468,
+        "denominator": 250000,
+        "percent": 94.1872
+      },
+      "ever_invested": {
+        "events": 104613,
+        "denominator": 250000,
+        "percent": 41.8452
+      },
+      "months_below_one_expense": 3.6458399999999997,
+      "mean_final_wealth": 19498.02943855109,
+      "cleared_user_months": {
+        "events": 629070,
+        "denominator": 3000000,
+        "percent": 20.969
+      },
+      "forced_sale_delta_pp_vs_revised": 1.2608000000000001,
+      "forced_sale_delta_95ci": {
+        "lower95": 0.756016780746302,
+        "upper95": 1.7011081162024557,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    },
+    {
+      "scenario": "stress",
+      "execution": "reserve_free",
+      "policy": "matched_random",
+      "unique_households": 50000,
+      "random_assignments": 5,
+      "event_trials": 250000,
+      "shortfall": {
+        "events": 99939,
+        "denominator": 250000,
+        "percent": 39.9756
+      },
+      "forced_sale": {
+        "events": 34781,
+        "denominator": 250000,
+        "percent": 13.9124
+      },
+      "ever_cleared": {
+        "events": 235254,
+        "denominator": 250000,
+        "percent": 94.1016
+      },
+      "ever_invested": {
+        "events": 151973,
+        "denominator": 250000,
+        "percent": 60.7892
+      },
+      "months_below_one_expense": 3.68102,
+      "mean_final_wealth": 19473.20530582568,
+      "cleared_user_months": {
+        "events": 626585,
+        "denominator": 3000000,
+        "percent": 20.886166666666668
+      },
+      "forced_sale_delta_pp_vs_revised": 11.5444,
+      "forced_sale_delta_95ci": {
+        "lower95": 10.674521454373586,
+        "upper95": 12.85024154589372,
+        "draws": 5000,
+        "clusters": 5,
+        "resampling_unit": "source_platform",
+        "seeds": [
+          11,
+          23,
+          37,
+          53,
+          71
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Five source-platform clusters only; CIs conditional on synthetic simulator assumptions.",
+    "No product lock-ins/minima/ranking, actual market backtest or real-world financial-safety validation.",
+    "All generated risk preferences are low; surplus and liquidity proxy are illustrative."
+  ]
+}

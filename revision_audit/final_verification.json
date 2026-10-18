@@ -1,0 +1,54 @@
+{
+  "baseline_unchanged": true,
+  "old_files_checked": 554,
+  "changed_existing_files": [
+    "prompts.md",
+    "README.md",
+    "data_audit/run.py",
+    "ml_service/modules/volatility.py",
+    "research_eval/evaluate_python.py",
+    "router_sim/simulate.py",
+    "router_sim/test_simulator.py",
+    "score_audit/run.py",
+    "server/tests/routerSafety.test.cjs",
+    "volatility_audit/run.py"
+  ],
+  "original_data_files_unchanged": 16,
+  "archived_files_unchanged": 315,
+  "paper_pdf_unchanged": true,
+  "count_derived_percentages_rechecked": 665,
+  "ablation_full_replay_exact": true,
+  "latex": {
+    "paper_table_updates.tex": {
+      "braces_balanced": true,
+      "tables": 7,
+      "booktabs": true,
+      "qualification": "Structural syntax check only; snippets are not standalone documents and were not TeX-rendered."
+    },
+    "ablation_table.tex": {
+      "braces_balanced": true,
+      "tables": 1,
+      "booktabs": true,
+      "qualification": "Structural syntax check only; snippets are not standalone documents and were not TeX-rendered."
+    }
+  },
+  "tests": {
+    "total": 142,
+    "passed": 138,
+    "failed": 4,
+    "errors": 0,
+    "skipped": 0
+  },
+  "known_consistency_failure": {
+    "status": "FAIL",
+    "reason": "No updated manuscript supplied; preserved RESULTS_FOR_PAPER.md quotes the older whole-system wealth difference. Generated snippets use the corrected current value.",
+    "table_VI_original_wealth": 52075.12115931623,
+    "table_VI_revised_wealth": 52052.45638158225,
+    "recomputed_revised_minus_original": -22.66477773398219,
+    "preserved_quoted_value": -21.218564925089595,
+    "preserved_text_matches": false,
+    "preserved_text_source": "RESULTS_FOR_PAPER.md: Router simulation central / final_net_wealth",
+    "generated_text_value": -22.66477773398219,
+    "generated_text_matches": true
+  }
+}

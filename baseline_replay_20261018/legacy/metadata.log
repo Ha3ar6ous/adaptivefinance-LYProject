@@ -1,0 +1,149 @@
+{
+  "evaluation_python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22631-SP0",
+  "node": "v22.18.0",
+  "commit": "db3fc1d56a8f38042a91e21ec6164ac8be0dfe40",
+  "income_dataset": {
+    "files": 16,
+    "rows": 1980,
+    "mean": 1165.077398989899,
+    "median": 1076.385,
+    "min": 0.0,
+    "max": 7324.78,
+    "canonical_platforms": [
+      "blinkit",
+      "snabbit",
+      "swiggy",
+      "uber",
+      "zomato"
+    ],
+    "unique_date_income_platform": 1361
+  },
+  "identical_income_series": [
+    [
+      "data\\volatility\\blinkit_with_volatility_label.csv",
+      "data\\normal\\blinkit_volatile.csv"
+    ],
+    [
+      "data\\volatility\\snabbit_with_volatility_label.csv",
+      "data\\normal\\snabbit_volatile.csv"
+    ],
+    [
+      "data\\volatility\\swiggy_with_volatility_label.csv",
+      "data\\normal\\swiggy_volatile.csv"
+    ],
+    [
+      "data\\volatility\\uber_with_volatility_label.csv",
+      "data\\normal\\uber_volatile.csv"
+    ],
+    [
+      "data\\volatility\\zomato_with_volatility_label.csv",
+      "data\\normal\\zomato_volatile.csv"
+    ]
+  ],
+  "paper_sha256": "8ea4f684df111d813f9ecb8679c9564f8e3adaf6e2052aedbc03e6ab3f8f47e9",
+  "server_installed_dependencies": {
+    "mongoose": "9.3.0",
+    "dotenv": "17.3.1",
+    "express": "5.2.1"
+  },
+  "majority_baselines": {
+    "all_common": {
+      "n": 455,
+      "accuracy": 0.7582417582417582,
+      "macro_precision": 0.25274725274725274,
+      "macro_recall": 0.3333333333333333,
+      "macro_f1": 0.2875,
+      "weighted_f1": 0.6539835164835165,
+      "cm": [
+        [
+          0,
+          0,
+          14
+        ],
+        [
+          0,
+          0,
+          96
+        ],
+        [
+          0,
+          0,
+          345
+        ]
+      ],
+      "per_class": {
+        "low": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "support": 14,
+          "predicted": 0
+        },
+        "medium": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "support": 96,
+          "predicted": 0
+        },
+        "high": {
+          "precision": 0.7582417582417582,
+          "recall": 1.0,
+          "f1": 0.8624999999999999,
+          "support": 345,
+          "predicted": 455
+        }
+      }
+    },
+    "chronological_test": {
+      "n": 300,
+      "accuracy": 0.7233333333333334,
+      "macro_precision": 0.24111111111111114,
+      "macro_recall": 0.3333333333333333,
+      "macro_f1": 0.27981947130883306,
+      "weighted_f1": 0.6072082527401677,
+      "cm": [
+        [
+          0,
+          0,
+          14
+        ],
+        [
+          0,
+          0,
+          69
+        ],
+        [
+          0,
+          0,
+          217
+        ]
+      ],
+      "per_class": {
+        "low": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "support": 14,
+          "predicted": 0
+        },
+        "medium": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "support": 69,
+          "predicted": 0
+        },
+        "high": {
+          "precision": 0.7233333333333334,
+          "recall": 1.0,
+          "f1": 0.8394584139264991,
+          "support": 217,
+          "predicted": 300
+        }
+      }
+    }
+  }
+}
+Fingerprint manifest written: 34 files

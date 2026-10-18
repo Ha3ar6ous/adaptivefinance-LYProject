@@ -1,0 +1,5 @@
+stage,method,n,eligible,allocations,minimum_violations,percentage_violations,hard_filter_violations,budget_violations,unused_mean
+before,proposed,1728,216,1080,312,120,0,0,2.185185185185185
+after,equal_weight,1728,216,540,0,0,0,0,0.0
+after,proposed,1728,216,792,0,0,0,0,0.0
+after,risk_only,1728,216,624,0,0,0,0,0.0

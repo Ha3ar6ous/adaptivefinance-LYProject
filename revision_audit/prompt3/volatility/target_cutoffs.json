@@ -1,0 +1,13 @@
+{
+  "cutoffs": [
+    0.531709662312071,
+    0.7739171644202268
+  ],
+  "fit_split": "train",
+  "n": 187,
+  "quantile_method": "linear",
+  "ties_at_cutoffs": [
+    1,
+    1
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "table_VI_wealth_vs_text": {
+    "status": "FAIL",
+    "reason": "No updated manuscript supplied; preserved RESULTS_FOR_PAPER.md quotes the older whole-system wealth difference. Generated snippets use the corrected current value.",
+    "table_VI_original_wealth": 52075.12115931623,
+    "table_VI_revised_wealth": 52052.45638158225,
+    "recomputed_revised_minus_original": -22.66477773398219,
+    "preserved_quoted_value": -21.218564925089595,
+    "preserved_text_matches": false,
+    "preserved_text_source": "RESULTS_FOR_PAPER.md: Router simulation central / final_net_wealth",
+    "generated_text_value": -22.66477773398219,
+    "generated_text_matches": true
+  },
+  "volatility_gain_inside_paired_ci": {
+    "status": "PASS",
+    "point_gain": 0.2789515478143144,
+    "lower95": 0.01340388007054677,
+    "upper95": 0.3380322580645161,
+    "recomputation": "Paired5000-draw whole-platform bootstrap was recomputed from saved target/prediction rows in revision_audit/evaluate.py; not adjusted to force inclusion."
+  },
+  "count_derived_percentages": {
+    "status": "PASS",
+    "count_derived_percentages_checked": 665,
+    "interval_fractions_independently_checked": 18,
+    "failures": [],
+    "configuration_note": "Nominal coverage, CI confidence and weight/intervention settings are configuration values. sMAPE averages relative errors, not a binary event count."
+  },
+  "test_suite_counts": {
+    "status": "PASS",
+    "values": {
+      "total": 142,
+      "passed": 138,
+      "failed": 4,
+      "errors": 0,
+      "skipped": 0
+    },
+    "all_tests_passed": false
+  }
+}

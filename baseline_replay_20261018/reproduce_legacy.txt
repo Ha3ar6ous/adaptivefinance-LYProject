@@ -1,0 +1,19 @@
+import os,sys,subprocess,json,time,runpy,importlib.util
+from pathlib import Path
+R=Path.cwd();O=R/'baseline_replay_20261018/legacy';O.mkdir(exist_ok=False)
+P=str(R/'forecast_audit/.venv/Scripts/python.exe');env=os.environ.copy();env.update(PYTHONUTF8='1',PYTHONDONTWRITEBYTECODE='1');commands=[]
+def call(name,args):
+ with (O/(name+'.log')).open('x',encoding='utf-8') as h:p=subprocess.run(args,cwd=R,env=env,stdout=h,stderr=subprocess.STDOUT)
+ commands.append(dict(name=name,command=args,exit_code=p.returncode));(O/'commands.json').write_text(json.dumps(commands,indent=2));print(name,p.returncode,flush=True)
+# Legacy runners lack --out. Only output write paths are redirected in memory.
+redirect="from pathlib import Path; import runpy; R=Path.cwd(); O=R/'baseline_replay_20261018/legacy'; orig=Path.write_text; Path.write_text=lambda self,*a,**k: orig(O/self.name,*a,**k) if self.parent in [R/'research_eval',R/'paper_audit'] else orig(self,*a,**k); "
+for name,file in [('research_python','research_eval/evaluate_python.py'),('coverage','research_eval/evaluate_coverage.py'),('historical_replay','paper_audit/replay_baseline.py'),('integration_fixtures','paper_audit/generate_integration_fixtures.py')]:
+ call(name,[P,'-c',redirect+f"runpy.run_path('{file}',run_name='__main__')"])
+code="import sys,importlib.util,json; from pathlib import Path; R=Path.cwd();sys.path.insert(0,str(R/'paper_audit'));import experiments as e; O=R/'baseline_replay_20261018/legacy';e.write=lambda n,v:(O/n).write_text(json.dumps(v,indent=2,allow_nan=False));e.load=lambda n:json.loads((O/n).read_text());e.select_forecast();e.select_volatility();e.test_forecast();e.test_volatility()"
+call('paper_experiments',[P,'-c',code])
+node="const fs=require('node:fs'),path=require('node:path'),Module=require('node:module');const file=path.resolve(process.argv[1]),dest=path.resolve('baseline_replay_20261018/legacy'),orig=fs.writeFileSync;fs.writeFileSync=function(p,...args){const dir=path.dirname(path.resolve(p));return orig.call(fs,dir===path.resolve('research_eval')||dir===path.resolve('paper_audit')?path.join(dest,path.basename(p)):p,...args)};const m=new Module(file);m.filename=file;m.paths=Module._nodeModulePaths(path.dirname(file));require.main=m;process.argv=[process.argv[0],file];m._compile(fs.readFileSync(file,'utf8'),file)"
+for name,file in [('research_node','research_eval/evaluate_node.cjs'),('router_cases','paper_audit/router_cases.cjs'),('original_node','eval_node.js')]:
+ call(name,['node','-e',node,file])
+call('original_python',[P,'eval_script.py'])
+# router_cases require.main check needs direct export invocation when compiled module is not main.
+call('router_export',['node','-e',"const fs=require('fs'),r=require('./paper_audit/router_cases.cjs'),old=require('./paper_audit/baseline/decisionRouterService'),now=require('./server/services/decisionRouterService');let x={policy:'paper_audit/PROTOCOL.md',splits:{}};for(const [name,rows] of [['boundary_grid',r.grid()],['invalid_inputs',r.invalidCases()],['combined',[...r.grid(),...r.invalidCases()]]])x.splits[name]={original:r.evaluate(old.buildDecisionRouter,rows),revised:r.evaluate(now.buildDecisionRouter,rows)};fs.writeFileSync('baseline_replay_20261018/legacy/router_results.json',JSON.stringify(x,null,2));console.log(JSON.stringify(Object.fromEntries(Object.entries(x.splits).map(([k,v])=>[k,{n:v.revised.n,fp:v.revised.fp,fn:v.revised.fn}]))))"])

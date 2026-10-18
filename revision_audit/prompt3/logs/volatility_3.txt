@@ -1,0 +1,2 @@
+TEST runtime: {'n': 247, 'macro_f1': 0.32435757244395846, 'high_recall': 0.72, 'balanced_accuracy': 0.4454794520547945, 'accuracy': 0.32793522267206476, 'high_support': 50, 'high_to_low': 0, 'high_to_medium': 14} selected: grid_cv30_0.45_0.75 {'n': 247, 'macro_f1': 0.6033091202582729, 'high_recall': 0.72, 'balanced_accuracy': 0.6216099572838415, 'accuracy': 0.6356275303643725, 'high_support': 50, 'high_to_low': 2, 'high_to_medium': 12}
+Wall seconds: 0.679092500002298

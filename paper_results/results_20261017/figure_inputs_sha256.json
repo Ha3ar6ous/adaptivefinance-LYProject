@@ -1,0 +1,12 @@
+{
+  "paper_results/results_20261017/tables/forecast_full_comparison.csv": "857b7015fde009c54db709f12ee4ef55245581d533d97cd4d4762be9a48f9824",
+  "paper_results/results_20261017/tables/data_all_forecasts.csv": "71326d0d38fced858560c25cd020ac488c7a49281322db9d4c432a5ba6c26a67",
+  "paper_results/results_20261017/tables/volatility_confusion.csv": "68c9b3c43a5c87791dc7d3fcb184e1b35cf66bbea380d6504e3b6358326d437e",
+  "paper_results/results_20261017/tables/router_grid.csv": "9482eb4ae66d8cf28b2e4bd2372a4eaefcdc7524a446245888cccc4e3c015a72",
+  "paper_results/results_20261017/tables/score_calibration.csv": "13416d6ebbe3e145420518cac7c4fff3ef90564735e1b192efd67507fe873739",
+  "paper_results/results_20261017/tables/score_models.csv": "08a4e1d74b627cd3288c76b9f7676e267910a8d026083e5308f79576901aeacb",
+  "paper_results/results_20261017/tables/engine_constraints.csv": "144ce96eb55a18671a0a27d82c3d695cdc41d16fe4fa19150d9b96b83a8bfd2c",
+  "paper_results/results_20261017/tables/llm_live.csv": "002ab27a6b33497367ec5ba14d499acff16e98cad0d798c7c1aa27ef446edc3f",
+  "engine_llm_audit/results_20261017/live_125.json": "d48a0db1901a07db167ce302c427e76aab5845899238fcd5f35e30c3402bb7e5",
+  "paper_results/plot.py": "8ce085c2623cc5fa8ee1d3767a2b039bd8bedf9f151cb6c68b35a2a670cdf4da"
+}
