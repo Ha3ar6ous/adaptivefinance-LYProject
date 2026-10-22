@@ -1,0 +1,13 @@
+=== DATASET STATISTICS ===
+Total Rows: 1980
+Number of Datasets: 16
+Number of Platforms: 10 ['Swiggy', 'Zomato', 'Blinkit', 'uber', 'Uber', 'swiggy', 'zomato', 'blinkit', 'Snabbit', 'snabbit']
+Income Min: 0.0, Max: 7324.78, Mean: 1165.08, Median: 1076.68
+
+=== FORECASTING EVALUATION ===
+Test Set: 15 days holdout
+Model MAE: 352.07, RMSE: 431.35
+Baseline (Hist Mean) MAE: 348.48, RMSE: 411.28
+
+=== VOLATILITY CLASSIFICATION ===
+Rule Consistency Accuracy: 35.60% (162/455)

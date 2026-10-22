@@ -1,0 +1,3525 @@
+{
+  "health": {
+    "matrix_n": 6480,
+    "score": {
+      "min": 7,
+      "max": 98,
+      "mean": 50.416666666666664
+    },
+    "phases": {
+      "survival": 2511,
+      "crisis": 1875,
+      "stability": 1686,
+      "growth": 408
+    },
+    "monotonicity": [
+      {
+        "factor": "liq",
+        "pairs": 5184,
+        "violations": 0,
+        "equalities": 1296,
+        "min_delta": 0,
+        "max_delta": 20
+      },
+      {
+        "factor": "debtRatio",
+        "pairs": 4860,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": -13,
+        "max_delta": -4
+      },
+      {
+        "factor": "vol",
+        "pairs": 3240,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": 6,
+        "max_delta": 6
+      },
+      {
+        "factor": "trend",
+        "pairs": 4320,
+        "violations": 0,
+        "equalities": 1440,
+        "min_delta": 0,
+        "max_delta": 8
+      },
+      {
+        "factor": "n",
+        "pairs": 4320,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": 2,
+        "max_delta": 4
+      },
+      {
+        "factor": "income",
+        "pairs": 2160,
+        "violations": 0,
+        "equalities": 2160,
+        "min_delta": 0,
+        "max_delta": 0
+      }
+    ],
+    "fixed_amount_expense": {
+      "pairs": 32,
+      "increases": 10,
+      "decreases": 9,
+      "equalities": 13,
+      "counterexamples": [
+        {
+          "balance": 0,
+          "debt": 10000,
+          "from": 10000,
+          "to": 20000,
+          "delta": 4
+        },
+        {
+          "balance": 0,
+          "debt": 10000,
+          "from": 20000,
+          "to": 40000,
+          "delta": 2
+        },
+        {
+          "balance": 0,
+          "debt": 60000,
+          "from": 20000,
+          "to": 40000,
+          "delta": 11
+        },
+        {
+          "balance": 0,
+          "debt": 100000,
+          "from": 20000,
+          "to": 40000,
+          "delta": 3
+        },
+        {
+          "balance": 10000,
+          "debt": 60000,
+          "from": 20000,
+          "to": 40000,
+          "delta": 9
+        },
+        {
+          "balance": 60000,
+          "debt": 10000,
+          "from": 10000,
+          "to": 20000,
+          "delta": 4
+        },
+        {
+          "balance": 120000,
+          "debt": 10000,
+          "from": 10000,
+          "to": 20000,
+          "delta": 4
+        },
+        {
+          "balance": 120000,
+          "debt": 10000,
+          "from": 20000,
+          "to": 40000,
+          "delta": 2
+        },
+        {
+          "balance": 120000,
+          "debt": 60000,
+          "from": 20000,
+          "to": 40000,
+          "delta": 11
+        },
+        {
+          "balance": 120000,
+          "debt": 100000,
+          "from": 20000,
+          "to": 40000,
+          "delta": 3
+        }
+      ]
+    },
+    "ablation": [
+      {
+        "component": "liquidity",
+        "multiplier": 0,
+        "weights": [
+          0,
+          0.35714285714285715,
+          0.28571428571428575,
+          0.2142857142857143,
+          0.14285714285714288
+        ],
+        "mean_abs_delta": 12.272685185185185,
+        "max_abs_delta": 29,
+        "phase_changes": 3663,
+        "score70_crossings": 1167,
+        "router_changes": 585
+      },
+      {
+        "component": "liquidity",
+        "multiplier": 0.8,
+        "weights": [
+          0.2553191489361702,
+          0.26595744680851063,
+          0.21276595744680854,
+          0.1595744680851064,
+          0.10638297872340427
+        ],
+        "mean_abs_delta": 1.8152777777777778,
+        "max_abs_delta": 4,
+        "phase_changes": 627,
+        "score70_crossings": 168,
+        "router_changes": 108
+      },
+      {
+        "component": "liquidity",
+        "multiplier": 1.2,
+        "weights": [
+          0.33962264150943394,
+          0.23584905660377356,
+          0.18867924528301888,
+          0.14150943396226415,
+          0.09433962264150944
+        ],
+        "mean_abs_delta": 1.6268518518518518,
+        "max_abs_delta": 4,
+        "phase_changes": 486,
+        "score70_crossings": 138,
+        "router_changes": 96
+      },
+      {
+        "component": "debtSafety",
+        "multiplier": 0,
+        "weights": [
+          0.39999999999999997,
+          0,
+          0.26666666666666666,
+          0.19999999999999998,
+          0.13333333333333333
+        ],
+        "mean_abs_delta": 9.748148148148148,
+        "max_abs_delta": 24,
+        "phase_changes": 2757,
+        "score70_crossings": 810,
+        "router_changes": 414
+      },
+      {
+        "component": "debtSafety",
+        "multiplier": 0.8,
+        "weights": [
+          0.3157894736842105,
+          0.2105263157894737,
+          0.2105263157894737,
+          0.15789473684210525,
+          0.10526315789473685
+        ],
+        "mean_abs_delta": 1.512037037037037,
+        "max_abs_delta": 4,
+        "phase_changes": 384,
+        "score70_crossings": 156,
+        "router_changes": 102
+      },
+      {
+        "component": "debtSafety",
+        "multiplier": 1.2,
+        "weights": [
+          0.2857142857142857,
+          0.2857142857142857,
+          0.19047619047619047,
+          0.14285714285714285,
+          0.09523809523809523
+        ],
+        "mean_abs_delta": 1.4152777777777779,
+        "max_abs_delta": 4,
+        "phase_changes": 486,
+        "score70_crossings": 96,
+        "router_changes": 78
+      },
+      {
+        "component": "incomeStability",
+        "multiplier": 0,
+        "weights": [
+          0.37499999999999994,
+          0.3125,
+          0,
+          0.18749999999999997,
+          0.125
+        ],
+        "mean_abs_delta": 5.247222222222222,
+        "max_abs_delta": 18,
+        "phase_changes": 1185,
+        "score70_crossings": 486,
+        "router_changes": 264
+      },
+      {
+        "component": "incomeStability",
+        "multiplier": 0.8,
+        "weights": [
+          0.31249999999999994,
+          0.26041666666666663,
+          0.16666666666666669,
+          0.15624999999999997,
+          0.10416666666666666
+        ],
+        "mean_abs_delta": 0.8907407407407407,
+        "max_abs_delta": 3,
+        "phase_changes": 315,
+        "score70_crossings": 84,
+        "router_changes": 42
+      },
+      {
+        "component": "incomeStability",
+        "multiplier": 1.2,
+        "weights": [
+          0.28846153846153844,
+          0.24038461538461536,
+          0.23076923076923075,
+          0.14423076923076922,
+          0.09615384615384616
+        ],
+        "mean_abs_delta": 0.7638888888888888,
+        "max_abs_delta": 3,
+        "phase_changes": 129,
+        "score70_crossings": 90,
+        "router_changes": 66
+      },
+      {
+        "component": "forecastTrend",
+        "multiplier": 0,
+        "weights": [
+          0.35294117647058826,
+          0.29411764705882354,
+          0.23529411764705885,
+          0,
+          0.11764705882352942
+        ],
+        "mean_abs_delta": 6.370833333333334,
+        "max_abs_delta": 15,
+        "phase_changes": 1827,
+        "score70_crossings": 594,
+        "router_changes": 396
+      },
+      {
+        "component": "forecastTrend",
+        "multiplier": 0.8,
+        "weights": [
+          0.30927835051546393,
+          0.2577319587628866,
+          0.2061855670103093,
+          0.12371134020618557,
+          0.10309278350515465
+        ],
+        "mean_abs_delta": 1.0773148148148148,
+        "max_abs_delta": 3,
+        "phase_changes": 273,
+        "score70_crossings": 108,
+        "router_changes": 78
+      },
+      {
+        "component": "forecastTrend",
+        "multiplier": 1.2,
+        "weights": [
+          0.2912621359223301,
+          0.24271844660194175,
+          0.1941747572815534,
+          0.17475728155339804,
+          0.0970873786407767
+        ],
+        "mean_abs_delta": 1.1157407407407407,
+        "max_abs_delta": 3,
+        "phase_changes": 324,
+        "score70_crossings": 132,
+        "router_changes": 114
+      },
+      {
+        "component": "dataConsistency",
+        "multiplier": 0,
+        "weights": [
+          0.3333333333333333,
+          0.2777777777777778,
+          0.22222222222222224,
+          0.16666666666666666,
+          0
+        ],
+        "mean_abs_delta": 2.8185185185185184,
+        "max_abs_delta": 9,
+        "phase_changes": 744,
+        "score70_crossings": 270,
+        "router_changes": 228
+      },
+      {
+        "component": "dataConsistency",
+        "multiplier": 0.8,
+        "weights": [
+          0.30612244897959184,
+          0.25510204081632654,
+          0.20408163265306123,
+          0.15306122448979592,
+          0.08163265306122451
+        ],
+        "mean_abs_delta": 0.5550925925925926,
+        "max_abs_delta": 2,
+        "phase_changes": 144,
+        "score70_crossings": 42,
+        "router_changes": 42
+      },
+      {
+        "component": "dataConsistency",
+        "multiplier": 1.2,
+        "weights": [
+          0.29411764705882354,
+          0.24509803921568626,
+          0.19607843137254902,
+          0.14705882352941177,
+          0.11764705882352941
+        ],
+        "mean_abs_delta": 0.4412037037037037,
+        "max_abs_delta": 2,
+        "phase_changes": 81,
+        "score70_crossings": 24,
+        "router_changes": 24
+      }
+    ],
+    "selected": [
+      {
+        "name": "stable",
+        "score": 91,
+        "phase": "growth",
+        "factors": {
+          "liquidity": {
+            "value": 100,
+            "detail": "5.0 months expense cover"
+          },
+          "debtSafety": {
+            "value": 100,
+            "detail": "0.0x monthly expenses in debt"
+          },
+          "incomeStability": {
+            "value": 90,
+            "detail": "low volatility"
+          },
+          "forecastTrend": {
+            "value": 50,
+            "detail": "100% of recent average"
+          },
+          "dataConsistency": {
+            "value": 100,
+            "detail": "30 entries, 30 active recent days"
+          }
+        }
+      },
+      {
+        "name": "zero_income",
+        "score": 79,
+        "phase": "stability",
+        "factors": {
+          "liquidity": {
+            "value": 100,
+            "detail": "5.0 months expense cover"
+          },
+          "debtSafety": {
+            "value": 100,
+            "detail": "0.0x monthly expenses in debt"
+          },
+          "incomeStability": {
+            "value": 90,
+            "detail": "low volatility"
+          },
+          "forecastTrend": {
+            "value": 0,
+            "detail": "0% of recent average"
+          },
+          "dataConsistency": {
+            "value": 60,
+            "detail": "30 entries, 0 active recent days"
+          }
+        }
+      },
+      {
+        "name": "zero_income_no_forecast",
+        "score": 79,
+        "phase": "stability",
+        "factors": {
+          "liquidity": {
+            "value": 100,
+            "detail": "5.0 months expense cover"
+          },
+          "debtSafety": {
+            "value": 100,
+            "detail": "0.0x monthly expenses in debt"
+          },
+          "incomeStability": {
+            "value": 90,
+            "detail": "low volatility"
+          },
+          "forecastTrend": {
+            "value": 0,
+            "detail": "0% of recent average"
+          },
+          "dataConsistency": {
+            "value": 60,
+            "detail": "30 entries, 0 active recent days"
+          }
+        }
+      },
+      {
+        "name": "high_debt",
+        "score": 60,
+        "phase": "stability",
+        "factors": {
+          "liquidity": {
+            "value": 100,
+            "detail": "5.0 months expense cover"
+          },
+          "debtSafety": {
+            "value": 0,
+            "detail": "5.0x monthly expenses in debt"
+          },
+          "incomeStability": {
+            "value": 60,
+            "detail": "medium volatility"
+          },
+          "forecastTrend": {
+            "value": 50,
+            "detail": "100% of recent average"
+          },
+          "dataConsistency": {
+            "value": 100,
+            "detail": "30 entries, 30 active recent days"
+          }
+        }
+      },
+      {
+        "name": "vulnerable",
+        "score": 29,
+        "phase": "crisis",
+        "factors": {
+          "liquidity": {
+            "value": 16.666666666666664,
+            "detail": "0.5 months expense cover"
+          },
+          "debtSafety": {
+            "value": 0,
+            "detail": "3.0x monthly expenses in debt"
+          },
+          "incomeStability": {
+            "value": 30,
+            "detail": "high volatility"
+          },
+          "forecastTrend": {
+            "value": 50,
+            "detail": "100% of recent average"
+          },
+          "dataConsistency": {
+            "value": 100,
+            "detail": "30 entries, 30 active recent days"
+          }
+        }
+      }
+    ]
+  },
+  "router": {
+    "n": 1792,
+    "allowed": 324,
+    "implemented": {
+      "passed": 1792,
+      "failed": 0,
+      "false_allow": 0,
+      "false_block": 0
+    },
+    "conservative": {
+      "passed": 1549,
+      "failed": 243,
+      "false_allow": 243,
+      "false_block": 0
+    },
+    "unknown_allowed": 108,
+    "boundaries": [
+      {
+        "liq": 0.99,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 1,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 1.01,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 2.99,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 3,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 3.01,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.49,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.5,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.51,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 1.99,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 2,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 2.01,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 69,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 70,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 71,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      }
+    ],
+    "rule_coverage": {
+      "liq_below": 448,
+      "debt_above": 448,
+      "high_vol": 448,
+      "low_health": 1024,
+      "all_clear": 324
+    },
+    "ml_outage": {
+      "score": 74,
+      "phase": "stability",
+      "volatility": "unknown",
+      "allowed": true,
+      "recommended": 5,
+      "investable": 2500
+    }
+  },
+  "investment": {
+    "dataset": {
+      "n": 37,
+      "risk": {
+        "low": 31,
+        "medium": 5,
+        "high": 1
+      },
+      "volatility_safe": 23
+    },
+    "representatives": [
+      {
+        "name": "safe_low",
+        "config": {},
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 100000,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "volatility": "low",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 1,
+            "remaining": 34,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 34,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 34,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 34,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": true,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "blockedReason": "",
+          "suggestions": [
+            {
+              "optionId": "option_23",
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "type": "Mutual Fund - Ultra Short",
+              "score": 95,
+              "allocationAmount": 504,
+              "allocationPct": 20,
+              "expectedReturnPct": 7,
+              "returnNote": "~7.0% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 6231,
+                "median": 6282,
+                "high": 6334,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_22",
+              "name": "HDFC / SBI Liquid Fund",
+              "type": "Mutual Fund - Liquid",
+              "score": 94,
+              "allocationAmount": 498,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None (T+1)",
+              "projection": {
+                "low": 6150,
+                "median": 6201,
+                "high": 6252,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_24",
+              "name": "Edelweiss CRISIL-IBX AAA Bond Index Fund (Jun 2027)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 498,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.9,
+              "returnNote": "~6.9% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2027",
+              "projection": {
+                "low": 6154,
+                "median": 6204,
+                "high": 6255,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_25",
+              "name": "Aditya Birla SL CRISIL-IBX AAA NBFC-HFC Index Fund (Sep 2026)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 498,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.9,
+              "returnNote": "~6.9% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2026",
+              "projection": {
+                "low": 6154,
+                "median": 6204,
+                "high": 6255,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_31",
+              "name": "Nippon India CRISIL IBX AAA Financial Services (Dec 2026)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 498,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2026",
+              "projection": {
+                "low": 6150,
+                "median": 6201,
+                "high": 6252,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          ],
+          "generatedAt": "2026-10-07T21:07:38.327Z"
+        }
+      },
+      {
+        "name": "safe_medium",
+        "config": {
+          "risk": "medium"
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 100000,
+          "investableAmount": 2500,
+          "riskProfile": "medium",
+          "volatility": "low",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 35,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": true,
+          "investableAmount": 2500,
+          "riskProfile": "medium",
+          "blockedReason": "",
+          "suggestions": [
+            {
+              "optionId": "option_32",
+              "name": "Digital Gold (Groww / Paytm)",
+              "type": "Commodity - Digital Gold",
+              "score": 92,
+              "allocationAmount": 532,
+              "allocationPct": 21,
+              "expectedReturnPct": null,
+              "returnNote": "Gold price linked",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": null,
+                "median": null,
+                "high": null,
+                "note": "Gold price linked"
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_29",
+              "name": "Corporate Bond Mutual Fund (High Quality)",
+              "type": "Mutual Fund - Debt",
+              "score": 89,
+              "allocationAmount": 515,
+              "allocationPct": 21,
+              "expectedReturnPct": 7.5,
+              "returnNote": "~7.5% p.a.",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 6298,
+                "median": 6437,
+                "high": 6579,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity"
+              ]
+            },
+            {
+              "optionId": "option_33",
+              "name": "Nippon India Gold BeES ETF",
+              "type": "Gold ETF",
+              "score": 89,
+              "allocationAmount": 515,
+              "allocationPct": 21,
+              "expectedReturnPct": null,
+              "returnNote": "Gold price linked",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": null,
+                "median": null,
+                "high": null,
+                "note": "Gold price linked"
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_22",
+              "name": "HDFC / SBI Liquid Fund",
+              "type": "Mutual Fund - Liquid",
+              "score": 81,
+              "allocationAmount": 468,
+              "allocationPct": 19,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None (T+1)",
+              "projection": {
+                "low": 5780,
+                "median": 5827,
+                "high": 5875,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_23",
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "type": "Mutual Fund - Ultra Short",
+              "score": 81,
+              "allocationAmount": 468,
+              "allocationPct": 19,
+              "expectedReturnPct": 7,
+              "returnNote": "~7.0% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 5786,
+                "median": 5834,
+                "high": 5881,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          ],
+          "generatedAt": "2026-10-07T21:07:38.328Z"
+        }
+      },
+      {
+        "name": "safe_high",
+        "config": {
+          "risk": "high"
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 100000,
+          "investableAmount": 2500,
+          "riskProfile": "high",
+          "volatility": "low",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 35,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": true,
+          "investableAmount": 2500,
+          "riskProfile": "high",
+          "blockedReason": "",
+          "suggestions": [
+            {
+              "optionId": "option_32",
+              "name": "Digital Gold (Groww / Paytm)",
+              "type": "Commodity - Digital Gold",
+              "score": 79,
+              "allocationAmount": 528,
+              "allocationPct": 21,
+              "expectedReturnPct": null,
+              "returnNote": "Gold price linked",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": null,
+                "median": null,
+                "high": null,
+                "note": "Gold price linked"
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_29",
+              "name": "Corporate Bond Mutual Fund (High Quality)",
+              "type": "Mutual Fund - Debt",
+              "score": 76,
+              "allocationAmount": 508,
+              "allocationPct": 20,
+              "expectedReturnPct": 7.5,
+              "returnNote": "~7.5% p.a.",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 6213,
+                "median": 6349,
+                "high": 6489,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity"
+              ]
+            },
+            {
+              "optionId": "option_33",
+              "name": "Nippon India Gold BeES ETF",
+              "type": "Gold ETF",
+              "score": 76,
+              "allocationAmount": 508,
+              "allocationPct": 20,
+              "expectedReturnPct": null,
+              "returnNote": "Gold price linked",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": null,
+                "median": null,
+                "high": null,
+                "note": "Gold price linked"
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_37",
+              "name": "Nifty 50 ETF (SBI / Nippon India)",
+              "type": "ETF - Equity Index",
+              "score": 75,
+              "allocationAmount": 501,
+              "allocationPct": 20,
+              "expectedReturnPct": 12,
+              "returnNote": "~12-15% p.a. (long-term historical)",
+              "riskLevel": "high",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 6177,
+                "median": 6417,
+                "high": 6668,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "matches risk level",
+                "high liquidity"
+              ]
+            },
+            {
+              "optionId": "option_23",
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "type": "Mutual Fund - Ultra Short",
+              "score": 68,
+              "allocationAmount": 454,
+              "allocationPct": 18,
+              "expectedReturnPct": 7,
+              "returnNote": "~7.0% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 5613,
+                "median": 5659,
+                "high": 5705,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          ],
+          "generatedAt": "2026-10-07T21:07:38.329Z"
+        }
+      },
+      {
+        "name": "medium_vol_low_risk",
+        "config": {
+          "vol": "medium"
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 100000,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "volatility": "medium",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 1,
+            "remaining": 34,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 4,
+            "remaining": 30,
+            "independent_removed": 5
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 30,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 30,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": true,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "blockedReason": "",
+          "suggestions": [
+            {
+              "optionId": "option_23",
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "type": "Mutual Fund - Ultra Short",
+              "score": 95,
+              "allocationAmount": 504,
+              "allocationPct": 20,
+              "expectedReturnPct": 7,
+              "returnNote": "~7.0% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 6231,
+                "median": 6282,
+                "high": 6334,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_22",
+              "name": "HDFC / SBI Liquid Fund",
+              "type": "Mutual Fund - Liquid",
+              "score": 94,
+              "allocationAmount": 498,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None (T+1)",
+              "projection": {
+                "low": 6150,
+                "median": 6201,
+                "high": 6252,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_24",
+              "name": "Edelweiss CRISIL-IBX AAA Bond Index Fund (Jun 2027)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 498,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.9,
+              "returnNote": "~6.9% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2027",
+              "projection": {
+                "low": 6154,
+                "median": 6204,
+                "high": 6255,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_25",
+              "name": "Aditya Birla SL CRISIL-IBX AAA NBFC-HFC Index Fund (Sep 2026)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 498,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.9,
+              "returnNote": "~6.9% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2026",
+              "projection": {
+                "low": 6154,
+                "median": 6204,
+                "high": 6255,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_31",
+              "name": "Nippon India CRISIL IBX AAA Financial Services (Dec 2026)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 498,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2026",
+              "projection": {
+                "low": 6150,
+                "median": 6201,
+                "high": 6252,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          ],
+          "generatedAt": "2026-10-07T21:07:38.330Z"
+        }
+      },
+      {
+        "name": "high_vol_gated",
+        "config": {
+          "vol": "high"
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 100000,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "volatility": "high",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 1,
+            "remaining": 34,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 4,
+            "remaining": 30,
+            "independent_removed": 5
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 10,
+            "remaining": 20,
+            "independent_removed": 14
+          }
+        ],
+        "survivors": 20,
+        "router_allowed": false,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": false,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "blockedReason": "Blocked by high income volatility.",
+          "suggestions": [],
+          "generatedAt": "2026-10-07T21:07:38.330Z"
+        }
+      },
+      {
+        "name": "high_vol_filter_isolation",
+        "config": {
+          "vol": "high",
+          "risk": "medium"
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 100000,
+          "investableAmount": 2500,
+          "riskProfile": "medium",
+          "volatility": "high",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 12,
+            "remaining": 23,
+            "independent_removed": 14
+          }
+        ],
+        "survivors": 23,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": true,
+          "investableAmount": 2500,
+          "riskProfile": "medium",
+          "blockedReason": "",
+          "suggestions": [
+            {
+              "optionId": "option_32",
+              "name": "Digital Gold (Groww / Paytm)",
+              "type": "Commodity - Digital Gold",
+              "score": 92,
+              "allocationAmount": 532,
+              "allocationPct": 21,
+              "expectedReturnPct": null,
+              "returnNote": "Gold price linked",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": null,
+                "median": null,
+                "high": null,
+                "note": "Gold price linked"
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_29",
+              "name": "Corporate Bond Mutual Fund (High Quality)",
+              "type": "Mutual Fund - Debt",
+              "score": 89,
+              "allocationAmount": 515,
+              "allocationPct": 21,
+              "expectedReturnPct": 7.5,
+              "returnNote": "~7.5% p.a.",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 6298,
+                "median": 6437,
+                "high": 6579,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity"
+              ]
+            },
+            {
+              "optionId": "option_33",
+              "name": "Nippon India Gold BeES ETF",
+              "type": "Gold ETF",
+              "score": 89,
+              "allocationAmount": 515,
+              "allocationPct": 21,
+              "expectedReturnPct": null,
+              "returnNote": "Gold price linked",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": null,
+                "median": null,
+                "high": null,
+                "note": "Gold price linked"
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_22",
+              "name": "HDFC / SBI Liquid Fund",
+              "type": "Mutual Fund - Liquid",
+              "score": 81,
+              "allocationAmount": 468,
+              "allocationPct": 19,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None (T+1)",
+              "projection": {
+                "low": 5780,
+                "median": 5827,
+                "high": 5875,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_23",
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "type": "Mutual Fund - Ultra Short",
+              "score": 81,
+              "allocationAmount": 468,
+              "allocationPct": 19,
+              "expectedReturnPct": 7,
+              "returnNote": "~7.0% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 5786,
+                "median": 5834,
+                "high": 5881,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          ],
+          "generatedAt": "2026-10-07T21:07:38.330Z"
+        }
+      },
+      {
+        "name": "reserve_only",
+        "config": {
+          "balance": 60000
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 60000,
+          "investableAmount": 0,
+          "riskProfile": "low",
+          "volatility": "low",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 36,
+            "remaining": 1,
+            "independent_removed": 36
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 0,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 0,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": false,
+          "investableAmount": 0,
+          "riskProfile": "low",
+          "blockedReason": "Score, liquidity, debt, and volatility allow low-risk investing.",
+          "suggestions": [],
+          "generatedAt": "2026-10-07T21:07:38.331Z"
+        }
+      },
+      {
+        "name": "small_budget",
+        "config": {
+          "balance": 61000
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 61000,
+          "investableAmount": 100,
+          "riskProfile": "low",
+          "volatility": "low",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 23,
+            "remaining": 14,
+            "independent_removed": 23
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 13,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 13,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 13,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 1,
+            "remaining": 12,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 12,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 12,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 12,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": true,
+          "investableAmount": 100,
+          "riskProfile": "low",
+          "blockedReason": "",
+          "suggestions": [
+            {
+              "optionId": "option_23",
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "type": "Mutual Fund - Ultra Short",
+              "score": 95,
+              "allocationAmount": 20,
+              "allocationPct": 20,
+              "expectedReturnPct": 7,
+              "returnNote": "~7.0% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 247,
+                "median": 249,
+                "high": 251,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_22",
+              "name": "HDFC / SBI Liquid Fund",
+              "type": "Mutual Fund - Liquid",
+              "score": 94,
+              "allocationAmount": 19,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None (T+1)",
+              "projection": {
+                "low": 235,
+                "median": 237,
+                "high": 239,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_24",
+              "name": "Edelweiss CRISIL-IBX AAA Bond Index Fund (Jun 2027)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 19,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.9,
+              "returnNote": "~6.9% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2027",
+              "projection": {
+                "low": 235,
+                "median": 237,
+                "high": 239,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_25",
+              "name": "Aditya Birla SL CRISIL-IBX AAA NBFC-HFC Index Fund (Sep 2026)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 19,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.9,
+              "returnNote": "~6.9% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2026",
+              "projection": {
+                "low": 235,
+                "median": 237,
+                "high": 239,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_31",
+              "name": "Nippon India CRISIL IBX AAA Financial Services (Dec 2026)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 94,
+              "allocationAmount": 19,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2026",
+              "projection": {
+                "low": 235,
+                "median": 237,
+                "high": 239,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          ],
+          "generatedAt": "2026-10-07T21:07:38.331Z"
+        }
+      },
+      {
+        "name": "high_debt",
+        "config": {
+          "debt": 100000
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 100000,
+          "savings": 100000,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "volatility": "low",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 4,
+            "remaining": 31,
+            "independent_removed": 5
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 31,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 0,
+            "remaining": 31,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 31,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 31,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 31,
+        "router_allowed": false,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": false,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "blockedReason": "Blocked by debt above 2 months of expenses.",
+          "suggestions": [],
+          "generatedAt": "2026-10-07T21:07:38.331Z"
+        }
+      },
+      {
+        "name": "no_surplus",
+        "config": {
+          "income": 500
+        },
+        "inputs": {
+          "monthlyIncome": 15000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 100000,
+          "investableAmount": 0,
+          "riskProfile": "low",
+          "volatility": "low",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 36,
+            "remaining": 1,
+            "independent_removed": 36
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 0,
+            "independent_removed": 3
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 0,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 0,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": false,
+          "investableAmount": 0,
+          "riskProfile": "low",
+          "blockedReason": "Score, liquidity, debt, and volatility allow low-risk investing.",
+          "suggestions": [],
+          "generatedAt": "2026-10-07T21:07:38.331Z"
+        }
+      },
+      {
+        "name": "affluent",
+        "config": {
+          "income": 3000,
+          "balance": 200000,
+          "risk": "medium"
+        },
+        "inputs": {
+          "monthlyIncome": 90000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 200000,
+          "investableAmount": 14000,
+          "riskProfile": "medium",
+          "volatility": "low",
+          "forecastRatio": 1
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 0,
+            "remaining": 37,
+            "independent_removed": 0
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 36,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 0,
+            "remaining": 36,
+            "independent_removed": 0
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 36,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 36,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 36,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": true,
+          "investableAmount": 14000,
+          "riskProfile": "medium",
+          "blockedReason": "",
+          "suggestions": [
+            {
+              "optionId": "option_32",
+              "name": "Digital Gold (Groww / Paytm)",
+              "type": "Commodity - Digital Gold",
+              "score": 92,
+              "allocationAmount": 2981,
+              "allocationPct": 21,
+              "expectedReturnPct": null,
+              "returnNote": "Gold price linked",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": null,
+                "median": null,
+                "high": null,
+                "note": "Gold price linked"
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_29",
+              "name": "Corporate Bond Mutual Fund (High Quality)",
+              "type": "Mutual Fund - Debt",
+              "score": 89,
+              "allocationAmount": 2884,
+              "allocationPct": 21,
+              "expectedReturnPct": 7.5,
+              "returnNote": "~7.5% p.a.",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 35271,
+                "median": 36047,
+                "high": 36841,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity"
+              ]
+            },
+            {
+              "optionId": "option_33",
+              "name": "Nippon India Gold BeES ETF",
+              "type": "Gold ETF",
+              "score": 89,
+              "allocationAmount": 2884,
+              "allocationPct": 21,
+              "expectedReturnPct": null,
+              "returnNote": "Gold price linked",
+              "riskLevel": "medium",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": null,
+                "median": null,
+                "high": null,
+                "note": "Gold price linked"
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_22",
+              "name": "HDFC / SBI Liquid Fund",
+              "type": "Mutual Fund - Liquid",
+              "score": 81,
+              "allocationAmount": 2625,
+              "allocationPct": 19,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None (T+1)",
+              "projection": {
+                "low": 32419,
+                "median": 32685,
+                "high": 32953,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            },
+            {
+              "optionId": "option_23",
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "type": "Mutual Fund - Ultra Short",
+              "score": 81,
+              "allocationAmount": 2625,
+              "allocationPct": 19,
+              "expectedReturnPct": 7,
+              "returnNote": "~7.0% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 32454,
+                "median": 32720,
+                "high": 32989,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          ],
+          "generatedAt": "2026-10-07T21:07:38.332Z"
+        }
+      },
+      {
+        "name": "falling_forecast",
+        "config": {
+          "trend": 0.85
+        },
+        "inputs": {
+          "monthlyIncome": 30000,
+          "monthlyExpenses": 20000,
+          "debt": 0,
+          "savings": 100000,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "volatility": "low",
+          "forecastRatio": 0.85
+        },
+        "filters": [
+          {
+            "name": "amount",
+            "removed": 1,
+            "remaining": 36,
+            "independent_removed": 1
+          },
+          {
+            "name": "income",
+            "removed": 1,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "debt",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 0
+          },
+          {
+            "name": "savings",
+            "removed": 0,
+            "remaining": 35,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk",
+            "removed": 1,
+            "remaining": 34,
+            "independent_removed": 1
+          },
+          {
+            "name": "risk_volatility",
+            "removed": 0,
+            "remaining": 34,
+            "independent_removed": 0
+          },
+          {
+            "name": "volatility_safe",
+            "removed": 0,
+            "remaining": 34,
+            "independent_removed": 0
+          }
+        ],
+        "survivors": 34,
+        "router_allowed": true,
+        "result": {
+          "userId": "research-fixture",
+          "eligible": true,
+          "investableAmount": 2500,
+          "riskProfile": "low",
+          "blockedReason": "",
+          "suggestions": [
+            {
+              "optionId": "option_22",
+              "name": "HDFC / SBI Liquid Fund",
+              "type": "Mutual Fund - Liquid",
+              "score": 97,
+              "allocationAmount": 500,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None (T+1)",
+              "projection": {
+                "low": 6175,
+                "median": 6226,
+                "high": 6277,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly",
+                "liquidity prioritized due forecast"
+              ]
+            },
+            {
+              "optionId": "option_23",
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "type": "Mutual Fund - Ultra Short",
+              "score": 97,
+              "allocationAmount": 500,
+              "allocationPct": 20,
+              "expectedReturnPct": 7,
+              "returnNote": "~7.0% p.a. (indicative)",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "None",
+              "projection": {
+                "low": 6182,
+                "median": 6232,
+                "high": 6284,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly",
+                "liquidity prioritized due forecast"
+              ]
+            },
+            {
+              "optionId": "option_24",
+              "name": "Edelweiss CRISIL-IBX AAA Bond Index Fund (Jun 2027)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 97,
+              "allocationAmount": 500,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.9,
+              "returnNote": "~6.9% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2027",
+              "projection": {
+                "low": 6178,
+                "median": 6229,
+                "high": 6280,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly",
+                "liquidity prioritized due forecast"
+              ]
+            },
+            {
+              "optionId": "option_25",
+              "name": "Aditya Birla SL CRISIL-IBX AAA NBFC-HFC Index Fund (Sep 2026)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 97,
+              "allocationAmount": 500,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.9,
+              "returnNote": "~6.9% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2026",
+              "projection": {
+                "low": 6178,
+                "median": 6229,
+                "high": 6280,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly",
+                "liquidity prioritized due forecast"
+              ]
+            },
+            {
+              "optionId": "option_31",
+              "name": "Nippon India CRISIL IBX AAA Financial Services (Dec 2026)",
+              "type": "Mutual Fund - Target Maturity",
+              "score": 97,
+              "allocationAmount": 500,
+              "allocationPct": 20,
+              "expectedReturnPct": 6.8,
+              "returnNote": "~6.8% p.a.",
+              "riskLevel": "low",
+              "liquidity": "High",
+              "lockInPeriod": "Maturity 2026",
+              "projection": {
+                "low": 6175,
+                "median": 6226,
+                "high": 6277,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly",
+                "liquidity prioritized due forecast"
+              ]
+            }
+          ],
+          "generatedAt": "2026-10-07T21:07:38.333Z"
+        }
+      }
+    ],
+    "grid": {
+      "n": 1728,
+      "eligible": 324,
+      "blocked": 1404,
+      "allocations": 1620,
+      "violations": {
+        "budget": 0,
+        "negative": 0,
+        "minimum_allocated": 468,
+        "hard_filter": 0,
+        "top5": 0,
+        "router_bypass": 0,
+        "pct_sum_not100": 180
+      },
+      "unused": {
+        "min": 0,
+        "max": 4,
+        "mean": 2.185185185185185
+      },
+      "recommended_distribution": {
+        "0": 1404,
+        "5": 324
+      }
+    },
+    "stability": [
+      {
+        "name": "repeat",
+        "ids": [
+          "option_23",
+          "option_22",
+          "option_24",
+          "option_25",
+          "option_31"
+        ],
+        "jaccard": 1,
+        "same_order": true,
+        "common_pairs": 10,
+        "inversions": 0
+      },
+      {
+        "name": "income_minus5pct",
+        "ids": [
+          "option_23",
+          "option_22",
+          "option_24",
+          "option_25",
+          "option_31"
+        ],
+        "jaccard": 1,
+        "same_order": true,
+        "common_pairs": 10,
+        "inversions": 0
+      },
+      {
+        "name": "income_plus5pct",
+        "ids": [
+          "option_23",
+          "option_22",
+          "option_24",
+          "option_25",
+          "option_31"
+        ],
+        "jaccard": 1,
+        "same_order": true,
+        "common_pairs": 10,
+        "inversions": 0
+      },
+      {
+        "name": "balance_minus5pct",
+        "ids": [
+          "option_23",
+          "option_22",
+          "option_24",
+          "option_25",
+          "option_31"
+        ],
+        "jaccard": 1,
+        "same_order": true,
+        "common_pairs": 10,
+        "inversions": 0
+      },
+      {
+        "name": "balance_plus5pct",
+        "ids": [
+          "option_23",
+          "option_22",
+          "option_24",
+          "option_25",
+          "option_31"
+        ],
+        "jaccard": 1,
+        "same_order": true,
+        "common_pairs": 10,
+        "inversions": 0
+      },
+      {
+        "name": "forecast_drop",
+        "ids": [
+          "option_22",
+          "option_23",
+          "option_24",
+          "option_25",
+          "option_31"
+        ],
+        "jaccard": 1,
+        "same_order": false,
+        "common_pairs": 10,
+        "inversions": 1
+      },
+      {
+        "name": "medium_risk",
+        "ids": [
+          "option_32",
+          "option_29",
+          "option_33",
+          "option_22",
+          "option_23"
+        ],
+        "jaccard": 0.25,
+        "same_order": false,
+        "common_pairs": 1,
+        "inversions": 1
+      },
+      {
+        "name": "high_risk",
+        "ids": [
+          "option_32",
+          "option_29",
+          "option_33",
+          "option_37",
+          "option_23"
+        ],
+        "jaccard": 0.1111111111111111,
+        "same_order": false,
+        "common_pairs": 0,
+        "inversions": 0
+      }
+    ]
+  },
+  "llm": {
+    "controlled": [
+      {
+        "name": "valid",
+        "status": "ready",
+        "local_ms": 0.3509,
+        "healthInsight": "If we can improve your forecast trend and income stability, it will give you a lot more breathing room. Focusing here will help much more than chasing high returns right now.",
+        "investmentInsight": "Good news! ICICI Pru Ultra Short Term Fund is a great match for you right now: Rs 504 monthly, with High liquidity.",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 91, you're currently in the growth phase. Your main focus area should be forecast trend, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 504 into ICICI Pru Ultra Short Term Fund."
+        },
+        "error": "",
+        "snapshot_unchanged": true
+      },
+      {
+        "name": "transport_failure",
+        "status": "fallback",
+        "local_ms": 0.1928,
+        "healthInsight": "If we can improve your forecast trend and income stability, it will give you a lot more breathing room. Focusing here will help much more than chasing high returns right now.",
+        "investmentInsight": "Good news! ICICI Pru Ultra Short Term Fund is a great match for you right now: Rs 504 monthly, with High liquidity.",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 91, you're currently in the growth phase. Your main focus area should be forecast trend, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 504 into ICICI Pru Ultra Short Term Fund."
+        },
+        "error": "controlled transport failure",
+        "snapshot_unchanged": true
+      },
+      {
+        "name": "schema_failure",
+        "status": "fallback",
+        "local_ms": 0.1651,
+        "healthInsight": "If we can improve your forecast trend and income stability, it will give you a lot more breathing room. Focusing here will help much more than chasing high returns right now.",
+        "investmentInsight": "Good news! ICICI Pru Ultra Short Term Fund is a great match for you right now: Rs 504 monthly, with High liquidity.",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 91, you're currently in the growth phase. Your main focus area should be forecast trend, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 504 into ICICI Pru Ultra Short Term Fund."
+        },
+        "error": "Missing overview fields",
+        "snapshot_unchanged": true
+      },
+      {
+        "name": "forced_fallback",
+        "status": "fallback",
+        "local_ms": 0.0789,
+        "healthInsight": "If we can improve your forecast trend and income stability, it will give you a lot more breathing room. Focusing here will help much more than chasing high returns right now.",
+        "investmentInsight": "Good news! ICICI Pru Ultra Short Term Fund is a great match for you right now: Rs 504 monthly, with High liquidity.",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 91, you're currently in the growth phase. Your main focus area should be forecast trend, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 504 into ICICI Pru Ultra Short Term Fund."
+        },
+        "error": "Forced fallback",
+        "snapshot_unchanged": true
+      },
+      {
+        "name": "invented_numbers",
+        "status": "ready",
+        "local_ms": 0.0469,
+        "healthInsight": "Your score is 999 and you can invest Rs 999999.",
+        "investmentInsight": "Buy ImaginaryProduct for Rs 999999 monthly.",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 91, you're currently in the growth phase. Your main focus area should be forecast trend, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 504 into ICICI Pru Ultra Short Term Fund."
+        },
+        "error": "",
+        "snapshot_unchanged": true
+      },
+      {
+        "name": "wrong_overview_types",
+        "status": "ready",
+        "local_ms": 0.042,
+        "healthInsight": "If we can improve your forecast trend and income stability, it will give you a lot more breathing room. Focusing here will help much more than chasing high returns right now.",
+        "investmentInsight": "Good news! ICICI Pru Ultra Short Term Fund is a great match for you right now: Rs 504 monthly, with High liquidity.",
+        "overview": {
+          "headline": "123",
+          "summary": "[object Object]",
+          "nextAction": "buy"
+        },
+        "error": "",
+        "snapshot_unchanged": true
+      },
+      {
+        "name": "missing_optional_fields",
+        "status": "ready",
+        "local_ms": 0.0344,
+        "healthInsight": "If we can improve your forecast trend and income stability, it will give you a lot more breathing room. Focusing here will help much more than chasing high returns right now.",
+        "investmentInsight": "Good news! ICICI Pru Ultra Short Term Fund is a great match for you right now: Rs 504 monthly, with High liquidity.",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 91, you're currently in the growth phase. Your main focus area should be forecast trend, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 504 into ICICI Pru Ultra Short Term Fund."
+        },
+        "error": "",
+        "snapshot_unchanged": true
+      }
+    ],
+    "fallback_snapshots": [
+      {
+        "name": "safe",
+        "snapshot": {
+          "health": {
+            "score": 91,
+            "phase": "growth",
+            "weakFactors": [
+              {
+                "key": "forecastTrend",
+                "score": 50,
+                "detail": "100% of recent average"
+              },
+              {
+                "key": "incomeStability",
+                "score": 90,
+                "detail": "low volatility"
+              }
+            ]
+          },
+          "router": {
+            "summary": "Investing can begin conservatively.",
+            "actions": [
+              {
+                "label": "Build emergency fund",
+                "allowed": false,
+                "reason": "Emergency fund is in a workable range."
+              },
+              {
+                "label": "Pay down debt",
+                "allowed": false,
+                "reason": "Debt load is manageable."
+              },
+              {
+                "label": "Start conservative investing",
+                "allowed": true,
+                "reason": "Score, liquidity, debt, and volatility allow low-risk investing."
+              }
+            ]
+          },
+          "forecast": {
+            "horizon": 15,
+            "total": 15000,
+            "average": 1000,
+            "method": "synthetic_control",
+            "note": ""
+          },
+          "volatility": {
+            "label": "low",
+            "cv": 0.1
+          },
+          "investment": {
+            "eligible": true,
+            "investableAmount": 2500,
+            "blockedReason": "",
+            "topSuggestion": {
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "allocationAmount": 504,
+              "riskLevel": "low",
+              "liquidity": "High",
+              "projection": {
+                "low": 6231,
+                "median": 6282,
+                "high": 6334,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          },
+          "userContext": {
+            "balanceBucket": "3+ months of expenses",
+            "monthlyExpenses": 20000,
+            "debt": 0,
+            "riskPreference": "low"
+          }
+        },
+        "direction": "steady",
+        "status": "fallback",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 91, you're currently in the growth phase. Your main focus area should be forecast trend, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 504 into ICICI Pru Ultra Short Term Fund."
+        },
+        "forecastInsight": "Based on recent trends, your 15-day forecast looks to be around Rs 15,000, which is steady. It's a good idea to use this projection to plan your upcoming expenses safely.",
+        "decisionInsight": "Right now, it's safer to pause on build emergency fund because emergency fund is in a workable range..",
+        "investmentInsight": "Good news! ICICI Pru Ultra Short Term Fund is a great match for you right now: Rs 504 monthly, with High liquidity."
+      },
+      {
+        "name": "high_vol",
+        "snapshot": {
+          "health": {
+            "score": 79,
+            "phase": "stability",
+            "weakFactors": [
+              {
+                "key": "incomeStability",
+                "score": 30,
+                "detail": "high volatility"
+              },
+              {
+                "key": "forecastTrend",
+                "score": 50,
+                "detail": "100% of recent average"
+              }
+            ]
+          },
+          "router": {
+            "summary": "Focus on safety actions before investing.",
+            "actions": [
+              {
+                "label": "Build emergency fund",
+                "allowed": false,
+                "reason": "Emergency fund is in a workable range."
+              },
+              {
+                "label": "Pay down debt",
+                "allowed": false,
+                "reason": "Debt load is manageable."
+              },
+              {
+                "label": "Start conservative investing",
+                "allowed": false,
+                "reason": "Blocked by high income volatility."
+              }
+            ]
+          },
+          "forecast": {
+            "horizon": 15,
+            "total": 15000,
+            "average": 1000,
+            "method": "synthetic_control",
+            "note": ""
+          },
+          "volatility": {
+            "label": "high",
+            "cv": 0.8
+          },
+          "investment": {
+            "eligible": false,
+            "investableAmount": 2500,
+            "blockedReason": "Blocked by high income volatility.",
+            "topSuggestion": null
+          },
+          "userContext": {
+            "balanceBucket": "3+ months of expenses",
+            "monthlyExpenses": 20000,
+            "debt": 0,
+            "riskPreference": "low"
+          }
+        },
+        "direction": "steady",
+        "status": "fallback",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 79, you're currently in the stability phase. Your main focus area should be income stability, especially since your income volatility is high. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Emergency fund is in a workable range."
+        },
+        "forecastInsight": "Based on recent trends, your 15-day forecast looks to be around Rs 15,000, which is steady. It's a good idea to use this projection to plan your upcoming expenses safely.",
+        "decisionInsight": "Right now, it's safer to pause on build emergency fund because emergency fund is in a workable range..",
+        "investmentInsight": "Blocked by high income volatility."
+      },
+      {
+        "name": "declining",
+        "snapshot": {
+          "health": {
+            "score": 83,
+            "phase": "growth",
+            "weakFactors": [
+              {
+                "key": "forecastTrend",
+                "score": 0,
+                "detail": "50% of recent average"
+              },
+              {
+                "key": "incomeStability",
+                "score": 90,
+                "detail": "low volatility"
+              }
+            ]
+          },
+          "router": {
+            "summary": "Investing can begin conservatively.",
+            "actions": [
+              {
+                "label": "Build emergency fund",
+                "allowed": false,
+                "reason": "Emergency fund is in a workable range."
+              },
+              {
+                "label": "Pay down debt",
+                "allowed": false,
+                "reason": "Debt load is manageable."
+              },
+              {
+                "label": "Start conservative investing",
+                "allowed": true,
+                "reason": "Score, liquidity, debt, and volatility allow low-risk investing."
+              }
+            ]
+          },
+          "forecast": {
+            "horizon": 15,
+            "total": 7500,
+            "average": 500,
+            "method": "synthetic_control",
+            "note": ""
+          },
+          "volatility": {
+            "label": "low",
+            "cv": 0.1
+          },
+          "investment": {
+            "eligible": true,
+            "investableAmount": 2500,
+            "blockedReason": "",
+            "topSuggestion": {
+              "name": "HDFC / SBI Liquid Fund",
+              "allocationAmount": 500,
+              "riskLevel": "low",
+              "liquidity": "High",
+              "projection": {
+                "low": 6175,
+                "median": 6226,
+                "high": 6277,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly",
+                "liquidity prioritized due forecast"
+              ]
+            }
+          },
+          "userContext": {
+            "balanceBucket": "3+ months of expenses",
+            "monthlyExpenses": 20000,
+            "debt": 0,
+            "riskPreference": "low"
+          }
+        },
+        "direction": "steady",
+        "status": "fallback",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 83, you're currently in the growth phase. Your main focus area should be forecast trend, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 500 into HDFC / SBI Liquid Fund."
+        },
+        "forecastInsight": "Based on recent trends, your 15-day forecast looks to be around Rs 7,500, which is steady. It's a good idea to use this projection to plan your upcoming expenses safely.",
+        "decisionInsight": "Right now, it's safer to pause on build emergency fund because emergency fund is in a workable range..",
+        "investmentInsight": "Good news! HDFC / SBI Liquid Fund is a great match for you right now: Rs 500 monthly, with High liquidity."
+      },
+      {
+        "name": "rising",
+        "snapshot": {
+          "health": {
+            "score": 98,
+            "phase": "growth",
+            "weakFactors": [
+              {
+                "key": "incomeStability",
+                "score": 90,
+                "detail": "low volatility"
+              },
+              {
+                "key": "liquidity",
+                "score": 100,
+                "detail": "5.0 months expense cover"
+              }
+            ]
+          },
+          "router": {
+            "summary": "Investing can begin conservatively.",
+            "actions": [
+              {
+                "label": "Build emergency fund",
+                "allowed": false,
+                "reason": "Emergency fund is in a workable range."
+              },
+              {
+                "label": "Pay down debt",
+                "allowed": false,
+                "reason": "Debt load is manageable."
+              },
+              {
+                "label": "Start conservative investing",
+                "allowed": true,
+                "reason": "Score, liquidity, debt, and volatility allow low-risk investing."
+              }
+            ]
+          },
+          "forecast": {
+            "horizon": 15,
+            "total": 22500,
+            "average": 1500,
+            "method": "synthetic_control",
+            "note": ""
+          },
+          "volatility": {
+            "label": "low",
+            "cv": 0.1
+          },
+          "investment": {
+            "eligible": true,
+            "investableAmount": 2500,
+            "blockedReason": "",
+            "topSuggestion": {
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "allocationAmount": 504,
+              "riskLevel": "low",
+              "liquidity": "High",
+              "projection": {
+                "low": 6231,
+                "median": 6282,
+                "high": 6334,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          },
+          "userContext": {
+            "balanceBucket": "3+ months of expenses",
+            "monthlyExpenses": 20000,
+            "debt": 0,
+            "riskPreference": "low"
+          }
+        },
+        "direction": "steady",
+        "status": "fallback",
+        "overview": {
+          "headline": "You are doing great! Your money plan is looking solid.",
+          "summary": "With a score of 98, you're currently in the growth phase. Your main focus area should be income stability, especially since your income volatility is low. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Since things are looking stable, a great first step is putting Rs 504 into ICICI Pru Ultra Short Term Fund."
+        },
+        "forecastInsight": "Based on recent trends, your 15-day forecast looks to be around Rs 22,500, which is steady. It's a good idea to use this projection to plan your upcoming expenses safely.",
+        "decisionInsight": "Right now, it's safer to pause on build emergency fund because emergency fund is in a workable range..",
+        "investmentInsight": "Good news! ICICI Pru Ultra Short Term Fund is a great match for you right now: Rs 504 monthly, with High liquidity."
+      },
+      {
+        "name": "crisis",
+        "snapshot": {
+          "health": {
+            "score": 24,
+            "phase": "crisis",
+            "weakFactors": [
+              {
+                "key": "liquidity",
+                "score": 0,
+                "detail": "0.0 months expense cover"
+              },
+              {
+                "key": "debtSafety",
+                "score": 0,
+                "detail": "5.0x monthly expenses in debt"
+              }
+            ]
+          },
+          "router": {
+            "summary": "Focus on safety actions before investing.",
+            "actions": [
+              {
+                "label": "Build emergency fund",
+                "allowed": true,
+                "reason": "Keep saving until you cover 3 months of expenses. Current cover is 0.0 months."
+              },
+              {
+                "label": "Pay down debt",
+                "allowed": true,
+                "reason": "Debt is 5.0x monthly expenses, so reduce it before taking risk."
+              },
+              {
+                "label": "Start conservative investing",
+                "allowed": false,
+                "reason": "Blocked by emergency fund below 1 month, debt above 2 months of expenses, high income volatility."
+              }
+            ]
+          },
+          "forecast": {
+            "horizon": 15,
+            "total": 15000,
+            "average": 1000,
+            "method": "synthetic_control",
+            "note": ""
+          },
+          "volatility": {
+            "label": "high",
+            "cv": 0.8
+          },
+          "investment": {
+            "eligible": false,
+            "investableAmount": 0,
+            "blockedReason": "Blocked by emergency fund below 1 month, debt above 2 months of expenses, high income volatility.",
+            "topSuggestion": null
+          },
+          "userContext": {
+            "balanceBucket": "below 1 month of expenses",
+            "monthlyExpenses": 20000,
+            "debt": 100000,
+            "riskPreference": "low"
+          }
+        },
+        "direction": "steady",
+        "status": "fallback",
+        "overview": {
+          "headline": "Let's focus on protecting your cash flow right now.",
+          "summary": "With a score of 24, you're currently in the crisis phase. Your main focus area should be cash buffer, especially since your income volatility is high. Don't worry, we'll take it one step at a time!",
+          "nextAction": "Blocked by emergency fund below 1 month, debt above 2 months of expenses, high income volatility."
+        },
+        "forecastInsight": "Based on recent trends, your 15-day forecast looks to be around Rs 15,000, which is steady. It's a good idea to use this projection to plan your upcoming expenses safely.",
+        "decisionInsight": "Right now, it's safer to pause on start conservative investing because blocked by emergency fund below 1 month, debt above 2 months of expenses, high income volatility..",
+        "investmentInsight": "Blocked by emergency fund below 1 month, debt above 2 months of expenses, high income volatility."
+      }
+    ],
+    "transport": [
+      {
+        "mode": "valid_json",
+        "success": true,
+        "ms": 0.4219
+      },
+      {
+        "mode": "fenced_json",
+        "success": true,
+        "ms": 0.1008
+      },
+      {
+        "mode": "malformed",
+        "success": false,
+        "error": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+        "ms": 0.1737
+      },
+      {
+        "mode": "missing_json",
+        "success": false,
+        "error": "Groq response did not contain JSON",
+        "ms": 0.1682
+      },
+      {
+        "mode": "http_429",
+        "success": false,
+        "error": "Groq failed with status 429",
+        "ms": 0.1771
+      },
+      {
+        "mode": "timeout",
+        "success": false,
+        "error": "Controlled timeout",
+        "ms": 35.6817
+      }
+    ],
+    "live": [
+      {
+        "cfg": {},
+        "snapshot": {
+          "health": {
+            "score": 91,
+            "phase": "growth",
+            "weakFactors": [
+              {
+                "key": "forecastTrend",
+                "score": 50,
+                "detail": "100% of recent average"
+              },
+              {
+                "key": "incomeStability",
+                "score": 90,
+                "detail": "low volatility"
+              }
+            ]
+          },
+          "router": {
+            "summary": "Investing can begin conservatively.",
+            "actions": [
+              {
+                "label": "Build emergency fund",
+                "allowed": false,
+                "reason": "Emergency fund is in a workable range."
+              },
+              {
+                "label": "Pay down debt",
+                "allowed": false,
+                "reason": "Debt load is manageable."
+              },
+              {
+                "label": "Start conservative investing",
+                "allowed": true,
+                "reason": "Score, liquidity, debt, and volatility allow low-risk investing."
+              }
+            ]
+          },
+          "forecast": {
+            "horizon": 15,
+            "total": 15000,
+            "average": 1000,
+            "method": "synthetic_control",
+            "note": ""
+          },
+          "volatility": {
+            "label": "low",
+            "cv": 0.1
+          },
+          "investment": {
+            "eligible": true,
+            "investableAmount": 2500,
+            "blockedReason": "",
+            "topSuggestion": {
+              "name": "ICICI Pru Ultra Short Term Fund",
+              "allocationAmount": 504,
+              "riskLevel": "low",
+              "liquidity": "High",
+              "projection": {
+                "low": 6231,
+                "median": 6282,
+                "high": 6334,
+                "note": "12-month monthly-investment range."
+              },
+              "reasonTags": [
+                "safe for volatile income",
+                "matches risk level",
+                "high liquidity",
+                "gig-worker friendly"
+              ]
+            }
+          },
+          "userContext": {
+            "balanceBucket": "3+ months of expenses",
+            "monthlyExpenses": 20000,
+            "debt": 0,
+            "riskPreference": "low"
+          }
+        },
+        "api_success": true,
+        "schema_success": false,
+        "fallback": true,
+        "latency_ms": 1167.1993,
+        "raw": {
+          "overview": "Your financial health is strong, with a score of 91 and a clear path toward growth. You have no debt and enough savings to cover three months of expenses, which is a fantastic foundation. This stability allows you to start thinking about growing your money safely.",
+          "healthInsight": "Your income is steady with low volatility, meaning you can predict your cash flow well. This consistency is your superpower, giving you the confidence to plan for the future without worrying about sudden income drops.",
+          "forecastInsight": "Over the next 15 months, you are projected to earn around 15,000, averaging 1,000 per month. This steady drip of income is perfect for building a small, consistent investment habit without straining your daily budget.",
+          "decisionInsight": "Since your emergency fund is solid and you have no debt, you are ready to start conservative investing. You don't need to rush, but starting now helps your money work for you while you focus on your gig work.",
+          "investmentInsight": "You can invest 2,500 safely, with a suggested allocation of 504 to a low-risk, high-liquidity fund. This option is designed for gig workers, ensuring you can access your money quickly if needed while keeping it safe.",
+          "reasons": "Your low risk preference and stable income make low-risk investing the right fit. The suggested fund offers high liquidity, so you won't be locked in if an urgent expense pops up.",
+          "actionPlan": "Start by setting up a small monthly investment of 504 in the suggested fund. Keep your main savings untouched for emergencies, and just let this small amount grow steadily over time.",
+          "watchOut": "Even with low volatility, keep an eye on your monthly expenses to ensure they stay within your 20,000 limit. Avoid increasing debt, as your current zero-debt status is a major asset to protect.",
+          "tone": "Warm, encouraging, and supportive"
+        },
+        "error": "Missing overview fields"
+      }
+    ],
+    "live_configuration": {
+      "key_configured": true,
+      "model": "qwen/qwen3.8-27b",
+      "timeout_ms": 12000,
+      "temperature": 0.2
+    }
+  },
+  "tests": [
+    {
+      "name": "health bounded over full matrix",
+      "passed": true
+    },
+    {
+      "name": "health monotonic liquidity debt volatility forecast history",
+      "passed": true
+    },
+    {
+      "name": "health insufficient history",
+      "passed": true
+    },
+    {
+      "name": "score income-sensitive with all other factors fixed",
+      "passed": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(health.calculateHealthScore(fixture({income:1500})).score>health.calculateHealthScore(fixture({income:500})).score)\n"
+    },
+    {
+      "name": "zero earnings should not pass investment gate",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "router exact implemented truth table",
+      "passed": true
+    },
+    {
+      "name": "router conservative 3 month and 0.5 debt safety requirement",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n243 !== 0\n"
+    },
+    {
+      "name": "router blocks unknown volatility",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "router ML outage fails closed",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "investment total allocation within budget",
+      "passed": true
+    },
+    {
+      "name": "investment respects all hard filters",
+      "passed": true
+    },
+    {
+      "name": "investment respects router block",
+      "passed": true
+    },
+    {
+      "name": "investment no negative allocation and at most five",
+      "passed": true
+    },
+    {
+      "name": "investment allocated product minimums satisfied",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n468 !== 0\n"
+    },
+    {
+      "name": "investment displayed percentages sum to 100",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n180 !== 0\n"
+    },
+    {
+      "name": "ranking deterministic repeat",
+      "passed": true
+    },
+    {
+      "name": "LLM rejects missing required fields",
+      "passed": true
+    },
+    {
+      "name": "LLM fallback on controlled schema transport forced errors",
+      "passed": true
+    },
+    {
+      "name": "LLM numerical invention rejected",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ready'\n- 'fallback'\n"
+    },
+    {
+      "name": "LLM wrong overview types rejected",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ready'\n- 'fallback'\n"
+    },
+    {
+      "name": "snapshot remains unchanged through LLM validation",
+      "passed": true
+    },
+    {
+      "name": "fallback detects falling and rising forecasts",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'steady'\n- 'softening'\n"
+    },
+    {
+      "name": "Groq malformed missing HTTP timeout paths reject",
+      "passed": true
+    },
+    {
+      "name": "Groq JSON and fenced JSON parse",
+      "passed": true
+    }
+  ],
+  "performance": {
+    "health_router_investment": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.34827859999999977,
+      "std_ms": 0.14702203821890106,
+      "median_ms": 0.31215000000000004,
+      "p95_ms": 0.6131,
+      "min_ms": 0.2132,
+      "max_ms": 1.5264
+    },
+    "health_router": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.0271134,
+      "std_ms": 0.013137406153423134,
+      "median_ms": 0.0247,
+      "p95_ms": 0.0361,
+      "min_ms": 0.0236,
+      "max_ms": 0.274
+    },
+    "investment_only": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.27960660000000004,
+      "std_ms": 0.10074813415860365,
+      "median_ms": 0.24225000000000002,
+      "p95_ms": 0.4892,
+      "min_ms": 0.1855,
+      "max_ms": 1.0928
+    },
+    "fixture_only": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.02804480000000001,
+      "std_ms": 0.015633764516583968,
+      "median_ms": 0.024149999999999998,
+      "p95_ms": 0.049,
+      "min_ms": 0.022,
+      "max_ms": 0.1833
+    },
+    "fallback": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.004604799999999971,
+      "std_ms": 0.0016584742868070036,
+      "median_ms": 0.0044,
+      "p95_ms": 0.005,
+      "min_ms": 0.0042,
+      "max_ms": 0.0372
+    }
+  },
+  "test_summary": {
+    "total": 24,
+    "passed": 14,
+    "failed": 10
+  }
+}

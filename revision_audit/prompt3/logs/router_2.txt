@@ -1,0 +1,16 @@
+Heldout 101 central
+Heldout 101 neutral
+Heldout 101 stress
+Heldout 211 central
+Heldout 211 neutral
+Heldout 211 stress
+Heldout 307 central
+Heldout 307 neutral
+Heldout 307 stress
+Heldout 401 central
+Heldout 401 neutral
+Heldout 401 stress
+Heldout 503 central
+Heldout 503 neutral
+Heldout 503 stress
+Wall seconds: 5.5330974999960745

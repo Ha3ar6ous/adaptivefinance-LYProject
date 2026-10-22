@@ -1,0 +1,12 @@
+ stage       method    n  eligible  allocations  minimum_violations  percentage_violations  hard_filter_violations  budget_violations  unused_mean
+before     proposed 1728       216         1080                 312                    120                       0                  0     2.185185
+ after equal_weight 1728       216          540                   0                      0                       0                  0     0.000000
+ after     proposed 1728       216          792                   0                      0                       0                  0     0.000000
+ after    risk_only 1728       216          624                   0                      0                       0                  0     0.000000
+seed   n  api_success  strict_schema_pass  raw_facts_faithful  accepted  fallback  timeout  latency_mean_ms  latency_p95_ms  successful_api_latency_mean_ms
+ all 125          108                 108                 108       108        17        0       389.617240       602.05448                      445.322103
+  11  25           25                  25                  25        25         0        0       429.933684       530.05204                      429.933684
+  23  25           25                  25                  25        25         0        0       466.738888       644.34422                      466.738888
+  37  25           22                  22                  22        22         3        0       388.117880       580.20746                      437.149905
+  53  25           19                  19                  19        19         6        0       365.354932       559.61976                      462.657874
+  71  25           17                  17                  17        17         8        0       297.940816       527.73056                      427.657371

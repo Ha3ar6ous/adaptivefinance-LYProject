@@ -1,0 +1,33 @@
+{
+  "server/services/decisionRouterService.js": {
+    "snapshot": "paper_audit\\baseline\\decisionRouterService.js",
+    "sha256": "cb7be007451894813f800ca31a4bafa65474d3b7db23c49ee6c751b9041e6f0e"
+  },
+  "ml_service/modules/forecast.py": {
+    "snapshot": "paper_audit\\baseline\\forecast.py",
+    "sha256": "6cc72b3c374c1ec31e178b1d9e920d7e36f4cbedf39e44e0254e7da7f54c0a72"
+  },
+  "ml_service/modules/volatility.py": {
+    "snapshot": "paper_audit\\baseline\\volatility.py",
+    "sha256": "8db81fd3c2a2de5ca52581b027b9f4bc5becc157fc7a432d1b7516a624014c46"
+  },
+  "research_eval/evaluate_python.py": {
+    "command": [
+      "C:\\Python311\\python.exe",
+      "research_eval/evaluate_python.py",
+      "--check"
+    ],
+    "exit_code": 1
+  },
+  "research_eval/evaluate_node.cjs": {
+    "command": [
+      "node",
+      "research_eval/evaluate_node.cjs",
+      "--check"
+    ],
+    "exit_code": 1
+  },
+  "legacy": {
+    "exit_code": 0
+  }
+}

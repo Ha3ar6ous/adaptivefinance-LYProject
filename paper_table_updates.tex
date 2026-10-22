@@ -1,0 +1,83 @@
+% Revision snippets only. Original paper is untouched. Requires booktabs and graphicx.
+% Proposed numbering is explicit in results_for_paper.json; supplied PDF numbering differs.
+\begin{table}[t]\centering
+\caption{Forward14-day CV target: deployed rule.}
+\begin{tabular}{lrr}\toprule
+Rule & Macro-F1 & HIGH recall \\\midrule
+Legacy .35/.75 & 0.324358 & 0.720000 \\
+Deployed .45/.75 & 0.603309 & 0.720000 \\
+\bottomrule\end{tabular}\end{table}
+\begin{table}[t]\centering
+\caption{Central simulation with engine budget.}
+\begin{tabular}{lrrr}\toprule
+Gate & Shortfall\% & Forced sale\% & Wealth \\\midrule
+original gate & 31.124 & 3.394 & 52075.121159 \\
+revised gate & 31.124 & 1.132 & 52052.456382 \\
+no investing & 31.124 & 0.000 & 52022.539574 \\
+\bottomrule\end{tabular}\end{table}
+% Current tableVI revised-minus-original mean wealth = -22.664777733982 INR.
+% The prior quoted whole-system wealth difference must be updated; do not mix runtime versions.
+\begin{table}[t]\centering
+\caption{Health outcome diagnostics.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrr}\toprule
+Model & AUC & Brier \\\midrule
+original\_uncalibrated & 0.828172 & 0.127347 \\
+corrected\_uncalibrated & 0.764614 & 0.177584 \\
+original\_calibrated & 0.828172 & 0.099471 \\
+corrected\_calibrated & 0.764614 & 0.112192 \\
+fit\_original\_factors & 0.874731 & 0.088651 \\
+fit\_corrected\_factors & 0.890767 & 0.080079 \\
+\bottomrule\end{tabular}}\end{table}
+\begin{table}[t]\centering
+\caption{Allocator enumeration.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrr}\toprule
+Stage & Method & N & Min violations & Pct violations \\\midrule
+before & proposed & 1728 & 312 & 120 \\
+after & equal\_weight & 1728 & 0 & 0 \\
+after & proposed & 1728 & 0 & 0 \\
+after & risk\_only & 1728 & 0 & 0 \\
+\bottomrule\end{tabular}}\end{table}
+\begin{table}[t]\centering
+\caption{Fresh live LLM measurements.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrr}\toprule
+Seed & N & Success & Fallback & Mean ms \\\midrule
+all & 125 & 108 & 17 & 389.617240 \\
+11 & 25 & 25 & 0 & 429.933684 \\
+23 & 25 & 25 & 0 & 466.738888 \\
+37 & 25 & 22 & 3 & 388.117880 \\
+53 & 25 & 19 & 6 & 365.354932 \\
+71 & 25 & 17 & 8 & 297.940816 \\
+\bottomrule\end{tabular}}\end{table}
+\begin{table}[t]\centering
+\caption{Original incomplete fixtures under current fail-closed policy.}
+\begin{tabular}{lr}\toprule
+Fixture & Allowed \\\midrule
+Low liquidity blocks invest & false \\
+High debt blocks invest & false \\
+High volatility blocks invest & false \\
+Ideal passes invest & false \\
+\bottomrule\end{tabular}\end{table}
+% Original ideal fixture lacks valid analytics. Current complete1914-case oracle matrix has zero false allows/blocks; oracle agreement is not financial outcome validation.
+\begin{table}[t]\centering
+\caption{Transfer CV classification with history-specific training targets.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{llrrr}\toprule
+Dataset & Rule & N & Macro-F1 & HIGH recall \\\midrule
+new\_synthetic\_11 & legacy\_cv30\_035 & 20 & 0.206536 & 0.250000 \\
+new\_synthetic\_11 & runtime\_cv30 & 20 & 0.206536 & 0.250000 \\
+new\_synthetic\_23 & legacy\_cv30\_035 & 20 & 0.151515 & 0.000000 \\
+new\_synthetic\_23 & runtime\_cv30 & 20 & 0.151515 & 0.000000 \\
+new\_synthetic\_37 & legacy\_cv30\_035 & 20 & 0.180952 & 0.166667 \\
+new\_synthetic\_37 & runtime\_cv30 & 20 & 0.180952 & 0.166667 \\
+new\_synthetic\_53 & legacy\_cv30\_035 & 20 & 0.344227 & 0.454545 \\
+new\_synthetic\_53 & runtime\_cv30 & 20 & 0.344227 & 0.454545 \\
+new\_synthetic\_71 & legacy\_cv30\_035 & 20 & 0.111111 & 0.000000 \\
+new\_synthetic\_71 & runtime\_cv30 & 20 & 0.111111 & 0.000000 \\
+real\_single\_driver & legacy\_cv30\_035 & 17 & 0.047619 & NA \\
+real\_single\_driver & runtime\_cv30 & 17 & 0.047619 & NA \\
+repository\_all & legacy\_cv30\_035 & 24 & 0.174242 & 0.250000 \\
+repository\_all & runtime\_cv30 & 24 & 0.396424 & 0.250000 \\
+repository\_canonical & legacy\_cv30\_035 & 12 & 0.055556 & 0.000000 \\
+repository\_canonical & runtime\_cv30 & 12 & 0.238095 & 0.000000 \\
+\bottomrule\end{tabular}}\end{table}
+% All ablations including stress/neutral/reserve-free: revision_audit/ablations_20261018/all_scenario_tables.tex
+\input{ablation_table.tex}

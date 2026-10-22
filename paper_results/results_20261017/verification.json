@@ -1,0 +1,53 @@
+{
+  "metric_rows": 71,
+  "arithmetic_comparisons_checked": 63,
+  "prior_files_checked": 206,
+  "authorized_source_changes": [
+    "server/services/aiExplanationService.js",
+    "server/services/groqService.js",
+    "server/services/investmentEngineService.js"
+  ],
+  "unexpected_prior_file_changes": [],
+  "source_manifest_append_only_log_changes": [
+    "CHANGES_results.md"
+  ],
+  "generated_figures": [
+    {
+      "file": "paper_results/results_20261017/figures/forecast_legacy.png",
+      "width": 1778,
+      "height": 706,
+      "bytes": 52235
+    },
+    {
+      "file": "paper_results/results_20261017/figures/real_forecast.png",
+      "width": 1778,
+      "height": 706,
+      "bytes": 50646
+    },
+    {
+      "file": "paper_results/results_20261017/figures/volatility_confusions.png",
+      "width": 1576,
+      "height": 690,
+      "bytes": 53699
+    },
+    {
+      "file": "paper_results/results_20261017/figures/router_tradeoff.png",
+      "width": 1774,
+      "height": 738,
+      "bytes": 107228
+    },
+    {
+      "file": "paper_results/results_20261017/figures/score_calibration.png",
+      "width": 1138,
+      "height": 818,
+      "bytes": 114012
+    },
+    {
+      "file": "paper_results/results_20261017/figures/engine_llm.png",
+      "width": 1778,
+      "height": 1138,
+      "bytes": 95373
+    }
+  ],
+  "secret_pattern_files": []
+}

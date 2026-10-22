@@ -1,0 +1,49 @@
+[
+  {
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\revision_audit\\prompt3_score",
+      "--stage",
+      "prepare"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\revision_audit\\prompt3_score",
+      "--stage",
+      "select"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\revision_audit\\prompt3_score",
+      "--stage",
+      "test"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "score_audit",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0
+  }
+]

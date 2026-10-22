@@ -1,0 +1,37 @@
+[
+  {
+    "seed": 11,
+    "rows": 900,
+    "exact_csv_text": false,
+    "generated_sha256_lf": "0e1683805de13d978bfd7ae122e4ee5b6c88a4eb41ba8dd21852579bf7cb1a22",
+    "archived_sha256_lf": "622797d203503b7527dfaf1902572ac495b25e5792e36245af0c2bf8f9b9547e"
+  },
+  {
+    "seed": 23,
+    "rows": 900,
+    "exact_csv_text": false,
+    "generated_sha256_lf": "6b5af0ffdc5eda72410f85c4e7e8f302ddd7b114e721bbb8a8cf034287024cd0",
+    "archived_sha256_lf": "73645ce2472ac96feabe6be9780bcb73c2762339ea050bb98c515cf557d2a19f"
+  },
+  {
+    "seed": 37,
+    "rows": 900,
+    "exact_csv_text": false,
+    "generated_sha256_lf": "7558ca17db8f809028b0c79e919499cfa63e6d229ce26245dc069e4f45b8ea9a",
+    "archived_sha256_lf": "b984b9a79caf47e48f5b24eb006580c73e71cc3828c1e0e415a63e4de50f767e"
+  },
+  {
+    "seed": 53,
+    "rows": 900,
+    "exact_csv_text": false,
+    "generated_sha256_lf": "f7338702c97d4b8db191d7aa1246f0e680bfe0bfe97bcf40a7f6d647d632f761",
+    "archived_sha256_lf": "798bb51ad38439d0ddd15a3c0be558803945b3d64aa5c6cb7dace4bccf3ba0cd"
+  },
+  {
+    "seed": 71,
+    "rows": 900,
+    "exact_csv_text": false,
+    "generated_sha256_lf": "c19f60e6aec33fa30544abdcb17e8fef2a70b9d69e31bd9d8bd93a287120743f",
+    "archived_sha256_lf": "912ca0809a547d0a959f82e653f7a28bcefe9fb23ab36170e021920bcfd92506"
+  }
+]

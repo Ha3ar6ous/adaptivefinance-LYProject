@@ -1,0 +1,841 @@
+scenario,execution,policy,reference,metric,seeds,mean_delta,lower95,upper95,unit
+central,engine_budget,always_invest,no_investing,shortfall_rate,5,-0.003999999999998449,-0.02283076688348,0.01483076688348,percentage points
+central,engine_budget,always_invest,no_investing,forced_liquidation_rate,5,7.57,7.5124264089053305,7.627573591094659,percentage points
+central,engine_budget,always_invest,no_investing,shortfall_or_liquidation_rate,5,0.32,0.27976548796546,0.36023451203453,percentage points
+central,engine_budget,always_invest,no_investing,months_below_1,5,0.0222799999999998,0.0200288525558417,0.0245311474441579,months
+central,engine_budget,always_invest,no_investing,months_below_3,5,0.0967599999999999,0.0890975145053478,0.1044224854946519,months
+central,engine_budget,always_invest,no_investing,final_net_wealth,5,76.72799334647716,71.83609418286744,81.61989251008688,INR
+central,engine_budget,always_invest,no_investing,median_final_net_wealth,5,40.9096732788632,-31.96439085216392,113.7837374098903,INR
+central,engine_budget,always_invest,no_investing,wealth_expense_ratio,5,0.003373177488836,0.0031036499704195,0.0036427050072526,initial-expense multiples
+central,engine_budget,always_invest,no_investing,ever_cleared,5,100.0,100.0,100.0,percentage points
+central,engine_budget,always_invest,no_investing,initial_cleared,5,100.0,100.0,100.0,percentage points
+central,engine_budget,always_invest,no_investing,cleared_user_months,5,100.0,100.0,100.0,percentage points
+central,engine_budget,always_invest,no_investing,ever_contributed,5,65.372,65.04226864989452,65.70173135010548,percentage points
+central,engine_budget,always_invest,no_investing,total_contributions,5,7310.373519999999,7245.476574865587,7375.270465134411,INR
+central,engine_budget,always_invest,no_investing,final_arrears,5,1.1873466760269369,0.2600170550646623,2.1146762969892112,INR
+central,engine_budget,original_gate,no_investing,shortfall_rate,5,1.1102230246251565e-15,-0.008779890330851203,0.008779890330853423,percentage points
+central,engine_budget,original_gate,no_investing,forced_liquidation_rate,5,3.1559999999999997,3.02180834460293,3.2901916553970603,percentage points
+central,engine_budget,original_gate,no_investing,shortfall_or_liquidation_rate,5,0.156,0.1302523073207,0.18174769267929,percentage points
+central,engine_budget,original_gate,no_investing,months_below_1,5,0.0100999999999999,0.0085074721346564,0.0116925278653435,months
+central,engine_budget,original_gate,no_investing,months_below_3,5,0.0519200000000001,0.0483069924516116,0.0555330075483886,months
+central,engine_budget,original_gate,no_investing,final_net_wealth,5,51.13537224483007,46.63092295817213,55.639821531488,INR
+central,engine_budget,original_gate,no_investing,median_final_net_wealth,5,43.00424724513141,0.8554367826389893,85.15305770762383,INR
+central,engine_budget,original_gate,no_investing,wealth_expense_ratio,5,0.0021568730065199,0.0019523713777336,0.0023613746353062,initial-expense multiples
+central,engine_budget,original_gate,no_investing,ever_cleared,5,74.54400000000001,74.22397329853428,74.86402670146575,percentage points
+central,engine_budget,original_gate,no_investing,initial_cleared,5,33.129999999999995,32.78882471356373,33.471175286436264,percentage points
+central,engine_budget,original_gate,no_investing,cleared_user_months,5,44.7945,44.60705054087874,44.98194945912125,percentage points
+central,engine_budget,original_gate,no_investing,ever_contributed,5,53.239999999999995,53.126538811944194,53.3534611880558,percentage points
+central,engine_budget,original_gate,no_investing,total_contributions,5,5332.89316,5263.07516634361,5402.711153656389,INR
+central,engine_budget,original_gate,no_investing,final_arrears,5,0.5359581537763006,-0.2699901383990231,1.3419064459516243,INR
+central,engine_budget,revised_gate,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+central,engine_budget,revised_gate,no_investing,forced_liquidation_rate,5,1.1320000000000001,0.9958692231605399,1.26813077683945,percentage points
+central,engine_budget,revised_gate,no_investing,shortfall_or_liquidation_rate,5,0.068,0.04958314667008001,0.08641685332992,percentage points
+central,engine_budget,revised_gate,no_investing,months_below_1,5,0.004,0.0030066688014368,0.0049933311985631,months
+central,engine_budget,revised_gate,no_investing,months_below_3,5,0.02252,0.0209607349818091,0.024079265018191,months
+central,engine_budget,revised_gate,no_investing,final_net_wealth,5,29.91680731974629,24.36581033752546,35.46780430196713,INR
+central,engine_budget,revised_gate,no_investing,median_final_net_wealth,5,23.24641630713013,-6.466912226179339,52.9597448404396,INR
+central,engine_budget,revised_gate,no_investing,wealth_expense_ratio,5,0.0012294433866724,0.0010427801188089,0.0014161066545359,initial-expense multiples
+central,engine_budget,revised_gate,no_investing,ever_cleared,5,51.767999999999994,51.43029934858859,52.10570065141139,percentage points
+central,engine_budget,revised_gate,no_investing,initial_cleared,5,15.443999999999999,15.196662526206811,15.69133747379318,percentage points
+central,engine_budget,revised_gate,no_investing,cleared_user_months,5,23.262,22.98172970470343,23.54227029529656,percentage points
+central,engine_budget,revised_gate,no_investing,ever_contributed,5,43.012,42.79208171079527,43.23191828920474,percentage points
+central,engine_budget,revised_gate,no_investing,total_contributions,5,3431.03038,3357.468322263843,3504.592437736157,INR
+central,engine_budget,revised_gate,no_investing,final_arrears,5,0.2589209266996476,0.0454294700167659,0.4724123833825294,INR
+central,engine_budget,score_only,no_investing,shortfall_rate,5,1.1102230246251565e-15,-0.008779890330851203,0.008779890330853423,percentage points
+central,engine_budget,score_only,no_investing,forced_liquidation_rate,5,4.06599999999999,3.97535002398212,4.15664997601787,percentage points
+central,engine_budget,score_only,no_investing,shortfall_or_liquidation_rate,5,0.198,0.16137617371902999,0.23462382628096998,percentage points
+central,engine_budget,score_only,no_investing,months_below_1,5,0.0128599999999999,0.010715476963968,0.0150045230360318,months
+central,engine_budget,score_only,no_investing,months_below_3,5,0.0658800000000001,0.062178466543691,0.0695815334563092,months
+central,engine_budget,score_only,no_investing,final_net_wealth,5,62.94492752591177,57.824963398423805,68.06489165339974,INR
+central,engine_budget,score_only,no_investing,median_final_net_wealth,5,41.03142859882937,-28.157308841709643,110.2201660393684,INR
+central,engine_budget,score_only,no_investing,wealth_expense_ratio,5,0.0027601151733102,0.0024808002268646,0.0030394301197558,initial-expense multiples
+central,engine_budget,score_only,no_investing,ever_cleared,5,78.138,77.82163142044517,78.45436857955484,percentage points
+central,engine_budget,score_only,no_investing,initial_cleared,5,45.82,45.33974722190129,46.30025277809871,percentage points
+central,engine_budget,score_only,no_investing,cleared_user_months,5,57.03600000000001,56.70869433187333,57.363305668126685,percentage points
+central,engine_budget,score_only,no_investing,ever_contributed,5,59.326,59.005973298534265,59.646026701465736,percentage points
+central,engine_budget,score_only,no_investing,total_contributions,5,6421.92666,6341.207458475385,6502.645861524616,INR
+central,engine_budget,score_only,no_investing,final_arrears,5,0.6476003456758918,-0.2645674560190132,1.5597681473707967,INR
+central,engine_budget,validation_selected,no_investing,shortfall_rate,5,1.1102230246251565e-15,-0.008779890330851203,0.008779890330853423,percentage points
+central,engine_budget,validation_selected,no_investing,forced_liquidation_rate,5,3.048,2.90577661642404,3.1902233835759497,percentage points
+central,engine_budget,validation_selected,no_investing,shortfall_or_liquidation_rate,5,0.152,0.13159737858025,0.17240262141974,percentage points
+central,engine_budget,validation_selected,no_investing,months_below_1,5,0.0096399999999999,0.0081076638734288,0.011172336126571,months
+central,engine_budget,validation_selected,no_investing,months_below_3,5,0.04912,0.044891591690601,0.0533484083093991,months
+central,engine_budget,validation_selected,no_investing,final_net_wealth,5,48.608825953735504,43.80460662583669,53.41304528163432,INR
+central,engine_budget,validation_selected,no_investing,median_final_net_wealth,5,40.32807181282842,-11.805744494647024,92.46188812030384,INR
+central,engine_budget,validation_selected,no_investing,wealth_expense_ratio,5,0.0020492901826425,0.0018438404798589,0.0022547398854262,initial-expense multiples
+central,engine_budget,validation_selected,no_investing,ever_cleared,5,63.019999999999996,62.7604357912388,63.279564208761194,percentage points
+central,engine_budget,validation_selected,no_investing,initial_cleared,5,25.911999999999992,25.50296640278465,26.321033597215337,percentage points
+central,engine_budget,validation_selected,no_investing,cleared_user_months,5,34.282333333333334,34.1123124327372,34.45235423392947,percentage points
+central,engine_budget,validation_selected,no_investing,ever_contributed,5,52.244,52.16566684387788,52.32233315612213,percentage points
+central,engine_budget,validation_selected,no_investing,total_contributions,5,5065.11362,4998.835862939981,5131.391377060019,INR
+central,engine_budget,validation_selected,no_investing,final_arrears,5,0.5158435857170843,-0.2588208271921701,1.2905079986263388,INR
+central,engine_budget,always_invest,original_gate,shortfall_rate,5,-0.0039999999999995595,-0.01510578042078,0.007105780420790414,percentage points
+central,engine_budget,always_invest,original_gate,forced_liquidation_rate,5,4.414,4.3041285211570806,4.52387147884291,percentage points
+central,engine_budget,always_invest,original_gate,shortfall_or_liquidation_rate,5,0.164,0.11088347755625,0.21711652244374002,percentage points
+central,engine_budget,always_invest,original_gate,months_below_1,5,0.0121799999999998,0.01120073714493,0.0131592628550696,months
+central,engine_budget,always_invest,original_gate,months_below_3,5,0.0448399999999997,0.0384761843130752,0.0512038156869243,months
+central,engine_budget,always_invest,original_gate,final_net_wealth,5,25.59262110164709,24.39060947271987,26.79463273057431,INR
+central,engine_budget,always_invest,original_gate,median_final_net_wealth,5,-2.094573966268217,-39.61309486082533,35.4239469282889,INR
+central,engine_budget,always_invest,original_gate,wealth_expense_ratio,5,0.0012163044823161,0.0011222749177895,0.0013103340468427,initial-expense multiples
+central,engine_budget,always_invest,original_gate,ever_cleared,5,25.456,25.13597329853426,25.77602670146574,percentage points
+central,engine_budget,always_invest,original_gate,initial_cleared,5,66.87,66.52882471356374,67.21117528643627,percentage points
+central,engine_budget,always_invest,original_gate,cleared_user_months,5,55.205499999999994,55.01805054087874,55.392949459121255,percentage points
+central,engine_budget,always_invest,original_gate,ever_contributed,5,12.132,11.89683657468326,12.367163425316729,percentage points
+central,engine_budget,always_invest,original_gate,total_contributions,5,1977.48036,1940.6965126484467,2014.2642073515533,INR
+central,engine_budget,always_invest,original_gate,final_arrears,5,0.651388522250636,0.3157589417156943,0.9870181027855778,INR
+central,engine_budget,revised_gate,original_gate,shortfall_rate,5,-1.1102230246251565e-15,-0.008779890330853423,0.008779890330851203,percentage points
+central,engine_budget,revised_gate,original_gate,forced_liquidation_rate,5,-2.024,-2.1393478454531203,-1.90865215454687,percentage points
+central,engine_budget,revised_gate,original_gate,shortfall_or_liquidation_rate,5,-0.08799999999999,-0.12013967570730999,-0.05586032429267,percentage points
+central,engine_budget,revised_gate,original_gate,months_below_1,5,-0.0060999999999999,-0.007220941358776,-0.0049790586412239,months
+central,engine_budget,revised_gate,original_gate,months_below_3,5,-0.0294,-0.0321722773093454,-0.0266277226906546,months
+central,engine_budget,revised_gate,original_gate,final_net_wealth,5,-21.218564925083776,-23.01744726962685,-19.4196825805407,INR
+central,engine_budget,revised_gate,original_gate,median_final_net_wealth,5,-19.75783093800128,-51.20620474918678,11.690542873184215,INR
+central,engine_budget,revised_gate,original_gate,wealth_expense_ratio,5,-0.0009274296198475,-0.0010105246006409,-0.0008443346390541,initial-expense multiples
+central,engine_budget,revised_gate,original_gate,ever_cleared,5,-22.77599999999999,-23.112923644078258,-22.43907635592173,percentage points
+central,engine_budget,revised_gate,original_gate,initial_cleared,5,-17.686,-17.83202095318735,-17.53997904681265,percentage points
+central,engine_budget,revised_gate,original_gate,cleared_user_months,5,-21.5325,-21.69436506957605,-21.37063493042394,percentage points
+central,engine_budget,revised_gate,original_gate,ever_contributed,5,-10.228,-10.45396920260181,-10.00203079739818,percentage points
+central,engine_budget,revised_gate,original_gate,total_contributions,5,-1901.8627800000008,-1927.3716117863453,-1876.353948213656,INR
+central,engine_budget,revised_gate,original_gate,final_arrears,5,-0.2770372270766529,-0.9118326810195092,0.3577582268662035,INR
+central,engine_budget,score_only,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+central,engine_budget,score_only,original_gate,forced_liquidation_rate,5,0.91,0.80950956203174,1.01049043796825,percentage points
+central,engine_budget,score_only,original_gate,shortfall_or_liquidation_rate,5,0.042,0.01978843915842,0.06421156084158,percentage points
+central,engine_budget,score_only,original_gate,months_below_1,5,0.0027599999999999,0.001991571478575,0.0035284285214248,months
+central,engine_budget,score_only,original_gate,months_below_3,5,0.0139599999999999,0.0116211848703293,0.0162988151296706,months
+central,engine_budget,score_only,original_gate,final_net_wealth,5,11.809555281081703,10.401100979960168,13.21800958220324,INR
+central,engine_budget,score_only,original_gate,median_final_net_wealth,5,-1.9728186463020392,-45.854104975751774,41.9084676831477,INR
+central,engine_budget,score_only,original_gate,wealth_expense_ratio,5,0.0006032421667902,0.0004821145269317,0.0007243698066488,initial-expense multiples
+central,engine_budget,score_only,original_gate,ever_cleared,5,3.594,3.45612496765879,3.73187503234121,percentage points
+central,engine_budget,score_only,original_gate,initial_cleared,5,12.68999999999999,12.22499724711345,13.15500275288653,percentage points
+central,engine_budget,score_only,original_gate,cleared_user_months,5,12.2415,11.950931168798231,12.53206883120177,percentage points
+central,engine_budget,score_only,original_gate,ever_contributed,5,6.085999999999999,5.86798275296403,6.304017247035961,percentage points
+central,engine_budget,score_only,original_gate,total_contributions,5,1089.0334999999995,1053.8909304222225,1124.1760695777766,INR
+central,engine_budget,score_only,original_gate,final_arrears,5,0.1116421918995911,-0.0127696758634431,0.2360540596626254,INR
+central,engine_budget,no_investing,original_gate,shortfall_rate,5,-1.1102230246251565e-15,-0.008779890330853423,0.008779890330851203,percentage points
+central,engine_budget,no_investing,original_gate,forced_liquidation_rate,5,-3.1559999999999997,-3.2901916553970603,-3.02180834460293,percentage points
+central,engine_budget,no_investing,original_gate,shortfall_or_liquidation_rate,5,-0.156,-0.18174769267929,-0.1302523073207,percentage points
+central,engine_budget,no_investing,original_gate,months_below_1,5,-0.0100999999999999,-0.0116925278653435,-0.0085074721346564,months
+central,engine_budget,no_investing,original_gate,months_below_3,5,-0.0519200000000001,-0.0555330075483886,-0.0483069924516116,months
+central,engine_budget,no_investing,original_gate,final_net_wealth,5,-51.13537224483007,-55.639821531488,-46.63092295817213,INR
+central,engine_budget,no_investing,original_gate,median_final_net_wealth,5,-43.00424724513141,-85.15305770762383,-0.8554367826389893,INR
+central,engine_budget,no_investing,original_gate,wealth_expense_ratio,5,-0.0021568730065199,-0.0023613746353062,-0.0019523713777336,initial-expense multiples
+central,engine_budget,no_investing,original_gate,ever_cleared,5,-74.54400000000001,-74.86402670146575,-74.22397329853428,percentage points
+central,engine_budget,no_investing,original_gate,initial_cleared,5,-33.129999999999995,-33.471175286436264,-32.78882471356373,percentage points
+central,engine_budget,no_investing,original_gate,cleared_user_months,5,-44.7945,-44.98194945912125,-44.60705054087874,percentage points
+central,engine_budget,no_investing,original_gate,ever_contributed,5,-53.239999999999995,-53.3534611880558,-53.126538811944194,percentage points
+central,engine_budget,no_investing,original_gate,total_contributions,5,-5332.89316,-5402.711153656389,-5263.07516634361,INR
+central,engine_budget,no_investing,original_gate,final_arrears,5,-0.5359581537763006,-1.3419064459516243,0.2699901383990231,INR
+central,engine_budget,validation_selected,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+central,engine_budget,validation_selected,original_gate,forced_liquidation_rate,5,-0.10799999999999,-0.15640897454338,-0.059591025456610006,percentage points
+central,engine_budget,validation_selected,original_gate,shortfall_or_liquidation_rate,5,-0.0039999999999995595,-0.01080087380658,0.0028008738065822603,percentage points
+central,engine_budget,validation_selected,original_gate,months_below_1,5,-0.00046,-0.0008773912214473,-4.260877855285041e-05,months
+central,engine_budget,validation_selected,original_gate,months_below_3,5,-0.0028,-0.0037894433903042,-0.0018105566096958,months
+central,engine_budget,validation_selected,original_gate,final_net_wealth,5,-2.526546291094564,-3.074395728383002,-1.9786968538061267,INR
+central,engine_budget,validation_selected,original_gate,median_final_net_wealth,5,-2.676175432302989,-15.53316405132695,10.180813186720972,INR
+central,engine_budget,validation_selected,original_gate,wealth_expense_ratio,5,-0.0001075828238773,-0.0001235809772342,-9.15846705204921e-05,initial-expense multiples
+central,engine_budget,validation_selected,original_gate,ever_cleared,5,-11.524,-11.71243043816366,-11.335569561836339,percentage points
+central,engine_budget,validation_selected,original_gate,initial_cleared,5,-7.217999999999999,-7.42323169714928,-7.012768302850721,percentage points
+central,engine_budget,validation_selected,original_gate,cleared_user_months,5,-10.51216666666666,-10.64904060765063,-10.37529272568269,percentage points
+central,engine_budget,validation_selected,original_gate,ever_contributed,5,-0.99599999999999,-1.1062217235273901,-0.8857782764725999,percentage points
+central,engine_budget,validation_selected,original_gate,total_contributions,5,-267.77954000000045,-276.7396116509268,-258.8194683490741,INR
+central,engine_budget,validation_selected,original_gate,final_arrears,5,-0.0201145680592162,-0.0848730863731602,0.0446439502547277,INR
+central,reserve_free,always_invest,no_investing,shortfall_rate,5,0.016,-0.02083370665983,0.05283370665984,percentage points
+central,reserve_free,always_invest,no_investing,forced_liquidation_rate,5,26.104,25.54225166589101,26.665748334109,percentage points
+central,reserve_free,always_invest,no_investing,shortfall_or_liquidation_rate,5,1.978,1.76322442835763,2.1927755716423603,percentage points
+central,reserve_free,always_invest,no_investing,months_below_1,5,0.20792,0.201974646193064,0.213865353806936,months
+central,reserve_free,always_invest,no_investing,months_below_3,5,0.3292800000000001,0.3200092506468566,0.3385507493531436,months
+central,reserve_free,always_invest,no_investing,final_net_wealth,5,95.19833739576134,88.19517978774851,102.20149500377416,INR
+central,reserve_free,always_invest,no_investing,median_final_net_wealth,5,108.21388078572052,-78.67243509810541,295.10019666954645,INR
+central,reserve_free,always_invest,no_investing,wealth_expense_ratio,5,0.0042597214772698,0.003863190802581,0.0046562521519587,initial-expense multiples
+central,reserve_free,always_invest,no_investing,ever_cleared,5,100.0,100.0,100.0,percentage points
+central,reserve_free,always_invest,no_investing,initial_cleared,5,100.0,100.0,100.0,percentage points
+central,reserve_free,always_invest,no_investing,cleared_user_months,5,100.0,100.0,100.0,percentage points
+central,reserve_free,always_invest,no_investing,ever_contributed,5,90.156,89.93482342678047,90.37717657321951,percentage points
+central,reserve_free,always_invest,no_investing,total_contributions,5,10981.095059999998,10892.273071067348,11069.917048932648,INR
+central,reserve_free,always_invest,no_investing,final_arrears,5,11.0524175593353,9.227559193350796,12.877275925319804,INR
+central,reserve_free,original_gate,no_investing,shortfall_rate,5,2.220446049250313e-15,-0.01520721613791,0.01520721613791,percentage points
+central,reserve_free,original_gate,no_investing,forced_liquidation_rate,5,5.91399999999999,5.75777715359585,6.07022284640414,percentage points
+central,reserve_free,original_gate,no_investing,shortfall_or_liquidation_rate,5,0.396,0.35712976852723,0.43487023147277,percentage points
+central,reserve_free,original_gate,no_investing,months_below_1,5,0.0300999999999999,0.0285666580734345,0.0316333419265653,months
+central,reserve_free,original_gate,no_investing,months_below_3,5,0.1653800000000002,0.1575657003071275,0.1731942996928729,months
+central,reserve_free,original_gate,no_investing,final_net_wealth,5,62.29066776871623,56.62658555892936,67.9547499785031,INR
+central,reserve_free,original_gate,no_investing,median_final_net_wealth,5,48.87771197035327,-30.17654112457675,127.9319650652833,INR
+central,reserve_free,original_gate,no_investing,wealth_expense_ratio,5,0.0025878429293057,0.0023222157546739,0.0028534701039375,initial-expense multiples
+central,reserve_free,original_gate,no_investing,ever_cleared,5,74.54400000000001,74.22397329853428,74.86402670146575,percentage points
+central,reserve_free,original_gate,no_investing,initial_cleared,5,33.129999999999995,32.78882471356373,33.471175286436264,percentage points
+central,reserve_free,original_gate,no_investing,cleared_user_months,5,44.51466666666667,44.32473761709745,44.70459571623589,percentage points
+central,reserve_free,original_gate,no_investing,ever_contributed,5,61.934,61.786403802165935,62.08159619783407,percentage points
+central,reserve_free,original_gate,no_investing,total_contributions,5,6694.8297600000005,6622.399836985731,6767.25968301427,INR
+central,reserve_free,original_gate,no_investing,final_arrears,5,1.5645222057690262,0.9433295518117826,2.1857148597262697,INR
+central,reserve_free,revised_gate,no_investing,shortfall_rate,5,0.00200000000000089,-0.003552890210397178,0.007552890210398957,percentage points
+central,reserve_free,revised_gate,no_investing,forced_liquidation_rate,5,1.15199999999999,1.00033390653222,1.30366609346777,percentage points
+central,reserve_free,revised_gate,no_investing,shortfall_or_liquidation_rate,5,0.08800000000000001,0.05137617371903,0.12462382628097,percentage points
+central,reserve_free,revised_gate,no_investing,months_below_1,5,0.0053399999999999,0.004542043687241,0.0061379563127589,months
+central,reserve_free,revised_gate,no_investing,months_below_3,5,0.03344,0.0320752988542547,0.0348047011457453,months
+central,reserve_free,revised_gate,no_investing,final_net_wealth,5,31.757411727818543,25.759308496508137,37.75551495912895,INR
+central,reserve_free,revised_gate,no_investing,median_final_net_wealth,5,27.581295144844624,-6.576031942563475,61.73862223225272,INR
+central,reserve_free,revised_gate,no_investing,wealth_expense_ratio,5,0.001314127440076,0.0011098712370231,0.001518383643129,initial-expense multiples
+central,reserve_free,revised_gate,no_investing,ever_cleared,5,51.767999999999994,51.43029934858859,52.10570065141139,percentage points
+central,reserve_free,revised_gate,no_investing,initial_cleared,5,15.443999999999999,15.196662526206811,15.69133747379318,percentage points
+central,reserve_free,revised_gate,no_investing,cleared_user_months,5,23.197000000000003,22.92111213509634,23.47288786490365,percentage points
+central,reserve_free,revised_gate,no_investing,ever_contributed,5,43.016,42.79239703226424,43.239602967735756,percentage points
+central,reserve_free,revised_gate,no_investing,total_contributions,5,3678.82674,3608.281631255934,3749.371848744065,INR
+central,reserve_free,revised_gate,no_investing,final_arrears,5,0.350593485153513,0.1493123745680313,0.5518745957389948,INR
+central,reserve_free,score_only,no_investing,shortfall_rate,5,0.0020000000000019997,-0.01641685332991,0.02041685332992,percentage points
+central,reserve_free,score_only,no_investing,forced_liquidation_rate,5,7.086,6.8549370387838,7.31706296121619,percentage points
+central,reserve_free,score_only,no_investing,shortfall_or_liquidation_rate,5,0.484,0.43543204645874,0.5325679535412601,percentage points
+central,reserve_free,score_only,no_investing,months_below_1,5,0.0357199999999999,0.034364366736375,0.0370756332636248,months
+central,reserve_free,score_only,no_investing,months_below_3,5,0.2010200000000001,0.1931516309881611,0.208888369011839,months
+central,reserve_free,score_only,no_investing,final_net_wealth,5,76.15542406214517,70.27075229563098,82.04009582865936,INR
+central,reserve_free,score_only,no_investing,median_final_net_wealth,5,65.24765703858574,-79.39871753138482,209.8940316085563,INR
+central,reserve_free,score_only,no_investing,wealth_expense_ratio,5,0.0032949573331369,0.002970755392465,0.0036191592738088,initial-expense multiples
+central,reserve_free,score_only,no_investing,ever_cleared,5,78.138,77.82163142044517,78.45436857955484,percentage points
+central,reserve_free,score_only,no_investing,initial_cleared,5,45.82,45.33974722190129,46.30025277809871,percentage points
+central,reserve_free,score_only,no_investing,cleared_user_months,5,56.66,56.34858709643399,56.97141290356601,percentage points
+central,reserve_free,score_only,no_investing,ever_contributed,5,68.21,67.83297552007205,68.58702447992793,percentage points
+central,reserve_free,score_only,no_investing,total_contributions,5,7987.34196,7901.202311801064,8073.481608198936,INR
+central,reserve_free,score_only,no_investing,final_arrears,5,1.8032851136857064,1.070410734959532,2.5361594924118807,INR
+central,reserve_free,validation_selected,no_investing,shortfall_rate,5,2.220446049250313e-15,-0.01520721613791,0.01520721613791,percentage points
+central,reserve_free,validation_selected,no_investing,forced_liquidation_rate,5,5.756,5.62678339767493,5.88521660232506,percentage points
+central,reserve_free,validation_selected,no_investing,shortfall_or_liquidation_rate,5,0.378,0.3312105154132,0.4247894845868,percentage points
+central,reserve_free,validation_selected,no_investing,months_below_1,5,0.0288399999999999,0.027219640375721,0.0304603596242788,months
+central,reserve_free,validation_selected,no_investing,months_below_3,5,0.1582600000000001,0.1500389090055713,0.1664810909944289,months
+central,reserve_free,validation_selected,no_investing,final_net_wealth,5,59.30503032769629,53.51052443910929,65.0995362162833,INR
+central,reserve_free,validation_selected,no_investing,median_final_net_wealth,5,51.1943392097528,-33.10890199099859,135.49758041050418,INR
+central,reserve_free,validation_selected,no_investing,wealth_expense_ratio,5,0.0024632885509961,0.0022021437287487,0.0027244333732436,initial-expense multiples
+central,reserve_free,validation_selected,no_investing,ever_cleared,5,73.774,73.4555428357123,74.0924571642877,percentage points
+central,reserve_free,validation_selected,no_investing,initial_cleared,5,31.53,31.19143303887153,31.86856696112847,percentage points
+central,reserve_free,validation_selected,no_investing,cleared_user_months,5,42.34533333333333,42.163995000377106,42.52667166628955,percentage points
+central,reserve_free,validation_selected,no_investing,ever_contributed,5,60.864,60.72226526472952,61.005734735270465,percentage points
+central,reserve_free,validation_selected,no_investing,total_contributions,5,6372.79012,6302.575815323389,6443.00442467661,INR
+central,reserve_free,validation_selected,no_investing,final_arrears,5,1.503865089768078,0.8510449253153353,2.156685254220821,INR
+central,reserve_free,always_invest,original_gate,shortfall_rate,5,0.015999999999989998,-0.015165519010499999,0.0471655190105,percentage points
+central,reserve_free,always_invest,original_gate,forced_liquidation_rate,5,20.19,19.58571643379245,20.79428356620755,percentage points
+central,reserve_free,always_invest,original_gate,shortfall_or_liquidation_rate,5,1.58199999999999,1.38383882830239,1.7801611716976002,percentage points
+central,reserve_free,always_invest,original_gate,months_below_1,5,0.1778200000000001,0.1714146502796655,0.1842253497203346,months
+central,reserve_free,always_invest,original_gate,months_below_3,5,0.1638999999999999,0.156310090765633,0.1714899092343668,months
+central,reserve_free,always_invest,original_gate,final_net_wealth,5,32.90766962704511,29.06732346888238,36.74801578520784,INR
+central,reserve_free,always_invest,original_gate,median_final_net_wealth,5,59.33616881536727,-56.33924584591431,175.01158347664887,INR
+central,reserve_free,always_invest,original_gate,wealth_expense_ratio,5,0.0016718785479641,0.0014788755296946,0.0018648815662335,initial-expense multiples
+central,reserve_free,always_invest,original_gate,ever_cleared,5,25.456,25.13597329853426,25.77602670146574,percentage points
+central,reserve_free,always_invest,original_gate,initial_cleared,5,66.87,66.52882471356374,67.21117528643627,percentage points
+central,reserve_free,always_invest,original_gate,cleared_user_months,5,55.48533333333333,55.29540428376411,55.67526238290256,percentage points
+central,reserve_free,always_invest,original_gate,ever_contributed,5,28.22199999999999,27.993824180313982,28.45017581968601,percentage points
+central,reserve_free,always_invest,original_gate,total_contributions,5,4286.2653,4259.579399346697,4312.951200653303,INR
+central,reserve_free,always_invest,original_gate,final_arrears,5,9.487895353566271,7.769172401034984,11.206618306097562,INR
+central,reserve_free,revised_gate,original_gate,shortfall_rate,5,0.0019999999999986695,-0.011601747613160001,0.01560174761316,percentage points
+central,reserve_free,revised_gate,original_gate,forced_liquidation_rate,5,-4.76199999999999,-4.91964732566427,-4.60435267433572,percentage points
+central,reserve_free,revised_gate,original_gate,shortfall_or_liquidation_rate,5,-0.30799999999999,-0.34861589034288,-0.2673841096571,percentage points
+central,reserve_free,revised_gate,original_gate,months_below_1,5,-0.0247599999999999,-0.0265216757511438,-0.022998324248856,months
+central,reserve_free,revised_gate,original_gate,months_below_3,5,-0.1319400000000001,-0.1401432559716638,-0.1237367440283365,months
+central,reserve_free,revised_gate,original_gate,final_net_wealth,5,-30.533256040897687,-32.8688351623313,-28.197676919464072,INR
+central,reserve_free,revised_gate,original_gate,median_final_net_wealth,5,-21.29641682550864,-103.30887873469858,60.716045083681294,INR
+central,reserve_free,revised_gate,original_gate,wealth_expense_ratio,5,-0.0012737154892296,-0.0013857894847037,-0.0011616414937556,initial-expense multiples
+central,reserve_free,revised_gate,original_gate,ever_cleared,5,-22.77599999999999,-23.112923644078258,-22.43907635592173,percentage points
+central,reserve_free,revised_gate,original_gate,initial_cleared,5,-17.686,-17.83202095318735,-17.53997904681265,percentage points
+central,reserve_free,revised_gate,original_gate,cleared_user_months,5,-21.31766666666666,-21.462422848051,-21.17291048528233,percentage points
+central,reserve_free,revised_gate,original_gate,ever_contributed,5,-18.918,-19.20885167493237,-18.62714832506762,percentage points
+central,reserve_free,revised_gate,original_gate,total_contributions,5,-3016.00302,-3079.623380380712,-2952.382659619288,INR
+central,reserve_free,revised_gate,original_gate,final_arrears,5,-1.2139287206155132,-1.728841664252994,-0.6990157769780322,INR
+central,reserve_free,score_only,original_gate,shortfall_rate,5,0.0019999999999997797,-0.003552890210395206,0.0075528902103947654,percentage points
+central,reserve_free,score_only,original_gate,forced_liquidation_rate,5,1.172,1.02341478466174,1.32058521533825,percentage points
+central,reserve_free,score_only,original_gate,shortfall_or_liquidation_rate,5,0.08800000000000001,0.05244415410601,0.12355584589398001,percentage points
+central,reserve_free,score_only,original_gate,months_below_1,5,0.00562,0.0050976149707877,0.0061423850292123,months
+central,reserve_free,score_only,original_gate,months_below_3,5,0.0356399999999998,0.0314379257758529,0.0398420742241468,months
+central,reserve_free,score_only,original_gate,final_net_wealth,5,13.864756293428943,12.815897815071356,14.913614771786534,INR
+central,reserve_free,score_only,original_gate,median_final_net_wealth,5,16.369945068232482,-59.49451736089597,92.23440749736092,INR
+central,reserve_free,score_only,original_gate,wealth_expense_ratio,5,0.0007071144038311,0.0005974086214304,0.0008168201862319,initial-expense multiples
+central,reserve_free,score_only,original_gate,ever_cleared,5,3.594,3.45612496765879,3.73187503234121,percentage points
+central,reserve_free,score_only,original_gate,initial_cleared,5,12.68999999999999,12.22499724711345,13.15500275288653,percentage points
+central,reserve_free,score_only,original_gate,cleared_user_months,5,12.14533333333333,11.860891082966,12.42977558370066,percentage points
+central,reserve_free,score_only,original_gate,ever_contributed,5,6.276,5.91553230248992,6.636467697510071,percentage points
+central,reserve_free,score_only,original_gate,total_contributions,5,1292.5122,1250.8749373827109,1334.149462617289,INR
+central,reserve_free,score_only,original_gate,final_arrears,5,0.2387629079166799,-0.020146147165865,0.497671962999225,INR
+central,reserve_free,no_investing,original_gate,shortfall_rate,5,-2.220446049250313e-15,-0.01520721613791,0.01520721613791,percentage points
+central,reserve_free,no_investing,original_gate,forced_liquidation_rate,5,-5.91399999999999,-6.07022284640414,-5.75777715359585,percentage points
+central,reserve_free,no_investing,original_gate,shortfall_or_liquidation_rate,5,-0.396,-0.43487023147277,-0.35712976852723,percentage points
+central,reserve_free,no_investing,original_gate,months_below_1,5,-0.0300999999999999,-0.0316333419265653,-0.0285666580734345,months
+central,reserve_free,no_investing,original_gate,months_below_3,5,-0.1653800000000002,-0.1731942996928729,-0.1575657003071275,months
+central,reserve_free,no_investing,original_gate,final_net_wealth,5,-62.29066776871623,-67.9547499785031,-56.62658555892936,INR
+central,reserve_free,no_investing,original_gate,median_final_net_wealth,5,-48.87771197035327,-127.9319650652833,30.17654112457675,INR
+central,reserve_free,no_investing,original_gate,wealth_expense_ratio,5,-0.0025878429293057,-0.0028534701039375,-0.0023222157546739,initial-expense multiples
+central,reserve_free,no_investing,original_gate,ever_cleared,5,-74.54400000000001,-74.86402670146575,-74.22397329853428,percentage points
+central,reserve_free,no_investing,original_gate,initial_cleared,5,-33.129999999999995,-33.471175286436264,-32.78882471356373,percentage points
+central,reserve_free,no_investing,original_gate,cleared_user_months,5,-44.51466666666667,-44.70459571623589,-44.32473761709745,percentage points
+central,reserve_free,no_investing,original_gate,ever_contributed,5,-61.934,-62.08159619783407,-61.786403802165935,percentage points
+central,reserve_free,no_investing,original_gate,total_contributions,5,-6694.8297600000005,-6767.25968301427,-6622.399836985731,INR
+central,reserve_free,no_investing,original_gate,final_arrears,5,-1.5645222057690262,-2.1857148597262697,-0.9433295518117826,INR
+central,reserve_free,validation_selected,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+central,reserve_free,validation_selected,original_gate,forced_liquidation_rate,5,-0.158,-0.20136945896608002,-0.11463054103391,percentage points
+central,reserve_free,validation_selected,original_gate,shortfall_or_liquidation_rate,5,-0.01799999999999,-0.028388506336830002,-0.007611493663163466,percentage points
+central,reserve_free,validation_selected,original_gate,months_below_1,5,-0.0012599999999999,-0.0016386566281639,-0.000881343371836,months
+central,reserve_free,validation_selected,original_gate,months_below_3,5,-0.0071200000000001,-0.0082144970577421,-0.006025502942258,months
+central,reserve_free,validation_selected,original_gate,final_net_wealth,5,-2.985637441019935,-3.570157084282078,-2.401117797757792,INR
+central,reserve_free,validation_selected,original_gate,median_final_net_wealth,5,2.3166272393995317,-11.241779440425736,15.8750339192248,INR
+central,reserve_free,validation_selected,original_gate,wealth_expense_ratio,5,-0.0001245543783095,-0.0001438071753337,-0.0001053015812853,initial-expense multiples
+central,reserve_free,validation_selected,original_gate,ever_cleared,5,-0.7699999999999899,-0.8528293197227701,-0.6871706802772201,percentage points
+central,reserve_free,validation_selected,original_gate,initial_cleared,5,-1.6,-1.82470345038574,-1.37529654961425,percentage points
+central,reserve_free,validation_selected,original_gate,cleared_user_months,5,-2.1693333333333302,-2.22199946317847,-2.11666720348818,percentage points
+central,reserve_free,validation_selected,original_gate,ever_contributed,5,-1.06999999999999,-1.15823680579212,-0.98176319420787,percentage points
+central,reserve_free,validation_selected,original_gate,total_contributions,5,-322.03964000000013,-336.779126970621,-307.30015302937926,INR
+central,reserve_free,validation_selected,original_gate,final_arrears,5,-0.060657116000948,-0.1296963381259953,0.0083821061240992,INR
+neutral,engine_budget,always_invest,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,always_invest,no_investing,forced_liquidation_rate,5,7.57,7.5124264089053305,7.627573591094659,percentage points
+neutral,engine_budget,always_invest,no_investing,shortfall_or_liquidation_rate,5,0.32,0.27976548796546,0.36023451203453,percentage points
+neutral,engine_budget,always_invest,no_investing,months_below_1,5,0.0222799999999998,0.0200288525558417,0.0245311474441579,months
+neutral,engine_budget,always_invest,no_investing,months_below_3,5,0.0967599999999999,0.0890975145053478,0.1044224854946519,months
+neutral,engine_budget,always_invest,no_investing,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,engine_budget,always_invest,no_investing,median_final_net_wealth,5,1.6007106751203538e-11,-2.558990950619085e-11,5.7604123008597924e-11,INR
+neutral,engine_budget,always_invest,no_investing,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186038e-16,3.354157045618854e-16,initial-expense multiples
+neutral,engine_budget,always_invest,no_investing,ever_cleared,5,100.0,100.0,100.0,percentage points
+neutral,engine_budget,always_invest,no_investing,initial_cleared,5,100.0,100.0,100.0,percentage points
+neutral,engine_budget,always_invest,no_investing,cleared_user_months,5,100.0,100.0,100.0,percentage points
+neutral,engine_budget,always_invest,no_investing,ever_contributed,5,65.372,65.04226864989452,65.70173135010548,percentage points
+neutral,engine_budget,always_invest,no_investing,total_contributions,5,7310.37402,7245.47723650966,7375.270803490341,INR
+neutral,engine_budget,always_invest,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,original_gate,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,original_gate,no_investing,forced_liquidation_rate,5,3.1559999999999997,3.02180834460293,3.2901916553970603,percentage points
+neutral,engine_budget,original_gate,no_investing,shortfall_or_liquidation_rate,5,0.156,0.1302523073207,0.18174769267929,percentage points
+neutral,engine_budget,original_gate,no_investing,months_below_1,5,0.0100999999999999,0.0085074721346564,0.0116925278653435,months
+neutral,engine_budget,original_gate,no_investing,months_below_3,5,0.0519200000000001,0.0483069924516116,0.0555330075483886,months
+neutral,engine_budget,original_gate,no_investing,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,engine_budget,original_gate,no_investing,median_final_net_wealth,5,1.3096723705530169e-11,-2.9470050201295526e-11,5.5663497612355856e-11,INR
+neutral,engine_budget,original_gate,no_investing,wealth_expense_ratio,5,0.0,0.0,0.0,initial-expense multiples
+neutral,engine_budget,original_gate,no_investing,ever_cleared,5,74.54400000000001,74.22397329853428,74.86402670146575,percentage points
+neutral,engine_budget,original_gate,no_investing,initial_cleared,5,33.129999999999995,32.78882471356373,33.471175286436264,percentage points
+neutral,engine_budget,original_gate,no_investing,cleared_user_months,5,44.7945,44.60705054087874,44.98194945912125,percentage points
+neutral,engine_budget,original_gate,no_investing,ever_contributed,5,53.239999999999995,53.126538811944194,53.3534611880558,percentage points
+neutral,engine_budget,original_gate,no_investing,total_contributions,5,5332.893180000001,5263.075159948038,5402.711200051964,INR
+neutral,engine_budget,original_gate,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,revised_gate,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,revised_gate,no_investing,forced_liquidation_rate,5,1.1320000000000001,0.9958692231605399,1.26813077683945,percentage points
+neutral,engine_budget,revised_gate,no_investing,shortfall_or_liquidation_rate,5,0.068,0.04958314667008001,0.08641685332992,percentage points
+neutral,engine_budget,revised_gate,no_investing,months_below_1,5,0.004,0.0030066688014368,0.0049933311985631,months
+neutral,engine_budget,revised_gate,no_investing,months_below_3,5,0.02252,0.0209607349818091,0.024079265018191,months
+neutral,engine_budget,revised_gate,no_investing,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,engine_budget,revised_gate,no_investing,median_final_net_wealth,5,1.1641532182693482e-11,-2.700582440865661e-11,5.028888877404357e-11,INR
+neutral,engine_budget,revised_gate,no_investing,wealth_expense_ratio,5,1.7763568394002506e-16,-1.2438378356549906e-16,4.796551514455492e-16,initial-expense multiples
+neutral,engine_budget,revised_gate,no_investing,ever_cleared,5,51.767999999999994,51.43029934858859,52.10570065141139,percentage points
+neutral,engine_budget,revised_gate,no_investing,initial_cleared,5,15.443999999999999,15.196662526206811,15.69133747379318,percentage points
+neutral,engine_budget,revised_gate,no_investing,cleared_user_months,5,23.262,22.98172970470343,23.54227029529656,percentage points
+neutral,engine_budget,revised_gate,no_investing,ever_contributed,5,43.012,42.79208171079527,43.23191828920474,percentage points
+neutral,engine_budget,revised_gate,no_investing,total_contributions,5,3431.03038,3357.468322263843,3504.592437736157,INR
+neutral,engine_budget,revised_gate,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,score_only,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,score_only,no_investing,forced_liquidation_rate,5,4.06599999999999,3.97535002398212,4.15664997601787,percentage points
+neutral,engine_budget,score_only,no_investing,shortfall_or_liquidation_rate,5,0.198,0.16137617371902999,0.23462382628096998,percentage points
+neutral,engine_budget,score_only,no_investing,months_below_1,5,0.0128599999999999,0.010715476963968,0.0150045230360318,months
+neutral,engine_budget,score_only,no_investing,months_below_3,5,0.0658800000000001,0.062178466543691,0.0695815334563092,months
+neutral,engine_budget,score_only,no_investing,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,engine_budget,score_only,no_investing,median_final_net_wealth,5,1.3096723705530169e-11,-2.9470050201295526e-11,5.5663497612355856e-11,INR
+neutral,engine_budget,score_only,no_investing,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186038e-16,3.354157045618854e-16,initial-expense multiples
+neutral,engine_budget,score_only,no_investing,ever_cleared,5,78.138,77.82163142044517,78.45436857955484,percentage points
+neutral,engine_budget,score_only,no_investing,initial_cleared,5,45.82,45.33974722190129,46.30025277809871,percentage points
+neutral,engine_budget,score_only,no_investing,cleared_user_months,5,57.03600000000001,56.70869433187333,57.363305668126685,percentage points
+neutral,engine_budget,score_only,no_investing,ever_contributed,5,59.326,59.005973298534265,59.646026701465736,percentage points
+neutral,engine_budget,score_only,no_investing,total_contributions,5,6421.92668,6341.207455095914,6502.645904904085,INR
+neutral,engine_budget,score_only,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,validation_selected,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,validation_selected,no_investing,forced_liquidation_rate,5,3.048,2.90577661642404,3.1902233835759497,percentage points
+neutral,engine_budget,validation_selected,no_investing,shortfall_or_liquidation_rate,5,0.152,0.13159737858025,0.17240262141974,percentage points
+neutral,engine_budget,validation_selected,no_investing,months_below_1,5,0.0096399999999999,0.0081076638734288,0.011172336126571,months
+neutral,engine_budget,validation_selected,no_investing,months_below_3,5,0.04912,0.044891591690601,0.0533484083093991,months
+neutral,engine_budget,validation_selected,no_investing,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,engine_budget,validation_selected,no_investing,median_final_net_wealth,5,1.3096723705530169e-11,-2.9470050201295526e-11,5.5663497612355856e-11,INR
+neutral,engine_budget,validation_selected,no_investing,wealth_expense_ratio,5,0.0,0.0,0.0,initial-expense multiples
+neutral,engine_budget,validation_selected,no_investing,ever_cleared,5,63.019999999999996,62.7604357912388,63.279564208761194,percentage points
+neutral,engine_budget,validation_selected,no_investing,initial_cleared,5,25.911999999999992,25.50296640278465,26.321033597215337,percentage points
+neutral,engine_budget,validation_selected,no_investing,cleared_user_months,5,34.282333333333334,34.1123124327372,34.45235423392947,percentage points
+neutral,engine_budget,validation_selected,no_investing,ever_contributed,5,52.244,52.16566684387788,52.32233315612213,percentage points
+neutral,engine_budget,validation_selected,no_investing,total_contributions,5,5065.1136400000005,4998.8358573751975,5131.391422624803,INR
+neutral,engine_budget,validation_selected,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,always_invest,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,always_invest,original_gate,forced_liquidation_rate,5,4.414,4.3041285211570806,4.52387147884291,percentage points
+neutral,engine_budget,always_invest,original_gate,shortfall_or_liquidation_rate,5,0.164,0.11088347755625,0.21711652244374002,percentage points
+neutral,engine_budget,always_invest,original_gate,months_below_1,5,0.0121799999999998,0.01120073714493,0.0131592628550696,months
+neutral,engine_budget,always_invest,original_gate,months_below_3,5,0.0448399999999997,0.0384761843130752,0.0512038156869243,months
+neutral,engine_budget,always_invest,original_gate,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,engine_budget,always_invest,original_gate,median_final_net_wealth,5,2.9103830456733705e-12,-5.170135715737121e-12,1.099090180708386e-11,INR
+neutral,engine_budget,always_invest,original_gate,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186038e-16,3.354157045618854e-16,initial-expense multiples
+neutral,engine_budget,always_invest,original_gate,ever_cleared,5,25.456,25.13597329853426,25.77602670146574,percentage points
+neutral,engine_budget,always_invest,original_gate,initial_cleared,5,66.87,66.52882471356374,67.21117528643627,percentage points
+neutral,engine_budget,always_invest,original_gate,cleared_user_months,5,55.205499999999994,55.01805054087874,55.392949459121255,percentage points
+neutral,engine_budget,always_invest,original_gate,ever_contributed,5,12.132,11.89683657468326,12.367163425316729,percentage points
+neutral,engine_budget,always_invest,original_gate,total_contributions,5,1977.48084,1940.695995506223,2014.2656844937771,INR
+neutral,engine_budget,always_invest,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,revised_gate,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,revised_gate,original_gate,forced_liquidation_rate,5,-2.024,-2.1393478454531203,-1.90865215454687,percentage points
+neutral,engine_budget,revised_gate,original_gate,shortfall_or_liquidation_rate,5,-0.08799999999999,-0.12013967570730999,-0.05586032429267,percentage points
+neutral,engine_budget,revised_gate,original_gate,months_below_1,5,-0.0060999999999999,-0.007220941358776,-0.0049790586412239,months
+neutral,engine_budget,revised_gate,original_gate,months_below_3,5,-0.0294,-0.0321722773093454,-0.0266277226906546,months
+neutral,engine_budget,revised_gate,original_gate,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,engine_budget,revised_gate,original_gate,median_final_net_wealth,5,-1.4551915228366853e-12,-1.7616229045657663e-11,1.470584599998429e-11,INR
+neutral,engine_budget,revised_gate,original_gate,wealth_expense_ratio,5,1.7763568394002506e-16,-1.2438378356549906e-16,4.796551514455492e-16,initial-expense multiples
+neutral,engine_budget,revised_gate,original_gate,ever_cleared,5,-22.77599999999999,-23.112923644078258,-22.43907635592173,percentage points
+neutral,engine_budget,revised_gate,original_gate,initial_cleared,5,-17.686,-17.83202095318735,-17.53997904681265,percentage points
+neutral,engine_budget,revised_gate,original_gate,cleared_user_months,5,-21.5325,-21.69436506957605,-21.37063493042394,percentage points
+neutral,engine_budget,revised_gate,original_gate,ever_contributed,5,-10.228,-10.45396920260181,-10.00203079739818,percentage points
+neutral,engine_budget,revised_gate,original_gate,total_contributions,5,-1901.8628000000003,-1927.371624533749,-1876.3539754662515,INR
+neutral,engine_budget,revised_gate,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,score_only,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,score_only,original_gate,forced_liquidation_rate,5,0.91,0.80950956203174,1.01049043796825,percentage points
+neutral,engine_budget,score_only,original_gate,shortfall_or_liquidation_rate,5,0.042,0.01978843915842,0.06421156084158,percentage points
+neutral,engine_budget,score_only,original_gate,months_below_1,5,0.0027599999999999,0.001991571478575,0.0035284285214248,months
+neutral,engine_budget,score_only,original_gate,months_below_3,5,0.0139599999999999,0.0116211848703293,0.0162988151296706,months
+neutral,engine_budget,score_only,original_gate,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,engine_budget,score_only,original_gate,median_final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,engine_budget,score_only,original_gate,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186038e-16,3.354157045618854e-16,initial-expense multiples
+neutral,engine_budget,score_only,original_gate,ever_cleared,5,3.594,3.45612496765879,3.73187503234121,percentage points
+neutral,engine_budget,score_only,original_gate,initial_cleared,5,12.68999999999999,12.22499724711345,13.15500275288653,percentage points
+neutral,engine_budget,score_only,original_gate,cleared_user_months,5,12.2415,11.950931168798231,12.53206883120177,percentage points
+neutral,engine_budget,score_only,original_gate,ever_contributed,5,6.085999999999999,5.86798275296403,6.304017247035961,percentage points
+neutral,engine_budget,score_only,original_gate,total_contributions,5,1089.0334999999995,1053.8909304222225,1124.1760695777766,INR
+neutral,engine_budget,score_only,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,no_investing,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,no_investing,original_gate,forced_liquidation_rate,5,-3.1559999999999997,-3.2901916553970603,-3.02180834460293,percentage points
+neutral,engine_budget,no_investing,original_gate,shortfall_or_liquidation_rate,5,-0.156,-0.18174769267929,-0.1302523073207,percentage points
+neutral,engine_budget,no_investing,original_gate,months_below_1,5,-0.0100999999999999,-0.0116925278653435,-0.0085074721346564,months
+neutral,engine_budget,no_investing,original_gate,months_below_3,5,-0.0519200000000001,-0.0555330075483886,-0.0483069924516116,months
+neutral,engine_budget,no_investing,original_gate,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,engine_budget,no_investing,original_gate,median_final_net_wealth,5,-1.3096723705530169e-11,-5.5663497612355856e-11,2.9470050201295526e-11,INR
+neutral,engine_budget,no_investing,original_gate,wealth_expense_ratio,5,0.0,0.0,0.0,initial-expense multiples
+neutral,engine_budget,no_investing,original_gate,ever_cleared,5,-74.54400000000001,-74.86402670146575,-74.22397329853428,percentage points
+neutral,engine_budget,no_investing,original_gate,initial_cleared,5,-33.129999999999995,-33.471175286436264,-32.78882471356373,percentage points
+neutral,engine_budget,no_investing,original_gate,cleared_user_months,5,-44.7945,-44.98194945912125,-44.60705054087874,percentage points
+neutral,engine_budget,no_investing,original_gate,ever_contributed,5,-53.239999999999995,-53.3534611880558,-53.126538811944194,percentage points
+neutral,engine_budget,no_investing,original_gate,total_contributions,5,-5332.893180000001,-5402.711200051964,-5263.075159948038,INR
+neutral,engine_budget,no_investing,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,engine_budget,validation_selected,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,engine_budget,validation_selected,original_gate,forced_liquidation_rate,5,-0.10799999999999,-0.15640897454338,-0.059591025456610006,percentage points
+neutral,engine_budget,validation_selected,original_gate,shortfall_or_liquidation_rate,5,-0.0039999999999995595,-0.01080087380658,0.0028008738065822603,percentage points
+neutral,engine_budget,validation_selected,original_gate,months_below_1,5,-0.00046,-0.0008773912214473,-4.260877855285041e-05,months
+neutral,engine_budget,validation_selected,original_gate,months_below_3,5,-0.0028,-0.0037894433903042,-0.0018105566096958,months
+neutral,engine_budget,validation_selected,original_gate,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,engine_budget,validation_selected,original_gate,median_final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,engine_budget,validation_selected,original_gate,wealth_expense_ratio,5,0.0,0.0,0.0,initial-expense multiples
+neutral,engine_budget,validation_selected,original_gate,ever_cleared,5,-11.524,-11.71243043816366,-11.335569561836339,percentage points
+neutral,engine_budget,validation_selected,original_gate,initial_cleared,5,-7.217999999999999,-7.42323169714928,-7.012768302850721,percentage points
+neutral,engine_budget,validation_selected,original_gate,cleared_user_months,5,-10.51216666666666,-10.64904060765063,-10.37529272568269,percentage points
+neutral,engine_budget,validation_selected,original_gate,ever_contributed,5,-0.99599999999999,-1.1062217235273901,-0.8857782764725999,percentage points
+neutral,engine_budget,validation_selected,original_gate,total_contributions,5,-267.7795400000003,-276.73961165092646,-258.8194683490741,INR
+neutral,engine_budget,validation_selected,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,always_invest,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,always_invest,no_investing,forced_liquidation_rate,5,26.104,25.54225166589101,26.665748334109,percentage points
+neutral,reserve_free,always_invest,no_investing,shortfall_or_liquidation_rate,5,1.978,1.76322442835763,2.1927755716423603,percentage points
+neutral,reserve_free,always_invest,no_investing,months_below_1,5,0.2078799999999999,0.2019463269186742,0.2138136730813256,months
+neutral,reserve_free,always_invest,no_investing,months_below_3,5,0.3292800000000001,0.3200092506468566,0.3385507493531436,months
+neutral,reserve_free,always_invest,no_investing,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,reserve_free,always_invest,no_investing,median_final_net_wealth,5,1.3096723705530169e-11,-2.5444894365942686e-11,5.1638341777003017e-11,INR
+neutral,reserve_free,always_invest,no_investing,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186038e-16,3.354157045618854e-16,initial-expense multiples
+neutral,reserve_free,always_invest,no_investing,ever_cleared,5,100.0,100.0,100.0,percentage points
+neutral,reserve_free,always_invest,no_investing,initial_cleared,5,100.0,100.0,100.0,percentage points
+neutral,reserve_free,always_invest,no_investing,cleared_user_months,5,100.0,100.0,100.0,percentage points
+neutral,reserve_free,always_invest,no_investing,ever_contributed,5,90.156,89.93482342678047,90.37717657321951,percentage points
+neutral,reserve_free,always_invest,no_investing,total_contributions,5,10981.57994,10892.826556961354,11070.333323038643,INR
+neutral,reserve_free,always_invest,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,original_gate,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,original_gate,no_investing,forced_liquidation_rate,5,5.91399999999999,5.75777715359585,6.07022284640414,percentage points
+neutral,reserve_free,original_gate,no_investing,shortfall_or_liquidation_rate,5,0.396,0.35712976852723,0.43487023147277,percentage points
+neutral,reserve_free,original_gate,no_investing,months_below_1,5,0.0300999999999999,0.0285666580734345,0.0316333419265653,months
+neutral,reserve_free,original_gate,no_investing,months_below_3,5,0.1653800000000002,0.1575657003071275,0.1731942996928729,months
+neutral,reserve_free,original_gate,no_investing,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,reserve_free,original_gate,no_investing,median_final_net_wealth,5,1.6007106751203538e-11,-2.6077581689800448e-11,5.8091795192207525e-11,INR
+neutral,reserve_free,original_gate,no_investing,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186038e-16,3.354157045618854e-16,initial-expense multiples
+neutral,reserve_free,original_gate,no_investing,ever_cleared,5,74.54400000000001,74.22397329853428,74.86402670146575,percentage points
+neutral,reserve_free,original_gate,no_investing,initial_cleared,5,33.129999999999995,32.78882471356373,33.471175286436264,percentage points
+neutral,reserve_free,original_gate,no_investing,cleared_user_months,5,44.51466666666667,44.32473761709745,44.70459571623589,percentage points
+neutral,reserve_free,original_gate,no_investing,ever_contributed,5,61.934,61.786403802165935,62.08159619783407,percentage points
+neutral,reserve_free,original_gate,no_investing,total_contributions,5,6694.77322,6622.321649803939,6767.224790196061,INR
+neutral,reserve_free,original_gate,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,revised_gate,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,revised_gate,no_investing,forced_liquidation_rate,5,1.15199999999999,1.00033390653222,1.30366609346777,percentage points
+neutral,reserve_free,revised_gate,no_investing,shortfall_or_liquidation_rate,5,0.08800000000000001,0.05137617371903,0.12462382628097,percentage points
+neutral,reserve_free,revised_gate,no_investing,months_below_1,5,0.0053399999999999,0.004542043687241,0.0061379563127589,months
+neutral,reserve_free,revised_gate,no_investing,months_below_3,5,0.03344,0.0320752988542547,0.0348047011457453,months
+neutral,reserve_free,revised_gate,no_investing,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,reserve_free,revised_gate,no_investing,median_final_net_wealth,5,1.1641532182693482e-11,-2.700582440865661e-11,5.028888877404357e-11,INR
+neutral,reserve_free,revised_gate,no_investing,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186038e-16,3.354157045618854e-16,initial-expense multiples
+neutral,reserve_free,revised_gate,no_investing,ever_cleared,5,51.767999999999994,51.43029934858859,52.10570065141139,percentage points
+neutral,reserve_free,revised_gate,no_investing,initial_cleared,5,15.443999999999999,15.196662526206811,15.69133747379318,percentage points
+neutral,reserve_free,revised_gate,no_investing,cleared_user_months,5,23.197000000000003,22.92111213509634,23.47288786490365,percentage points
+neutral,reserve_free,revised_gate,no_investing,ever_contributed,5,43.016,42.79239703226424,43.239602967735756,percentage points
+neutral,reserve_free,revised_gate,no_investing,total_contributions,5,3678.82674,3608.281631255934,3749.371848744065,INR
+neutral,reserve_free,revised_gate,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,score_only,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,score_only,no_investing,forced_liquidation_rate,5,7.086,6.8549370387838,7.31706296121619,percentage points
+neutral,reserve_free,score_only,no_investing,shortfall_or_liquidation_rate,5,0.484,0.43543204645874,0.5325679535412601,percentage points
+neutral,reserve_free,score_only,no_investing,months_below_1,5,0.0357199999999999,0.034364366736375,0.0370756332636248,months
+neutral,reserve_free,score_only,no_investing,months_below_3,5,0.2010200000000001,0.1931516309881611,0.208888369011839,months
+neutral,reserve_free,score_only,no_investing,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,reserve_free,score_only,no_investing,median_final_net_wealth,5,1.8917489796876908e-11,-1.9198240969311068e-11,5.7033220563064887e-11,INR
+neutral,reserve_free,score_only,no_investing,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186038e-16,3.354157045618854e-16,initial-expense multiples
+neutral,reserve_free,score_only,no_investing,ever_cleared,5,78.138,77.82163142044517,78.45436857955484,percentage points
+neutral,reserve_free,score_only,no_investing,initial_cleared,5,45.82,45.33974722190129,46.30025277809871,percentage points
+neutral,reserve_free,score_only,no_investing,cleared_user_months,5,56.65983333333333,56.3481889647769,56.97147770188976,percentage points
+neutral,reserve_free,score_only,no_investing,ever_contributed,5,68.21,67.83297552007205,68.58702447992793,percentage points
+neutral,reserve_free,score_only,no_investing,total_contributions,5,7987.26088,7901.077820016315,8073.443939983685,INR
+neutral,reserve_free,score_only,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,validation_selected,no_investing,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,validation_selected,no_investing,forced_liquidation_rate,5,5.756,5.62678339767493,5.88521660232506,percentage points
+neutral,reserve_free,validation_selected,no_investing,shortfall_or_liquidation_rate,5,0.378,0.3312105154132,0.4247894845868,percentage points
+neutral,reserve_free,validation_selected,no_investing,months_below_1,5,0.0288399999999999,0.027219640375721,0.0304603596242788,months
+neutral,reserve_free,validation_selected,no_investing,months_below_3,5,0.1582600000000001,0.1500389090055713,0.1664810909944289,months
+neutral,reserve_free,validation_selected,no_investing,final_net_wealth,5,1.4551915228366853e-12,-2.585067857868561e-12,5.495450903541932e-12,INR
+neutral,reserve_free,validation_selected,no_investing,median_final_net_wealth,5,1.6007106751203538e-11,-2.6077581689800448e-11,5.8091795192207525e-11,INR
+neutral,reserve_free,validation_selected,no_investing,wealth_expense_ratio,5,8.881784197001253e-17,-1.5778002062186043e-16,3.354157045618855e-16,initial-expense multiples
+neutral,reserve_free,validation_selected,no_investing,ever_cleared,5,73.774,73.4555428357123,74.0924571642877,percentage points
+neutral,reserve_free,validation_selected,no_investing,initial_cleared,5,31.53,31.19143303887153,31.86856696112847,percentage points
+neutral,reserve_free,validation_selected,no_investing,cleared_user_months,5,42.345166666666664,42.16346883321019,42.52686450012314,percentage points
+neutral,reserve_free,validation_selected,no_investing,ever_contributed,5,60.864,60.72226526472952,61.005734735270465,percentage points
+neutral,reserve_free,validation_selected,no_investing,total_contributions,5,6372.70904,6302.477267776038,6442.940812223961,INR
+neutral,reserve_free,validation_selected,no_investing,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,always_invest,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,always_invest,original_gate,forced_liquidation_rate,5,20.19,19.58571643379245,20.79428356620755,percentage points
+neutral,reserve_free,always_invest,original_gate,shortfall_or_liquidation_rate,5,1.58199999999999,1.38383882830239,1.7801611716976002,percentage points
+neutral,reserve_free,always_invest,original_gate,months_below_1,5,0.17778,0.1713704395180522,0.1841895604819477,months
+neutral,reserve_free,always_invest,original_gate,months_below_3,5,0.1638999999999999,0.156310090765633,0.1714899092343668,months
+neutral,reserve_free,always_invest,original_gate,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,reserve_free,always_invest,original_gate,median_final_net_wealth,5,-2.9103830456733705e-12,-1.6611569214353528e-11,1.0790803123006784e-11,INR
+neutral,reserve_free,always_invest,original_gate,wealth_expense_ratio,5,0.0,0.0,0.0,initial-expense multiples
+neutral,reserve_free,always_invest,original_gate,ever_cleared,5,25.456,25.13597329853426,25.77602670146574,percentage points
+neutral,reserve_free,always_invest,original_gate,initial_cleared,5,66.87,66.52882471356374,67.21117528643627,percentage points
+neutral,reserve_free,always_invest,original_gate,cleared_user_months,5,55.48533333333333,55.29540428376411,55.67526238290256,percentage points
+neutral,reserve_free,always_invest,original_gate,ever_contributed,5,28.22199999999999,27.993824180313982,28.45017581968601,percentage points
+neutral,reserve_free,always_invest,original_gate,total_contributions,5,4286.8067200000005,4260.070382144259,4313.543057855742,INR
+neutral,reserve_free,always_invest,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,revised_gate,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,revised_gate,original_gate,forced_liquidation_rate,5,-4.76199999999999,-4.91964732566427,-4.60435267433572,percentage points
+neutral,reserve_free,revised_gate,original_gate,shortfall_or_liquidation_rate,5,-0.30799999999999,-0.34861589034288,-0.2673841096571,percentage points
+neutral,reserve_free,revised_gate,original_gate,months_below_1,5,-0.0247599999999999,-0.0265216757511438,-0.022998324248856,months
+neutral,reserve_free,revised_gate,original_gate,months_below_3,5,-0.1319400000000001,-0.1401432559716638,-0.1237367440283365,months
+neutral,reserve_free,revised_gate,original_gate,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,reserve_free,revised_gate,original_gate,median_final_net_wealth,5,-4.3655745685100546e-12,-2.0777185755280114e-11,1.2046036618260002e-11,INR
+neutral,reserve_free,revised_gate,original_gate,wealth_expense_ratio,5,0.0,0.0,0.0,initial-expense multiples
+neutral,reserve_free,revised_gate,original_gate,ever_cleared,5,-22.77599999999999,-23.112923644078258,-22.43907635592173,percentage points
+neutral,reserve_free,revised_gate,original_gate,initial_cleared,5,-17.686,-17.83202095318735,-17.53997904681265,percentage points
+neutral,reserve_free,revised_gate,original_gate,cleared_user_months,5,-21.31766666666666,-21.462422848051,-21.17291048528233,percentage points
+neutral,reserve_free,revised_gate,original_gate,ever_contributed,5,-18.918,-19.20885167493237,-18.62714832506762,percentage points
+neutral,reserve_free,revised_gate,original_gate,total_contributions,5,-3015.94648,-3079.4985154565447,-2952.3944445434554,INR
+neutral,reserve_free,revised_gate,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,score_only,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,score_only,original_gate,forced_liquidation_rate,5,1.172,1.02341478466174,1.32058521533825,percentage points
+neutral,reserve_free,score_only,original_gate,shortfall_or_liquidation_rate,5,0.08800000000000001,0.05244415410601,0.12355584589398001,percentage points
+neutral,reserve_free,score_only,original_gate,months_below_1,5,0.00562,0.0050976149707877,0.0061423850292123,months
+neutral,reserve_free,score_only,original_gate,months_below_3,5,0.0356399999999998,0.0314379257758529,0.0398420742241468,months
+neutral,reserve_free,score_only,original_gate,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,reserve_free,score_only,original_gate,median_final_net_wealth,5,2.9103830456733705e-12,-2.037903909937137e-12,7.858670001283878e-12,INR
+neutral,reserve_free,score_only,original_gate,wealth_expense_ratio,5,0.0,0.0,0.0,initial-expense multiples
+neutral,reserve_free,score_only,original_gate,ever_cleared,5,3.594,3.45612496765879,3.73187503234121,percentage points
+neutral,reserve_free,score_only,original_gate,initial_cleared,5,12.68999999999999,12.22499724711345,13.15500275288653,percentage points
+neutral,reserve_free,score_only,original_gate,cleared_user_months,5,12.14516666666666,11.86071989951476,12.42961343381856,percentage points
+neutral,reserve_free,score_only,original_gate,ever_contributed,5,6.276,5.91553230248992,6.636467697510071,percentage points
+neutral,reserve_free,score_only,original_gate,total_contributions,5,1292.48766,1250.8395557981885,1334.1357642018118,INR
+neutral,reserve_free,score_only,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,no_investing,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,no_investing,original_gate,forced_liquidation_rate,5,-5.91399999999999,-6.07022284640414,-5.75777715359585,percentage points
+neutral,reserve_free,no_investing,original_gate,shortfall_or_liquidation_rate,5,-0.396,-0.43487023147277,-0.35712976852723,percentage points
+neutral,reserve_free,no_investing,original_gate,months_below_1,5,-0.0300999999999999,-0.0316333419265653,-0.0285666580734345,months
+neutral,reserve_free,no_investing,original_gate,months_below_3,5,-0.1653800000000002,-0.1731942996928729,-0.1575657003071275,months
+neutral,reserve_free,no_investing,original_gate,final_net_wealth,5,-1.4551915228366853e-12,-5.495450903541932e-12,2.585067857868561e-12,INR
+neutral,reserve_free,no_investing,original_gate,median_final_net_wealth,5,-1.6007106751203538e-11,-5.8091795192207525e-11,2.6077581689800448e-11,INR
+neutral,reserve_free,no_investing,original_gate,wealth_expense_ratio,5,-8.881784197001253e-17,-3.354157045618854e-16,1.5778002062186038e-16,initial-expense multiples
+neutral,reserve_free,no_investing,original_gate,ever_cleared,5,-74.54400000000001,-74.86402670146575,-74.22397329853428,percentage points
+neutral,reserve_free,no_investing,original_gate,initial_cleared,5,-33.129999999999995,-33.471175286436264,-32.78882471356373,percentage points
+neutral,reserve_free,no_investing,original_gate,cleared_user_months,5,-44.51466666666667,-44.70459571623589,-44.32473761709745,percentage points
+neutral,reserve_free,no_investing,original_gate,ever_contributed,5,-61.934,-62.08159619783407,-61.786403802165935,percentage points
+neutral,reserve_free,no_investing,original_gate,total_contributions,5,-6694.77322,-6767.224790196061,-6622.321649803939,INR
+neutral,reserve_free,no_investing,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+neutral,reserve_free,validation_selected,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+neutral,reserve_free,validation_selected,original_gate,forced_liquidation_rate,5,-0.158,-0.20136945896608002,-0.11463054103391,percentage points
+neutral,reserve_free,validation_selected,original_gate,shortfall_or_liquidation_rate,5,-0.01799999999999,-0.028388506336830002,-0.007611493663163466,percentage points
+neutral,reserve_free,validation_selected,original_gate,months_below_1,5,-0.0012599999999999,-0.0016386566281639,-0.000881343371836,months
+neutral,reserve_free,validation_selected,original_gate,months_below_3,5,-0.0071200000000001,-0.0082144970577421,-0.006025502942258,months
+neutral,reserve_free,validation_selected,original_gate,final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,reserve_free,validation_selected,original_gate,median_final_net_wealth,5,0.0,0.0,0.0,INR
+neutral,reserve_free,validation_selected,original_gate,wealth_expense_ratio,5,0.0,-3.8990545595977565e-16,3.8990545595977565e-16,initial-expense multiples
+neutral,reserve_free,validation_selected,original_gate,ever_cleared,5,-0.7699999999999899,-0.8528293197227701,-0.6871706802772201,percentage points
+neutral,reserve_free,validation_selected,original_gate,initial_cleared,5,-1.6,-1.82470345038574,-1.37529654961425,percentage points
+neutral,reserve_free,validation_selected,original_gate,cleared_user_months,5,-2.16949999999999,-2.22206031316423,-2.11693968683576,percentage points
+neutral,reserve_free,validation_selected,original_gate,ever_contributed,5,-1.06999999999999,-1.15823680579212,-0.98176319420787,percentage points
+neutral,reserve_free,validation_selected,original_gate,total_contributions,5,-322.06418000000014,-336.78266332823546,-307.3456966717648,INR
+neutral,reserve_free,validation_selected,original_gate,final_arrears,5,0.0,0.0,0.0,INR
+stress,engine_budget,always_invest,no_investing,shortfall_rate,5,0.04,0.010880398072099999,0.06911960192789,percentage points
+stress,engine_budget,always_invest,no_investing,forced_liquidation_rate,5,11.94399999999999,11.75991519870481,12.12808480129518,percentage points
+stress,engine_budget,always_invest,no_investing,shortfall_or_liquidation_rate,5,0.47200000000000003,0.44508136597661996,0.49891863402337,percentage points
+stress,engine_budget,always_invest,no_investing,months_below_1,5,0.0353599999999999,0.0331674871648106,0.0375525128351892,months
+stress,engine_budget,always_invest,no_investing,months_below_3,5,0.12362,0.1131780560910222,0.1340619439089778,months
+stress,engine_budget,always_invest,no_investing,final_net_wealth,5,-139.1280847251779,-146.63295069363056,-131.62321875672524,INR
+stress,engine_budget,always_invest,no_investing,median_final_net_wealth,5,-19.07515942806058,-128.18875419977263,90.03843534365149,INR
+stress,engine_budget,always_invest,no_investing,wealth_expense_ratio,5,-0.0058049729406711,-0.0061964185151529,-0.0054135273661893,initial-expense multiples
+stress,engine_budget,always_invest,no_investing,ever_cleared,5,100.0,100.0,100.0,percentage points
+stress,engine_budget,always_invest,no_investing,initial_cleared,5,100.0,100.0,100.0,percentage points
+stress,engine_budget,always_invest,no_investing,cleared_user_months,5,100.0,100.0,100.0,percentage points
+stress,engine_budget,always_invest,no_investing,ever_contributed,5,63.69800000000001,63.284281729480064,64.11171827051996,percentage points
+stress,engine_budget,always_invest,no_investing,total_contributions,5,6762.572340000001,6695.408262456967,6829.736417543034,INR
+stress,engine_budget,always_invest,no_investing,final_arrears,5,19.33516304684017,16.331249738979622,22.339076354700723,INR
+stress,engine_budget,original_gate,no_investing,shortfall_rate,5,0.019999999999989998,0.004792783862084199,0.03520721613791,percentage points
+stress,engine_budget,original_gate,no_investing,forced_liquidation_rate,5,5.672,5.47876261202079,5.8652373879791995,percentage points
+stress,engine_budget,original_gate,no_investing,shortfall_or_liquidation_rate,5,0.20600000000000002,0.17132221175075,0.24067778824924,percentage points
+stress,engine_budget,original_gate,no_investing,months_below_1,5,0.0173199999999999,0.015587444862004,0.0190525551379958,months
+stress,engine_budget,original_gate,no_investing,months_below_3,5,0.06814,0.0633097834118998,0.0729702165881002,months
+stress,engine_budget,original_gate,no_investing,final_net_wealth,5,-94.4271144124752,-101.14693183047348,-87.70729699447693,INR
+stress,engine_budget,original_gate,no_investing,median_final_net_wealth,5,-4.640784999539028,-87.34683497307209,78.06526497399405,INR
+stress,engine_budget,original_gate,no_investing,wealth_expense_ratio,5,-0.0039572404747304,-0.0042506260924347,-0.0036638548570261,initial-expense multiples
+stress,engine_budget,original_gate,no_investing,ever_cleared,5,71.99799999999999,71.57406674345998,72.42193325654002,percentage points
+stress,engine_budget,original_gate,no_investing,initial_cleared,5,33.129999999999995,32.78882471356373,33.471175286436264,percentage points
+stress,engine_budget,original_gate,no_investing,cleared_user_months,5,41.455999999999996,41.214173738738765,41.69782626126123,percentage points
+stress,engine_budget,original_gate,no_investing,ever_contributed,5,50.854,50.630052550519814,51.077947449480185,percentage points
+stress,engine_budget,original_gate,no_investing,total_contributions,5,4917.36572,4840.931001638188,4993.800438361812,INR
+stress,engine_budget,original_gate,no_investing,final_arrears,5,8.497001936857123,6.342766235614258,10.651237638099987,INR
+stress,engine_budget,revised_gate,no_investing,shortfall_rate,5,0.01199999999999,-0.0016017476131649604,0.02560174761316,percentage points
+stress,engine_budget,revised_gate,no_investing,forced_liquidation_rate,5,2.336,2.24535002398212,2.4266499760178704,percentage points
+stress,engine_budget,revised_gate,no_investing,shortfall_or_liquidation_rate,5,0.09199999999998999,0.05986032429267,0.12413967570732,percentage points
+stress,engine_budget,revised_gate,no_investing,months_below_1,5,0.0068999999999999,0.0057253307322614,0.0080746692677384,months
+stress,engine_budget,revised_gate,no_investing,months_below_3,5,0.0315799999999999,0.0296757553341569,0.0334842446658429,months
+stress,engine_budget,revised_gate,no_investing,final_net_wealth,5,-52.25427839009935,-60.096974399070405,-44.4115823811283,INR
+stress,engine_budget,revised_gate,no_investing,median_final_net_wealth,5,-18.345964953560905,-60.07038297539954,23.37845306827773,INR
+stress,engine_budget,revised_gate,no_investing,wealth_expense_ratio,5,-0.0022790795066672,-0.0025041519586747,-0.0020540070546596,initial-expense multiples
+stress,engine_budget,revised_gate,no_investing,ever_cleared,5,47.808,47.48607600905843,48.129923990941556,percentage points
+stress,engine_budget,revised_gate,no_investing,initial_cleared,5,15.443999999999999,15.196662526206811,15.69133747379318,percentage points
+stress,engine_budget,revised_gate,no_investing,cleared_user_months,5,20.968999999999998,20.64066474091254,21.29733525908745,percentage points
+stress,engine_budget,revised_gate,no_investing,ever_contributed,5,39.85399999999999,39.441009040216265,40.26699095978372,percentage points
+stress,engine_budget,revised_gate,no_investing,total_contributions,5,3152.05792,3074.252258002754,3229.8635819972465,INR
+stress,engine_budget,revised_gate,no_investing,final_arrears,5,3.447390983135847,2.2585558064763367,4.636226159795357,INR
+stress,engine_budget,score_only,no_investing,shortfall_rate,5,0.024,0.0032229873263286976,0.04477701267367,percentage points
+stress,engine_budget,score_only,no_investing,forced_liquidation_rate,5,7.18399999999999,7.126694818717259,7.24130518128273,percentage points
+stress,engine_budget,score_only,no_investing,shortfall_or_liquidation_rate,5,0.28600000000000003,0.23664483223199,0.335355167768,percentage points
+stress,engine_budget,score_only,no_investing,months_below_1,5,0.02144,0.0192143367654807,0.0236656632345192,months
+stress,engine_budget,score_only,no_investing,months_below_3,5,0.0865199999999999,0.0813313893712081,0.0917086106287918,months
+stress,engine_budget,score_only,no_investing,final_net_wealth,5,-111.06536551985046,-119.16490823048132,-102.9658228092196,INR
+stress,engine_budget,score_only,no_investing,median_final_net_wealth,5,-3.3442807167957653,-80.76423619058458,74.07567475699305,INR
+stress,engine_budget,score_only,no_investing,wealth_expense_ratio,5,-0.004661479452487,-0.0050771554207426,-0.0042458034842313,initial-expense multiples
+stress,engine_budget,score_only,no_investing,ever_cleared,5,75.722,75.19914297156863,76.24485702843137,percentage points
+stress,engine_budget,score_only,no_investing,initial_cleared,5,45.82,45.33974722190129,46.30025277809871,percentage points
+stress,engine_budget,score_only,no_investing,cleared_user_months,5,52.64466666666666,52.338038782129836,52.95129455120349,percentage points
+stress,engine_budget,score_only,no_investing,ever_contributed,5,56.906,56.53478607068318,57.277213929316815,percentage points
+stress,engine_budget,score_only,no_investing,total_contributions,5,5912.48222,5829.385371200335,5995.579068799665,INR
+stress,engine_budget,score_only,no_investing,final_arrears,5,11.000170654506656,8.543045483740666,13.457295825272643,INR
+stress,engine_budget,validation_selected,no_investing,shortfall_rate,5,0.019999999999989998,0.004792783862084199,0.03520721613791,percentage points
+stress,engine_budget,validation_selected,no_investing,forced_liquidation_rate,5,5.492,5.30670478792376,5.6772952120762294,percentage points
+stress,engine_budget,validation_selected,no_investing,shortfall_or_liquidation_rate,5,0.2,0.16073513677044002,0.23926486322955,percentage points
+stress,engine_budget,validation_selected,no_investing,months_below_1,5,0.0165799999999998,0.0151282616608963,0.0180317383391033,months
+stress,engine_budget,validation_selected,no_investing,months_below_3,5,0.0645999999999999,0.0597822476829777,0.069417752317022,months
+stress,engine_budget,validation_selected,no_investing,final_net_wealth,5,-90.08133636949933,-97.51702890327716,-82.64564383572149,INR
+stress,engine_budget,validation_selected,no_investing,median_final_net_wealth,5,-4.640784999539028,-87.34683497307209,78.06526497399405,INR
+stress,engine_budget,validation_selected,no_investing,wealth_expense_ratio,5,-0.0037686388680107,-0.0040808451797682,-0.0034564325562532,initial-expense multiples
+stress,engine_budget,validation_selected,no_investing,ever_cleared,5,60.45,60.19904253460161,60.700957465398396,percentage points
+stress,engine_budget,validation_selected,no_investing,initial_cleared,5,25.911999999999992,25.50296640278465,26.321033597215337,percentage points
+stress,engine_budget,validation_selected,no_investing,cleared_user_months,5,31.11033333333333,30.8838660036872,31.33680066297947,percentage points
+stress,engine_budget,validation_selected,no_investing,ever_contributed,5,49.883999999999986,49.74752988542548,50.0204701145745,percentage points
+stress,engine_budget,validation_selected,no_investing,total_contributions,5,4671.42724,4598.222344757826,4744.632135242174,INR
+stress,engine_budget,validation_selected,no_investing,final_arrears,5,8.142259516971535,6.032545310683938,10.251973723259132,INR
+stress,engine_budget,always_invest,original_gate,shortfall_rate,5,0.02,-0.004833279964072077,0.04483327996407,percentage points
+stress,engine_budget,always_invest,original_gate,forced_liquidation_rate,5,6.272,6.06212572484861,6.481874275151379,percentage points
+stress,engine_budget,always_invest,original_gate,shortfall_or_liquidation_rate,5,0.26599999999998997,0.23132221175075,0.30067778824923996,percentage points
+stress,engine_budget,always_invest,original_gate,months_below_1,5,0.0180399999999999,0.0165101812664981,0.0195698187335018,months
+stress,engine_budget,always_invest,original_gate,months_below_3,5,0.05548,0.0489312375926025,0.0620287624073974,months
+stress,engine_budget,always_invest,original_gate,final_net_wealth,5,-44.7009703127027,-47.02515371351816,-42.37678691188725,INR
+stress,engine_budget,always_invest,original_gate,median_final_net_wealth,5,-14.43437442852155,-97.2014569095291,68.332708052486,INR
+stress,engine_budget,always_invest,original_gate,wealth_expense_ratio,5,-0.0018477324659407,-0.0020483764969358,-0.0016470884349455,initial-expense multiples
+stress,engine_budget,always_invest,original_gate,ever_cleared,5,28.002,27.578066743459978,28.42593325654003,percentage points
+stress,engine_budget,always_invest,original_gate,initial_cleared,5,66.87,66.52882471356374,67.21117528643627,percentage points
+stress,engine_budget,always_invest,original_gate,cleared_user_months,5,58.544,58.30217373873877,58.78582626126122,percentage points
+stress,engine_budget,always_invest,original_gate,ever_contributed,5,12.843999999999989,12.57934783114831,13.10865216885167,percentage points
+stress,engine_budget,always_invest,original_gate,total_contributions,5,1845.20662,1819.892698648692,1870.520541351308,INR
+stress,engine_budget,always_invest,original_gate,final_arrears,5,10.838161109983048,9.618740471743092,12.057581748223004,INR
+stress,engine_budget,revised_gate,original_gate,shortfall_rate,5,-0.00800000000000023,-0.01355289021039,-0.002447109789604473,percentage points
+stress,engine_budget,revised_gate,original_gate,forced_liquidation_rate,5,-3.3360000000000003,-3.4738750323411995,-3.19812496765879,percentage points
+stress,engine_budget,revised_gate,original_gate,shortfall_or_liquidation_rate,5,-0.11399999999999999,-0.13065867063118,-0.09734132936881,percentage points
+stress,engine_budget,revised_gate,original_gate,months_below_1,5,-0.0104199999999999,-0.0119264613506786,-0.0089135386493213,months
+stress,engine_budget,revised_gate,original_gate,months_below_3,5,-0.03656,-0.0398340869116866,-0.0332859130883134,months
+stress,engine_budget,revised_gate,original_gate,final_net_wealth,5,42.17283602237585,39.86939489339572,44.47627715135598,INR
+stress,engine_budget,revised_gate,original_gate,median_final_net_wealth,5,-13.705179954021878,-56.03623454524993,28.625874637206174,INR
+stress,engine_budget,revised_gate,original_gate,wealth_expense_ratio,5,0.0016781609680632,0.0015714773083668,0.0017848446277596,initial-expense multiples
+stress,engine_budget,revised_gate,original_gate,ever_cleared,5,-24.19,-24.55686916467755,-23.82313083532244,percentage points
+stress,engine_budget,revised_gate,original_gate,initial_cleared,5,-17.686,-17.83202095318735,-17.53997904681265,percentage points
+stress,engine_budget,revised_gate,original_gate,cleared_user_months,5,-20.487,-20.70201347124587,-20.27198652875413,percentage points
+stress,engine_budget,revised_gate,original_gate,ever_contributed,5,-11.0,-11.291592834388311,-10.70840716561168,percentage points
+stress,engine_budget,revised_gate,original_gate,total_contributions,5,-1765.3078,-1785.273488965566,-1745.342111034434,INR
+stress,engine_budget,revised_gate,original_gate,final_arrears,5,-5.049610953721276,-6.381812689844313,-3.7174092175982394,INR
+stress,engine_budget,score_only,original_gate,shortfall_rate,5,0.00400000000000178,-0.002800873806583816,0.01080087380658,percentage points
+stress,engine_budget,score_only,original_gate,forced_liquidation_rate,5,1.512,1.34624832003072,1.67775167996927,percentage points
+stress,engine_budget,score_only,original_gate,shortfall_or_liquidation_rate,5,0.08,0.05088039807209001,0.1091196019279,percentage points
+stress,engine_budget,score_only,original_gate,months_below_1,5,0.00412,0.0034665024352084,0.0047734975647917,months
+stress,engine_budget,score_only,original_gate,months_below_3,5,0.0183799999999999,0.0163201845856569,0.020439815414343,months
+stress,engine_budget,score_only,original_gate,final_net_wealth,5,-16.638251107375254,-19.43617616995325,-13.840326044797262,INR
+stress,engine_budget,score_only,original_gate,median_final_net_wealth,5,1.296504282743263,-91.16608263158402,93.75909119707052,INR
+stress,engine_budget,score_only,original_gate,wealth_expense_ratio,5,-0.0007042389777565,-0.0009237044101507,-0.0004847735453624,initial-expense multiples
+stress,engine_budget,score_only,original_gate,ever_cleared,5,3.72399999999999,3.53536512384829,3.9126348761517002,percentage points
+stress,engine_budget,score_only,original_gate,initial_cleared,5,12.68999999999999,12.22499724711345,13.15500275288653,percentage points
+stress,engine_budget,score_only,original_gate,cleared_user_months,5,11.188666666666661,10.937008808312381,11.440324525020939,percentage points
+stress,engine_budget,score_only,original_gate,ever_contributed,5,6.05199999999999,5.807357529063769,6.29664247093622,percentage points
+stress,engine_budget,score_only,original_gate,total_contributions,5,995.1164999999996,968.4317616717286,1021.8012383282708,INR
+stress,engine_budget,score_only,original_gate,final_arrears,5,2.5031687176495323,1.8410571846604424,3.1652802506386224,INR
+stress,engine_budget,no_investing,original_gate,shortfall_rate,5,-0.019999999999989998,-0.03520721613791,-0.004792783862084199,percentage points
+stress,engine_budget,no_investing,original_gate,forced_liquidation_rate,5,-5.672,-5.8652373879791995,-5.47876261202079,percentage points
+stress,engine_budget,no_investing,original_gate,shortfall_or_liquidation_rate,5,-0.20600000000000002,-0.24067778824924,-0.17132221175075,percentage points
+stress,engine_budget,no_investing,original_gate,months_below_1,5,-0.0173199999999999,-0.0190525551379958,-0.015587444862004,months
+stress,engine_budget,no_investing,original_gate,months_below_3,5,-0.06814,-0.0729702165881002,-0.0633097834118998,months
+stress,engine_budget,no_investing,original_gate,final_net_wealth,5,94.4271144124752,87.70729699447693,101.14693183047348,INR
+stress,engine_budget,no_investing,original_gate,median_final_net_wealth,5,4.640784999539028,-78.06526497399405,87.34683497307209,INR
+stress,engine_budget,no_investing,original_gate,wealth_expense_ratio,5,0.0039572404747304,0.0036638548570261,0.0042506260924347,initial-expense multiples
+stress,engine_budget,no_investing,original_gate,ever_cleared,5,-71.99799999999999,-72.42193325654002,-71.57406674345998,percentage points
+stress,engine_budget,no_investing,original_gate,initial_cleared,5,-33.129999999999995,-33.471175286436264,-32.78882471356373,percentage points
+stress,engine_budget,no_investing,original_gate,cleared_user_months,5,-41.455999999999996,-41.69782626126123,-41.214173738738765,percentage points
+stress,engine_budget,no_investing,original_gate,ever_contributed,5,-50.854,-51.077947449480185,-50.630052550519814,percentage points
+stress,engine_budget,no_investing,original_gate,total_contributions,5,-4917.36572,-4993.800438361812,-4840.931001638188,INR
+stress,engine_budget,no_investing,original_gate,final_arrears,5,-8.497001936857123,-10.651237638099987,-6.342766235614258,INR
+stress,engine_budget,validation_selected,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+stress,engine_budget,validation_selected,original_gate,forced_liquidation_rate,5,-0.18,-0.20483327996407,-0.15516672003592,percentage points
+stress,engine_budget,validation_selected,original_gate,shortfall_or_liquidation_rate,5,-0.00599999999999934,-0.01280087380658,0.0008008738065824815,percentage points
+stress,engine_budget,validation_selected,original_gate,months_below_1,5,-0.0007400000000001,-0.0011754683990667,-0.0003045316009335,months
+stress,engine_budget,validation_selected,original_gate,months_below_3,5,-0.00354,-0.0039928244929662,-0.0030871755070339,months
+stress,engine_budget,validation_selected,original_gate,final_net_wealth,5,4.345778042975871,3.582505474021973,5.109050611929769,INR
+stress,engine_budget,validation_selected,original_gate,median_final_net_wealth,5,0.0,0.0,0.0,INR
+stress,engine_budget,validation_selected,original_gate,wealth_expense_ratio,5,0.0001886016067196,0.0001622178763545,0.0002149853370847,initial-expense multiples
+stress,engine_budget,validation_selected,original_gate,ever_cleared,5,-11.548,-11.734539096340969,-11.361460903659031,percentage points
+stress,engine_budget,validation_selected,original_gate,initial_cleared,5,-7.217999999999999,-7.42323169714928,-7.012768302850721,percentage points
+stress,engine_budget,validation_selected,original_gate,cleared_user_months,5,-10.34566666666666,-10.50402514536093,-10.18730818797239,percentage points
+stress,engine_budget,validation_selected,original_gate,ever_contributed,5,-0.97,-1.11612649780046,-0.82387350219953,percentage points
+stress,engine_budget,validation_selected,original_gate,total_contributions,5,-245.93848,-254.1404120976704,-237.73654790232956,INR
+stress,engine_budget,validation_selected,original_gate,final_arrears,5,-0.3547424198855878,-0.5417656750104185,-0.1677191647607572,INR
+stress,reserve_free,always_invest,no_investing,shortfall_rate,5,0.13799999999999,0.08288913823629,0.19311086176369,percentage points
+stress,reserve_free,always_invest,no_investing,forced_liquidation_rate,5,34.27599999999999,33.70974131514574,34.84225868485424,percentage points
+stress,reserve_free,always_invest,no_investing,shortfall_or_liquidation_rate,5,2.34199999999999,2.0266075677259,2.65739243227409,percentage points
+stress,reserve_free,always_invest,no_investing,months_below_1,5,0.2400599999999998,0.2278377745506229,0.2522822254493767,months
+stress,reserve_free,always_invest,no_investing,months_below_3,5,0.3421199999999998,0.3314780630175627,0.352761936982437,months
+stress,reserve_free,always_invest,no_investing,final_net_wealth,5,-276.2177203828971,-289.6362055746372,-262.79923519115704,INR
+stress,reserve_free,always_invest,no_investing,median_final_net_wealth,5,-255.5306977164495,-418.7255092014085,-92.33588623149052,INR
+stress,reserve_free,always_invest,no_investing,wealth_expense_ratio,5,-0.0111230593656023,-0.0117865752006481,-0.0104595435305566,initial-expense multiples
+stress,reserve_free,always_invest,no_investing,ever_cleared,5,100.0,100.0,100.0,percentage points
+stress,reserve_free,always_invest,no_investing,initial_cleared,5,100.0,100.0,100.0,percentage points
+stress,reserve_free,always_invest,no_investing,cleared_user_months,5,100.0,100.0,100.0,percentage points
+stress,reserve_free,always_invest,no_investing,ever_contributed,5,89.91000000000001,89.69422180270021,90.1257781972998,percentage points
+stress,reserve_free,always_invest,no_investing,total_contributions,5,10680.44144,10599.140185348126,10761.742694651872,INR
+stress,reserve_free,always_invest,no_investing,final_arrears,5,88.58189253237796,82.65895117956781,94.50483388518812,INR
+stress,reserve_free,original_gate,no_investing,shortfall_rate,5,0.04599999999999,0.020252307320700002,0.07174769267928001,percentage points
+stress,reserve_free,original_gate,no_investing,forced_liquidation_rate,5,9.754,9.58820181934809,9.919798180651899,percentage points
+stress,reserve_free,original_gate,no_investing,shortfall_or_liquidation_rate,5,0.60599999999999,0.46426526472951996,0.74773473527047,percentage points
+stress,reserve_free,original_gate,no_investing,months_below_1,5,0.0475799999999998,0.0429048423662039,0.0522551576337957,months
+stress,reserve_free,original_gate,no_investing,months_below_3,5,0.1772599999999997,0.1707246704821163,0.183795329517883,months
+stress,reserve_free,original_gate,no_investing,final_net_wealth,5,-130.97873016613374,-140.1064042687534,-121.85105606351408,INR
+stress,reserve_free,original_gate,no_investing,median_final_net_wealth,5,-50.18129364998458,-88.62977946565977,-11.732807834309405,INR
+stress,reserve_free,original_gate,no_investing,wealth_expense_ratio,5,-0.0054487207450575,-0.0058671793620096,-0.0050302621281054,initial-expense multiples
+stress,reserve_free,original_gate,no_investing,ever_cleared,5,71.99799999999999,71.57406674345998,72.42193325654002,percentage points
+stress,reserve_free,original_gate,no_investing,initial_cleared,5,33.129999999999995,32.78882471356373,33.471175286436264,percentage points
+stress,reserve_free,original_gate,no_investing,cleared_user_months,5,41.11566666666666,40.8569686635394,41.37436466979393,percentage points
+stress,reserve_free,original_gate,no_investing,ever_contributed,5,59.618,59.432704787923775,59.803295212076236,percentage points
+stress,reserve_free,original_gate,no_investing,total_contributions,5,6338.49032,6272.799767032226,6404.180872967774,INR
+stress,reserve_free,original_gate,no_investing,final_arrears,5,19.189506900723792,16.704072027336444,21.67494177411114,INR
+stress,reserve_free,revised_gate,no_investing,shortfall_rate,5,0.01199999999999,-0.0016017476131649604,0.02560174761316,percentage points
+stress,reserve_free,revised_gate,no_investing,forced_liquidation_rate,5,2.368,2.28046488968623,2.4555351103137597,percentage points
+stress,reserve_free,revised_gate,no_investing,shortfall_or_liquidation_rate,5,0.12399999999999001,0.06471135669866,0.18328864330133002,percentage points
+stress,reserve_free,revised_gate,no_investing,months_below_1,5,0.0092199999999999,0.0077923563545396,0.0106476436454602,months
+stress,reserve_free,revised_gate,no_investing,months_below_3,5,0.0448999999999998,0.0418509626451702,0.0479490373548293,months
+stress,reserve_free,revised_gate,no_investing,final_net_wealth,5,-58.11127742236495,-67.00424368367891,-49.21831116105099,INR
+stress,reserve_free,revised_gate,no_investing,median_final_net_wealth,5,-18.0401324906532,-56.313524396012056,20.23325941470566,INR
+stress,reserve_free,revised_gate,no_investing,wealth_expense_ratio,5,-0.0025498663108342,-0.0028219820896347,-0.0022777505320336,initial-expense multiples
+stress,reserve_free,revised_gate,no_investing,ever_cleared,5,47.808,47.48607600905843,48.129923990941556,percentage points
+stress,reserve_free,revised_gate,no_investing,initial_cleared,5,15.443999999999999,15.196662526206811,15.69133747379318,percentage points
+stress,reserve_free,revised_gate,no_investing,cleared_user_months,5,20.88616666666666,20.56759252708336,21.204740806249962,percentage points
+stress,reserve_free,revised_gate,no_investing,ever_contributed,5,39.855999999999995,39.44272915384006,40.269270846159934,percentage points
+stress,reserve_free,revised_gate,no_investing,total_contributions,5,3411.50738,3333.022770214432,3489.9919897855684,INR
+stress,reserve_free,revised_gate,no_investing,final_arrears,5,4.261325961560942,2.9660700562251723,5.556581866896712,INR
+stress,reserve_free,score_only,no_investing,shortfall_rate,5,0.05399999999999001,0.0282523073207,0.07974769267929,percentage points
+stress,reserve_free,score_only,no_investing,forced_liquidation_rate,5,11.566,11.28236741284218,11.84963258715781,percentage points
+stress,reserve_free,score_only,no_investing,shortfall_or_liquidation_rate,5,0.73599999999999,0.58632926335169,0.8856707366483,percentage points
+stress,reserve_free,score_only,no_investing,months_below_1,5,0.0557799999999999,0.050140739935466,0.0614192600645338,months
+stress,reserve_free,score_only,no_investing,months_below_3,5,0.2172199999999998,0.2100691579649476,0.2243708420350519,months
+stress,reserve_free,score_only,no_investing,final_net_wealth,5,-152.07763046109466,-162.73103546953456,-141.42422545265475,INR
+stress,reserve_free,score_only,no_investing,median_final_net_wealth,5,-60.05457535891037,-133.99818516288076,13.88903444506002,INR
+stress,reserve_free,score_only,no_investing,wealth_expense_ratio,5,-0.0063490815648189,-0.0068817444808112,-0.0058164186488267,initial-expense multiples
+stress,reserve_free,score_only,no_investing,ever_cleared,5,75.722,75.19914297156863,76.24485702843137,percentage points
+stress,reserve_free,score_only,no_investing,initial_cleared,5,45.82,45.33974722190129,46.30025277809871,percentage points
+stress,reserve_free,score_only,no_investing,cleared_user_months,5,52.19566666666666,51.88901102455553,52.50232230877779,percentage points
+stress,reserve_free,score_only,no_investing,ever_contributed,5,65.75,65.2235725360249,66.2764274639751,percentage points
+stress,reserve_free,score_only,no_investing,total_contributions,5,7544.55924,7466.514478489853,7622.604001510146,INR
+stress,reserve_free,score_only,no_investing,final_arrears,5,23.121177191560854,20.10801253984013,26.13434184328158,INR
+stress,reserve_free,validation_selected,no_investing,shortfall_rate,5,0.04599999999999,0.020252307320700002,0.07174769267928001,percentage points
+stress,reserve_free,validation_selected,no_investing,forced_liquidation_rate,5,9.501999999999999,9.36390150716801,9.64009849283198,percentage points
+stress,reserve_free,validation_selected,no_investing,shortfall_or_liquidation_rate,5,0.57799999999999,0.42456529327649,0.7314347067235,percentage points
+stress,reserve_free,validation_selected,no_investing,months_below_1,5,0.0457599999999999,0.0410297653327121,0.0504902346672877,months
+stress,reserve_free,validation_selected,no_investing,months_below_3,5,0.1698399999999999,0.1635266544240702,0.1761533455759296,months
+stress,reserve_free,validation_selected,no_investing,final_net_wealth,5,-125.07666892172492,-134.4502635389594,-115.70307430449044,INR
+stress,reserve_free,validation_selected,no_investing,median_final_net_wealth,5,-51.638833021232855,-91.38732664024774,-11.890339402217975,INR
+stress,reserve_free,validation_selected,no_investing,wealth_expense_ratio,5,-0.0051946120348899,-0.0056056415228109,-0.0047835825469689,initial-expense multiples
+stress,reserve_free,validation_selected,no_investing,ever_cleared,5,71.232,70.80031858647413,71.66368141352588,percentage points
+stress,reserve_free,validation_selected,no_investing,initial_cleared,5,31.53,31.19143303887153,31.86856696112847,percentage points
+stress,reserve_free,validation_selected,no_investing,cleared_user_months,5,39.135999999999996,38.88677914460247,39.38522085539752,percentage points
+stress,reserve_free,validation_selected,no_investing,ever_contributed,5,58.596000000000004,58.43611918547889,58.75588081452112,percentage points
+stress,reserve_free,validation_selected,no_investing,total_contributions,5,6036.59656,5973.361964162445,6099.831155837555,INR
+stress,reserve_free,validation_selected,no_investing,final_arrears,5,18.436204696794448,15.896358614915364,20.97605077867353,INR
+stress,reserve_free,always_invest,original_gate,shortfall_rate,5,0.092,0.04688810667402,0.13711189332597998,percentage points
+stress,reserve_free,always_invest,original_gate,forced_liquidation_rate,5,24.522,23.961433051707807,25.08256694829218,percentage points
+stress,reserve_free,always_invest,original_gate,shortfall_or_liquidation_rate,5,1.73599999999999,1.55809073572335,1.91390926427664,percentage points
+stress,reserve_free,always_invest,original_gate,months_below_1,5,0.1924799999999999,0.1832388161147045,0.2017211838852953,months
+stress,reserve_free,always_invest,original_gate,months_below_3,5,0.1648600000000001,0.1579118941180984,0.1718081058819019,months
+stress,reserve_free,always_invest,original_gate,final_net_wealth,5,-145.23899021676334,-152.46729348309077,-138.0106869504359,INR
+stress,reserve_free,always_invest,original_gate,median_final_net_wealth,5,-205.34940406646493,-353.81105877254424,-56.88774936038561,INR
+stress,reserve_free,always_invest,original_gate,wealth_expense_ratio,5,-0.0056743386205448,-0.0060281490339091,-0.0053205282071804,initial-expense multiples
+stress,reserve_free,always_invest,original_gate,ever_cleared,5,28.002,27.578066743459978,28.42593325654003,percentage points
+stress,reserve_free,always_invest,original_gate,initial_cleared,5,66.87,66.52882471356374,67.21117528643627,percentage points
+stress,reserve_free,always_invest,original_gate,cleared_user_months,5,58.88433333333334,58.62563533020608,59.143031336460595,percentage points
+stress,reserve_free,always_invest,original_gate,ever_contributed,5,30.292,29.92215916956195,30.66184083043805,percentage points
+stress,reserve_free,always_invest,original_gate,total_contributions,5,4341.951120000001,4294.583355538092,4389.318884461909,INR
+stress,reserve_free,always_invest,original_gate,final_arrears,5,69.39238563165418,65.06615832901602,73.71861293429234,INR
+stress,reserve_free,revised_gate,original_gate,shortfall_rate,5,-0.033999999999990003,-0.05655594666299,-0.011444053337,percentage points
+stress,reserve_free,revised_gate,original_gate,forced_liquidation_rate,5,-7.385999999999999,-7.51699408063636,-7.25500591936364,percentage points
+stress,reserve_free,revised_gate,original_gate,shortfall_or_liquidation_rate,5,-0.482,-0.6021915357633699,-0.36180846423662,percentage points
+stress,reserve_free,revised_gate,original_gate,months_below_1,5,-0.0383599999999999,-0.0430096959642794,-0.0337103040357204,months
+stress,reserve_free,revised_gate,original_gate,months_below_3,5,-0.1323599999999999,-0.1383041867672786,-0.1264158132327211,months
+stress,reserve_free,revised_gate,original_gate,final_net_wealth,5,72.86745274376881,71.21544308850352,74.5194623990341,INR
+stress,reserve_free,revised_gate,original_gate,median_final_net_wealth,5,32.14116115933139,-8.309767154884192,72.59208947354696,INR
+stress,reserve_free,revised_gate,original_gate,wealth_expense_ratio,5,0.0028988544342233,0.0027111922792373,0.0030865165892093,initial-expense multiples
+stress,reserve_free,revised_gate,original_gate,ever_cleared,5,-24.19,-24.55686916467755,-23.82313083532244,percentage points
+stress,reserve_free,revised_gate,original_gate,initial_cleared,5,-17.686,-17.83202095318735,-17.53997904681265,percentage points
+stress,reserve_free,revised_gate,original_gate,cleared_user_months,5,-20.2295,-20.412311335486798,-20.046688664513198,percentage points
+stress,reserve_free,revised_gate,original_gate,ever_contributed,5,-19.762,-20.26777045787344,-19.256229542126547,percentage points
+stress,reserve_free,revised_gate,original_gate,total_contributions,5,-2926.98294,-2974.3187225143724,-2879.6471574856278,INR
+stress,reserve_free,revised_gate,original_gate,final_arrears,5,-14.928180939162848,-16.21516464958924,-13.641197228736456,INR
+stress,reserve_free,score_only,original_gate,shortfall_rate,5,0.00800000000000134,-0.0023885063368360953,0.01838850633683,percentage points
+stress,reserve_free,score_only,original_gate,forced_liquidation_rate,5,1.81199999999999,1.6010267073403601,2.02297329265963,percentage points
+stress,reserve_free,score_only,original_gate,shortfall_or_liquidation_rate,5,0.12999999999998998,0.10088039807209001,0.15911960192789001,percentage points
+stress,reserve_free,score_only,original_gate,months_below_1,5,0.0082,0.0068598079057959,0.0095401920942041,months
+stress,reserve_free,score_only,original_gate,months_below_3,5,0.0399600000000001,0.0364233276505697,0.0434966723494304,months
+stress,reserve_free,score_only,original_gate,final_net_wealth,5,-21.098900294960917,-23.930074925143717,-18.267725664778112,INR
+stress,reserve_free,score_only,original_gate,median_final_net_wealth,5,-9.873281708925788,-75.94612408518212,56.19956066733055,INR
+stress,reserve_free,score_only,original_gate,wealth_expense_ratio,5,-0.0009003608197613,-0.0010964525443198,-0.0007042690952028,initial-expense multiples
+stress,reserve_free,score_only,original_gate,ever_cleared,5,3.72399999999999,3.53536512384829,3.9126348761517002,percentage points
+stress,reserve_free,score_only,original_gate,initial_cleared,5,12.68999999999999,12.22499724711345,13.15500275288653,percentage points
+stress,reserve_free,score_only,original_gate,cleared_user_months,5,11.08,10.82659392470789,11.3334060752921,percentage points
+stress,reserve_free,score_only,original_gate,ever_contributed,5,6.132,5.76772447690607,6.496275523093919,percentage points
+stress,reserve_free,score_only,original_gate,total_contributions,5,1206.0689200000002,1168.5008350131354,1243.637004986865,INR
+stress,reserve_free,score_only,original_gate,final_arrears,5,3.931670290837064,2.97397332194294,4.889367259731189,INR
+stress,reserve_free,no_investing,original_gate,shortfall_rate,5,-0.04599999999999,-0.07174769267928001,-0.020252307320700002,percentage points
+stress,reserve_free,no_investing,original_gate,forced_liquidation_rate,5,-9.754,-9.919798180651899,-9.58820181934809,percentage points
+stress,reserve_free,no_investing,original_gate,shortfall_or_liquidation_rate,5,-0.60599999999999,-0.74773473527047,-0.46426526472951996,percentage points
+stress,reserve_free,no_investing,original_gate,months_below_1,5,-0.0475799999999998,-0.0522551576337957,-0.0429048423662039,months
+stress,reserve_free,no_investing,original_gate,months_below_3,5,-0.1772599999999997,-0.183795329517883,-0.1707246704821163,months
+stress,reserve_free,no_investing,original_gate,final_net_wealth,5,130.97873016613374,121.85105606351408,140.1064042687534,INR
+stress,reserve_free,no_investing,original_gate,median_final_net_wealth,5,50.18129364998458,11.732807834309405,88.62977946565977,INR
+stress,reserve_free,no_investing,original_gate,wealth_expense_ratio,5,0.0054487207450575,0.0050302621281054,0.0058671793620096,initial-expense multiples
+stress,reserve_free,no_investing,original_gate,ever_cleared,5,-71.99799999999999,-72.42193325654002,-71.57406674345998,percentage points
+stress,reserve_free,no_investing,original_gate,initial_cleared,5,-33.129999999999995,-33.471175286436264,-32.78882471356373,percentage points
+stress,reserve_free,no_investing,original_gate,cleared_user_months,5,-41.11566666666666,-41.37436466979393,-40.8569686635394,percentage points
+stress,reserve_free,no_investing,original_gate,ever_contributed,5,-59.618,-59.803295212076236,-59.432704787923775,percentage points
+stress,reserve_free,no_investing,original_gate,total_contributions,5,-6338.49032,-6404.180872967774,-6272.799767032226,INR
+stress,reserve_free,no_investing,original_gate,final_arrears,5,-19.189506900723792,-21.67494177411114,-16.704072027336444,INR
+stress,reserve_free,validation_selected,original_gate,shortfall_rate,5,0.0,0.0,0.0,percentage points
+stress,reserve_free,validation_selected,original_gate,forced_liquidation_rate,5,-0.25199999999999,-0.30917050381974,-0.19482949618025,percentage points
+stress,reserve_free,validation_selected,original_gate,shortfall_or_liquidation_rate,5,-0.027999999999999997,-0.050211560841579995,-0.0057884391584187645,percentage points
+stress,reserve_free,validation_selected,original_gate,months_below_1,5,-0.0018199999999999,-0.0022795834411373,-0.0013604165588624,months
+stress,reserve_free,validation_selected,original_gate,months_below_3,5,-0.0074199999999997,-0.0085215176368314,-0.006318482363168,months
+stress,reserve_free,validation_selected,original_gate,final_net_wealth,5,5.9020612444088325,5.421500069416448,6.382622419401217,INR
+stress,reserve_free,validation_selected,original_gate,median_final_net_wealth,5,-1.4575393712482765,-20.47511899546215,17.560040252965596,INR
+stress,reserve_free,validation_selected,original_gate,wealth_expense_ratio,5,0.0002541087101675,0.0002319803575281,0.000276237062807,initial-expense multiples
+stress,reserve_free,validation_selected,original_gate,ever_cleared,5,-0.766,-0.8624190271219501,-0.66958097287804,percentage points
+stress,reserve_free,validation_selected,original_gate,initial_cleared,5,-1.6,-1.82470345038574,-1.37529654961425,percentage points
+stress,reserve_free,validation_selected,original_gate,cleared_user_months,5,-1.97966666666666,-2.0042573267727,-1.9550760065606299,percentage points
+stress,reserve_free,validation_selected,original_gate,ever_contributed,5,-1.02199999999999,-1.10730511805592,-0.9366948819440699,percentage points
+stress,reserve_free,validation_selected,original_gate,total_contributions,5,-301.89376,-313.6353490122876,-290.1521709877123,INR
+stress,reserve_free,validation_selected,original_gate,final_arrears,5,-0.7533022039293428,-0.9731795189148538,-0.5334248889438318,INR

@@ -1,0 +1,72 @@
+{
+  "ml_service/modules/forecast.py": {
+    "executable_lines": 64,
+    "covered_lines": 58,
+    "line_coverage_pct": 90.625,
+    "uncovered_lines": [
+      1,
+      4,
+      6,
+      11,
+      26,
+      38
+    ]
+  },
+  "ml_service/modules/volatility.py": {
+    "executable_lines": 77,
+    "covered_lines": 37,
+    "line_coverage_pct": 48.05194805194805,
+    "uncovered_lines": [
+      1,
+      2,
+      3,
+      6,
+      9,
+      12,
+      17,
+      18,
+      22,
+      26,
+      28,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      41,
+      45,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      102,
+      103,
+      104,
+      105
+    ]
+  },
+  "combined": {
+    "executable_lines": 141,
+    "covered_lines": 95,
+    "line_coverage_pct": 67.37588652482269
+  },
+  "test_summary": {
+    "total": 10,
+    "failed": 1,
+    "errors": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "winners": {
+    "NB": {
+      "name": "NB_2_.2",
+      "family": "NB",
+      "order": 18,
+      "n": 187,
+      "macro_f1": 0.543957351892138,
+      "high_recall": 0.5303030303030303,
+      "balanced_accuracy": 0.5449053179549633,
+      "accuracy": 0.6096256684491979,
+      "high_support": 66,
+      "high_to_low": 1,
+      "high_to_medium": 30,
+      "config": {
+        "family": "NB",
+        "var_smoothing": 0.1
+      },
+      "decision": ".2",
+      "low": 

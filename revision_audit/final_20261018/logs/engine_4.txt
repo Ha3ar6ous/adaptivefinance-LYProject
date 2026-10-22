@@ -1,0 +1,13 @@
+{"completed":1,"total":125,"api_success":1,"fallbacks":0}
+{"completed":11,"total":125,"api_success":11,"fallbacks":0}
+{"completed":21,"total":125,"api_success":21,"fallbacks":0}
+{"completed":31,"total":125,"api_success":31,"fallbacks":0}
+{"completed":41,"total":125,"api_success":41,"fallbacks":0}
+{"completed":51,"total":125,"api_success":51,"fallbacks":0}
+{"completed":61,"total":125,"api_success":61,"fallbacks":0}
+{"completed":71,"total":125,"api_success":70,"fallbacks":1}
+{"completed":81,"total":125,"api_success":77,"fallbacks":4}
+{"completed":91,"total":125,"api_success":84,"fallbacks":7}
+{"completed":101,"total":125,"api_success":91,"fallbacks":10}
+{"completed":111,"total":125,"api_success":98,"fallbacks":13}
+{"completed":121,"total":125,"api_success":105,"fallbacks":16}

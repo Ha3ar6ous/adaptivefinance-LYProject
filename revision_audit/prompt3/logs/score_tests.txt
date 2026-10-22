@@ -1,0 +1,11 @@
+test_frozen_selection (test_score.ScoreTests.test_frozen_selection) ... ok
+test_heldout_metrics (test_score.ScoreTests.test_heldout_metrics) ... ok
+test_monotonic_candidate (test_score.ScoreTests.test_monotonic_candidate) ... ok
+test_no_source_edits (test_score.ScoreTests.test_no_source_edits) ... ok
+test_original_failure_retained (test_score.ScoreTests.test_original_failure_retained) ... ok
+test_weighted_auc_ci_matches_sklearn (test_score.ScoreTests.test_weighted_auc_ci_matches_sklearn) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.919s
+
+OK

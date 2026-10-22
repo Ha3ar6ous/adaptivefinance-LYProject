@@ -1,0 +1,40 @@
+{
+  "prediction": [
+    1464.69,
+    361.18,
+    852.86,
+    1023.06,
+    43.34,
+    1691.48,
+    770.15,
+    1229.57,
+    126.06,
+    617.74,
+    787.95,
+    0.0,
+    1456.37,
+    535.04,
+    994.46,
+    0.0,
+    382.63,
+    552.83,
+    0.0,
+    1221.25,
+    299.92,
+    759.34,
+    0.0,
+    147.51,
+    317.71,
+    0.0,
+    986.14,
+    64.81,
+    524.23,
+    0.0
+  ],
+  "error": "",
+  "converged": true,
+  "warnings": [
+    "Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros."
+  ],
+  "seconds": 0.03492070000356762
+}

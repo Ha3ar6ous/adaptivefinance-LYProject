@@ -1,0 +1,13 @@
+group,comparison,metric,lower_95,upper_95,valid_draws
+all,grid_cv30_0.45_0.75 minus runtime_cv30,macro_f1,0.01340388007054677,0.3380322580645161,5000
+all,grid_cv30_0.45_0.75 minus runtime_cv30,high_recall,0.0,0.0,5000
+blinkit,grid_cv30_0.45_0.75 minus runtime_cv30,macro_f1,-0.022222222222222254,-0.01302681992337168,5000
+blinkit,grid_cv30_0.45_0.75 minus runtime_cv30,high_recall,0.0,0.0,5000
+snabbit,grid_cv30_0.45_0.75 minus runtime_cv30,macro_f1,0.0,0.0,5000
+snabbit,grid_cv30_0.45_0.75 minus runtime_cv30,high_recall,0.0,0.0,3804
+swiggy,grid_cv30_0.45_0.75 minus runtime_cv30,macro_f1,-0.04692891649413389,0.0,5000
+swiggy,grid_cv30_0.45_0.75 minus runtime_cv30,high_recall,0.0,0.0,3804
+uber,grid_cv30_0.45_0.75 minus runtime_cv30,macro_f1,0.0,0.3888256446395981,5000
+uber,grid_cv30_0.45_0.75 minus runtime_cv30,high_recall,0.0,0.0,3804
+zomato,grid_cv30_0.45_0.75 minus runtime_cv30,macro_f1,0.0,0.3051643192488263,5000
+zomato,grid_cv30_0.45_0.75 minus runtime_cv30,high_recall,0.0,0.0,3549

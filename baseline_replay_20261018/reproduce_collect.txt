@@ -1,0 +1,180 @@
+import os,sys,json,csv,math,re,hashlib,subprocess,platform,datetime,shutil
+from pathlib import Path
+R=Path.cwd();O=R/'baseline_replay_20261018'
+def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def rel(p):return p.relative_to(R).as_posix()
+def dump(p,v):p.write_text(json.dumps(v,indent=2,allow_nan=False),encoding='utf-8')
+def value(v):
+ if v is None:return None
+ if not isinstance(v,str):return v
+ if v=='':return None
+ if v in ['True','False','true','false']:return v.lower()=='true'
+ try:
+  x=float(v)
+  return (int(v) if re.fullmatch(r'-?\d+',v) else x) if math.isfinite(x) else None
+ except ValueError:return v
+
+def table(p):return [{k:value(v) for k,v in row.items()} for row in csv.DictReader(p.open(encoding='utf-8-sig',newline=''))]
+comparisons=[];tables={};mismatches=[];all_numeric=0
+skip={'train.csv','validation.csv','test.csv','forecast_windows.csv','canonicalization_rows.csv','repository_canonical.csv','test_seed_probabilities.csv'}
+roots=[('forecast_audit/results_20261017','forecast'),('volatility_audit/results_20261017','volatility'),('router_sim/results_20261017','router'),('score_audit/results_20261017','score_default_threads'),('data_audit/results_20261017','data'),('engine_llm_audit/results_20261017','engine')]
+for old,new in roots:
+ for p in sorted((R/old).rglob('*.csv')):
+  if 'cache' in p.parts or 'family_diagnostics' in p.parts or 'predictions' in p.name or 'probabilities' in p.name or p.name in skip or p.name.startswith('synthetic_seed') or p.name.startswith('real_uber_daily'):continue
+  q=O/new/p.relative_to(R/old)
+  if not q.exists():
+   comparisons.append(dict(reference=rel(p),replay=rel(q),status='not_regenerated_by_existing_runner'));continue
+  a,b=table(p),table(q);diff=[];numeric=0
+  if len(a)!=len(b):diff.append(dict(path='row_count',before=len(a),after=len(b)))
+  for i,(x,y) in enumerate(zip(a,b)):
+   for k in sorted(set(x)|set(y)):
+    u,v=x.get(k),y.get(k)
+    if isinstance(u,(float,int)) and not isinstance(u,bool) and isinstance(v,(float,int)) and not isinstance(v,bool):
+     numeric+=1
+     if u!=v:diff.append(dict(row=i,column=k,before=u,after=v,absolute_change=v-u,relative_change_percent=100*(v-u)/u if u else None,same_at_six_decimals=round(u,6)==round(v,6)))
+    elif u!=v:diff.append(dict(row=i,column=k,before=u,after=v))
+  for d in diff:
+   col=d.get('column','')
+   d['category']='timing' if any(s in col.lower() for s in ['second','latency','elapsed','_ms']) else 'network_outcome' if p.name=='live_summary.csv' else 'numerical_or_fixture_difference'
+  status='exact' if not diff else 'different'
+  item=dict(reference=rel(p),replay=rel(q),status=status,rows=len(b),numeric_cells=numeric,normalized_csv_bytes_exact=p.read_text(encoding='utf-8-sig')==q.read_text(encoding='utf-8-sig'),differences=diff)
+  comparisons.append(item);all_numeric+=numeric
+  tables[rel(q)]=dict(reference=rel(p),reference_sha256=sha(p),replay_sha256=sha(q),rows=b)
+  if diff:mismatches.append(item)
+
+# Baseline JSON files carry oracle counts, configuration, selection, and cohort hashes.
+jsonnames=['baseline_reproduction.json','selection.json','conformal_quantiles.json','analysis_summary.json','tests.json','label_provenance.json','original_expense_monotonicity.json','corrected_expense_monotonicity.json','cohort_hashes_train_validation.json','test_hashes.json','test_cohorts.json','validation_cohorts.json','test_implementation_checks.json','validation_implementation_checks.json','runtime_thresholds.json','dedupe_summary.json','real_provenance.json','environment.json']
+json_tables={}
+for old,new in roots:
+ for name in jsonnames:
+  p=R/old/name;q=O/new/name
+  if q.exists():json_tables[rel(q)]=load(q)
+# Compare numeric values recursively; configuration hash strings are provenance, not numerical headlines.
+def numeric_diff(a,b,path=''):
+ out=[]
+ if isinstance(a,dict) and isinstance(b,dict):
+  for k in sorted(set(a)&set(b)):
+   if any(t in k.lower() for t in ['latency','time_ms','wall_seconds','seconds','timestamp']):continue
+   out.extend(numeric_diff(a[k],b[k],path+'/'+str(k)))
+ elif isinstance(a,list) and isinstance(b,list):
+  if len(a)!=len(b):out.append(dict(path=path+'/length',before=len(a),after=len(b)))
+  for i,(x,y) in enumerate(zip(a,b)):out.extend(numeric_diff(x,y,path+'/'+str(i)))
+ elif isinstance(a,(int,float)) and not isinstance(a,bool) and isinstance(b,(int,float)) and not isinstance(b,bool) and a!=b:
+  out.append(dict(path=path,before=a,after=b,absolute_change=b-a,same_at_six_decimals=round(a,6)==round(b,6)))
+ elif isinstance(a,bool) and isinstance(b,bool) and a!=b:out.append(dict(path=path,before=a,after=b))
+ return out
+json_comparisons=[]
+for old,new in roots:
+ for name in jsonnames:
+  p=R/old/name;q=O/new/name
+  if p.exists() and q.exists():json_comparisons.append(dict(reference=rel(p),replay=rel(q),numeric_differences=numeric_diff(load(p),load(q))))
+# Full deterministic fixtures: exact object equality includes counts and all outcomes.
+fixtures=[]
+for folder,names in [('engine',['snapshots.json','engine_before.json','engine_after.json','llm_controlled_before.json','llm_controlled_after.json']),('router',['test_fixtures.json','validation_fixtures.json','test_implementation_checks.json','validation_implementation_checks.json'])]:
+ oldroot='engine_llm_audit' if folder=='engine' else 'router_sim'
+ for name in names:
+  p=R/oldroot/'results_20261017'/name;q=O/folder/name;a,b=load(p),load(q)
+  fixtures.append(dict(reference=rel(p),replay=rel(q),exact_object_equal=a==b,count=len(b) if isinstance(b,list) else b.get('snapshots'),numeric_differences=numeric_diff(a,b)))
+# LLM orchestration output includes elapsed times; compare those separately.
+p=R/'engine_llm_audit/results_20261017/controlled_orchestration.json';q=O/'engine/controlled_orchestration.json'
+if q.exists():
+ json_tables[rel(q)]=load(q)
+ json_comparisons.append(dict(reference=rel(p),replay=rel(q),numeric_differences=numeric_diff(load(p),load(q))))
+
+# Parse unique suites, counting each primary suite once, excluding duplicate executions by reports.
+def parse_test(name,p,framework='unittest'):
+ raw=p.read_text(encoding='utf-8-sig',errors='replace')
+ if framework=='node':
+  get=lambda k:int(re.search(r'# '+k+r' (\d+)',raw)[1]);n=get('tests');f=get('fail');s=get('skipped');e=0;passed=get('pass')
+ else:
+  n=int(re.search(r'Ran (\d+) tests?',raw)[1]);get=lambda k:int(re.search(k+r'=(\d+)',raw)[1]) if re.search(k+r'=(\d+)',raw) else 0;f=get('failures');e=get('errors');s=get('skipped');passed=n-f-e-s
+ return dict(suite=name,log=rel(p),framework=framework,total=n,passed=passed,failed=f,errors=e,skipped=s,failure_names=re.findall(r'^(?:FAIL|ERROR): (.+)$',raw,re.M))
+tests=[]
+paths=[('forecast',O/'forecast/tests.log','unittest'),('volatility',O/'volatility/final_tables/test_run.txt','unittest'),('router_simulator',O/'router/final_tables/tests.txt','unittest'),('score',O/'logs/score_default_tests.txt','unittest'),('data',O/'data/tests.txt','unittest'),('server',O/'logs/node_tests_1.txt','node'),('paper_audit',O/'logs/paper_tests.txt','unittest'),('retained_python',O/'logs/legacy_tests_1.txt','unittest')]
+for name,p,framework in paths:
+ if p.exists():tests.append(parse_test(name,p,framework))
+oldnode=load(O/'legacy/node_results.json');tests.append(dict(suite='retained_node_harness',framework='node:assert custom',log='baseline_replay_20261018/legacy/research_node.log',**oldnode['test_summary'],errors=0,skipped=0,failure_names=[t['name'] for t in oldnode['tests'] if not t['passed']]))
+legacy={}
+for name in ['forecast_results.json','volatility_results.json','forecast_selection.json','volatility_selection.json','router_results.json','baseline_replay.json','integration_fixtures.json','coverage_results.json','python_results.json','node_results.json','performance_results.json','metadata.json']:
+ p=O/'legacy'/name
+ if not p.exists():continue
+ a=load(p);ref=R/('research_eval' if name in ['python_results.json','node_results.json','performance_results.json','coverage_results.json','metadata.json'] else 'paper_audit')/name
+ legacy[name]=dict(replay=rel(p),reference=rel(ref),numeric_differences=numeric_diff(load(ref),a) if ref.exists() else [],results=a)
+ if name=='node_results.json':legacy[name]['warning']='llm.live values are copied by the retained runner from its old archive; not a new API run. Fresh live measurements are engine/live_125.json. Fixture method synthetic_control is rejected by current router.'
+
+# Isolate timing rather than claiming deterministic timing reproduction.
+perf={}
+for source in ['python_results.json','node_results.json','performance_results.json','metadata.json']:
+ a=load(R/'research_eval'/source);b=load(O/'legacy'/source)
+ perf[source]=dict(reference=a.get('performance',a),replay=b.get('performance',b))
+ if source=='performance_results.json':perf[source]['qualification']='50 loopback requests after 10 warmups; 500 local iterations after 50 warmups. Run while independent forecast/API experiments were active; timings are machine/load dependent.'
+
+# Paper table rows are transcribed from the extracted PDF; values independently measured below.
+py=load(O/'legacy/python_results.json');stdout=(O/'legacy/original_python.log').read_text(encoding='utf-8-sig');nodeout=(O/'legacy/original_node.log').read_text(encoding='utf-8-sig')
+rows=[]
+for method,pattern,claimed in [('proposed',r'Model MAE: ([\d.]+), RMSE: ([\d.]+)',[352.07,431.35]),('historical_mean_label_actually_MA15',r'Baseline \(Hist Mean\) MAE: ([\d.]+), RMSE: ([\d.]+)',[348.48,411.28])]:
+ m=re.search(pattern,stdout);measured=list(map(float,m.groups()));rows.append(dict(method=method,paper_mae=claimed[0],paper_rmse=claimed[1],replay_mae=measured[0],replay_rmse=measured[1],matches_published_precision=measured==claimed))
+health=[]
+for name,score,phase in [('Vulnerable',21,'crisis'),('High Debt',52,'survival'),('Stable',91,'growth')]:
+ m=re.search(re.escape(name)+r' - Score: (\d+), Phase: (\w+)',nodeout);health.append(dict(scenario=name,paper_score=score,replay_score=int(m[1]),paper_phase=phase,replay_phase=m[2],exact=int(m[1])==score and m[2]==phase))
+router=[]
+for name,expected in [('Low liquidity blocks invest',False),('High debt blocks invest',False),('High volatility blocks invest',False),('Ideal passes invest',True)]:
+ m=re.search(re.escape(name)+r': Invest Allowed=(true|false)',nodeout);actual=m[1]=='true';router.append(dict(scenario=name,paper_allowed=expected,replay_allowed=actual,exact=actual==expected))
+performance_py=py['performance']['forecast_30_on60'];performance_node=load(O/'legacy/performance_results.json')['local_health_router_investment']
+paper=dict(provenance=load(O/'paper_provenance.json'),IV=dict(rows=rows,configuration='eval_script.py: gig_income_data.csv first165 train/last15 test. Its so-called historical-mean baseline averages only last15 training days, hence MA15; not full-history mean.'),V=dict(rows=health,actual_scenarios=len(health),textual_claim='Paper says four synthetic health scenarios but table and executable contain three.'),VI=dict(rows=router,passed=sum(r['exact'] for r in router),total=len(router),nonreproduction_reason='Original ideal fixture lacks valid forecast/volatility analytics required by revised fail-closed router.'),VII=dict(paper_forecast_threshold_ms=1,paper_pipeline_threshold_ms=2,forecast_replay=performance_py,pipeline_replay=performance_node,forecast_all_samples_below_claim=performance_py['max_ms']<1,pipeline_all_samples_below_claim=performance_node['max_ms']<2,qualification='Paper gives inequality claims with no archived raw timings. Mean/median and maxima must be distinguished; exact original timing cannot be reproduced.'),VIII=dict(status='absent from supplied PDF'),IX=dict(status='absent from supplied PDF'),X=dict(status='absent from supplied PDF'),volatility_agreement=dict(paper_correct=162,paper_n=455,replay=load(O/'legacy/baseline_replay.json')['volatility']),product_counts=dict(total=int(re.search(r'Total Options: (\d+)',nodeout)[1]),volatility_safe=int(re.search(r'Volatility Safe Options: (\d+)',nodeout)[1]),high_risk=int(re.search(r'High Risk Options: (\d+)',nodeout)[1])))
+
+initial=load(O/'initial_manifest.json');changed=[p for p,h in initial.items() if not (R/p).exists() or sha(R/p)!=h]
+sourcechanged=[p for p in changed if Path(p).suffix in ['.py','.js','.cjs','.ts','.tsx','.jsx','.json'] and 'results_' not in p and not p.startswith(('paper_audit/baseline/','research_eval/'))]
+# Record single-thread score diagnostic differences, even when default-thread replay is exact.
+score_thread=[]
+for p in (R/'score_audit/results_20261017').glob('*.csv'):
+ q=O/'score'/p.name
+ if not q.exists() or p.name in skip or 'predictions' in p.name:continue
+ a,b=table(p),table(q);delta=numeric_diff(a,b)
+ if delta:score_thread.append(dict(reference=rel(p),replay=rel(q),numeric_differences=delta))
+
+commandlogs=[]
+for file in [O/'commands.json',O/'legacy/commands.json',O/'score_default_commands.json',O/'supplemental_commands.json']:
+ if file.exists():commandlogs+=load(file)
+commands_by_suite={p.name:p.read_text(encoding='utf-8-sig') for p in O.glob('reproduce_*.txt')}
+ledger=R/'paper_results/results_20261017/tables/before_after_all_metrics.csv'
+headline=table(ledger)
+# Capture literal baseline paper-ready ledger without overwriting it; source checks above validate component tables.
+summary=dict(csv_comparisons=len(comparisons),exact_csv_tables=sum(x['status']=='exact' for x in comparisons),different_csv_tables=sum(x['status']=='different' for x in comparisons),not_regenerated_csv_tables=sum(x['status'].startswith('not_') for x in comparisons),numeric_csv_cells_compared=all_numeric,paper_ready_ledger_rows=len(headline),unique_test_total=sum(x['total'] for x in tests),tests_passed=sum(x['passed'] for x in tests),tests_failed=sum(x['failed'] for x in tests),test_errors=sum(x['errors'] for x in tests),changed_existing_files=len(changed),changed_existing_source_files=len(sourcechanged))
+result=dict(schema_version=1,created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),task='Read-only pre-ablation baseline reproduction',branch=subprocess.check_output(['git','branch','--show-current'],text=True).strip(),git_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),git_status=subprocess.check_output(['git','status','--short'],text=True).splitlines(),commit_is_complete_source_identity=False,dirty_tree_warning='Existing uncommitted source changes and untracked audit scripts predate this task. Use initial_manifest.json hashes and archived source snapshots; commit alone cannot reproduce this baseline.',environment=dict(os=platform.platform(),python=sys.version,node=subprocess.check_output(['node','--version'],text=True).strip(),numpy=__import__('numpy').__version__,pandas=__import__('pandas').__version__,scipy=__import__('scipy').__version__,sklearn=__import__('sklearn').__version__,statsmodels=__import__('statsmodels').__version__,thread_overrides_primary=dict(OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1'),score_primary_run='score_default_threads (thread overrides removed, matching original score execution)',ml_service_runtime='ml_service/.venv/Scripts/python.exe; FastAPI0.115.6 uvicorn0.34.0; loopback127.0.0.1:18081'),seeds=dict(forecast_gb_and_bootstrap=[11,23,37,53,71],volatility_gb_and_bootstrap=[11,23,37,53,71],router_validation=[11,23,37,53,71],router_test=[101,211,307,401,503],score_train=[601,607,613,617,619],score_validation=[11,23,37,53,71],score_test=[101,211,307,401,503],synthetic_generator=[11,23,37,53,71],live_llm=[11,23,37,53,71],original_dataset_generation_seed=None,original_dataset_seed_status='Unknown; reproducibility relies on unchanged CSV hashes.',deterministic_models='No random seed applicable to rules/ETS/ARIMA/legacy deterministic classifiers.'),summary=summary,paper_tables_IV_X=paper,baseline_paper_ready_ledger=dict(path=rel(ledger),sha256=sha(ledger),rows=headline),executed_commands=commandlogs,reproduction_drivers=commands_by_suite,headline_tables=tables,numerical_json_results=json_tables,comparison_tables=comparisons,json_numeric_comparisons=json_comparisons,fixture_reproduction=fixtures,legacy_suites=legacy,test_suites=tests,performance=perf,single_thread_score_diagnostic=score_thread,synthetic_generator_reproduction=load(O/'synthetic_generator_cell_check.json'),preservation=dict(initial_manifest=rel(O/'initial_manifest.json'),files_checked=len(initial),changed=changed,source_changes=sourcechanged,old_cache_exclusion='Existing cache directories were excluded from initial manifest; experiments used fresh cache, leaving archived caches unused.',no_source_files_modified=not sourcechanged,no_existing_noncached_artifact_changed=not changed),qualifications=['No source/data/label/old-result edit was authorized or made. New baseline artifacts only.','Original PDF has Tables IV-VII; VIII-X absent. All newer headline audit tables are included separately.','Prediction metrics, scenario outcomes and oracle consistency have different interpretations. Simulation results are not real financial outcome evidence.','Fresh train/validation/calibration/test workflows use existing frozen splits/seeds; no model definitions or selection objectives were changed.','Data evaluation uses documented clone mode to reuse pinned public input instead of redownloading an external dataset. Five synthetic generators were also re-executed and checked cell for cell.','External API responses, rate limits and timing do not have deterministic exact-reproduction guarantees. See fresh live_summary.csv and every before/after mismatch.','Legacy research Node runner copies archived llm.live fields by default; these are explicitly not counted as newly measured live requests.','Duplicate test executions by report scripts and environment sensitivity reruns are excluded from unique suite totals.','Old zero-income, health income-sufficiency and forecast-direction defects are retained; no repairs belong in this baseline step.'])
+# Record every live headline mismatch separately, irrespective of model stochasticity.
+result['nonreproducing_headline_tables']=mismatches
+result['all_headlines_reproduce_exactly']=not mismatches and all(r['exact'] for r in router) and all(not x['numeric_differences'] for x in json_comparisons)
+result['fixture_counts']={
+ 'original_health_scenarios':len(health),'original_router_scenarios':len(router),
+ 'legacy_health_matrix':oldnode['health']['matrix_n'],
+ 'router_boundary_grid':legacy['router_results.json']['results']['splits']['boundary_grid']['revised']['n'],
+ 'router_invalid':legacy['router_results.json']['results']['splits']['invalid_inputs']['revised']['n'],
+ 'router_combined':legacy['router_results.json']['results']['splits']['combined']['revised']['n'],
+ 'integration_fixtures':len(load(O/'legacy/integration_fixtures.json')),
+ 'engine_profiles':len([r for r in load(O/'engine/engine_after.json') if r['method']=='proposed']),
+ 'engine_rows_with_comparator_policies':len(load(O/'engine/engine_after.json')),
+ 'llm_snapshots':len(load(O/'engine/snapshots.json')),
+ 'llm_controlled_before':len(load(O/'engine/llm_controlled_before.json')),
+ 'llm_controlled_after':len(load(O/'engine/llm_controlled_after.json')),
+ 'llm_orchestration_cases':len(load(O/'engine/controlled_orchestration.json')),
+ 'llm_live_requests':len(load(O/'engine/live_125.json')['rows']),
+ 'simulator_validation_implementation_snapshots':load(O/'router/validation_implementation_checks.json')['snapshots'],
+ 'simulator_test_implementation_snapshots':load(O/'router/test_implementation_checks.json')['snapshots'],
+}
+result['llm_live_change']={'reference':table(R/'engine_llm_audit/results_20261017/live_summary.csv')[0],'replay':table(O/'engine/live_summary.csv')[0],'http_errors':{e:sum(row['error']==e for row in load(O/'engine/live_125.json')['rows']) for e in set(row['error'] for row in load(O/'engine/live_125.json')['rows']) if e},'qualification':'125 fresh calls, seeds11/23/37/53/71; no retries. Response outcomes and latencies vary across execution time; no exact API determinism claim.'}
+result['source_snapshot_sha256']=initial
+result['summary']['tables_with_non_timing_non_network_differences']=sum(any(d.get('category')=='numerical_or_fixture_difference' for d in t.get('differences',[])) for t in comparisons)
+result['summary']['single_thread_score_diagnostic_difference_cells']=sum(len(x['numeric_differences']) for x in score_thread)
+result['preservation']['concurrent_context_file_change']={'path':'prompts.md','initial_sha256':initial.get('prompts.md'),'final_sha256':sha(R/'prompts.md'),'observation':'Changed during execution; none of the executed runners writes prompts.md. Left intact; no new prompt task executed. Not used as numeric input or model configuration.'}
+result['remaining_failures']=[dict(suite=s['suite'],failures=s['failure_names']) for s in tests if s['failed'] or s['errors']]
+result['reproduction_status']='PARTIAL_EXACT_REPRODUCTION: deterministic audit tables checked individually; paper ideal-router fixture and live API outcomes/timings do not reproduce. See comparison lists; no fixes applied.'
+dump(R/'baseline_results.json',result)
+print(json.dumps(summary,indent=2));print('nonexact tables',[(x['reference'],len(x['differences'])) for x in mismatches]);print('existing changed',changed)
+
+
+
+
+
+

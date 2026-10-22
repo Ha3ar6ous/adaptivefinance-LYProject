@@ -1,0 +1,788 @@
+A Risk-Aware Financial Decision Framework for
+Gig Workers with Irregular Income
+Omkar Dabde ∗, Dev Baliga ∗, Ritesh Gorule ∗, Ritesh Jha ∗, Nandana Prabhu †, Anant Shah ‡
+∗Department of Information Technology, K J Somaiya School of Engineering,
+Somaiya Vidyavihar University, Mumbai, India
+16010423065, 16010423073, 16010423075, 16010423076
+†Project Guide, Department of Information Technology, K J Somaiya School of Engineering,
+Somaiya Vidyavihar University, Mumbai, India
+‡Industry Mentor, Gracenote(Nielsen), Mumbai, India
+Abstract—Income for gig and platform-based workers can vary
+significantly on a day-to-day basis and, therefore, makes tradi-
+tional ratio-based approaches to financial planning challenging to
+apply. In this paper, we introduce a risk-aware financial decision-
+making framework that evaluates the readiness of a gig worker
+to invest in any investment product. The framework consists
+of six modules: income forecasting module with a lightweight
+mathematical solution; income-volatility classifier based on the
+coefficient of variation; multi-factor financial health scoring
+model; deterministic rule-based decision router that restricts ac-
+cess to investment features in unsafe scenarios; micro-investment
+recommendation engine; and a large language model (LLM)
+explanation layer, which gives natural-language explanations for
+every recommendation. In contrast to the systems where an
+investment recommendation is the main goal, our framework
+focuses on financial safety: users with low emergency fund
+amount, excessive debt, and high income-volatility are advised
+to take stabilization actions first and not to make investments.
+We evaluate the framework by performing empirical studies
+using synthetic gig-workers’ income datasets. Results show that
+the mathematical forecasting technique produces results with
+the same level of accuracy, but not better than the historical
+mean baseline (MAE: 352.07 vs. 348.48) and that the rule-based
+decision router successfully gates all unsafe scenarios.
+Index Terms—gig economy, income volatility, financial health
+score, risk-aware decision routing, micro-investment, explainable
+AI, financial inclusion
+I. INTRODUCTION
+There have been significant developments in the platform-
+based gig economy in India in recent years, with Economic
+Survey 2025-26 projecting around 12 million gig and platform
+workers in FY2024-25, compared to 7.7 million in FY2020-
+21 [16]. The workers employed by delivery, ride-hailing, and
+freelance platforms like Zomato, Swiggy, Blinkit, and Uber
+usually generate income fluctuating daily based on demand,
+incentives, and hours worked. Earlier studies reported income
+insecurity and lack of social security coverage among workers
+in the digital labour platforms [8]. The situation may expose
+the workers to income shocks and hinder financial planning.
+In this case, standard financial advisory practices, which are
+based on assumption of fixed monthly income, would not be
+adequate for such workers.
+Conventional personal finance applications and robo-
+advisors usually concern themselves only about recommending
+a suitable portfolio for the user after determining that he wants
+to invest in something, without checking whether he should
+be investing or not at this point of his life. It is indeed an
+important issue for gig workers because premature investment
+would worsen their financial condition.
+In this paper, we present a pipeline that attempts to address
+this problem by treating investment-readiness as a primary
+decision that is made prior to the recommendation of any
+investments. This pipeline consists of four components: the
+first step entails using the income data to make a short-term
+prediction and volatility classification, which in combination
+with the profile data (balance, debt, expenses, savings) of
+the user, goes into making a multi-factorial score on their
+financial health; the second component involves using a deter-
+ministic decision router to route the user either to building
+an emergency fund, decreasing their debt level, or making
+conservative investments depending on the score and a set
+of safety rules; the final two components involve passing only
+the users qualified for making investments to a micro-investing
+engine followed by an explanation layer.
+It is critical to be precise about what is, and is not, claimed
+about the underlying technologies. The income forecasting
+and volatility classifiers are implemented as mathematical and
+statistical descriptive approaches – rolling means, constrained
+slope, and coefficient of variation, rather than predictive al-
+gorithms like ARIMA, Random Forest, or XGBoost. The
+financial well-being metric and decision router are purely
+deterministic and rule-based elements. The only element in
+the present system that has been learned or generated is the
+LLM explanation module, and its role has been carefully
+confined to generating language from the results computed by
+other modules without carrying out any financial calculation
+or gating itself. This paper describes the present state of the
+implementation and evaluation of the system, and explicitly
+identifies which elements of the original idea (ARIMA, XG-
+Boost, Random Forest, Gemini API) were not realized in this
+version of the system.
+The contributions of this paper are:
+•A safety-first decision pipeline that gates micro-
+investment recommendations behind an explicit financial
+health and emergency-fund check, rather than presenting
+investment options unconditionally.
+•A lightweight, dependency-free mathematical income
+forecasting method and a coefficient-of-variation-based
+volatility classifier suited to short, sparse income histories
+typical of new gig-worker users.
+•A multi-factor financial health scoring formulation that
+combines liquidity, debt safety, income stability, forecast
+trend, and data consistency into a single interpretable
+score.
+•An LLM-based explanation layer that is architecturally
+sandboxed from the numerical decision logic, together
+with a deterministic fallback mechanism for cases where
+the LLM call fails.
+•An honest empirical evaluation of each component using
+synthetic gig-worker datasets, including a comparison of
+the forecasting method against a naive baseline and a
+threshold-consistency evaluation of the volatility classi-
+fier.
+II. RELATEDWORK
+A. Income Instability and Financial Uncertainty of Gig Work-
+ers
+Existing research demonstrates that income instability is
+greater among gig workers than it is in the context of regular
+salary, and this instability and lack of control over income
+affect the process of financial planning [15]. Sun [1] provides
+the mathematical and statistical study of the income of gig
+workers in the platform economy and concludes that gig
+income is unstable and provides an understanding of features
+contributing to the instability. Such works have established
+the importance of income volatility as one of the primary
+issues in the process of financial planning for gig workers,
+although being descriptive and offline, in the sense that they
+do not provide the continuous process of income tracking and
+prediction.
+B. Measure of Financial Health
+Conventional techniques used to measure financial health,
+which are based on the use of Z-score models validated
+for corporate financial health measurement [2], are based
+on accounting ratios that can be determined using periodic
+stable financial statements. Static ratio-based measurement
+techniques cannot be applied in case of irregular income flows
+of the individual in question, since the assumptions of fixed
+reporting period are violated. The proposed model calculates
+a weighted dynamic financial health score by considering fac-
+tors like liquidity, debt, income stability, forecast trends, and
+consistency of the provided financial information measured
+relatively to the user’s recent income data.
+C. ML-Based Scoring and Credit Inclusion
+In her survey paper, Hashi [3] studies the use of ML-based
+fintech solutions for credit scoring and financial inclusion
+in the context of the gig economy, noting that the models
+that use combinations of various financial and behavior-based
+inputs are superior in terms of risk assessment to those based
+on a single accounting ratio. However, this body of research
+focuses on the problems of credit scoring and risk prediction
+of loans and does not consider a broader problem of measuring
+financial health and readiness for investments.
+D. Automated Financial Guidance and Robo-Advisory
+Bhagavanji and Nagarathinam [4] discuss an AI-enabled
+financial planner dashboard that gives trend insights to the
+user. In addition, the authors give empirical data on robo-
+advising of small-scale investors in the setting of employees’
+savings programs, showing that automated systems are capable
+of creating reasonable portfolios at low costs. The limitation
+typical for these studies is that the recommendation process
+is considered unconditional, that is, upon receiving a request
+from the user, the system creates a recommendation regardless
+of the fact whether his/her financial standing allows the user
+to invest. The suggested framework differs from the described
+approach by introducing a deterministic decision router be-
+tween the assessment of the user’s financial standing and the
+creation of a recommendation, redirecting people who fall
+below the safety threshold to emergency fund accumulation
+and debt repayment rather than giving them recommendations
+for investments.
+E. Explainability in AI-Assisted Financial Systems
+The importance of the explainability of AI-enabled financial
+systems targeted at users without specialist background has
+been emphasized [12]. As for the framework suggested in
+this paper, its explainability does not come from applying an
+opaque learned model as a scoring or gating function, but from
+making the numerical logic deterministic and employing large
+language models only as an interface rendering the already
+calculated numbers. This approach sacrifices certain flexibility
+of end-to-end recommendation learning systems for greater
+auditability.
+F . Positioning of the Present Work
+The above literature review covers a variety of topics such as
+income volatility, financial health assessment, ML-based credit
+scoring, automated advisory dashboard creation, and robo-
+advisory investment suggestions as independent subjects and
+not necessarily in a way that conditions the recommendations
+with an explicit safety verification of the user. The innovation
+of this research is neither an introduction of a novel algorithm
+for any of these tasks but the incorporation of continuous in-
+come assessment, health scoring, deterministic safety filtering,
+constrained micro-investment, and LLM-based explanations
+into one pipeline that targets irregular daily income users.
+III. PROBLEMSTATEMENT ANDRESEARCHOBJECTIVES
+A. Problem Statement
+Gig economy users experience irregular income flows,
+insufficient savings, and restricted access to traditional fi-
+nancial advice and planning. Current financial and robo-
+advisors assume the user’s financial readiness for investments
+Fig. 1. System architecture of the proposed risk-aware financial decision
+framework.
+and concentrate only on the portfolio construction without
+checking if the user is financially ready for that. As a result,
+there is a possibility of vulnerable users being recommended
+investment products even before they are financially stable and
+safe enough for investing.
+B. Research Objectives
+The framework aims at solving the following problems:
+1) To continuously feed the income data of a gig worker
+on a daily basis, analyze it and come up with a short
+term income forecast and volatility category.
+2) To calculate a single number score (0-100) that re-
+flects the financial health by combining indicators of
+income stability, liquidity, indebtedness, income growth
+tendency and data consistency.
+3) To make a deterministic decision based on safety rules if
+a user should save money in an emergency fund, pay off
+some debt or he/she is qualified for conservative micro-
+investments.
+4) To offer a set of micro-investment opportunities limited
+by the user’s eligibility criteria (affordability, risk toler-
+ance, volatility safety) and sorted in descending order of
+recommendation importance.
+5) To explain the recommendation result in natural lan-
+guage without changing the numerical output.
+6) To test every element of the framework empirically on
+a synthetic gig-workers dataset and provide unbiased
+results, both for the positive and negative cases.
+IV. PROPOSEDFRAMEWORK ANDSYSTEM
+ARCHITECTURE
+A. Overview
+The system is designed using a layered pipeline ap-
+proach that includes a React-based frontend layer, a
+Node.js/Express backend to coordinate business logic, a state-
+less Python/FastAPI microservice to perform income pre-
+diction and volatility classification, MongoDB database, and
+finally, an explanation service powered by the LLM through
+the Groq API. The architecture is shown in Figure 1.
+The process involves: (1) the backend fetching user and
+income details from MongoDB; (2) the backend invoking
+TABLE I
+SYSTEMCOMPONENTS ANDRESPONSIBILITIES
+Component Responsibility
+React Frontend User onboarding, daily income entry/CSV up-
+load, dashboard visualization
+Node.js/Express
+Backend
+Orchestration, health-score computation, deci-
+sion routing, investment curation, LLM prompt
+construction
+Python/FastAPI
+ML Service
+Stateless income forecasting and volatility clas-
+sification (/analyzeendpoint)
+MongoDB Storage of user profiles, daily income entries,
+cached analytics, investment suggestions, and
+explanations
+LLM Explanation
+Service (Groq
+API)
+Converts deterministic calculation outputs into
+natural-language explanations
+the FastAPI service which yields the prediction and volatility
+label based on the income details submitted; (3) the backend
+calculating the financial health score, routing the decision, and
+when possible, launching the micro-investments module; (4)
+the backend creating the JSON snapshot of the deterministic
+outputs and passing them to the LLM Explanation API; (5)
+the aggregate output is passed back to the frontend dashboard.
+These steps are depicted in Figure 2. If the ML service is
+not reachable, the backend handles it gracefully by excluding
+forecasting and volatility components from the computation
+of the health score and decision router. In the case where
+the LLM service fails or the request exceeds 12 seconds, the
+backend resorts to a fallback deterministic explanation through
+a template (fallbackFromSnapshot).
+B. Design Principle: Safety Before Recommendation
+The primary architectural design decision made here is the
+placement of the decision router after the financial health score
+but before the investment recommendation, not the other way
+around. Investment suggestions will only be calculated and
+prioritized when the decision router is allowed to take the
+conservative_investingaction; otherwise, the output
+will include only blockers and stabilization actions (e.g.,
+”Build emergency fund,” ”Reduce debt”). Such an architecture
+aims to ensure that the system will never offer any investment
+products to someone who does not have enough safety margins
+(in terms of having an emergency fund and debt level), no
+matter how good other indicators may look.
+C. Data Sources
+Due to the lack of a large scale labeled gig-income dataset in
+the real world, income, volatility, and investment-option data
+were derived using a combination of publicly available Kaggle
+data (data on e-commerce/gig delivery analysis, freelancer
+earnings, delivery partner income prediction, Indian personal
+finance and spending behavior, and mutual funds data) and
+existing benchmarking numbers. More specifically, an earn-
+ings benchmark number of around 102 per hour for Zomato
+delivery partners in 2025 was taken into consideration while
+creating the income-generating assumptions for the generated
+synthetic datasets [17]. 102 is the average earnings per hour
+Fig. 2. Decision pipeline from income analysis and financial health assess-
+ment to safety-gated investment recommendation.
+for Zomato delivery partners in 2025 based on total logged-in
+time, without taking tips into account. The income range (200
+– 2000 per day) and its volatility were inspired by worker-
+forums and journalism reporting on earnings volatility through
+algorithmic process.
+V. METHODOLOGY
+A. Income Forecasting
+Income forecasting is implemented as a descriptive, mathe-
+matical method which operates on up to 42 most recent daily
+income records of the user and does not employ any trained
+time-series model like ARIMA. The forecast for a future day
+dis calculated as
+ˆy(d) = max
+(︁
+B+s·d+W(d),0
+)︁
+(1)
+whereBis the base average income computed on the
+14 most recent records,sis a term which encodes a trend
+andW(d)is the adjustment for weekday seasonality. Base
+average income is just a moving average. The adjustment for
+weekdayW(d)is calculated as an average income for the
+same weekday in up to 42 most recent records minus the
+overall base average incomeBin order to allow weekdays
+with higher or lower historical income to affect the forecast.
+Slopesis only computed if there are at least 15 records of
+income and is computed as follows: a moving window of up
+to 30 most recent income records is split into an early half
+and a late one, and
+s= ¯ylate −¯yearly
+nwindow
+(2)
+where the slope is restricted to be between±8%ofBto
+avoid extrapolation and generate unreasonably high forecasts.
+If there are less than 15 records (cold start), then the slopesis
+0 and the forecast depends on the base average and weekday
+adjustments only. The forecast horizon is by default equal to
+15 days and is restricted to lie in [1, 30] range.
+B. Classification of Income Volatility
+The level of volatility is expressed by the coefficient of
+variation (CV), which is calculated on up to 30 of the most
+recent income entries (the minimum number of entries is 3):
+CV= σ
+µ (3)
+whereσandµare the standard deviation and mean of
+recent daily income. Then the obtained coefficient of variation
+is labeled as eitherlow(CV <0.35),medium(0.35≤
+CV <0.75), orhigh(CV≥0.75). These boundaries were
+determined off-line by a helper script, which analyzed the
+historical CSV files, searching for a rolling CV feature for
+7 days, sorting the obtained values, and setting the boundary
+between low and medium labels at the 33rd and the boundary
+between medium and high labels at the 66th percentiles of the
+calibration sample.
+C. Financial Health Score
+The financial health score consists of five weighted metrics,
+each normalized to 0–100 before being combined into a single
+score, as shown in Table II.
+TABLE II
+FINANCIALHEALTHSCORECOMPONENTS ANDTHEIRWEIGHTS
+Metric Weight Equation
+Liquidity 30%
+(︃Balance
+Expenses
+/︂
+3
+)︃
+×100
+Debt Safety 25% 100−
+(︃ Debt
+Expenses ×35
+)︃
+Income Stability 20% Fixed mapping: low= 90, medium
+= 60, high= 30, unknown= 45
+Forecast Trend 15% 50 +
+(︃ForecastAvg
+ActualAvg −1
+)︃
+×100
+Data Consistency 10% 0.6
+(︃Entries
+30 ×100
+)︃
++
+0.4
+(︃ActiveDays
+RecentLen ×100
+)︃
+Each metric is clamped to the range[0,100]before weight-
+ing. The overall score is the weighted sum
+H=
+5∑︂
+i=1
+wi ·F i, H∈[0,100](4)
+and is mapped to one of four qualitative phases:Crisis(H <
+40),Survival(H <60),Stability(H <80), andGrowth(H≥
+80). Note that the income-stability metric uses a fixed mapping
+from the categorical volatility label produced by the module
+described in Section V-A, rather than a continuous function
+of CV; this is a deliberate simplification to keep the scoring
+logic interpretable.
+D. Decision Router
+The decision router is a deterministic and rule-based gate
+that checks for three conditions pertaining to safety before the
+conservative_investingaction is permitted, as shown
+in Table III.
+TABLE III
+DECISIONROUTERRULES
+Condition Trigger Action
+Liquidity risk Balance<3×Ex-
+penses
+Establish emergency
+fund
+Debt risk Debt>0.5×Ex-
+penses
+Reduce debt
+Eligibility for invest-
+ing
+H≥70, liquidity
+≥1month, debt≤
+2months, volatility
+̸=high
+Invest in conserva-
+tive assets
+If the liquidity and/or debt conditions are triggered, the
+respective blockers (”emergency fund below 1 month” or ”debt
+greater than 2 months of expenses”) are attached to the router
+and the investment engine is not called, regardless of the value
+of the health score. This ordering ensures that a numerically
+high health score cannot, by itself, override an unmet liquidity
+or debt safety condition.
+E. Micro-Investment Recommendation Engine
+For users who pass the decision router, the investable
+amount is computed as
+I=
+⌊︂
+max
+(︂
+0,min(0.25S,0.10P)
+)︂⌋︂
+(5)
+whereSis the monthly surplus (income minus expenses)
+andPis spare savings, defined as balance minus three months
+of expenses. This formulation caps the recommended monthly
+investment at the lower of 25% of surplus or 10% of spare
+savings, so that a user with a large surplus but low savings
+buffer, or vice versa, is not over-committed.
+Candidate investment options are drawn from a curated
+dataset of 37 products and are first passed through hard filters
+that remove any option whose minimum monthly amount
+exceedsI, whose minimum earning requirement exceeds the
+user’s income, whose maximum permitted debt is below the
+user’s debt, whose minimum savings requirement exceeds the
+user’s savings, or whose risk/volatility profile is incompatible
+with the user’s stated risk preference and the current volatility
+classification (e.g., a low-risk user is never shown a high-
+risk option, and under high volatility only options marked
+volatility-safe are retained).
+Surviving options are ranked using a weighted score,
+R= 0.30r risk + 0.25rliq + 0.20rvol + 0.15rgig + 0.10rret (6)
+combining risk-profile match, liquidity, volatility safety, a
+gig-worker suitability priority, and expected return. The top
+five ranked options are retained, and the total investable
+amountIis allocated across them in proportion to their
+normalized ranking scores. A 12-month projected value is
+computed for each allocation using standard compound in-
+terest based on the option’s stated expected annual return.
+This filtering, ranking, and allocation pipeline is illustrated
+in Figure 7.
+F . LLM-Based Explanation Layer
+The explanation layer uses the Groq API with the
+llama-3.1-8b-instantmodel, decoding temperature
+0.2, and request timeout 12,000 ms. The backend creates
+a JSON snapshot with the health score, the weakest
+contributors, router actions and blockers, forecast summary
+statistics, volatility label, and the balance, spending,
+debt, and risk appetite of the user, and provides this
+snapshot to the LLM with the explicit instruction to use
+only the given values and not to derive any new figures
+or invent any investment instruments. The LLM must
+provide a strictly defined JSON object with nine fields:
+overview,healthInsight,forecastInsight,
+decisionInsight,investmentInsight,reasons,
+actionPlan,watchOut, andtone. In case of
+API failure, timeout, or output not conforming to the
+JSON schema, the backend uses a deterministic template
+(fallbackFromSnapshot) to create equivalent natural-
+language text based on the snapshot, without involving any
+API. By design, there is no way for the LLM to modify
+the health score, router decision, or investment allocation; it
+works strictly downstream of these deterministic procedures.
+VI. EXPERIMENTALSETUP
+A. Datasets
+Two types of datasets have been used for evaluation pur-
+poses. Firstly, income datasets with 16 files and 1,980 total
+entries spanning 10 gig economy platforms such as Uber,
+Swiggy, Blinkit, and Zomato (capitalization varies in the file-
+names) (data/normal/anddata/volatility/) were
+used to evaluate forecasting and volatility modules, respec-
+tively. Income values in the dataset range from 0 to 7,324.78
+per day, with the average and median income being 1,165.08
+and 1,076.68, respectively, as shown in Figure 3. Secondly, a
+37-product investments dataset (investments-mod.csv)
+with parameters including expected return, risk value, liquidity,
+minimum investment amount, lock-in period, and gig-workers’
+suitable status were used to test the investment engine, out of
+which 23 are deemed to be safe and 1 is categorized as risky.
+Fig. 3. Summary statistics of daily income across 1,980 records in the
+synthetic gig-worker dataset (10 platforms, 16 files).
+B. Forecasting Evaluation Procedure
+A 15-day holdout backtest was done on
+gig_income_data.csv. The mathematical forecasting
+technique outlined in Section V-A was pitted against a na ¨ıve
+historical mean approach with respect to MAE and RMSE
+scores.
+C. Volatility Evaluation Procedure
+The rule-based volatility classifier was evaluated against
+the ground truth volatility labels provided in the five
+volatility/datasets using a 30-day window of evaluation
+and recording the percentage of times when the label predicted
+by the classifier matches the ground truth label.
+D. Validation of Financial Health Scoring, Decision Router,
+and Investment Engine
+Four synthetic financial scenarios (Table V) were tested in
+the health-score component to make sure that the direction of
+scoring makes sense. A small test set of four synthetic financial
+scenarios (Table VI) was run through the decision router to
+make sure that theconservative_investingaction is
+gated appropriately. The investment engine was tested qualita-
+tively on the 37-product scenario using the representative user
+profiles.
+E. Computational Performance Measurement
+Computation time of the forecasting algorithm as well as of
+the complete health-score/router/investment computation was
+measured in the production environment directly.
+VII. RESULTS ANDDISCUSSION
+A. Income Forecasting
+Table IV reports the 15-day holdout evaluation. The mathe-
+matical trend-based forecast achieved an MAE of 352.07 and
+an RMSE of 431.35, compared to an MAE of 348.48 and an
+RMSE of 411.28 for a naive historical-mean baseline.
+As can be seen from Figure 4, in case of this dataset the
+proposed forecasting technique is not better than the naive
+baseline method, it is comparable to the latter with a bit
+higher error rates in both measures. That means that additional
+components of the forecasting model such as the weekday
+TABLE IV
+INCOMEFORECASTING: 15-DAYHOLDOUTEVALUATION
+Method MAE () RMSE ()
+Proposed Math/Trend Forecast 352.07 431.35
+Naive Historical-Mean Baseline 348.48 411.28
+Fig. 4. Comparison of 15-day holdout forecast error between the proposed
+mathematical/trend method and a naive historical-mean baseline. The pro-
+posed method does not outperform the baseline on this dataset.
+seasonality and slope terms do not give any accuracy benefits
+to the simple rolling mean approach, and the forecasting model
+must be considered as a simple trend projection model and not
+as an effective forecasting method.
+B. Volatility Classification
+The rule-based classifier correctly identified the ground-
+truth label of volatility in 162 of 455 evaluated cases (35.6%).
+The result must be understood as a test of rule/threshold
+consistency and not as machine learning classification ac-
+curacy. The relatively small percentage of matches suggests
+that the ground-truth labels of the evaluation CSV files were
+most probably created with some other parameters of rolling
+windows (7 day window vs 30 day in current implementation
+and calibration of the system).
+C. Financial Health Score
+Table V summarizes the four synthetic scenarios used
+to validate the direction and sensitivity of the health-score
+computation.
+From Figure 5, it can be observed that the score operates as
+expected based on the design criteria: high debt compared to
+the expenses has a big impact on reducing the score despite the
+income being similar to the stable case, while the combination
+of low savings and high volatility makes the vulnerable case
+reach the Crisis stage.
+D. Decision Router
+Table VI indicates that the router correctly filtered the
+conservative_investingaction in all four edge cases,
+TABLE V
+FINANCIALHEALTHSCORE: SYNTHETICSCENARIOVALIDATION
+Scenario Debt () Score Phase
+Vulnerable
+(income
+500/day,
+savings 10k,
+expenses
+20k, high
+volatility)
+60,000 21 Crisis
+High Debt
+(income
+1000/day,
+savings 60k,
+expenses
+20k,
+medium
+volatility)
+100,000 52 Survival
+Stable
+(income
+1000/day,
+savings
+100k,
+expenses
+20k, low
+volatility)
+5,000 91 Growth
+Fig. 5. Financial health scores for three synthetic scenarios, showing
+separation across the Crisis, Survival, and Growth phases.
+even when there was a case where the health score was 80 but
+a volatility condition violation existed.
+Figure 6 clearly shows that the router works as a hard gate;
+only having a good health level is not enough for investment
+when one of the safety factors (liquidity, debt, or volatility)
+has been violated. This is the way how the principle of the
+section IV-B is implemented.
+TABLE VI
+DECISIONROUTER: EDGE-CASEVALIDATION(4/4 PASSED)
+Scenario Score Debt Volat. Allowed?
+Low liquidity 80 0 Low Blocked
+High debt 80 High Low Blocked
+High volatility 80 0 High Blocked
+Ideal/Safe 80 0 Low Passed
+Fig. 6. Decision router flow showing safety checks and investment eligibility
+gating.
+E. Investment Engine
+Out of 37 investment choices in the filtered dataset, 23
+choices have been marked as safe for high volatility while only
+1 choice is marked as high risk, which shows that the dataset
+is biased towards conservative investments that are suitable for
+gig workers. It can be verified through qualitative analysis that
+the hard-filtering process eliminates those choices from the list
+that surpasses the investable amount or violate any constraint
+regarding risks and volatility of the user, and a deterministic
+output is generated by the top five ranked allocation.
+F . LLM Explanation Layer
+The live latency and success rates have not been measured
+against the Groq API because this would rely on the external
+network and was not part of the current evaluation. It has been
+confirmed in code that (i) the LLM explanation strictly adheres
+to the nine fields JSON schema, and (ii) the deterministic
+fallback (fallbackFromSnapshot) generates an identical
+explanation if the API call times out after 12 seconds or fails
+Fig. 7. Micro-investment recommendation pipeline with hard filtering,
+weighted ranking, and allocation.
+for any reason. There is no guarantee of uptime here; the
+fallback serves only to mitigate the effect of API failure.
+G. Computational Performance
+Table VII reports lightweight execution-time measurements
+for the core analytics.
+TABLE VII
+COMPUTATIONALPERFORMANCE(REPRESENTATIVEINPUTS)
+Component Execution Time
+Income forecasting (30-day projection) <1ms
+Health score + router + investment engine <2ms (combined)
+The above numbers show that the computations performed
+by the analytics modules are quite inexpensive compared to
+the round-trip through the network from the Node.js backend
+to the Python ML service and the external LLM API. These
+measurements reflect the local computation only and are not
+to be considered an end-to-end system latency or throughput
+measurement.
+VIII. LIMITATIONS
+Several important limitations of this project should be
+mentioned. First, the income forecasting module uses a math-
+ematical trend-projection model and does not provide better
+predictions than the naive baseline of historical mean in
+the evaluation dataset; this module should not be considered
+to provide any proven predictive ability. Second, a 35.6%
+agreement between the volatility classifier predictions and
+the ground-truth labels in the evaluation datasets suggest that
+there might be some misalignment between the calibration
+window/thresholds used in this classifier and the process
+of creating those ground-truth labels, and this problem has
+not been addressed yet. Third, the financial health score
+and decision router components, while consistent in their
+predictions in synthetic scenarios, have not been evaluated
+against real user outcomes. Fourth, the real-world latency,
+failure rate, and explanations quality of the LLM explanation
+layer when used via the live API have not been assessed in
+this evaluation. Fifth, there were no automatic unit testing
+systems (such as Jest or PyTest) implemented for this codebase
+at the moment of the evaluation, limiting the assurance of
+regression safety of this software. Sixth, the investment rec-
+ommendations generated by the system were not backtested
+against real market performance, and no claims are made
+about the profitability or other financial outcomes of following
+these recommendations. Finally, the synthetic datasets used
+both during development and evaluation, while based on the
+published baseline statistics, do not represent all behavioral
+and platform-specific complexity of the gig worker income
+streams.
+IX. CONCLUSION ANDFUTUREWORK
+In this paper, we introduced a risk-aware financial decision
+pipeline for gig workers, which encompasses mathematical
+income prediction, statistical volatility classification, multi-
+dimensional financial health scoring, a deterministic safety-
+gate decision router, a constrained micro-investment recom-
+mendation engine, and an LLM-explanation module, which
+itself is constrained to natural language representations of
+deterministic predictions. Empirically testing the system on
+synthetic gig worker data demonstrates that our income fore-
+casting model is no more accurate than a trivial baseline;
+that the classification results of our volatility classifier only
+show limited agreement with the ground truth labels, possibly
+because of threshold or window mismatches; that our financial
+health score is behaving consistent in synthetic settings; and
+that our decision router always rejects investment recommen-
+dation for unsafe scenarios.
+Future research directions include: using a calibration pro-
+cess for volatility classification that is tied to the rolling
+window directly and which is also consistent with the labeling
+methodology; testing the forecasting module on more base-
+lines and for longer holdout times; performing a formal us-
+ability and comprehension study of the generated explanations
+by the LLM on gig workers; developing an automated testing
+suite for the health-score, router, and investment-engine logic;
+and, in case of access to a sufficiently sized real-world income
+data set, using trained models in place of the mathematical
+forecasting and volatility classification methods, tested using
+the same honest baseline comparison framework of this paper.
+ACKNOWLEDGMENT
+The Authors express gratitude to Dr. Nandana Prabhu
+(Project Guide) Mr. Anant Shah (Industry Mentor) for their
+valuable guidance through this project, and to the Department
+of Information Technology, K J Somaiya School of Engineer-
+ing, Somaiya Vidyavihar University for their support.
+REFERENCES
+[1] Y . Sun, “Mathematical and Statistical Analysis of Gig Work in
+the Platform Economy,” Advances in Economics, Management and
+Political Sciences, vol. 218, pp. 61–74, 2025, doi: 10.54254/2754-
+1169/2025.CAU27208.
+[2] J. Koshti and C. Marvadi, “Validating Z Score Model for Evaluating
+Financial Health of Selected Indian Companies,” International Journal
+of Management, Public Policy and Research, E-ISSN: 2583-3014, vol.
+2, no. 2, pp. 115–125, 2023, doi: 10.55829/ijmpr.v2i2.164.
+[3] A. I. Hashi, “Machine Learning–Driven Fintech Solutions for Credit
+Scoring and Financial Inclusion in the Gig Economy,” International
+Journal of Innovative Science and Research Technology, vol. 10, no.
+8, pp. 1805–1820, Aug. 2025, doi: 10.38124/ijisrt/25aug1023.
+[4] V . Bhagavanji and A. Nagarathinam, “AI-Powered Financial Planner
+Dashboard,” International Research Journal of Modernization in Engi-
+neering Technology and Science, vol. 7, no. 5, May 2025. [Page range
+and DOI not independently verified.]
+[5] M. Bianchi and M. Bri `ere, “Human-Robot Interactions in Investment
+Decisions,” Management Science, vol. 72, no. 1, pp. 14–31, 2024, doi:
+10.1287/mnsc.2022.03886.
+[6] NITI Aayog, “India’s Booming Gig and Platform Economy: Perspectives
+and Recommendations on the Future of Work,” Government of India,
+Jun. 2022.
+[7] Government of Telangana, “Telangana Gig and Platform Workers (Reg-
+istration, Social Security and Welfare) Bill,” 2025. [Draft/Cabinet-
+approved as of available sources; no single permanent primary document
+located.]
+[8] International Labour Organization, “World Employment and Social
+Outlook 2021: The Role of Digital Labour Platforms in Transforming
+the World of Work,” ILO, Geneva, Switzerland, 2021.
+[9] Ujjivan Small Finance Bank, “How to Manage Money in the Gig
+Economy: A Complete Guide,” 2025.
+[10] S. S. Wavhal, “Financial Literacy for Gig Workers: Building Stability
+in Uncertain Times,” Journal of Emerging Technologies and Innovative
+Research, vol. 10, no. 12, pp. i57–i71, Dec. 2023.
+[11] S. Turgay, S. Erdo ˘gan, ˇZ. Stevi ´c, O. E. Elma, T. Eren, Z. Wang, and
+M. Baydas ¸, “Risk-Aware Financial Forecasting Enhanced by Machine
+Learning and Intuitionistic Fuzzy Multi-Criteria Decision-Making,”
+arXiv:2512.17936, Dec. 2025.
+[12] “A Comprehensive Review on Financial Explainable AI,”
+arXiv:2309.11960, 2023.
+[13] N. Kozodoi, J. Jacob, and S. Lessmann, “Fairness in Credit Scoring:
+Assessment, Implementation and Profit Implications,” European Journal
+of Operational Research, vol. 297, pp. 1083–1094, 2022.
+[14] G. Kumar, “Architecting Scalable and Resilient Fintech Platforms with
+AI/ML Integration,” International Journal of Innovative Science and
+Research Technology, vol. 10, no. 4, pp. 3073–3084, Apr. 2025, doi:
+10.38124/ijisrt/25apr2359.
+[15] J. Peetz, J. Robson, and S. Xuereb, “The Role of Income V olatility
+and Perceived Locus of Control in Financial Planning Decisions,”
+Frontiers in Psychology, vol. 12, Art. no. 638043, 2021, doi: 10.3389/fp-
+syg.2021.638043.
+[16] Government of India, “Economic Survey 2025–26,” Ministry of Finance,
+2026.
+[17] ETtech, “Zomato delivery partners’ hourly earnings rose 10.9% in 2025:
+Eternal CEO Deepinder Goyal,” The Economic Times, Jan. 3, 2026.

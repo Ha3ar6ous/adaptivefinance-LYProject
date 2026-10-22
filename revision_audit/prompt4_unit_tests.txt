@@ -1,0 +1,13 @@
+test_all_added_gates_fail_closed_on_unavailable_analytics (test_ablate.AblationTests.test_all_added_gates_fail_closed_on_unavailable_analytics) ... ok
+test_cluster_interval_zero_for_self_comparison (test_ablate.AblationTests.test_cluster_interval_zero_for_self_comparison) ... ok
+test_match_monthly_count_exactly (test_ablate.AblationTests.test_match_monthly_count_exactly) ... ok
+test_minus_volatility_really_removes_high_block (test_ablate.AblationTests.test_minus_volatility_really_removes_high_block) ... ok
+test_original_accounting_unchanged_and_alias_outcomes_equal (test_ablate.AblationTests.test_original_accounting_unchanged_and_alias_outcomes_equal) ... ok
+test_random_gates_are_seeded (test_ablate.AblationTests.test_random_gates_are_seeded) ... ok
+test_select_k_ties_and_eligibility (test_ablate.AblationTests.test_select_k_ties_and_eligibility) ... ok
+test_thresholds_and_no_score_equivalence (test_ablate.AblationTests.test_thresholds_and_no_score_equivalence) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.053s
+
+OK

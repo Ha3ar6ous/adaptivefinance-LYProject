@@ -1,0 +1,94 @@
+[
+  {
+    "name": "research_python",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-c",
+      "from pathlib import Path; import runpy; R=Path.cwd(); O=R/'revision_audit/final_20261018/legacy'; orig=Path.write_text; Path.write_text=lambda self,*a,**k: orig(O/self.name,*a,**k) if self.parent in [R/'research_eval',R/'paper_audit'] else orig(self,*a,**k); runpy.run_path('research_eval/evaluate_python.py',run_name='__main__')"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "coverage",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-c",
+      "from pathlib import Path; import runpy; R=Path.cwd(); O=R/'revision_audit/final_20261018/legacy'; orig=Path.write_text; Path.write_text=lambda self,*a,**k: orig(O/self.name,*a,**k) if self.parent in [R/'research_eval',R/'paper_audit'] else orig(self,*a,**k); runpy.run_path('research_eval/evaluate_coverage.py',run_name='__main__')"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "historical_replay",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-c",
+      "from pathlib import Path; import runpy; R=Path.cwd(); O=R/'revision_audit/final_20261018/legacy'; orig=Path.write_text; Path.write_text=lambda self,*a,**k: orig(O/self.name,*a,**k) if self.parent in [R/'research_eval',R/'paper_audit'] else orig(self,*a,**k); runpy.run_path('paper_audit/replay_baseline.py',run_name='__main__')"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "integration_fixtures",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-c",
+      "from pathlib import Path; import runpy; R=Path.cwd(); O=R/'revision_audit/final_20261018/legacy'; orig=Path.write_text; Path.write_text=lambda self,*a,**k: orig(O/self.name,*a,**k) if self.parent in [R/'research_eval',R/'paper_audit'] else orig(self,*a,**k); runpy.run_path('paper_audit/generate_integration_fixtures.py',run_name='__main__')"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "paper_experiments",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-c",
+      "import sys,importlib.util,json; from pathlib import Path; R=Path.cwd();sys.path.insert(0,str(R/'paper_audit'));import experiments as e; O=R/'revision_audit/final_20261018/legacy';e.write=lambda n,v:(O/n).write_text(json.dumps(v,indent=2,allow_nan=False));e.load=lambda n:json.loads((O/n).read_text());e.select_forecast();e.select_volatility();e.test_forecast();e.test_volatility()"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "research_node",
+    "command": [
+      "node",
+      "-e",
+      "const fs=require('node:fs'),path=require('node:path'),Module=require('node:module');const file=path.resolve(process.argv[1]),dest=path.resolve('revision_audit/final_20261018/legacy'),orig=fs.writeFileSync;fs.writeFileSync=function(p,...args){const dir=path.dirname(path.resolve(p));return orig.call(fs,dir===path.resolve('research_eval')||dir===path.resolve('paper_audit')?path.join(dest,path.basename(p)):p,...args)};const m=new Module(file);m.filename=file;m.paths=Module._nodeModulePaths(path.dirname(file));require.main=m;process.argv=[process.argv[0],file];m._compile(fs.readFileSync(file,'utf8'),file)",
+      "research_eval/evaluate_node.cjs"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "router_cases",
+    "command": [
+      "node",
+      "-e",
+      "const fs=require('node:fs'),path=require('node:path'),Module=require('node:module');const file=path.resolve(process.argv[1]),dest=path.resolve('revision_audit/final_20261018/legacy'),orig=fs.writeFileSync;fs.writeFileSync=function(p,...args){const dir=path.dirname(path.resolve(p));return orig.call(fs,dir===path.resolve('research_eval')||dir===path.resolve('paper_audit')?path.join(dest,path.basename(p)):p,...args)};const m=new Module(file);m.filename=file;m.paths=Module._nodeModulePaths(path.dirname(file));require.main=m;process.argv=[process.argv[0],file];m._compile(fs.readFileSync(file,'utf8'),file)",
+      "paper_audit/router_cases.cjs"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "original_node",
+    "command": [
+      "node",
+      "-e",
+      "const fs=require('node:fs'),path=require('node:path'),Module=require('node:module');const file=path.resolve(process.argv[1]),dest=path.resolve('revision_audit/final_20261018/legacy'),orig=fs.writeFileSync;fs.writeFileSync=function(p,...args){const dir=path.dirname(path.resolve(p));return orig.call(fs,dir===path.resolve('research_eval')||dir===path.resolve('paper_audit')?path.join(dest,path.basename(p)):p,...args)};const m=new Module(file);m.filename=file;m.paths=Module._nodeModulePaths(path.dirname(file));require.main=m;process.argv=[process.argv[0],file];m._compile(fs.readFileSync(file,'utf8'),file)",
+      "eval_node.js"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "original_python",
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "eval_script.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "router_export",
+    "command": [
+      "node",
+      "-e",
+      "const fs=require('fs'),r=require('./paper_audit/router_cases.cjs'),old=require('./paper_audit/baseline/decisionRouterService'),now=require('./server/services/decisionRouterService');let x={policy:'paper_audit/PROTOCOL.md',splits:{}};for(const [name,rows] of [['boundary_grid',r.grid()],['invalid_inputs',r.invalidCases()],['combined',[...r.grid(),...r.invalidCases()]]])x.splits[name]={original:r.evaluate(old.buildDecisionRouter,rows),revised:r.evaluate(now.buildDecisionRouter,rows)};fs.writeFileSync('revision_audit/final_20261018/legacy/router_results.json',JSON.stringify(x,null,2));console.log(JSON.stringify(Object.fromEntries(Object.entries(x.splits).map(([k,v])=>[k,{n:v.revised.n,fp:v.revised.fp,fn:v.revised.fn}]))))"
+    ],
+    "exit_code": 0
+  }
+]

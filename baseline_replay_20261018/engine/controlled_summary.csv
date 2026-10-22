@@ -1,0 +1,11 @@
+stage,case,n,accepted,rejected
+before,number999,125,125,0
+before,product,125,125,0
+before,schema,125,0,125
+before,valid,125,125,0
+before,wrong_number_context,125,125,0
+after,number999,125,0,125
+after,product,125,0,125
+after,schema,125,0,125
+after,valid,125,125,0
+after,wrong_number_context,125,0,125

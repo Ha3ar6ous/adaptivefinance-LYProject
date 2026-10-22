@@ -1,0 +1,69 @@
+[
+  {
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "baseline_replay_20261018/score_default_threads",
+      "--stage",
+      "prepare"
+    ],
+    "exit_code": 0,
+    "removed_thread_overrides": [
+      "OMP_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "MKL_NUM_THREADS"
+    ]
+  },
+  {
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "baseline_replay_20261018/score_default_threads",
+      "--stage",
+      "select"
+    ],
+    "exit_code": 0,
+    "removed_thread_overrides": [
+      "OMP_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "MKL_NUM_THREADS"
+    ]
+  },
+  {
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "score_audit/run.py",
+      "--out",
+      "baseline_replay_20261018/score_default_threads",
+      "--stage",
+      "test"
+    ],
+    "exit_code": 0,
+    "removed_thread_overrides": [
+      "OMP_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "MKL_NUM_THREADS"
+    ]
+  },
+  {
+    "command": [
+      "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "score_audit",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "removed_thread_overrides": [
+      "OMP_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "MKL_NUM_THREADS"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+test_currency_never_pooled (test_data.DataTests.test_currency_never_pooled) ... ok
+test_forecast_origins_and_target_lengths (test_data.DataTests.test_forecast_origins_and_target_lengths) ... ok
+test_new_generator_keys_and_incentives (test_data.DataTests.test_new_generator_keys_and_incentives) ... ok
+test_original_sources_preserved (test_data.DataTests.test_original_sources_preserved) ... ok
+test_real_daily_derivative_no_location_columns (test_data.DataTests.test_real_daily_derivative_no_location_columns) ... ok
+test_seeded_generator_reproduces (test_data.DataTests.test_seeded_generator_reproduces) ... ok
+test_unique_canonical_keys (test_data.DataTests.test_unique_canonical_keys) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.432s
+
+OK

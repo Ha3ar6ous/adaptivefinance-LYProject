@@ -1,0 +1,18 @@
+# Preserve research records and source snapshots byte-for-byte across platforms.
+# Their manifests hash file bytes, including line endings.
+/baseline_replay_20261018/** -text
+/data_audit/** -text
+/engine_llm_audit/** -text
+/forecast_audit/** -text
+/paper_audit/** -text
+/paper_results/** -text
+/research_eval/** -text
+/revision_audit/** -text
+/router_sim/** -text
+/score_audit/** -text
+/volatility_audit/** -text
+/baseline_results.json -text
+/results_for_paper.json -text
+/ablation_results.json -text
+/ablation_table.tex -text
+/paper_table_updates.tex -text

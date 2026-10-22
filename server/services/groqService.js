@@ -10,7 +10,8 @@ const extractJson = (text) => {
   return JSON.parse(trimmed.slice(start, end + 1))
 }
 
-const callGroqJson = async ({ systemPrompt, userPayload }) => {
+const JSON_MODEL = 'openai/gpt-oss-20b'
+const callGroqJson = async ({ systemPrompt, userPayload, seed }) => {
   const apiKey = process.env.GROQ_API_KEY
   if (!apiKey) {
     throw new Error('GROQ_API_KEY is not configured')
@@ -31,12 +32,15 @@ const callGroqJson = async ({ systemPrompt, userPayload }) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: process.env.GROQ_MODEL || 'qwen/qwen3.8-27b',
+        model: JSON_MODEL,
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: JSON.stringify(userPayload) },
         ],
-        temperature: 0.2,
+        temperature: 0,
+        reasoning_effort: 'low',
+        max_completion_tokens: 512,
+        ...(Number.isInteger(seed) ? { seed } : {}),
         response_format: { type: 'json_object' },
       }),
     })
@@ -94,6 +98,7 @@ const callGroqText = async ({ systemPrompt, messages }) => {
 }
 
 module.exports = {
+  JSON_MODEL,
   callGroqJson,
   callGroqText,
 }

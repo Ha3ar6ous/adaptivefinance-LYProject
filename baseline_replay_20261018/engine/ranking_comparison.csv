@@ -1,0 +1,3 @@
+baseline,eligible_profiles,mean_jaccard,top1_agreement
+equal_weight,216,0.0,0.0
+risk_only,216,0.5037037037037037,0.2222222222222222

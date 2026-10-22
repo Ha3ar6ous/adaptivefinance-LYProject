@@ -1,0 +1,27 @@
+{
+  "json_parse": "PASS",
+  "tables": {
+    "csv_comparisons": 107,
+    "exact_csv_tables": 102,
+    "different_csv_tables": 5,
+    "not_regenerated_csv_tables": 0,
+    "numeric_csv_cells_compared": 246237,
+    "paper_ready_ledger_rows": 71,
+    "unique_test_total": 130,
+    "tests_passed": 126,
+    "tests_failed": 4,
+    "test_errors": 0,
+    "changed_existing_files": 1,
+    "changed_existing_source_files": 0,
+    "tables_with_non_timing_non_network_differences": 0,
+    "single_thread_score_diagnostic_difference_cells": 72
+  },
+  "source_changes": "NONE",
+  "observed_concurrent_change": [
+    "prompts.md"
+  ],
+  "secret_pattern_files": [],
+  "baseline_sha256": "bac412df0fd7fa6a153a3c32a0878252ae2a53c7fb1a316210cf42fba68bb5c1",
+  "all_primary_fixture_objects_exact": true,
+  "all_deterministic_json_numbers_exact": true
+}

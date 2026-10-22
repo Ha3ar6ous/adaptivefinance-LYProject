@@ -1,0 +1,80 @@
+{
+  "files": 16,
+  "notebook_versions": 3,
+  "notebook_hits": [
+    {
+      "file": "1forcastingmodel/gig_income_forecast.ipynb",
+      "revision": "dc8b5ff2243552d262ee95833eb4d9c953181529",
+      "hits": [
+        {
+          "cell": 11,
+          "line": "    df = pd.read_csv(csv_path)"
+        },
+        {
+          "cell": 24,
+          "line": "    np.random.seed(seed)"
+        },
+        {
+          "cell": 24,
+          "line": "    df = pd.read_csv(csv_path)"
+        },
+        {
+          "cell": 24,
+          "line": "    fc_df.to_csv(out_csv, index=False)"
+        }
+      ]
+    },
+    {
+      "file": "2volatilitymodel/volatility_classifier_2.ipynb",
+      "revision": "dc8b5ff2243552d262ee95833eb4d9c953181529",
+      "hits": [
+        {
+          "cell": 3,
+          "line": "CV_LOW    = 0.30"
+        },
+        {
+          "cell": 5,
+          "line": "    df    = pd.read_csv(fpath, parse_dates=['date'])"
+        },
+        {
+          "cell": 7,
+          "line": "def cv_to_label(cv):"
+        },
+        {
+          "cell": 7,
+          "line": "    if cv < CV_LOW:"
+        },
+        {
+          "cell": 7,
+          "line": "        'Platform CV Label': cv_to_label(cv),"
+        },
+        {
+          "cell": 7,
+          "line": "raw['volatility_label_stat'] = raw['rolling_cv_7'].apply(cv_to_label)"
+        },
+        {
+          "cell": 7,
+          "line": "    out_df.to_csv(fpath, index=False)"
+        },
+        {
+          "cell": 13,
+          "line": "    stat_label_global = cv_to_label(cv)"
+        },
+        {
+          "cell": 17,
+          "line": "summary.to_csv(out_path)"
+        }
+      ]
+    },
+    {
+      "file": "3investmentsuggestion/gig_worker_investment_advisor_v2.ipynb",
+      "revision": "3861c9a2a5cf99e286c5d64db38757b3964cb1c8",
+      "hits": [
+        {
+          "cell": 1,
+          "line": "df_raw = pd.read_csv(csv_filename, on_bad_lines='skip')"
+        }
+      ]
+    }
+  ]
+}

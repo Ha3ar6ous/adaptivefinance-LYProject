@@ -1,0 +1,15 @@
+dataset,series,horizon,test_days,reason
+repository_all,blinkit_stable.csv,30,24,no complete test horizon
+repository_all,blinkit_volatile.csv,30,24,no complete test horizon
+repository_all,snabbit_stable.csv,30,24,no complete test horizon
+repository_all,snabbit_volatile.csv,30,24,no complete test horizon
+repository_all,swiggy_stable.csv,30,24,no complete test horizon
+repository_all,swiggy_volatile.csv,30,24,no complete test horizon
+repository_all,uber_stable.csv,30,24,no complete test horizon
+repository_all,uber_volatile.csv,30,24,no complete test horizon
+repository_all,zomato_stable.csv,30,24,no complete test horizon
+repository_all,zomato_volatile.csv,30,24,no complete test horizon
+repository_canonical,blinkit,30,24,no complete test horizon
+repository_canonical,snabbit,30,24,no complete test horizon
+repository_canonical,swiggy,30,24,no complete test horizon
+repository_canonical,uber,30,24,no complete test horizon

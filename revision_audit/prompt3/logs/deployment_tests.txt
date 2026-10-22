@@ -1,0 +1,9 @@
+test_boundaries (test_deployment.DeploymentTests.test_boundaries) ... ok
+test_high_boundary_unchanged (test_deployment.DeploymentTests.test_high_boundary_unchanged) ... ok
+test_legacy_artifact_cannot_override_validated_deployment (test_deployment.DeploymentTests.test_legacy_artifact_cannot_override_validated_deployment) ... ok
+test_pinned_thresholds (test_deployment.DeploymentTests.test_pinned_thresholds) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

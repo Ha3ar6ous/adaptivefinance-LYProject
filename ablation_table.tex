@@ -1,0 +1,26 @@
+% Simulation only. Requires booktabs and graphicx. C=cleared user-months; I=ever invested.
+% Matched gates have equal monthly C counts; I can differ. Random gate averages five assignments.
+\begin{table}[t]
+\centering
+\caption{Simulation ablations: central, engine budget.}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Policy & Short\% & Sale\% & Mo. $<E$ & Wealth & C\% & I\% \\
+\midrule
+Always & 31.120 & 7.570 & 3.032 & 52099.268 & 100.000 & 65.372 \\
+Original & 31.124 & 3.394 & 3.021 & 52075.121 & 46.587 & 53.694 \\
+Full & 31.124 & 1.132 & 3.014 & 52052.456 & 23.262 & 43.012 \\
+Score only & 31.124 & 4.510 & 3.024 & 52088.180 & 59.321 & 60.106 \\
+None & 31.124 & 0.000 & 3.010 & 52022.540 & 0.000 & 0.000 \\
+L & 31.120 & 7.330 & 3.031 & 52095.586 & 51.340 & 64.892 \\
+L+D & 31.124 & 1.788 & 3.016 & 52061.544 & 31.583 & 50.524 \\
+L+D+V & 31.124 & 1.132 & 3.014 & 52052.456 & 23.262 & 43.012 \\
+Full-V & 31.124 & 1.788 & 3.016 & 52061.544 & 31.583 & 50.524 \\
+Full-S & 31.124 & 1.132 & 3.014 & 52052.456 & 23.262 & 43.012 \\
+Matched savings & 31.124 & 0.698 & 3.013 & 52061.462 & 23.262 & 39.420 \\
+Own proxy & 31.120 & 7.330 & 3.031 & 52095.586 & 46.671 & 64.892 \\
+Matched random & 31.125 & 2.126 & 3.014 & 52038.079 & 23.262 & 46.070 \\
+\bottomrule
+\end{tabular}}
+\end{table}

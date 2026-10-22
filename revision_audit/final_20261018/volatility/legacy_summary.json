@@ -1,0 +1,19 @@
+{
+  "n": 600,
+  "original_counts": {
+    "medium": 255,
+    "high": 178,
+    "low": 167
+  },
+  "stat_counts": {
+    "high": 443,
+    "medium": 132,
+    "low": 25
+  },
+  "reconstructed_matches": 600,
+  "original_stat_matches": 229,
+  "max_cv_error": 3.68594044175552e-14,
+  "runtime_n": 455,
+  "runtime_original_matches": 162,
+  "runtime_stat_matches": 333
+}

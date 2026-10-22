@@ -1,0 +1,38 @@
+{
+  "profile": {
+    "balance": 61000,
+    "expenses": 20000,
+    "income_per_day": 1000,
+    "debt": 0
+  },
+  "health": 91,
+  "eligible": true,
+  "investable": 100,
+  "allocations": [
+    {
+      "id": "option_23",
+      "amount": 20,
+      "minimum": 100
+    },
+    {
+      "id": "option_22",
+      "amount": 19,
+      "minimum": 100
+    },
+    {
+      "id": "option_24",
+      "amount": 19,
+      "minimum": 100
+    },
+    {
+      "id": "option_25",
+      "amount": 19,
+      "minimum": 100
+    },
+    {
+      "id": "option_31",
+      "amount": 19,
+      "minimum": 100
+    }
+  ]
+}

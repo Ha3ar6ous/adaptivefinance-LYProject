@@ -1,0 +1,411 @@
+{
+  "health": {
+    "n": 6480,
+    "phases": {
+      "survival": 2511,
+      "crisis": 1875,
+      "stability": 1686,
+      "growth": 408
+    },
+    "monotonicity": [
+      {
+        "factor": "liq",
+        "pairs": 5184,
+        "violations": 0,
+        "equalities": 1296,
+        "min_delta": 0,
+        "max_delta": 20
+      },
+      {
+        "factor": "debtRatio",
+        "pairs": 4860,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": -13,
+        "max_delta": -4
+      },
+      {
+        "factor": "vol",
+        "pairs": 3240,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": 6,
+        "max_delta": 6
+      },
+      {
+        "factor": "trend",
+        "pairs": 4320,
+        "violations": 0,
+        "equalities": 1440,
+        "min_delta": 0,
+        "max_delta": 8
+      },
+      {
+        "factor": "n",
+        "pairs": 4320,
+        "violations": 0,
+        "equalities": 0,
+        "min_delta": 2,
+        "max_delta": 4
+      },
+      {
+        "factor": "income",
+        "pairs": 2160,
+        "violations": 0,
+        "equalities": 2160,
+        "min_delta": 0,
+        "max_delta": 0
+      }
+    ]
+  },
+  "router": {
+    "n": 1792,
+    "allowed": 324,
+    "implemented": {
+      "passed": 1792,
+      "failed": 0,
+      "false_allow": 0,
+      "false_block": 0
+    },
+    "conservative": {
+      "passed": 1549,
+      "failed": 243,
+      "false_allow": 243,
+      "false_block": 0
+    },
+    "unknown_allowed": 108,
+    "boundaries": [
+      {
+        "liq": 0.99,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 1,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 1.01,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 2.99,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": true,
+        "debt_action": false
+      },
+      {
+        "liq": 3,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 3.01,
+        "debt_ratio": 0,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.49,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.5,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0.51,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 1.99,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 2,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 2.01,
+        "score": 80,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": true
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 69,
+        "vol": "low",
+        "invest_allowed": false,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 70,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      },
+      {
+        "liq": 4,
+        "debt_ratio": 0,
+        "score": 71,
+        "vol": "low",
+        "invest_allowed": true,
+        "emergency_action": false,
+        "debt_action": false
+      }
+    ],
+    "rule_coverage": {
+      "liq_below": 448,
+      "debt_above": 448,
+      "high_vol": 448,
+      "low_health": 1024,
+      "all_clear": 324
+    },
+    "ml_outage": {
+      "score": 74,
+      "phase": "stability",
+      "volatility": "unknown",
+      "allowed": true,
+      "recommended": 5,
+      "investable": 2500
+    }
+  },
+  "investment": {
+    "n": 1728,
+    "eligible": 324,
+    "blocked": 1404,
+    "allocations": 1620,
+    "violations": {
+      "budget": 0,
+      "negative": 0,
+      "minimum_allocated": 468,
+      "hard_filter": 0,
+      "top5": 0,
+      "router_bypass": 0,
+      "pct_sum_not100": 180
+    },
+    "unused": {
+      "min": 0,
+      "max": 4,
+      "mean": 2.185185185185185
+    },
+    "recommended_distribution": {
+      "0": 1404,
+      "5": 324
+    }
+  },
+  "llm": {
+    "transport": [
+      {
+        "mode": "valid_json",
+        "success": true,
+        "ms": 0.6919
+      },
+      {
+        "mode": "fenced_json",
+        "success": true,
+        "ms": 0.1175
+      },
+      {
+        "mode": "malformed",
+        "success": false,
+        "error": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+        "ms": 0.3709
+      },
+      {
+        "mode": "missing_json",
+        "success": false,
+        "error": "Groq response did not contain JSON",
+        "ms": 0.1677
+      },
+      {
+        "mode": "http_429",
+        "success": false,
+        "error": "Groq failed with status 429",
+        "ms": 0.1596
+      },
+      {
+        "mode": "timeout",
+        "success": false,
+        "error": "Controlled timeout",
+        "ms": 25.0469
+      }
+    ],
+    "live": [
+      {
+        "cfg": {},
+        "api_success": true,
+        "schema_success": false,
+        "fallback": true,
+        "latency_ms": 1167.1993,
+        "error": "Missing overview fields"
+      }
+    ]
+  },
+  "tests": {
+    "total": 24,
+    "passed": 14,
+    "failed": 10
+  },
+  "failures": [
+    {
+      "name": "score income-sensitive with all other factors fixed",
+      "passed": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(health.calculateHealthScore(fixture({income:1500})).score>health.calculateHealthScore(fixture({income:500})).score)\n"
+    },
+    {
+      "name": "zero earnings should not pass investment gate",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "router conservative 3 month and 0.5 debt safety requirement",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n243 !== 0\n"
+    },
+    {
+      "name": "router blocks unknown volatility",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "router ML outage fails closed",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "investment allocated product minimums satisfied",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n468 !== 0\n"
+    },
+    {
+      "name": "investment displayed percentages sum to 100",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n180 !== 0\n"
+    },
+    {
+      "name": "LLM numerical invention rejected",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ready'\n- 'fallback'\n"
+    },
+    {
+      "name": "LLM wrong overview types rejected",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ready'\n- 'fallback'\n"
+    },
+    {
+      "name": "fallback detects falling and rising forecasts",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'steady'\n- 'softening'\n"
+    }
+  ],
+  "performance": {
+    "health_router_investment": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 1.473873799999999,
+      "std_ms": 0.6900742085700349,
+      "median_ms": 1.34185,
+      "p95_ms": 2.7198,
+      "min_ms": 0.5015,
+      "max_ms": 4.6522
+    },
+    "health_router": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.03418019999999999,
+      "std_ms": 0.016034881601059613,
+      "median_ms": 0.0328,
+      "p95_ms": 0.0441,
+      "min_ms": 0.0235,
+      "max_ms": 0.3361
+    },
+    "investment_only": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 1.3138194000000005,
+      "std_ms": 0.704547184086091,
+      "median_ms": 1.1916,
+      "p95_ms": 2.6037,
+      "min_ms": 0.4253,
+      "max_ms": 4.4566
+    },
+    "fixture_only": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.0468536,
+      "std_ms": 0.02490449290871027,
+      "median_ms": 0.0353,
+      "p95_ms": 0.086,
+      "min_ms": 0.0221,
+      "max_ms": 0.1482
+    },
+    "fallback": {
+      "n": 500,
+      "warmup": 50,
+      "mean_ms": 0.004022799999999999,
+      "std_ms": 0.000157353614512028,
+      "median_ms": 0.004,
+      "p95_ms": 0.0043,
+      "min_ms": 0.0039,
+      "max_ms": 0.0052
+    }
+  }
+}

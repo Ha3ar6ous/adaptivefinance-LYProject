@@ -1,0 +1,12 @@
+file,rows,train_days,validation_days,test_days,platform,first,last
+blinkit_stable.csv,120,60,30,30,blinkit,2024-01-01,2024-04-29
+blinkit_volatile.csv,120,60,30,30,blinkit,2024-01-01,2024-04-29
+gig_income_data.csv,180,60,30,90,zomato,2024-01-01,2024-06-28
+snabbit_stable.csv,120,60,30,30,snabbit,2024-01-01,2024-04-29
+snabbit_volatile.csv,120,60,30,30,snabbit,2024-01-01,2024-04-29
+swiggy_stable.csv,120,60,30,30,swiggy,2024-01-01,2024-04-29
+swiggy_volatile.csv,120,60,30,30,swiggy,2024-01-01,2024-04-29
+uber_stable.csv,120,60,30,30,uber,2024-01-01,2024-04-29
+uber_volatile.csv,120,60,30,30,uber,2024-01-01,2024-04-29
+zomato_stable.csv,120,60,30,30,zomato,2024-01-01,2024-04-29
+zomato_volatile.csv,120,60,30,30,zomato,2024-01-01,2024-04-29

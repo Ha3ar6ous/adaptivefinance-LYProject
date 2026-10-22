@@ -1,0 +1,15 @@
+=== FINANCIAL HEALTH SCORE ===
+Vulnerable - Score: 21, Phase: crisis
+High Debt - Score: 52, Phase: survival
+Stable - Score: 91, Phase: growth
+
+=== DECISION ROUTER ===
+Low liquidity blocks invest: Invest Allowed=false
+High debt blocks invest: Invest Allowed=false
+High volatility blocks invest: Invest Allowed=false
+Ideal passes invest: Invest Allowed=false
+
+=== INVESTMENT ENGINE ===
+Total Options: 37
+Volatility Safe Options: 23
+High Risk Options: 1

@@ -1,0 +1,2355 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "temperature": 0,
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "timeout_ms": 12000,
+  "pacing_ms": 2100,
+  "rows": [
+    {
+      "id": "11_0",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 696.8408,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 0,
+          "forecastTotal": 40882,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_1",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 518.0066000000002,
+      "error": "",
+      "raw": {
+        "templateId": "standard",
+        "facts": {
+          "healthScore": 71,
+          "forecastTotal": 81192,
+          "investmentEligible": true,
+          "productName": "Nifty 50 ETF (SBI / Nippon India)",
+          "allocationAmount": 9029
+        }
+      }
+    },
+    {
+      "id": "11_2",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 511.6331,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 95,
+          "forecastTotal": 23136,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_3",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 513.4682000000003,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 43,
+          "forecastTotal": 6439,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_4",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 513.2101999999995,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 25,
+          "forecastTotal": 24481,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_5",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 508.2554,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 21,
+          "forecastTotal": 39770,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_6",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 570.1771000000008,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 92,
+          "forecastTotal": 64530,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_7",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 510.200499999999,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 9,
+          "forecastTotal": 84303,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_8",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 461.9002999999975,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 91,
+          "forecastTotal": 20103,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_9",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 431.6349999999984,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 59,
+          "forecastTotal": 52341,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_10",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 713.5362999999998,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 93,
+          "forecastTotal": 68803,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_11",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 550.6915999999983,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 25,
+          "forecastTotal": 73776,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_12",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 663.6092999999964,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 58,
+          "forecastTotal": 50111,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_13",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 573.4684999999954,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 72,
+          "forecastTotal": 21911,
+          "investmentEligible": true,
+          "productName": "Sovereign Gold Bond (Current Series)",
+          "allocationAmount": 6304
+        }
+      }
+    },
+    {
+      "id": "11_14",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 637.977899999998,
+      "error": "",
+      "raw": {
+        "templateId": "standard",
+        "facts": {
+          "healthScore": 83,
+          "forecastTotal": 21608,
+          "investmentEligible": true,
+          "productName": "Sukanya Samriddhi Yojana (SSY)",
+          "allocationAmount": 3612
+        }
+      }
+    },
+    {
+      "id": "11_15",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 518.8526000000056,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 56,
+          "forecastTotal": 78994,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_16",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 579.8822,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 77,
+          "forecastTotal": 69899,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_17",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 509.7439999999988,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 47,
+          "forecastTotal": 11325,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_18",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 721.8906999999963,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 66,
+          "forecastTotal": 100301,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_19",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 543.5152000000016,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 58,
+          "forecastTotal": 99646,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_20",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 555.6218000000008,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 47,
+          "forecastTotal": 89096,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_21",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 509.3899999999994,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 91,
+          "forecastTotal": 87825,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_22",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 428.23829999999725,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 89,
+          "forecastTotal": 32437,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "11_23",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 549.5118000000002,
+      "error": "",
+      "raw": {
+        "templateId": "standard",
+        "facts": {
+          "healthScore": 97,
+          "forecastTotal": 23679,
+          "investmentEligible": true,
+          "productName": "Public Provident Fund (PPF)",
+          "allocationAmount": 4456
+        }
+      }
+    },
+    {
+      "id": "11_24",
+      "seed": 11,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 475.14830000000075,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 95,
+          "forecastTotal": 94470,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_0",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 593.909799999994,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 0,
+          "forecastTotal": 6381,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_1",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 606.4979999999923,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 6,
+          "forecastTotal": 79008,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_2",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 544.2994999999937,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 10,
+          "forecastTotal": 66656,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_3",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 305.34700000000885,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 7,
+          "forecastTotal": 5639,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_4",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 661.7621000000072,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 48,
+          "forecastTotal": 7945,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_5",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 537.1452999999892,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 97,
+          "forecastTotal": 51155,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_6",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 558.574099999998,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 61,
+          "forecastTotal": 70352,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_7",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 176.11119999999937,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 87,
+          "forecastTotal": 11101,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_8",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 926.2217000000092,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 66,
+          "forecastTotal": 44439,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_9",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 335.1006000000052,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 5,
+          "forecastTotal": 49374,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_10",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 339.3217000000004,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 1,
+          "forecastTotal": 92776,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_11",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 522.8271999999997,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 41,
+          "forecastTotal": 20600,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_12",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 552.1800000000076,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 23,
+          "forecastTotal": 68887,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_13",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 524.9415000000008,
+      "error": "",
+      "raw": {
+        "templateId": "standard",
+        "facts": {
+          "healthScore": 81,
+          "forecastTotal": 34784,
+          "investmentEligible": true,
+          "productName": "Digital Gold (Groww / Paytm)",
+          "allocationAmount": 2124
+        }
+      }
+    },
+    {
+      "id": "23_14",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 329.51239999999234,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 82,
+          "forecastTotal": 76667,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_15",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 670.9043999999994,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 26,
+          "forecastTotal": 20213,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_16",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 514.5059000000037,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 6,
+          "forecastTotal": 60926,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_17",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 509.7016999999905,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 21,
+          "forecastTotal": 25028,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_18",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 444.08520000000135,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 62,
+          "forecastTotal": 36974,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_19",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 443.6634999999951,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 51,
+          "forecastTotal": 25175,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_20",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 518.8941999999952,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 53,
+          "forecastTotal": 4235,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_21",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 551.3136000000086,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 91,
+          "forecastTotal": 79664,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_22",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 729.0445999999938,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 30,
+          "forecastTotal": 37994,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_23",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 545.1483999999909,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 14,
+          "forecastTotal": 19106,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "23_24",
+      "seed": 23,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 525.4573999999993,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 72,
+          "forecastTotal": 96289,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_0",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 583.8826999999874,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 0,
+          "forecastTotal": 26545,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_1",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 1001.6827000000048,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 99,
+          "forecastTotal": 56414,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_2",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 626.8818000000028,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 69,
+          "forecastTotal": 67371,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_3",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 495.18229999998584,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 61,
+          "forecastTotal": 4705,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_4",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 445.58950000000186,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 83,
+          "forecastTotal": 77595,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_5",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 524.8158999999869,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 12,
+          "forecastTotal": 38765,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_6",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 549.0316999999923,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 30,
+          "forecastTotal": 52525,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_7",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 519.688599999994,
+      "error": "",
+      "raw": {
+        "templateId": "standard",
+        "facts": {
+          "healthScore": 88,
+          "forecastTotal": 75404,
+          "investmentEligible": true,
+          "productName": "Post Office 5-Year Time Deposit",
+          "allocationAmount": 4970
+        }
+      }
+    },
+    {
+      "id": "37_8",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 484.73670000000857,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 89,
+          "forecastTotal": 20288,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_9",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 662.4635000000126,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 46,
+          "forecastTotal": 99859,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_10",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 546.8947000000044,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 11,
+          "forecastTotal": 3184,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_11",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 243.0512999999919,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 1,
+          "forecastTotal": 49607,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_12",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 554.7229999999981,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 43,
+          "forecastTotal": 98480,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_13",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 782.9621000000043,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 48,
+          "forecastTotal": 20921,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_14",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 163.8338999999978,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 34,
+          "forecastTotal": 30488,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_15",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 473.5757000000158,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 48,
+          "forecastTotal": 25610,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_16",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 601.8299000000115,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 10,
+          "forecastTotal": 85497,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_17",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 552.7635000000009,
+      "error": "",
+      "raw": {
+        "templateId": "standard",
+        "facts": {
+          "healthScore": 79,
+          "forecastTotal": 13626,
+          "investmentEligible": true,
+          "productName": "Post Office Savings Account",
+          "allocationAmount": 3882
+        }
+      }
+    },
+    {
+      "id": "37_18",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 246.82749999998487,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 64,
+          "forecastTotal": 70389,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_19",
+      "seed": 37,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 23.594699999986915,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "37_20",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 554.5406999999832,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 1,
+          "forecastTotal": 43536,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_21",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 161.50970000002417,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 2,
+          "forecastTotal": 57094,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_22",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 459.8255000000063,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 84,
+          "forecastTotal": 19419,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "37_23",
+      "seed": 37,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 23.32170000000042,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "37_24",
+      "seed": 37,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 519.7440999999817,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 3,
+          "forecastTotal": 71708,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_0",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 496.88610000000335,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 0,
+          "forecastTotal": 91055,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_1",
+      "seed": 53,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 20.279699999984587,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "53_2",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 519.7491000000155,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 22,
+          "forecastTotal": 70489,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_3",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 302.9219999999914,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 63,
+          "forecastTotal": 68894,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_4",
+      "seed": 53,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 26.421100000006845,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "53_5",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 464.145199999999,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 15,
+          "forecastTotal": 30461,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_6",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 554.6653000000224,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 18,
+          "forecastTotal": 59620,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_7",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 548.630999999994,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 77,
+          "forecastTotal": 83088,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_8",
+      "seed": 53,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 21.996299999998882,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "53_9",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 444.2999000000127,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 94,
+          "forecastTotal": 48852,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_10",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 333.01599999997416,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 36,
+          "forecastTotal": 97390,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_11",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 473.4868000000133,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 55,
+          "forecastTotal": 97263,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_12",
+      "seed": 53,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 29.959199999982957,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "53_13",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 599.4369000000006,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 73,
+          "forecastTotal": 45605,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_14",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 548.2191999999923,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 10,
+          "forecastTotal": 64433,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_15",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 480.02640000000247,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 67,
+          "forecastTotal": 86346,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_16",
+      "seed": 53,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 23.81810000000405,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "53_17",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 625.338699999993,
+      "error": "",
+      "raw": {
+        "templateId": "standard",
+        "facts": {
+          "healthScore": 93,
+          "forecastTotal": 56734,
+          "investmentEligible": true,
+          "productName": "7.75% GOI Savings Bond (legacy reference)",
+          "allocationAmount": 3868
+        }
+      }
+    },
+    {
+      "id": "53_18",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 453.4205999999831,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 40,
+          "forecastTotal": 94319,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_19",
+      "seed": 53,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 32.274800000013784,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "53_20",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 453.147799999977,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 96,
+          "forecastTotal": 5856,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_21",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 527.4819999999891,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 88,
+          "forecastTotal": 96019,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_22",
+      "seed": 53,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 20.269499999994878,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "53_23",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 447.946100000001,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 65,
+          "forecastTotal": 88353,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "53_24",
+      "seed": 53,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 514.2320000000182,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 5,
+          "forecastTotal": 39633,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_0",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 371.37979999999516,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 0,
+          "forecastTotal": 1855,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_1",
+      "seed": 71,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 21.279699999984587,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "71_2",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 516.7485999999917,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 82,
+          "forecastTotal": 82826,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_3",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 485.7865999999922,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 66,
+          "forecastTotal": 70211,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_4",
+      "seed": 71,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 24.75119999999879,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "71_5",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 372.40159999998286,
+      "error": "",
+      "raw": {
+        "templateId": "standard",
+        "facts": {
+          "healthScore": 72,
+          "forecastTotal": 93556,
+          "investmentEligible": true,
+          "productName": "Post Office 5-Year Time Deposit",
+          "allocationAmount": 7886
+        }
+      }
+    },
+    {
+      "id": "71_6",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 537.7095000000554,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 22,
+          "forecastTotal": 53219,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_7",
+      "seed": 71,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 29.353200000012293,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "71_8",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 650.7632999999914,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 51,
+          "forecastTotal": 61225,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_9",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 624.664300000004,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 87,
+          "forecastTotal": 52188,
+          "investmentEligible": true,
+          "productName": "Mahila Samman Savings Certificate",
+          "allocationAmount": 827
+        }
+      }
+    },
+    {
+      "id": "71_10",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 162.74300000001676,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 23,
+          "forecastTotal": 3381,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_11",
+      "seed": 71,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 29.56219999998575,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "71_12",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 642.9722000000183,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 51,
+          "forecastTotal": 8724,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_13",
+      "seed": 71,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 16.495799999975134,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "71_14",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 615.6777999999467,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 79,
+          "forecastTotal": 17348,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_15",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 475.2439000000013,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 68,
+          "forecastTotal": 70873,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_16",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 528.7772000000114,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 17,
+          "forecastTotal": 39886,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_17",
+      "seed": 71,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 23.23440000001574,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "71_18",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 527.5350999999791,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 53,
+          "forecastTotal": 100339,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_19",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 507.3351000000257,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 71,
+          "forecastTotal": 28764,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_20",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 510.1842000000179,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 72,
+          "forecastTotal": 96366,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_21",
+      "seed": 71,
+      "api_success": false,
+      "schema_pass": false,
+      "facts_faithful": false,
+      "fallback": true,
+      "latency_ms": 20.15529999998398,
+      "error": "Groq failed with status 429"
+    },
+    {
+      "id": "71_22",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 430.00050000002375,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 65,
+          "forecastTotal": 64919,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_23",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 523.6584000000148,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 96,
+          "forecastTotal": 97972,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    },
+    {
+      "id": "71_24",
+      "seed": 71,
+      "api_success": true,
+      "schema_pass": true,
+      "facts_faithful": true,
+      "fallback": false,
+      "latency_ms": 171.54930000001332,
+      "error": "",
+      "raw": {
+        "templateId": "concise",
+        "facts": {
+          "healthScore": 8,
+          "forecastTotal": 41587,
+          "investmentEligible": false,
+          "productName": null,
+          "allocationAmount": 0
+        }
+      }
+    }
+  ]
+}

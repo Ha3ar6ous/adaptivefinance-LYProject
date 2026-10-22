@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\Ritesh\\Documents\\RJ\\AllWork\\LYProject\\forecast_audit\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "volatility_audit",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "exit_code": 0
+}

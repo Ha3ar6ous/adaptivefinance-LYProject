@@ -1,0 +1,16 @@
+101 central
+101 stress
+101 neutral
+211 central
+211 stress
+211 neutral
+307 central
+307 stress
+307 neutral
+401 central
+401 stress
+401 neutral
+503 central
+503 stress
+503 neutral
+Saved 78 aggregate rows

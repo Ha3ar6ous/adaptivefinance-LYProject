@@ -1,0 +1,11 @@
+Computing platform-cluster bootstrap intervals...
+         method  horizon        mae       rmse     smape     mase  n_windows  n_forecast_instances
+       original        7 535.230913 761.721537 59.107871 0.795921        108                   756
+       original       15 526.054961 770.652686 57.493326 0.799135         86                  1290
+       original       30 437.308559 616.350071 47.067290 0.820324         31                   930
+historical_mean        7 507.079577 740.183307 56.376178 0.755371        108                   756
+historical_mean       15 498.618682 748.936323 54.756541 0.760807         86                  1290
+historical_mean       30 404.916075 575.710608 44.269572 0.773549         31                   930
+mean_median_075        7 491.689656 733.350074 55.609185 0.734775        108                   756
+mean_median_075       15 483.431016 742.676699 53.955866 0.741392         86                  1290
+mean_median_075       30 400.860312 576.431447 44.198366 0.770988         31                   930

@@ -4,6 +4,9 @@ from pathlib import Path
 
 
 ARTIFACT_PATH = Path(__file__).resolve().parents[1] / "artifacts" / "volatility_model.json"
+# Frozen validation-selected deployment rule. Legacy 7-day calibration artifacts
+# are research candidates and must not silently override this 30-entry rule.
+RUNTIME_THRESHOLDS = {"low_max_cv": 0.45, "medium_max_cv": 0.75}
 
 
 def _income_values(records):
@@ -28,7 +31,7 @@ def _std(values, avg):
 
 
 def _label_from_cv(cv):
-    if cv < 0.35:
+    if cv < 0.45:
         return "low"
     if cv < 0.75:
         return "medium"
@@ -36,12 +39,7 @@ def _label_from_cv(cv):
 
 
 def _load_thresholds():
-    if ARTIFACT_PATH.exists():
-        try:
-            return json.loads(ARTIFACT_PATH.read_text())
-        except json.JSONDecodeError:
-            pass
-    return {"low_max_cv": 0.35, "medium_max_cv": 0.75}
+    return RUNTIME_THRESHOLDS.copy()
 
 
 def classify_volatility(records):
@@ -60,7 +58,7 @@ def classify_volatility(records):
     cv = std / avg if avg else 0
     thresholds = _load_thresholds()
 
-    if cv < thresholds.get("low_max_cv", 0.35):
+    if cv < thresholds.get("low_max_cv", 0.45):
         label = "low"
     elif cv < thresholds.get("medium_max_cv", 0.75):
         label = "medium"
@@ -93,7 +91,8 @@ def train_volatility_model(csv_dir):
                 except ValueError:
                     continue
 
-    low_max = 0.35
+    # Offline 7-day quantiles remain diagnostic; runtime does not load this file.
+    low_max = 0.45
     medium_max = 0.75
     if len(cvs) >= 10:
         ordered = sorted(cvs)

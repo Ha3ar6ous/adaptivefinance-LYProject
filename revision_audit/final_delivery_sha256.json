@@ -1,0 +1,22 @@
+{
+  "results_for_paper.json": "5b8ac721d640199e0676fb9b3f833764f41e45c5cc971b7dd9575ea60cd22a0e",
+  "ablation_results.json": "0b4d7643b4a96249d4ea6c5ae9146a4a65c40582da36b9e540966412934869f2",
+  "ablation_table.tex": "ef56d3a0fe39845a4c5a9abe7501450a93df0add9ebaf3ba97c3e2e985d59d8f",
+  "paper_table_updates.tex": "5930f37f3ec4e5b424de9acf51125ac7bcb3b88f6bd4dfa84bfc33fbcd782095",
+  "changes_summary.md": "b791cff0dbc03029e3a6d1b1e8beef34f9b64b3abd5021540bed042e4f6ee129",
+  "PROVENANCE.md": "1993f5021fe00dac3a4ec8b6059ee25d53d1429551cbb50ab889caff5cc38833",
+  "score_decision.md": "44680b47d1dbca8c8ed3c15d8a202655201007de046ba9c3058e6fd07f22a423",
+  "CHANGES_paper_metrics.md": "2f123c3354a8a2a25dbf7b3c74c4d8fb5923758c8c219bcc3183e02f4563be79",
+  "revision_audit/final_verification.json": "f397a0dd97648eaec3dbd4aed2348f3ec2662b4e72f5cf3f867b77fcbb51ec99",
+  "revision_audit/completion_manifest.json": "fbc7c6bec19222ca8fa154559fed796c3c885ff2fd4657f7c1f0e75cd8ae3925",
+  "revision_audit/ablate.py": "bdb7b21f8d341b3c41910d921bd93b4a1de70e4f72698fea2d4873b72d8587eb",
+  "revision_audit/evaluate.py": "77be45aeec28edbaa8476a3b3ba2ba1178fbe499cb6b310d84eda9033dce5e79",
+  "revision_audit/paper_export.py": "d684e3a58e89e019b0ccce54466b3a73897179a419d144a4a9ddd97017201dbe",
+  "revision_audit/provenance.py": "e29bb3a4d93f8bbfcfe46bcd250e20797a9a74a313bb20888d2de7fdd2efade7",
+  "revision_audit/run_final.py": "8c9dd67b62e536a2db1d678b4bfcaf5ea552801f2da2441bcdcc5911e859a0fb",
+  "revision_audit/run_legacy_final.py": "00948a7535c17772aacafd3a5590ba228dba7bfaf9ea589b9f858d58ce04e8c3",
+  "revision_audit/run_prompt3.py": "e2c76b19c27d46a9a3b61b03c7c4d7dc78ea1e95c507811bd82939427bde8484",
+  "revision_audit/test_ablate.py": "c3caf40fcdd13e89073c4beefb115128d945b8348f8820ae237c860c80991eed",
+  "revision_audit/test_deployment.py": "9416f3f4a7180dc39cc8dab77a89872e7fba3dfe53f2cd9d52c93dded2f0e685",
+  "revision_audit/verify_final.py": "89ac5db30e17923a6e7440bbe531c3aba8969071491c33b22d06b25935fd96da"
+}

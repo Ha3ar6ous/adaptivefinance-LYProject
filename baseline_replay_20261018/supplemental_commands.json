@@ -1,0 +1,53 @@
+[
+  {
+    "name": "paper_tests",
+    "command": [
+      "forecast_audit/.venv/Scripts/python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "paper_audit",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "baseline_replay_20261018\\logs\\paper_tests.txt"
+  },
+  {
+    "name": "loopback_service_start",
+    "command": [
+      "ml_service/.venv/Scripts/python.exe",
+      "-m",
+      "uvicorn",
+      "app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18081"
+    ],
+    "cwd": "ml_service",
+    "status": "started successfully, performance measured; own process17204 stopped afterward"
+  },
+  {
+    "name": "loopback_performance",
+    "command": [
+      "node",
+      "-e",
+      "const fs=require('node:fs'),path=require('node:path'),Module=require('node:module');const file=path.resolve('research_eval/evaluate_performance.cjs'),orig=fs.writeFileSync;fs.writeFileSync=function(p,...args){return orig.call(fs,path.resolve(p)===path.resolve('research_eval/performance_results.json')?path.resolve('baseline_replay_20261018/legacy/performance_results.json'):p,...args)};const m=new Module(file);m.filename=file;m.paths=Module._nodeModulePaths(path.dirname(file));m._compile(fs.readFileSync(file,'utf8'),file)"
+    ],
+    "exit_code": 0,
+    "log": "baseline_replay_20261018\\legacy\\performance.log"
+  },
+  {
+    "name": "metadata_and_manifest",
+    "command": [
+      "forecast_audit/.venv/Scripts/python.exe",
+      "-c",
+      "from pathlib import Path;import runpy;R=Path.cwd();O=R/'baseline_replay_20261018/legacy';orig=Path.write_text;Path.write_text=lambda self,*a,**k:orig(O/self.name,*a,**k) if self.parent in [R/'research_eval',R/'paper_audit'] else orig(self,*a,**k);runpy.run_path('research_eval/collect_metadata.py',run_name='__main__');runpy.run_path('paper_audit/collect_manifest.py',run_name='__main__')"
+    ],
+    "exit_code": 0,
+    "log": "baseline_replay_20261018\\legacy\\metadata.log"
+  }
+]

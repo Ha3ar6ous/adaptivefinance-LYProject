@@ -1,0 +1,9 @@
+command_id,command
+F,forecast_audit/.venv/Scripts/python.exe forecast_audit/analyze.py --out <fresh-forecast-run> (run.py select/calibrate/test first)
+V,forecast_audit/.venv/Scripts/python.exe volatility_audit/run.py --out <fresh-volatility-run> --stage test (prepare/select and compare.py freeze first)
+R,forecast_audit/.venv/Scripts/python.exe router_sim/simulate.py --out <fresh-router-run> --stage test (prepare/validation first)
+S,forecast_audit/.venv/Scripts/python.exe score_audit/run.py --out <fresh-score-run> --stage test (prepare/select first)
+E,node engine_llm_audit/evaluate.cjs before --archive-before; node engine_llm_audit/evaluate.cjs after (ENGINE_AUDIT_OUT must be a fresh directory)
+L,"node engine_llm_audit/live.cjs (fresh ENGINE_AUDIT_OUT, synthetic snapshots, API quota); engine_llm_audit/summarize.py"
+C,node engine_llm_audit/evaluate.cjs before --archive-before; node engine_llm_audit/evaluate.cjs after; node engine_llm_audit/orchestration.cjs
+D,forecast_audit/.venv/Scripts/python.exe data_audit/run.py --out <fresh-data-run> --stage clone; same --stage evaluate

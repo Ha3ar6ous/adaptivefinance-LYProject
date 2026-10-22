@@ -1,0 +1,25 @@
+test_feature_windows_are_strictly_past (test_audit.AuditTests.test_feature_windows_are_strictly_past) ... ok
+test_future_definition_and_zero_mean (test_audit.AuditTests.test_future_definition_and_zero_mean) ... ok
+test_future_poison_cannot_change_features (test_audit.AuditTests.test_future_poison_cannot_change_features) ... ok
+test_high_override_exact_boundary (test_audit.AuditTests.test_high_override_exact_boundary) ... ok
+test_high_recall_unavailable_without_support (test_audit.AuditTests.test_high_recall_unavailable_without_support) ... ok
+test_invalid_history_rejected (test_audit.AuditTests.test_invalid_history_rejected) ... ok
+test_metrics_and_bootstrap_vectorization (test_audit.AuditTests.test_metrics_and_bootstrap_vectorization) ... ok
+test_purged_splits (test_audit.AuditTests.test_purged_splits) ... ok
+test_recall_constraint_and_tie_order (test_audit.AuditTests.test_recall_constraint_and_tie_order) ... ok
+test_seed_contract (test_audit.AuditTests.test_seed_contract) ... ok
+test_target_boundaries (test_audit.AuditTests.test_target_boundaries) ... ok
+test_all_predictions_retained_and_metrics_match (test_results.ResultTests.test_all_predictions_retained_and_metrics_match) ... ok
+test_bootstrap_clusters_and_five_seeds (test_results.ResultTests.test_bootstrap_clusters_and_five_seeds) ... ok
+test_frozen_selection_inputs_unchanged (test_results.ResultTests.test_frozen_selection_inputs_unchanged) ... ok
+test_gb_ensemble_uses_all_five_seeds (test_results.ResultTests.test_gb_ensemble_uses_all_five_seeds) ... ok
+test_grid_never_swept_on_test (test_results.ResultTests.test_grid_never_swept_on_test) ... ok
+test_no_cross_partition_outcomes (test_results.ResultTests.test_no_cross_partition_outcomes) ... ok
+test_no_existing_results_or_sources_modified (test_results.ResultTests.test_no_existing_results_or_sources_modified) ... ok
+test_no_overlap_diagnostic_count (test_results.ResultTests.test_no_overlap_diagnostic_count) ... ok
+test_target_thresholds_fit_train_only (test_results.ResultTests.test_target_thresholds_fit_train_only) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.267s
+
+OK

@@ -1,0 +1,27 @@
+test_application_consistency_checks (test_results.ResultTests.test_application_consistency_checks) ... ok
+test_engine_floor_masks_low_liquidity_thresholds (test_results.ResultTests.test_engine_floor_masks_low_liquidity_thresholds) ... ok
+test_frozen_validation_inputs_and_old_files_unchanged (test_results.ResultTests.test_frozen_validation_inputs_and_old_files_unchanged) ... ok
+test_neutral_wealth_conservation_all_policies (test_results.ResultTests.test_neutral_wealth_conservation_all_policies) ... ok
+test_no_investing_has_no_forced_sales_or_contributions (test_results.ResultTests.test_no_investing_has_no_forced_sales_or_contributions) ... ok
+test_population_and_repetitions (test_results.ResultTests.test_population_and_repetitions) ... ok
+test_rate_counts_and_bounds (test_results.ResultTests.test_rate_counts_and_bounds) ... ok
+test_scenarios_share_households_and_regimes (test_results.ResultTests.test_scenarios_share_households_and_regimes) ... ok
+test_selection_recomputed_from_validation_only (test_results.ResultTests.test_selection_recomputed_from_validation_only) ... ok
+test_test_only_has_frozen_selected_pair (test_results.ResultTests.test_test_only_has_frozen_selected_pair) ... ok
+test_budget_reserve_masks_low_thresholds (test_simulator.SimulatorTests.test_budget_reserve_masks_low_thresholds) ... ok
+test_chronological_block_pool (test_simulator.SimulatorTests.test_chronological_block_pool) ... ok
+test_features_cannot_observe_future (test_simulator.SimulatorTests.test_features_cannot_observe_future) ... ok
+test_full_sale_and_unpaid_bills (test_simulator.SimulatorTests.test_full_sale_and_unpaid_bills) ... ok
+test_gate_boundary_and_missing_analytics (test_simulator.SimulatorTests.test_gate_boundary_and_missing_analytics) ... ok
+test_pareto_dominance (test_simulator.SimulatorTests.test_pareto_dominance) ... ok
+test_sale_can_prevent_shortfall (test_simulator.SimulatorTests.test_sale_can_prevent_shortfall) ... ok
+test_same_seed_same_paths_across_scenarios (test_simulator.SimulatorTests.test_same_seed_same_paths_across_scenarios) ... ok
+test_wealth_conservation_with_fees_and_interest (test_simulator.SimulatorTests.test_wealth_conservation_with_fees_and_interest) ... ok
+test_zero_surplus_no_policy_effect (test_simulator.SimulatorTests.test_zero_surplus_no_policy_effect) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.244s
+
+OK
+
+Tables: D:\Ritesh\Documents\RJ\AllWork\LYProject\revision_audit\final_20261018\router\final_tables

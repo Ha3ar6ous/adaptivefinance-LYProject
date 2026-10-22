@@ -1,0 +1,142 @@
+[
+  {
+    "seed": 11,
+    "hash": "4684801620710c6c59c0592eface565e89b3abf112092dd87a6f5ffb6e623760",
+    "adverse_user_months": 20372,
+    "medical_events": 2986,
+    "vehicle_events": 4697,
+    "analytics_missing_forecast": 2465,
+    "analytics_missing_volatility": 2345,
+    "analytics_error_status": 1164,
+    "regime_counts": [
+      5872,
+      3152,
+      976
+    ],
+    "source_counts": [
+      876,
+      927,
+      859,
+      890,
+      924,
+      921,
+      968,
+      955,
+      898,
+      884,
+      898
+    ]
+  },
+  {
+    "seed": 23,
+    "hash": "b78507b4f79eb01d1dab6d4af21c64768373b1a1de3df8a9086ba0cb3062478f",
+    "adverse_user_months": 19906,
+    "medical_events": 3012,
+    "vehicle_events": 4843,
+    "analytics_missing_forecast": 2373,
+    "analytics_missing_volatility": 2391,
+    "analytics_error_status": 1254,
+    "regime_counts": [
+      5993,
+      3021,
+      986
+    ],
+    "source_counts": [
+      906,
+      931,
+      875,
+      891,
+      947,
+      958,
+      899,
+      953,
+      851,
+      903,
+      886
+    ]
+  },
+  {
+    "seed": 37,
+    "hash": "a41bc227bae3b80b0271abfcb8043f8ff46995c9d840893330f23fa9789ad32f",
+    "adverse_user_months": 20303,
+    "medical_events": 2960,
+    "vehicle_events": 4890,
+    "analytics_missing_forecast": 2353,
+    "analytics_missing_volatility": 2466,
+    "analytics_error_status": 1175,
+    "regime_counts": [
+      6011,
+      3040,
+      949
+    ],
+    "source_counts": [
+      857,
+      910,
+      863,
+      952,
+      918,
+      884,
+      917,
+      938,
+      957,
+      917,
+      887
+    ]
+  },
+  {
+    "seed": 53,
+    "hash": "00ddb4f32193808a8309be2dd9a21a0f80990c52a8c102fe547b8faab93e5dcb",
+    "adverse_user_months": 19992,
+    "medical_events": 2964,
+    "vehicle_events": 4719,
+    "analytics_missing_forecast": 2378,
+    "analytics_missing_volatility": 2483,
+    "analytics_error_status": 1233,
+    "regime_counts": [
+      5995,
+      3036,
+      969
+    ],
+    "source_counts": [
+      925,
+      927,
+      919,
+      906,
+      909,
+      857,
+      917,
+      905,
+      904,
+      928,
+      903
+    ]
+  },
+  {
+    "seed": 71,
+    "hash": "f1f3209ce1bf3a4afbb38820dd0c2183089fbd1d365d60429cea6f764ed4008d",
+    "adverse_user_months": 19966,
+    "medical_events": 3036,
+    "vehicle_events": 4791,
+    "analytics_missing_forecast": 2414,
+    "analytics_missing_volatility": 2456,
+    "analytics_error_status": 1200,
+    "regime_counts": [
+      5964,
+      3049,
+      987
+    ],
+    "source_counts": [
+      872,
+      888,
+      929,
+      900,
+      909,
+      920,
+      883,
+      977,
+      929,
+      900,
+      893
+    ]
+  }
+]

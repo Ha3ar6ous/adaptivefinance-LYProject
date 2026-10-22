@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: largest remainder preserves rupees and percentage points with stable ties
+ok 1 - largest remainder preserves rupees and percentage points with stable ties
+  ---
+  duration_ms: 2.9909
+  type: 'test'
+  ...
+# Subtest: infeasible products are dropped one at a time and full budget redistributed
+ok 2 - infeasible products are dropped one at a time and full budget redistributed
+  ---
+  duration_ms: 0.5504
+  type: 'test'
+  ...
+# Subtest: allocation cannot fall below minimum or exceed budget
+ok 3 - allocation cannot fall below minimum or exceed budget
+  ---
+  duration_ms: 0.6831
+  type: 'test'
+  ...
+# Subtest: invalid budgets fail closed
+ok 4 - invalid budgets fail closed
+  ---
+  duration_ms: 0.285
+  type: 'test'
+  ...
+# Subtest: schema-valid score999, invented product and wrong contextual number rejected
+ok 5 - schema-valid score999, invented product and wrong contextual number rejected
+  ---
+  duration_ms: 18.0878
+  type: 'test'
+  ...
+# Subtest: typed facts exact, extra fields and changed decisions rejected
+ok 6 - typed facts exact, extra fields and changed decisions rejected
+  ---
+  duration_ms: 0.4237
+  type: 'test'
+  ...
+# Subtest: full enumeration has zero measured allocation violations for every ranking
+ok 7 - full enumeration has zero measured allocation violations for every ranking
+  ---
+  duration_ms: 11.22
+  type: 'test'
+  ...
+# Subtest: JSON transport pins model, schema mode and seed; timeout is observable
+ok 8 - JSON transport pins model, schema mode and seed; timeout is observable
+  ---
+  duration_ms: 12.2985
+  type: 'test'
+  ...
+# Subtest: all conservative threshold combinations match independent policy oracle
+ok 9 - all conservative threshold combinations match independent policy oracle
+  ---
+  duration_ms: 61.9945
+  type: 'test'
+  ...
+# Subtest: all malformed/missing analytics and financial cases fail closed without throwing
+ok 10 - all malformed/missing analytics and financial cases fail closed without throwing
+  ---
+  duration_ms: 4.3928
+  type: 'test'
+  ...
+# Subtest: missing or malformed entire request fails closed
+ok 11 - missing or malformed entire request fails closed
+  ---
+  duration_ms: 0.1834
+  type: 'test'
+  ...
+# Subtest: exact liquidity, debt and health equality boundaries are accepted
+ok 12 - exact liquidity, debt and health equality boundaries are accepted
+  ---
+  duration_ms: 0.1728
+  type: 'test'
+  ...
+# Subtest: ready cached and fresh analytics both accepted
+ok 13 - ready cached and fresh analytics both accepted
+  ---
+  duration_ms: 0.1983
+  type: 'test'
+  ...
+# Subtest: ML service failure is closed even with formerly sufficient score
+ok 14 - ML service failure is closed even with formerly sufficient score
+  ---
+  duration_ms: 0.1608
+  type: 'test'
+  ...
+# Subtest: investment engine revalidates stale/forged allowed flag
+ok 15 - investment engine revalidates stale/forged allowed flag
+  ---
+  duration_ms: 79.5734
+  type: 'test'
+  ...
+# Subtest: valid safe users still obtain recommendations
+ok 16 - valid safe users still obtain recommendations
+  ---
+  duration_ms: 2.6537
+  type: 'test'
+  ...
+# Subtest: sub-rupee boundaries preserve strict inequalities
+ok 17 - sub-rupee boundaries preserve strict inequalities
+  ---
+  duration_ms: 0.6447
+  type: 'test'
+  ...
+# Subtest: real Python outputs and health scorer remain compatible with router/engine
+ok 18 - real Python outputs and health scorer remain compatible with router/engine
+  ---
+  duration_ms: 6.9125
+  type: 'test'
+  ...
+# Subtest: read endpoint rebuilds recommendations from current profile instead of stored permission
+ok 19 - read endpoint rebuilds recommendations from current profile instead of stored permission
+  ---
+  duration_ms: 3.2708
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 744.9458

@@ -1,0 +1,26 @@
+validation original: 0.13s
+validation naive: 0.09s
+validation seasonal_naive_7: 0.10s
+validation historical_mean: 0.10s
+validation ma_7: 0.11s
+validation ma_14: 0.12s
+validation ma_30: 0.17s
+validation median: 0.12s
+validation mean_median_075: 0.11s
+validation ets_level: 0.49s
+validation ets_damped: 0.96s
+validation ets_weekly: 1.48s
+validation arima_100: 1.22s
+validation arima_011: 2.40s
+validation sarima_100_1007: 4.29s
+validation sarima_011_0117: 5.72s
+validation gb_squared_error_d1: 16.57s
+validation gb_squared_error_d2: 13.89s
+validation gb_huber_d1: 30.49s
+validation gb_huber_d2: 39.50s
+validation gb_quantile_d1: 26.44s
+validation gb_quantile_d2: 29.61s
+{
+  "selected": "mean_median_075",
+  "validation_gate": false
+}
