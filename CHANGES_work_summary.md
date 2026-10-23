@@ -33,3 +33,25 @@ git status --short
 ```
 
 The final local and remote hashes must match. This report summarizes archived evidence rather than claiming a fresh full-suite pass.
+
+## Presentation-oriented expansion and filename correction — 2026-10-23
+
+- Renamed `worddonebwcommits.md` to `workdonebwcommits.md` as requested. The earlier filename above is retained in the historical task record.
+- Added an evidence-scale opening brief, an executable-deliverables inventory, a reviewer-response matrix, a proposed 16-slide storyboard, and a figure/table evidence plan. These make the completed research engineering easier to present without inflating results, sample sizes, file counts, or effort claims.
+- Linked the report from the main README documentation table so it is easy to find.
+- Retained the detailed historical methods/results, rejected deployments, failure cases, and limitations. No new experiment, algorithm, metric, dataset, or slide deck was created.
+- Checked local links, heading references, and document structure before committing; published the documentation update to `main`.
+
+Commands for this follow-up:
+
+```powershell
+git pull --ff-only origin main
+git mv -- worddonebwcommits.md workdonebwcommits.md
+git add -- workdonebwcommits.md CHANGES_work_summary.md README.md
+git diff --cached --check
+git commit -m "Rename and expand research work report for presentations"
+git push origin main
+git rev-parse HEAD
+git ls-remote --heads origin main
+git status --short
+```

@@ -1,8 +1,28 @@
-# Research Evaluation and Reproducibility Work Report
+# Work Completed: Research Evaluation, Safety Engineering, and Reproducibility
 
 - **Project:** Adaptive Finance — risk-aware financial decision support for gig workers
 - **Report prepared:** 23 October 2026
 - **Purpose:** Document the substantial research, implementation, testing, and documentation work delivered in the large research revision, including unsuccessful experiments and remaining limitations.
+- **Use:** Technical work report and source material for a project-review presentation. Sections 16–19 provide the deliverables inventory, reviewer-response mapping, slide structure, and presentation evidence plan.
+
+## Presentation brief
+
+The central achievement was the construction of a research evaluation and verification layer around an existing application. The work involved experiment design, statistical comparisons, target-definition investigation, simulation engineering, production safeguards, controlled failure testing, data auditing, and reproducible reporting. It was substantially broader than a UI revision or a single model adjustment.
+
+The project now has evidence for assessing both strengths and weaknesses: which components enforce their intended constraints, which metric improved under a defined target, which proposed changes failed selection, and which claims still require real-world validation. A useful presentation should show that complete engineering process rather than equate “work completed” with “every metric improved.”
+
+| Evidence of work completed | Recorded scale | What this represents |
+|---|---|---|
+| Forecast evaluation | 7-, 15-, and 30-day horizons; multiple rolling origins and model families | Chronological benchmarking, selection, uncertainty, and interval evaluation |
+| Forward-volatility evaluation | 187 training, 187 validation, 247 test examples | A separately defined predictive task with past-only features |
+| Router engineering checks | 1,914 fixture cases | Policy enforcement, boundary tests, and malformed-input handling |
+| Cash-flow outcome simulation | 50,000 unique held-out households followed for 12 months | Paired policy comparisons under declared assumptions |
+| Investment constraints | 1,728 profiles and a 37-product catalogue | Filtering, ranking, budget, minimum-allocation, and rounding checks |
+| Explanation evaluation | 125 live requests plus controlled corruption/failure cases | Provider behavior, numerical fidelity, validation, and fallback |
+| Final consolidated tests | 142 executed; 138 passed and four retained failures | Component, integration, simulation, and artifact checks |
+| Final numerical verification | 665 event percentages and 18 interval fractions checked | Independent denominator and reporting consistency checks |
+
+These are different units of work and evidence. They must not be added into a single “sample size,” and repeated policy/model evaluations must not be presented as additional independent users.
 
 ## 1. Commit range and scope
 
@@ -319,3 +339,82 @@ For exact executed experiment commands, environments, and exit codes, use [final
 Do not rerun fixed-output orchestrators directly into occupied archives. Use fresh output paths consistently across runners/export/verification. Live API outcomes and timing need not repeat exactly; some numerical replays also depend on recorded thread/environment settings. The recorded source snapshots and manifests are necessary because the research baseline was captured from a dirty working tree.
 
 This report adds a presentation-oriented account of existing work; it does not modify the manuscript, reclassify failed experiments, or introduce new research results.
+
+## 16. Concrete research-engineering deliverables
+
+The following inventory makes the implementation effort visible independently of whether a candidate achieved a better score. Each row names executable tooling or a preserved record, not a proposed future task.
+
+| Delivered capability | Engineering activities completed | Inspectable implementation / output |
+|---|---|---|
+| Baseline preservation | Inventoried existing results, captured the dirty-tree state, recorded environments and seeds, replayed deterministic outputs, separated live/timing variation | [Baseline log](CHANGES_baseline.md), [baseline export](baseline_results.json) |
+| Forecast experiment pipeline | Implemented chronological staging, rolling origins, baseline/statistical/boosting candidates, seed handling, fit diagnostics, prediction retention, validation selection | [Forecast runner](forecast_audit/run.py), [analysis tools](forecast_audit/analyze.py) |
+| Statistical forecast reporting | Calculated scale-sensitive/relative errors, grouped summaries, uncertainty, dependence-aware comparisons, and interval calibration/coverage | [Forecast protocol](forecast_audit/PROTOCOL.md), [final forecast outputs](revision_audit/final_20261018/forecast) |
+| Label and target investigation | Compared label columns, inspected historical notebook evidence, documented window/threshold mismatches, distinguished reconstructed labels from predictive targets | [Provenance tooling](revision_audit/provenance.py), [provenance report](PROVENANCE.md) |
+| Volatility experiment pipeline | Built forward targets, purged crossing windows, generated past-only features, compared rules/classifiers, froze validation choices, retained rejected-family diagnostics | [Volatility runner](volatility_audit/run.py), [comparison tools](volatility_audit/compare.py) |
+| Conservative readiness validation | Implemented finite-value, score/phase, forecast/date, CV-consistency, and availability checks; expanded adversarial and boundary coverage | [Router implementation](server/services/decisionRouterService.js), [router fixtures/tests](server/tests/routerSafety.test.cjs) |
+| Cash-flow outcome simulator | Implemented block-bootstrap income, household heterogeneity, regimes, expenses, debt/arrears accounting, shocks, investment contributions, and liquidation outcomes | [Simulator](router_sim/simulate.py), [Node bridge](router_sim/bridge.cjs) |
+| Component and policy ablations | Added component-removal policies, threshold trade-offs, matched-clearance comparisons, paired uncertainty, and accounting/replay checks | [Ablation runner](revision_audit/ablate.py), [aggregate results](ablation_results.json) |
+| Score validation | Generated independent shortfall outcomes, tested expense/income sensitivity, evaluated corrected/fitted models, calibrated probabilities, and enforced adoption criteria | [Score runner](score_audit/run.py), [recorded adoption decision](score_decision.md) |
+| Product and allocation evaluation | Enumerated financial profiles, traced filtering and ranking alternatives, checked product/budget constraints, and tested corrected allocation behavior | [Engine evaluator](engine_llm_audit/evaluate.cjs), [engine results](revision_audit/final_20261018/engine/engine_summary.csv) |
+| Explanation fault injection | Constructed valid/corrupted snapshots, injected transport and validation failures, checked persisted fallback behavior, measured live response outcomes | [Orchestration evaluator](engine_llm_audit/orchestration.cjs), [live evaluator](engine_llm_audit/live.cjs) |
+| Data credibility and transfer | Audited conflicting duplicates, preserved originals, generated separately labeled seeded scenarios, processed an attributed external case, evaluated transfer | [Data runner](data_audit/run.py), [data audit record](CHANGES_data.md) |
+| Final replay and paper exports | Orchestrated fresh runs, retained command/exit records, recalculated headline comparisons, checked arithmetic and consistency, exported tables | [Final runner](revision_audit/run_final.py), [exporter](revision_audit/paper_export.py), [verifier](revision_audit/verify_final.py) |
+| Maintainable project documentation | Rebuilt the overview, separated startup commands, described actual APIs/algorithms, indexed evidence and known limitations | [README](README.md), [startup guide](STARTUP.md), [research reference](docs/RESEARCH.md) |
+
+This inventory is suitable for explaining the division of work in a presentation. It should not be used to infer person-hours, number of contributors, or manual effort from file counts; those quantities were not measured.
+
+## 17. How the work addressed the original reviewer concerns
+
+| Reviewer concern | Research response delivered | Current assessment |
+|---|---|---|
+| Forecasting loses to historical mean | Broader baselines, rolling origins, multiple horizons, statistical uncertainty, and a frozen adoption decision | Evaluation substantially strengthened; superiority claim remains unsupported |
+| Low volatility agreement and possible mismatch | Recovered statistical-label evidence, documented mismatches, defined a distinct future target, compared families, evaluated threshold sensitivity | Target-specific macro-F1 improved; HIGH recall and provenance limitations remain |
+| Arbitrary financial-health weights | Component sensitivity, monotonicity interventions, outcome calibration, and corrected/learned candidates | Weight optimality not established; unsuccessful correction documented |
+| Too few synthetic health scenarios | Large seeded household matrices with separate train/validation/test outcomes and intervention checks | Broader controlled evidence, still conditional on simulation assumptions |
+| Router validated with only a few cases | Conservative oracle, expanded combinations, malformed inputs, boundaries, and current-profile investment integration | Stronger engineering validation; separate outcome evidence supplied |
+| Qualitative investment evaluation | Product filtering, representative profiles, ranking comparators, minimum-allocation and budget checks | Quantitative constraint evidence; no profitability/suitability ground truth |
+| No empirical explanation evaluation | Controlled numerical/product corruptions, orchestration faults, live latency/schema/fallback measurements | Constrained factual fidelity supported; human quality and free-form chat remain unvalidated |
+| No automated tests | Added research/component/integration suites and final replay verification | Explicit pass/fail accounting, including unresolved failures |
+| Practical financial support insufficiently validated | Cash-flow outcomes, multiple policies/scenarios, threshold trade-offs, ablations, and transfer checks | More defensible conditional evidence; no claim of real-world financial validation |
+
+Several criticisms are therefore addressed by stronger methodology and a narrower claim, rather than by an artificial positive result. That is a legitimate research revision outcome and should be presented directly.
+
+## 18. Suggested presentation structure
+
+This is a proposed presentation plan, not an additional experiment or a claim that a slide deck has already been created. Use the detailed sections above as speaker notes and the linked artifacts for exact values.
+
+| Slide | Suggested title | Main content | Evidence to display |
+|---:|---|---|---|
+| 1 | Research revision: objective and scope | Explain irregular-income decision support and the change from descriptive presentation to empirical assessment | Commit-range diagram and workstream overview |
+| 2 | What needed to be validated | Summarize the reviewer concerns and the corresponding evaluation questions | Reviewer-response matrix from section 17 |
+| 3 | Reproducibility before improvement | Explain baseline capture, dirty-tree snapshots, deterministic replay, and live variation | Preservation/replay facts from section 3 |
+| 4 | Data audit and evaluation boundaries | Distinguish development data, conflicting overlaps, new hypothetical data, and one-driver transfer data | Dataset inventory and provenance status |
+| 5 | Forecasting experiment design | Show training, validation, calibration, test, rolling origins, horizons, and candidate families | Timeline schematic based on section 4 |
+| 6 | Forecast results and adoption decision | Show existing method, historical mean, and research blend; explain why production was retained | Same-window MAE/RMSE table and validation guard |
+| 7 | Defining a meaningful volatility target | Separate past-income runtime CV, historical labels, and next-14-day realized CV | Window diagram and target-definition summary |
+| 8 | Volatility improvement with safety caveats | Show macro-F1/balanced accuracy gain alongside unchanged HIGH recall and HIGH-to-LOW errors | Before/after metrics plus confusion matrices |
+| 9 | Fail-closed decision routing | Explain mandatory conditions, invalid-input rejection, threshold equality, and cached-permission revalidation | Policy table and 1,914-case confusion counts |
+| 10 | From rule agreement to simulated outcomes | Explain income generation, expenses, debt, shocks, paired households, and outcomes | Simulator flow and assumptions summary |
+| 11 | Policy trade-offs and ablations | Compare forced liquidation and wealth; show the stronger savings comparator and absent score increment | Four-policy result table and paired ablation evidence |
+| 12 | Health-score validation and rejected correction | Explain monotonicity defect, outcome models, and why a seemingly sensible correction was not adopted | AUC/Brier table and expense intervention |
+| 13 | Investment constraints and allocator repair | Show the minimum-aware rounding/redistribution change and before/after violations | Constraint table: 312 to zero minimum violations; 120 to zero percentage failures |
+| 14 | Explanation reliability and failure handling | Separate fact validation, deterministic rendering, controlled failures, and live provider outcomes | Corruption rejection and live/fallback tables |
+| 15 | Testing, verification, and delivered artifacts | Summarize test scope, arithmetic checks, source manifests, command logs, and reusable tooling | Test totals and deliverables inventory |
+| 16 | Contributions, limitations, and next work | State supported contributions and unresolved forecasting/data/user-validation questions | Evidence-backed conclusion and limitation list |
+
+For a shorter presentation, combine slides 3–4, 7–8, 10–11, and 14–15. Keep the negative findings attached to the relevant results rather than placing every qualification on a final slide that may be skipped.
+
+## 19. Figures and tables that can be prepared from existing evidence
+
+| Presentation item | Existing source | Essential labeling |
+|---|---|---|
+| Forecast MAE/RMSE by horizon | [Selected forecast comparisons](revision_audit/final_20261018/forecast/selected_comparison.csv) | Same frozen test windows; research blend not deployed; keep validation decision visible |
+| Volatility confusion matrices | [All-model confusion results](revision_audit/final_20261018/volatility/final_tables/all_models_confusion.csv) | State target, class order, threshold rule, and test denominator; retain HIGH errors |
+| Threshold trade-off / Pareto plot | [Validation policy grid](revision_audit/final_20261018/router/validation_pareto_grid.csv) | Validation results, scenario/budget mode, and assumed simulation outcomes |
+| Policy forced-liquidation comparison | [Per-seed policy outcomes](revision_audit/final_20261018/router/test_per_seed.csv) | Paired simulated households; do not mix scenarios or treat repeats as independent users |
+| Health-score discrimination/calibration | [Score test metrics](revision_audit/final_20261018/score/test_metrics.csv) | Separate scalar, calibrated probability, and learned diagnostic model |
+| Allocator before/after constraints | [Engine summary](revision_audit/final_20261018/engine/engine_summary.csv) | Synthetic-grid checks, identical eligible-profile count, no profitability conclusion |
+| Explanation success/fallback breakdown | [Live summary](revision_audit/final_20261018/engine/live_summary.csv) | One recorded provider run; network latency distinct from local execution |
+| Test and artifact verification dashboard | [Final verification](revision_audit/final_verification.json) | Display four failed tests and the stale-narrative consistency failure |
+
+No chart should silently pool different datasets, currencies, output definitions, budgets, or stages of the research revision. The presentation can show substantial work through the range of questions investigated, executable deliverables, measured fixes, and carefully rejected alternatives; it does not need inflated claims or invented activity counts.

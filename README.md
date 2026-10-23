@@ -17,6 +17,7 @@ This repository contains both the application and its research audit. Experiment
 | Integrate with the backend or Python service | [API reference](docs/API.md) |
 | Find source files, run checks, or reproduce research | [Development guide](docs/DEVELOPMENT.md) |
 | Read current evidence, metrics, and limitations | [Research evidence guide](docs/RESEARCH.md) |
+| Review completed research work or prepare a presentation | [Work completed report and presentation plan](workdonebwcommits.md) |
 | Inspect dataset origins and unresolved provenance | [Data provenance](PROVENANCE.md) |
 
 ## What the application does
